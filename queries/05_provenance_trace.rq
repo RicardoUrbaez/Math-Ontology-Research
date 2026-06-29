@@ -1,0 +1,21 @@
+PREFIX mathkg: <http://example.org/mathkg/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# Purpose: list each concept with source ontology, source IRI, and mapping quality.
+SELECT ?concept ?label ?source ?sourceIRI ?mappingQuality ?provenanceNote
+WHERE {
+  ?concept rdf:type owl:Class ;
+           rdfs:label ?label .
+  OPTIONAL { ?concept dc:source ?source . }
+  OPTIONAL { ?concept dcterms:source ?source . }
+  OPTIONAL { ?concept skos:exactMatch ?sourceIRI . }
+  OPTIONAL { ?concept mathkg:mappingQuality ?mappingQuality . }
+  OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote . }
+  FILTER(STRSTARTS(STR(?concept), STR(mathkg:)))
+}
+ORDER BY ?label

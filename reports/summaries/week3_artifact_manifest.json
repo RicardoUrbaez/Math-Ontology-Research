@@ -1,0 +1,26 @@
+{
+  "week": 3,
+  "target_concept_count": 500,
+  "generated_files": [
+    "validation/week3_500_concept_metadata.csv",
+    "ontologies/merged/math_accessibility_kg_week3.ttl",
+    "gloss/week3_gloss_dictionary.json",
+    "gloss/week3_gloss_dictionary.csv",
+    "gloss/week3_rewrite_templates.json",
+    "reports/corpus/week3_arxiv_math_corpus_metadata.csv",
+    "reports/corpus/week3_usage_context_glosses.csv",
+    "reports/corpus/week3_top_100_symbols.csv",
+    "reports/corpus/week3_corpus_pipeline_status.md",
+    "reports/reasoning/week3_reasoner_report.md",
+    "reports/sparql/week3_benchmark_queries.rq",
+    "reports/sparql/week3_benchmark_results.csv",
+    "reports/sparql/week3_fuseki_benchmark_status.md",
+    "validation/week3_teams_mentor_review_record.md",
+    "validation/week3_inter_rater_agreement_status.md",
+    "paper/section_4_2_ontology_design.md",
+    "paper/section_4_3_kind_role_classification.md",
+    "paper/section_4_4_semantic_gloss_dictionary.md",
+    "reports/summaries/week3_completion_checklist.md"
+  ],
+  "build_hash": "ace36a778f0164690a4b61f87fc410093cf82a33246bb91120a3f482e523f739"
+}

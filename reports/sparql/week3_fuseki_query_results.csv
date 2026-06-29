@@ -1,0 +1,11 @@
+query_file,response_time_ms,result_count,status
+01_list_all_concepts.rq,78.859,72,completed_fuseki
+02_concepts_missing_definitions.rq,28.887,0,completed_fuseki
+03_concepts_by_type.rq,42.613,53,completed_fuseki
+04_kind_role_lookup.rq,20.522,53,completed_fuseki
+05_provenance_trace.rq,26.325,53,completed_fuseki
+06_relation_properties.rq,39.846,10,completed_fuseki
+07_alt_labels_synonyms.rq,38.236,55,completed_fuseki
+08_accessibility_notes.rq,15.707,53,completed_fuseki
+09_provisional_mappings.rq,51.125,91,completed_fuseki
+10_hierarchy_traversal.rq,44.424,52,completed_fuseki

@@ -1,0 +1,1426 @@
+@prefix : <http://example.org/mathkg/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix omp: <http://cll.niimm.ksu.ru/ontologies/mathematics#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mathkg: <http://example.org/mathkg/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://example.org/mathkg/> .
+
+<http://example.org/mathkg/> rdf:type owl:Ontology ;
+                              dc:description "Initial Week 2 seed merge ontology for a math accessibility knowledge graph. This file defines project-local classes for verified mathematical concepts and links them to canonical OntoMathPRO IRIs using the Week 2 cross-ontology mapping table." ;
+                              dc:license "Research prototype for academic use; source ontologies retain their original licenses." ;
+                              dc:source "OntoMathPRO, MathModDB, OntoMathEdu, OpenMath Content Dictionaries" ;
+                              dc:title "Math Accessibility Knowledge Graph Seed Ontology" ;
+                              dcterms:license "Research prototype for academic use; source ontologies retain their original licenses." ;
+                              rdfs:comment "Initial Week 2 seed merge ontology based on the verified cross-ontology mapping table and canonical IRI review process." ;
+                              rdfs:label "Math Accessibility Knowledge Graph Seed Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+mathkg:conceptType a owl:AnnotationProperty ;
+    rdfs:label "Concept type"@en ;
+    obo:IAO_0000115 "An annotation property recording the project-level type assigned to a mathematical concept."@en .
+
+mathkg:kindRoleClassification a owl:AnnotationProperty ;
+    rdfs:label "Kind/role classification"@en ;
+    obo:IAO_0000115 "An annotation property recording whether a concept is treated as a rigid kind or a context-dependent role."@en .
+
+mathkg:mappingQuality a owl:AnnotationProperty ;
+    rdfs:label "Mapping quality"@en ;
+    obo:IAO_0000115 "An annotation property recording the confidence or decision status for a concept mapping."@en .
+
+mathkg:accessibilityNote a owl:AnnotationProperty ;
+    rdfs:label "Accessibility note"@en ;
+    obo:IAO_0000115 "An annotation property recording speech, readability, or accessibility guidance for a concept."@en .
+
+mathkg:reviewStatus a owl:AnnotationProperty ;
+    rdfs:label "Review status"@en ;
+    obo:IAO_0000115 "An annotation property recording whether a concept metadata record is ready or needs further review."@en .
+
+mathkg:provenanceNote a owl:AnnotationProperty ;
+    rdfs:label "Provenance note"@en ;
+    obo:IAO_0000115 "An annotation property recording source and merge-decision notes for a concept."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/mathkg/MathRelation
+mathkg:MathRelation rdf:type owl:ObjectProperty ;
+                    rdfs:domain mathkg:MathObject ;
+                    rdfs:range mathkg:MathObject ;
+                    obo:IAO_0000115 "A mathematical relation property connects mathematical objects in the math accessibility knowledge graph." ;
+                    rdfs:comment "ObjectProperty root added to satisfy the Week 2 OWL 2 DL requirement for a MathRelation object-property subhierarchy." ;
+                    rdfs:label "Math Relation"@en ;
+                    skos:definition "An upper-level object property used to organize mathematical relations between mathematical objects."@en ;
+                    skos:note "Upper-level object property branch for mathematical relations."@en .
+
+
+###  http://example.org/mathkg/dependsOn
+mathkg:dependsOn rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf mathkg:MathRelation ;
+                 rdfs:domain mathkg:MathObject ;
+                 rdfs:range mathkg:MathObject ;
+                 rdfs:label "depends on"@en ;
+                 skos:definition "Relates a mathematical object or concept to another concept it depends on."@en ;
+    obo:IAO_0000115 "Relates a mathematical object or concept to another concept it depends on."@en .
+
+###  http://example.org/mathkg/hasElement
+mathkg:hasElement rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf mathkg:MathRelation ;
+                  owl:inverseOf mathkg:isElementOf ;
+                  rdfs:domain mathkg:MathObject ;
+                  rdfs:range mathkg:MathObject ;
+                  rdfs:label "has element"@en ;
+                  skos:definition "Relates a mathematical object, such as a set, to an element that belongs to it."@en ;
+    obo:IAO_0000115 "Relates a mathematical object, such as a set, to an element that belongs to it."@en .
+
+###  http://example.org/mathkg/hasOperand
+mathkg:hasOperand rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf mathkg:MathRelation ;
+                  obo:IAO_0000115 "Connects a mathematical operation to one of its input mathematical objects." ;
+                  rdfs:label "has operand" .
+
+
+###  http://example.org/mathkg/hasRelation
+mathkg:hasRelation rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf mathkg:MathRelation ;
+                   obo:IAO_0000115 "Connects a mathematical object to a relation concept or related mathematical object." ;
+                   rdfs:label "has relation" .
+
+
+###  http://example.org/mathkg/hasResult
+mathkg:hasResult rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf mathkg:MathRelation ;
+                 obo:IAO_0000115 "Connects a mathematical operation to its output or result." ;
+                 rdfs:label "has result" .
+
+
+###  http://example.org/mathkg/isElementOf
+mathkg:isElementOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf mathkg:MathRelation ;
+                   rdfs:domain mathkg:MathObject ;
+                   rdfs:range mathkg:MathObject ;
+                   rdfs:label "is element of"@en ;
+                   skos:definition "Relates an element to the mathematical object it belongs to."@en ;
+    obo:IAO_0000115 "Relates an element to the mathematical object it belongs to."@en .
+
+###  http://example.org/mathkg/isEqualTo
+mathkg:isEqualTo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf mathkg:MathRelation ;
+                 rdfs:domain mathkg:MathObject ;
+                 rdfs:range mathkg:MathObject ;
+                 rdfs:label "is equal to"@en ;
+                 skos:definition "Relates two mathematical objects that are considered equal."@en ;
+    obo:IAO_0000115 "Relates two mathematical objects that are considered equal."@en .
+
+###  http://example.org/mathkg/isLessThan
+mathkg:isLessThan rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf mathkg:MathRelation ;
+                  rdfs:domain mathkg:MathObject ;
+                  rdfs:range mathkg:MathObject ;
+                  rdfs:label "is less than"@en ;
+                  skos:definition "Relates one mathematical object or value to another that is greater than it."@en ;
+    obo:IAO_0000115 "Relates one mathematical object or value to another that is greater than it."@en .
+
+###  http://example.org/mathkg/isSubsetOf
+mathkg:isSubsetOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf mathkg:MathRelation ;
+                  rdfs:domain mathkg:MathObject ;
+                  rdfs:range mathkg:MathObject ;
+                  rdfs:label "is subset of"@en ;
+                  skos:definition "Relates one set to another set that contains it."@en ;
+    obo:IAO_0000115 "Relates one set to another set that contains it."@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/mathkg/Addition
+mathkg:Addition rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathOperation ;
+                obo:IAO_0000115 "Addition is the operation of combining quantities to produce their sum." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Mapped from OntoMathPRO mathematics:E1315 based on a direct Addition@en label match." ;
+                rdfs:label "Addition"@en ;
+                skos:definition "Addition is the operation of combining quantities to produce their sum." ;
+                skos:exactMatch omp:E1315 ;
+    skos:definition "Addition is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use addition when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1315 has direct rdfs:label Addition@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "addition"@en ;
+    skos:definition "Addition is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use addition when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1315 has direct rdfs:label Addition@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Angle
+mathkg:Angle rdf:type owl:Class ;
+             rdfs:subClassOf mathkg:MathObject ;
+             obo:IAO_0000115 "An angle is a measure of rotation or the figure formed by two rays sharing a common endpoint." ;
+             dc:source "OntoMathPRO" ;
+             rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+             rdfs:label "Angle"@en ;
+             skos:exactMatch omp:E1187 ;
+             skos:note "merge_status: mapped" ;
+    skos:definition "Angle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use angle as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1187 has direct English label Angle and Russian label угол; selected as canonical source for Angle" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "angle"@en ;
+    skos:definition "Angle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use angle as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1187 has direct English label Angle and Russian label угол; selected as canonical source for Angle" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Area
+mathkg:Area rdf:type owl:Class ;
+            rdfs:subClassOf mathkg:MathObject ;
+            obo:IAO_0000115 "Area is the measure of the size of a two-dimensional region." ;
+            dc:source "MathModDB" ;
+            rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+            rdfs:label "Area"@en ;
+            skos:exactMatch <https://mardi4nfdi.de/mathmoddb#Area> ;
+            skos:note "merge_status: mapped" ;
+    skos:definition "Area is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use area as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "MathModDB individual mathmoddb:Area has direct English label Area and description as a quantity expressing the extent of a two-dimensional surface or shape; selected as canonical source for Area" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "area"@en ;
+    skos:definition "Area is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use area as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "MathModDB individual mathmoddb:Area has direct English label Area and description as a quantity expressing the extent of a two-dimensional surface or shape; selected as canonical source for Area" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Circle
+mathkg:Circle rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "A circle is the set of points in a plane that are all the same distance from a given center point." ;
+              dc:source "OntoMathPRO" ;
+              rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+              rdfs:label "Circle"@en ;
+              skos:exactMatch omp:E109 ;
+              skos:note "merge_status: mapped" ;
+    skos:definition "Circle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use circle as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E109 has direct English label Circle and Russian label окружность; selected as canonical source for Circle" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "circle"@en ;
+    skos:definition "Circle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use circle as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E109 has direct English label Circle and Russian label окружность; selected as canonical source for Circle" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Coefficient
+mathkg:Coefficient rdf:type owl:Class ;
+                   rdfs:subClassOf mathkg:MathObject ;
+                   obo:IAO_0000115 "A coefficient is a numerical or symbolic factor that multiplies another term in an expression." ;
+                   dc:source "OntoMathPRO" ;
+                   rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review. Classified under MathematicalConcept pending review of a dedicated role hierarchy." ;
+                   rdfs:label "Coefficient"@en ;
+                   skos:exactMatch omp:E2129 ;
+                   skos:note "merge_status: mapped" ;
+    skos:definition "Coefficient is a context-dependent mathematical role used inside expressions, formulas, or models."@en ;
+    skos:example "Use coefficient when a symbol's meaning depends on its role in an expression or model."@en ;
+    mathkg:conceptType "Role" ;
+    mathkg:kindRoleClassification "role" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2129 has direct English label Coefficient and Russian label коэффициент; selected as canonical source for Coefficient" ;
+    mathkg:accessibilityNote "Speech rendering should preserve the expression context because this concept changes meaning by role."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "coefficient"@en ;
+    skos:definition "Coefficient is a context-dependent mathematical role used inside expressions, formulas, or models."@en ;
+    skos:example "Use coefficient when a symbol's meaning depends on its role in an expression or model."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2129 has direct English label Coefficient and Russian label коэффициент; selected as canonical source for Coefficient" ;
+    mathkg:accessibilityNote "Speech rendering should preserve the expression context because this concept changes meaning by role."@en .
+
+###  http://example.org/mathkg/ComplexNumber
+mathkg:ComplexNumber rdf:type owl:Class ;
+                     rdfs:subClassOf mathkg:MathObject ;
+                     obo:IAO_0000115 "A complex number is a number with a real part and an imaginary part." ;
+                     dc:source "OntoMathPRO" ;
+                     rdfs:comment "Mapped from OntoMathPRO mathematics:E2127 based on a direct Complex number@en label match." ;
+                     rdfs:label "Complex Number"@en ;
+                     skos:definition "A complex number is a number with a real part and an imaginary part." ;
+                     skos:exactMatch omp:E2127 ;
+    skos:definition "Complex Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use complex number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2127 has direct rdfs:label Complex number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "complex number"@en ;
+    skos:altLabel "complexnumber"@en ;
+    skos:definition "Complex Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use complex number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2127 has direct rdfs:label Complex number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Constant
+mathkg:Constant rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "A constant is a value that is fixed within a given mathematical context." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review. Classified under MathematicalConcept pending review of a dedicated role hierarchy." ;
+                rdfs:label "Constant"@en ;
+                skos:exactMatch omp:E2134 ;
+                skos:note "merge_status: mapped" ;
+    skos:definition "Constant is a context-dependent mathematical role used inside expressions, formulas, or models."@en ;
+    skos:example "Use constant when a symbol's meaning depends on its role in an expression or model."@en ;
+    mathkg:conceptType "Role" ;
+    mathkg:kindRoleClassification "role" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2134 has direct English label Constant and Russian labels Постоянная and Константа; selected as canonical source for Constant" ;
+    mathkg:accessibilityNote "Speech rendering should preserve the expression context because this concept changes meaning by role."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "constant"@en ;
+    skos:definition "Constant is a context-dependent mathematical role used inside expressions, formulas, or models."@en ;
+    skos:example "Use constant when a symbol's meaning depends on its role in an expression or model."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2134 has direct English label Constant and Russian labels Постоянная and Константа; selected as canonical source for Constant" ;
+    mathkg:accessibilityNote "Speech rendering should preserve the expression context because this concept changes meaning by role."@en .
+
+###  http://example.org/mathkg/Cosine
+mathkg:Cosine rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "Cosine is a trigonometric function that relates an angle to a ratio in a right triangle and to coordinates on the unit circle." ;
+              dc:source "OpenMath Content Dictionaries" ;
+              rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+              rdfs:label "Cosine"@en ;
+              skos:exactMatch <http://www.openmath.org/cd/transc1#cos> ;
+              skos:note "merge_status: mapped" ;
+    skos:definition "Cosine is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use cosine when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official transc1 Content Dictionary includes cos as the cosine function; selected as canonical source for the Cosine operation" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "cosine"@en ;
+    skos:definition "Cosine is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use cosine when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official transc1 Content Dictionary includes cos as the cosine function; selected as canonical source for the Cosine operation" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Derivative
+mathkg:Derivative rdf:type owl:Class ;
+                  rdfs:subClassOf mathkg:MathOperation ;
+                  obo:IAO_0000115 "A derivative measures how a quantity changes with respect to another quantity." ;
+                  dc:source "OpenMath Content Dictionaries" ;
+                  rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                  rdfs:label "Derivative"@en ;
+                  skos:exactMatch <http://www.openmath.org/cd/calculus1#diff> ;
+                  skos:note "merge_status: mapped" ;
+    skos:definition "Derivative is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use derivative when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official calculus1 Content Dictionary includes diff for ordinary differentiation of a unary function; selected as canonical source because no safer general OntoMathPRO derivative class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "derivative"@en ;
+    skos:definition "Derivative is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use derivative when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official calculus1 Content Dictionary includes diff for ordinary differentiation of a unary function; selected as canonical source because no safer general OntoMathPRO derivative class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Determinant
+mathkg:Determinant rdf:type owl:Class ;
+                   rdfs:subClassOf mathkg:MathOperation ;
+                   obo:IAO_0000115 "A determinant is a value computed from a square matrix that captures key algebraic properties of the matrix." ;
+                   dc:source "OpenMath Content Dictionaries" ;
+                   rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                   rdfs:label "Determinant"@en ;
+                   skos:exactMatch <http://www.openmath.org/cd/linalg1#determinant> ;
+                   skos:note "merge_status: mapped" ;
+    skos:definition "Determinant is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use determinant when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official linalg1 Content Dictionary includes determinant as the unary function returning the determinant of a square matrix; selected as canonical source for Determinant" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "determinant"@en ;
+    skos:definition "Determinant is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use determinant when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official linalg1 Content Dictionary includes determinant as the unary function returning the determinant of a square matrix; selected as canonical source for Determinant" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Division
+mathkg:Division rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathOperation ;
+                obo:IAO_0000115 "Division is the operation of partitioning a quantity into equal parts or determining how many times one quantity contains another." ;
+                dc:source "OpenMath Content Dictionaries" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                rdfs:label "Division"@en ;
+                skos:exactMatch <http://www.openmath.org/cd/arith1#divide> ;
+                skos:note "merge_status: mapped" ;
+    skos:definition "Division is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use division when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official arith1 Content Dictionary includes divide as the binary division symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "division"@en ;
+    skos:definition "Division is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use division when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official arith1 Content Dictionary includes divide as the binary division symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Element
+mathkg:Element rdf:type owl:Class ;
+               rdfs:subClassOf mathkg:MathObject ;
+               obo:IAO_0000115 "An element is an object considered as a member of a set or collection." ;
+               dc:source "OntoMathPRO" ;
+               rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+               rdfs:label "Element"@en ;
+               skos:exactMatch omp:E2143 ;
+               skos:note "Provisional specialized source mapping." ,
+                         "merge_status: mapped" ;
+    skos:definition "Element is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use element as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "provisional_specialized_source_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2143 has English label Element of the theory of algebra and Russian label элемент теории алгебры; selected as provisional source IRI for Element because no clean general Element class was found" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: provisional_specialized_source_match" ;
+    skos:altLabel "element"@en ;
+    skos:definition "Element is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use element as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2143 has English label Element of the theory of algebra and Russian label элемент теории алгебры; selected as provisional source IRI for Element because no clean general Element class was found" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Equality
+mathkg:Equality rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:RelationConcept ;
+                obo:IAO_0000115 "Equality is the relation that holds when two expressions represent the same value or object." ;
+                dc:source "OpenMath Content Dictionaries" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                rdfs:label "Equality"@en ;
+                skos:exactMatch <http://www.openmath.org/cd/relation1#eq> ;
+                skos:note "merge_status: mapped" ;
+    skos:definition "Equality is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use equality when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:conceptType "MathRelation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "equality"@en ;
+    skos:definition "Equality is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use equality when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:provenanceNote "OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en .
+
+###  http://example.org/mathkg/Equation
+mathkg:Equation rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "An equation is a mathematical statement that asserts two expressions are equal." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Mapped from OntoMathPRO mathematics:E1891 based on a direct Equation@en label match." ;
+                rdfs:label "Equation"@en ;
+                skos:definition "An equation is a mathematical statement that asserts two expressions are equal." ;
+                skos:exactMatch omp:E1891 ;
+    skos:definition "Equation is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use equation as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1891 has direct rdfs:label Equation@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "equation"@en ;
+    skos:definition "Equation is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use equation as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1891 has direct rdfs:label Equation@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/ExponentialFunction
+mathkg:ExponentialFunction rdf:type owl:Class ;
+                           rdfs:subClassOf mathkg:MathObject ;
+                           obo:IAO_0000115 "An exponential function is a function in which the variable appears in the exponent." ;
+                           dc:source "OntoMathPRO" ;
+                           rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                           rdfs:label "Exponential Function"@en ;
+                           skos:exactMatch omp:E1597 ;
+                           skos:note "merge_status: mapped" ;
+    skos:definition "Exponential Function is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use exponential function as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1597 has English label Exponential and Russian label показательная функция; selected instead of mathematics:E1609 because E1609 has Russian label степенная функция, which indicates power function" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "exponential function"@en ;
+    skos:altLabel "exponentialfunction"@en ;
+    skos:definition "Exponential Function is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use exponential function as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1597 has English label Exponential and Russian label показательная функция; selected instead of mathematics:E1609 because E1609 has Russian label степенная функция, which indicates power function" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Expression
+mathkg:Expression rdf:type owl:Class ;
+                  rdfs:subClassOf mathkg:MathObject ;
+                  obo:IAO_0000115 "An expression is a combination of symbols that represents a mathematical value, rule, or object." ;
+                  dc:source "OpenMath Experimental" ;
+                  rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                  rdfs:label "Expression"@en ;
+                  skos:exactMatch <http://www.openmath.org/cd/field1#expression> ;
+                  skos:note "Provisional specialized source mapping." ,
+                            "merge_status: mapped" ;
+    skos:definition "Expression is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use expression as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "provisional_specialized_source_match" ;
+    mathkg:provenanceNote "OpenMath experimental field1 Content Dictionary includes exact symbol name expression for arithmetic expressions over a field; selected as provisional source IRI for Expression because no clean general Expression class was found" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: provisional_specialized_source_match" ;
+    skos:altLabel "expression"@en ;
+    skos:definition "Expression is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use expression as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OpenMath experimental field1 Content Dictionary includes exact symbol name expression for arithmetic expressions over a field; selected as provisional source IRI for Expression because no clean general Expression class was found" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Formula
+mathkg:Formula rdf:type owl:Class ;
+               rdfs:subClassOf mathkg:MathObject ;
+               obo:IAO_0000115 "A formula is a mathematical expression or rule used to calculate, describe, or summarize a relationship." ;
+               dc:source "OntoMathPRO" ;
+               rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+               rdfs:label "Formula"@en ;
+               skos:exactMatch omp:E1988 ;
+               skos:note "merge_status: mapped" ;
+    skos:definition "Formula is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use formula as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1988 has direct English label Formula and Russian label формула; selected as canonical source for Formula" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "formula"@en ;
+    skos:definition "Formula is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use formula as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1988 has direct English label Formula and Russian label формула; selected as canonical source for Formula" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Function
+mathkg:Function rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "A function is a rule or mapping that assigns each input exactly one output." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Mapped from OntoMathPRO mathematics:E1505 based on a direct Function@en label match." ;
+                rdfs:label "Function"@en ;
+                skos:definition "A function is a rule or mapping that assigns each input exactly one output." ;
+                skos:exactMatch omp:E1505 ;
+    skos:definition "Function is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use function as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1505 has direct rdfs:label Function@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "function"@en ;
+    skos:definition "Function is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use function as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1505 has direct rdfs:label Function@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Graph
+mathkg:Graph rdf:type owl:Class ;
+             rdfs:subClassOf mathkg:MathObject ;
+             obo:IAO_0000115 "Graph may denote either a graph-theoretic structure or a plotted visual representation, depending on context." ;
+             dc:source "OntoMathPRO" ;
+             rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+             rdfs:label "Graph"@en ;
+             skos:exactMatch omp:E887 ;
+             skos:note "merge_status: mapped" ;
+    skos:definition "Graph is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use graph as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E887 has direct English label Graph and Russian label граф; selected as canonical source for Graph" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "graph"@en ;
+    skos:definition "Graph is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use graph as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E887 has direct English label Graph and Russian label граф; selected as canonical source for Graph" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Inequality
+mathkg:Inequality rdf:type owl:Class ;
+                  rdfs:subClassOf mathkg:RelationConcept ;
+                  obo:IAO_0000115 "An inequality is a mathematical statement that compares two expressions as not equal in value." ;
+                  dc:source "OntoMathPRO" ;
+                  rdfs:comment "Mapped from OntoMathPRO mathematics:E1202 based on a direct Inequality@en label match." ;
+                  rdfs:label "Inequality"@en ;
+                  skos:definition "An inequality is a mathematical statement that compares two expressions as not equal in value." ;
+                  skos:exactMatch omp:E1202 ;
+    skos:definition "Inequality is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use inequality when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:conceptType "MathRelation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1202 has direct rdfs:label Inequality@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "inequality"@en ;
+    skos:definition "Inequality is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use inequality when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1202 has direct rdfs:label Inequality@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en .
+
+###  http://example.org/mathkg/Integer
+mathkg:Integer rdf:type owl:Class ;
+               rdfs:subClassOf mathkg:MathObject ;
+               obo:IAO_0000115 "An integer is a whole number that may be positive, negative, or zero." ;
+               dc:source "OntoMathPRO" ;
+               rdfs:comment "Mapped to OntoMathPRO mathematics:E2118 because it carries the Russian label for integer and the English label A whole number." ;
+               rdfs:label "Integer"@en ;
+               skos:definition "An integer is a whole number that may be positive, negative, or zero." ;
+               skos:exactMatch omp:E2118 ;
+    skos:definition "Integer is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use integer as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2118 has Russian label Целое число and English label A whole number; selected as canonical IRI for Integer according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "integer"@en ;
+    skos:definition "Integer is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use integer as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2118 has Russian label Целое число and English label A whole number; selected as canonical IRI for Integer according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Integral
+mathkg:Integral rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathOperation ;
+                obo:IAO_0000115 "An integral represents accumulation, area, or the inverse process of differentiation, depending on context." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Mapped to OntoMathPRO mathematics:E1307 as the closest operation-level match because the source uses Integrating@en rather than Integral@en." ;
+                rdfs:label "Integral"@en ;
+                skos:definition "An integral represents accumulation, area, or the inverse process of differentiation, depending on context." ;
+                skos:exactMatch omp:E1307 ;
+    skos:definition "Integral is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use integral when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1307 has rdfs:label Integrating@en and a Russian comment stating that the process of finding an integral is integration; selected as the closest operation-level canonical IRI for Integral" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "integral"@en ;
+    skos:definition "Integral is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use integral when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1307 has rdfs:label Integrating@en and a Russian comment stating that the process of finding an integral is integration; selected as the closest operation-level canonical IRI for Integral" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Limit
+mathkg:Limit rdf:type owl:Class ;
+             rdfs:subClassOf mathkg:MathObject ;
+             obo:IAO_0000115 "A limit describes the value that a function, sequence, or expression approaches under specified conditions." ;
+             dc:source "OpenMath Content Dictionaries" ;
+             rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+             rdfs:label "Limit"@en ;
+             skos:exactMatch <http://www.openmath.org/cd/limit1#limit> ;
+             skos:note "merge_status: mapped" ;
+    skos:definition "Limit is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use limit as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official limit1 Content Dictionary includes limit for the limit of a unary function; selected as canonical source because OntoMathPRO results showed narrower theorem-related limit concepts rather than a general limit concept" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "limit"@en ;
+    skos:definition "Limit is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use limit as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OpenMath Official limit1 Content Dictionary includes limit for the limit of a unary function; selected as canonical source because OntoMathPRO results showed narrower theorem-related limit concepts rather than a general limit concept" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Line
+mathkg:Line rdf:type owl:Class ;
+            rdfs:subClassOf mathkg:MathObject ;
+            obo:IAO_0000115 "A line is a straight one-dimensional geometric object extending without end in both directions." ;
+            dc:source "OntoMathPRO" ;
+            rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+            rdfs:label "Line"@en ;
+            skos:exactMatch omp:E1168 ;
+            skos:note "merge_status: mapped" ;
+    skos:definition "Line is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use line as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1168 has direct English label Line and Russian label прямая; selected as canonical source for Line" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "line"@en ;
+    skos:definition "Line is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use line as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1168 has direct English label Line and Russian label прямая; selected as canonical source for Line" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Logarithm
+mathkg:Logarithm rdf:type owl:Class ;
+                 rdfs:subClassOf mathkg:MathObject ;
+                 obo:IAO_0000115 "A logarithm gives the exponent to which a base must be raised to produce a given value." ;
+                 dc:source "OntoMathPRO" ;
+                 rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                 rdfs:label "Logarithm"@en ;
+                 skos:exactMatch omp:E1308 ;
+                 skos:note "merge_status: mapped" ;
+    skos:definition "Logarithm is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use logarithm when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1308 has English label Taking the logarithm and Russian label Логарифмирование; selected as the canonical operation-level source for Logarithm" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "logarithm"@en ;
+    skos:definition "Logarithm is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use logarithm when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1308 has English label Taking the logarithm and Russian label Логарифмирование; selected as the canonical operation-level source for Logarithm" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/MathObject
+mathkg:MathObject rdf:type owl:Class ;
+                  rdfs:subClassOf mathkg:MathematicalConcept ;
+                  obo:IAO_0000115 "A mathematical object is an entity such as a number, set, equation, or structure that can be named, described, or reasoned about in mathematics." ;
+                  rdfs:label "Math Object"@en ;
+                  skos:definition "A rigid mathematical entity or concept that can be treated as an object in the math accessibility knowledge graph."@en ;
+                  skos:note "Upper-level rigid class for mathematical objects."@en .
+
+
+###  http://example.org/mathkg/MathOperation
+mathkg:MathOperation rdf:type owl:Class ;
+                     rdfs:subClassOf mathkg:MathematicalConcept ;
+                     obo:IAO_0000115 "A mathematical operation is a process or rule that takes mathematical inputs and produces an output or result." ;
+                     rdfs:label "Math Operation"@en ;
+                     skos:definition "A processual mathematical concept representing an action, procedure, or transformation applied to mathematical objects."@en ;
+                     skos:note "Upper-level processual class for mathematical operations."@en .
+
+
+###  http://example.org/mathkg/MathematicalConcept
+mathkg:MathematicalConcept rdf:type owl:Class ;
+                           rdfs:subClassOf owl:Thing ;
+                           obo:IAO_0000115 "A general concept used to represent mathematical objects, operations, or relations in the math accessibility knowledge graph." ;
+                           rdfs:comment "Top-level parent class added to organize the Week 2 seed ontology hierarchy." ;
+                           rdfs:label "Mathematical Concept" ;
+                           skos:definition "A broad category for mathematical entities represented in the math accessibility knowledge graph." .
+
+
+###  http://example.org/mathkg/Matrix
+mathkg:Matrix rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns." ;
+              dc:source "OntoMathPRO" ;
+              rdfs:comment "Mapped from OntoMathPRO mathematics:E1703 based on a direct Matrix@en label match." ;
+              rdfs:label "Matrix"@en ;
+              skos:definition "A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns." ;
+              skos:exactMatch omp:E1703 ;
+    skos:definition "Matrix is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use matrix as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1703 has direct rdfs:label Matrix@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "matrix"@en ;
+    skos:definition "Matrix is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use matrix as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1703 has direct rdfs:label Matrix@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Mean
+mathkg:Mean rdf:type owl:Class ;
+            rdfs:subClassOf mathkg:MathObject ;
+            obo:IAO_0000115 "The mean is a measure of central tendency, often computed by dividing the sum of values by the number of values." ;
+            dc:source "OntoMathPRO" ;
+            rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+            rdfs:label "Mean"@en ;
+            skos:exactMatch omp:E1666 ;
+            skos:note "merge_status: mapped" ;
+    skos:definition "Mean is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use mean when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1666 has English label Average value and Russian label Среднее значение; selected as canonical source for the Mean concept" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "mean"@en ;
+    skos:definition "Mean is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use mean when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1666 has English label Average value and Russian label Среднее значение; selected as canonical source for the Mean concept" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Multiplication
+mathkg:Multiplication rdf:type owl:Class ;
+                      rdfs:subClassOf mathkg:MathOperation ;
+                      obo:IAO_0000115 "Multiplication is the operation of combining equal groups or scaling one quantity by another." ;
+                      dc:source "OntoMathPRO" ;
+                      rdfs:comment "Mapped from OntoMathPRO mathematics:E1318 based on a direct Multiplication@en label match." ;
+                      rdfs:label "Multiplication"@en ;
+                      skos:definition "Multiplication is the operation of combining equal groups or scaling one quantity by another." ;
+                      skos:exactMatch omp:E1318 ;
+    skos:definition "Multiplication is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use multiplication when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1318 has direct rdfs:label Multiplication@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "multiplication"@en ;
+    skos:definition "Multiplication is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use multiplication when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1318 has direct rdfs:label Multiplication@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/NaturalNumber
+mathkg:NaturalNumber rdf:type owl:Class ;
+                     rdfs:subClassOf mathkg:MathObject ;
+                     obo:IAO_0000115 "A natural number is a counting number used to represent position or quantity in a sequence." ;
+                     dc:source "OntoMathPRO" ;
+                     rdfs:comment "Mapped from OntoMathPRO mathematics:E2119 based on a direct Natural number@en label match." ;
+                     rdfs:label "Natural Number"@en ;
+                     skos:definition "A natural number is a counting number used to represent position or quantity in a sequence." ;
+                     skos:exactMatch omp:E2119 ;
+    skos:definition "Natural Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use natural number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2119 has direct rdfs:label Natural number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "natural number"@en ;
+    skos:altLabel "naturalnumber"@en ;
+    skos:definition "Natural Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use natural number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2119 has direct rdfs:label Natural number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Number
+mathkg:Number rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "A number is a mathematical object used to count, measure, or represent quantity." ;
+              dc:source "OntoMathPRO" ;
+              rdfs:comment "Mapped from OntoMathPRO mathematics:E2114 based on a direct Number@en label match." ;
+              rdfs:label "Number"@en ;
+              skos:definition "A number is a mathematical object used to count, measure, or represent quantity." ;
+              skos:exactMatch omp:E2114 ;
+    skos:definition "Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2114 has direct rdfs:label Number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "number"@en ;
+    skos:definition "Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2114 has direct rdfs:label Number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Operation
+mathkg:Operation rdf:type owl:Class ;
+                 rdfs:subClassOf mathkg:MathOperation ;
+                 obo:IAO_0000115 "An operation is a process or rule that transforms one or more mathematical inputs into an output." ;
+                 dc:source "OntoMathPRO" ;
+                 rdfs:comment "Mapped from OntoMathPRO mathematics:E34 based on a direct Operation@en label match." ;
+                 rdfs:label "Operation"@en ;
+                 skos:definition "An operation is a process or rule that transforms one or more mathematical inputs into an output." ;
+                 skos:exactMatch omp:E34 ;
+    skos:definition "Operation is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use operation when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E34 has direct rdfs:label Operation@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "operation"@en ;
+    skos:definition "Operation is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use operation when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E34 has direct rdfs:label Operation@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Point
+mathkg:Point rdf:type owl:Class ;
+             rdfs:subClassOf mathkg:MathObject ;
+             obo:IAO_0000115 "A point is an exact location in space or in a coordinate system." ;
+             dc:source "OntoMathPRO" ;
+             rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+             rdfs:label "Point"@en ;
+             skos:exactMatch omp:E293 ;
+             skos:note "merge_status: mapped" ;
+    skos:definition "Point is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use point as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E293 has direct English label Point and Russian label точка; selected as canonical source for Point" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "point"@en ;
+    skos:definition "Point is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use point as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E293 has direct English label Point and Russian label точка; selected as canonical source for Point" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Polynomial
+mathkg:Polynomial rdf:type owl:Class ;
+                  rdfs:subClassOf mathkg:MathObject ;
+                  obo:IAO_0000115 "A polynomial is an expression made from variables, constants, and powers combined using addition, subtraction, and multiplication." ;
+                  dc:source "OntoMathPRO" ;
+                  rdfs:comment "Mapped to OntoMathPRO mathematics:E2920 using the Russian labels Polinom and Mnogochlen because no English Polynomial@en label was found." ;
+                  rdfs:label "Polynomial"@en ;
+                  skos:definition "A polynomial is an expression made from variables, constants, and powers combined using addition, subtraction, and multiplication." ;
+                  skos:exactMatch omp:E2920 ;
+    skos:definition "Polynomial is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use polynomial as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2920 has Russian labels Полином and Многочлен, which correspond to Polynomial; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "polynomial"@en ;
+    skos:definition "Polynomial is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use polynomial as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2920 has Russian labels Полином and Многочлен, which correspond to Polynomial; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Probability
+mathkg:Probability rdf:type owl:Class ;
+                   rdfs:subClassOf mathkg:MathObject ;
+                   obo:IAO_0000115 "Probability is a measure of how likely an event is to occur." ;
+                   dc:source "OntoMathPRO" ;
+                   rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                   rdfs:label "Probability"@en ;
+                   skos:exactMatch omp:E2410 ;
+                   skos:note "merge_status: mapped" ;
+    skos:definition "Probability is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use probability as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2410 has direct English label Probability and Russian label вероятность; selected as canonical source for the general Probability concept" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "probability"@en ;
+    skos:definition "Probability is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use probability as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2410 has direct English label Probability and Russian label вероятность; selected as canonical source for the general Probability concept" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/RationalNumber
+mathkg:RationalNumber rdf:type owl:Class ;
+                      rdfs:subClassOf mathkg:MathObject ;
+                      obo:IAO_0000115 "A rational number is a number that can be written as a fraction of two integers with a nonzero denominator." ;
+                      dc:source "OntoMathPRO" ;
+                      rdfs:comment "Mapped from OntoMathPRO mathematics:E2117 based on a direct Rational number@en label match." ;
+                      rdfs:label "Rational Number"@en ;
+                      skos:definition "A rational number is a number that can be written as a fraction of two integers with a nonzero denominator." ;
+                      skos:exactMatch omp:E2117 ;
+    skos:definition "Rational Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use rational number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2117 has direct rdfs:label Rational number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "rational number"@en ;
+    skos:altLabel "rationalnumber"@en ;
+    skos:definition "Rational Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use rational number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2117 has direct rdfs:label Rational number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/RealNumber
+mathkg:RealNumber rdf:type owl:Class ;
+                  rdfs:subClassOf mathkg:MathObject ;
+                  obo:IAO_0000115 "A real number is any number on the continuous number line, including rational and irrational values." ;
+                  dc:source "OntoMathPRO" ;
+                  rdfs:comment "Mapped from OntoMathPRO mathematics:E2116 based on a direct Real number@en label match." ;
+                  rdfs:label "Real Number"@en ;
+                  skos:definition "A real number is any number on the continuous number line, including rational and irrational values." ;
+                  skos:exactMatch omp:E2116 ;
+    skos:definition "Real Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use real number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2116 has direct rdfs:label Real number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "real number"@en ;
+    skos:altLabel "realnumber"@en ;
+    skos:definition "Real Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use real number as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2116 has direct rdfs:label Real number@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/RelationConcept
+mathkg:RelationConcept rdf:type owl:Class ;
+                       rdfs:subClassOf mathkg:MathObject ;
+                       obo:IAO_0000115 "A relation is a mathematical connection or association between objects, values, or sets." ;
+                       dc:source "OntoMathPRO" ;
+                       rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                       rdfs:label "Relation"@en ;
+                       skos:definition "The conceptual category of mathematical relations, represented structurally by the MathRelation object-property hierarchy."@en ;
+                       skos:exactMatch omp:E2452 ;
+                       skos:note "This class preserves the validation concept Relation, while mathkg:MathRelation is used for the OWL object-property hierarchy."@en ,
+                                 "merge_status: mapped" ;
+    skos:definition "Relation is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use relation when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:conceptType "MathRelation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2452 has direct English label Relation and Russian label отношение; selected as canonical source for Relation" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "relation"@en ;
+    skos:definition "Relation is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use relation when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2452 has direct English label Relation and Russian label отношение; selected as canonical source for Relation" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en .
+
+###  http://example.org/mathkg/Scalar
+mathkg:Scalar rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "A scalar is a quantity described by magnitude alone, without direction." ;
+              dc:source "OpenMath Experimental" ;
+              rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+              rdfs:label "Scalar"@en ;
+              skos:exactMatch <http://www.openmath.org/cd/linalg5#scalar> ;
+              skos:note "Provisional specialized source mapping." ,
+                        "merge_status: mapped" ;
+    skos:definition "Scalar is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use scalar as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "provisional_specialized_source_match" ;
+    mathkg:provenanceNote "OpenMath experimental linalg5 Content Dictionary includes exact symbol name scalar for a scalar matrix / scalar constant times identity; selected as provisional source IRI for Scalar because no clean general Scalar class was found" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: provisional_specialized_source_match" ;
+    skos:altLabel "scalar"@en ;
+    skos:definition "Scalar is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use scalar as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OpenMath experimental linalg5 Content Dictionary includes exact symbol name scalar for a scalar matrix / scalar constant times identity; selected as provisional source IRI for Scalar because no clean general Scalar class was found" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Sequence
+mathkg:Sequence rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "A sequence is an ordered list of mathematical objects, often numbers or expressions." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                rdfs:label "Sequence"@en ;
+                skos:exactMatch omp:E2931 ;
+                skos:note "Mapping based on the exact Russian OntoMathPRO label." ,
+                          "merge_status: mapped" ;
+    skos:definition "Sequence is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use sequence as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2931 has Russian label Последовательность and source comment referencing mathematical sequence; selected as canonical source for Sequence" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "sequence"@en ;
+    skos:definition "Sequence is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use sequence as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2931 has Russian label Последовательность and source comment referencing mathematical sequence; selected as canonical source for Sequence" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Series
+mathkg:Series rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "A series is a sum formed from the terms of a sequence." ;
+              dc:source "OntoMathPRO" ;
+              rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+              rdfs:label "Series"@en ;
+              skos:exactMatch omp:E3050 ;
+              skos:note "Mapping based on the exact Russian OntoMathPRO label." ,
+                        "merge_status: mapped" ;
+    skos:definition "Series is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use series as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E3050 has Russian label Ряд and comment defining a mathematical series as an infinite sum of terms; selected as canonical source for Series" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "series"@en ;
+    skos:definition "Series is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use series as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E3050 has Russian label Ряд and comment defining a mathematical series as an infinite sum of terms; selected as canonical source for Series" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Set
+mathkg:Set rdf:type owl:Class ;
+           rdfs:subClassOf mathkg:MathObject ;
+           obo:IAO_0000115 "A set is a collection of distinct objects considered as one mathematical object." ;
+           dc:source "OntoMathPRO" ;
+           rdfs:comment "Mapped from OntoMathPRO mathematics:E847 based on a direct Set@en label match." ;
+           rdfs:label "Set"@en ;
+           skos:definition "A set is a collection of distinct objects considered as one mathematical object." ;
+           skos:exactMatch omp:E847 ;
+    skos:definition "Set is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use set as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E847 has direct rdfs:label Set@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "set"@en ;
+    skos:definition "Set is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use set as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E847 has direct rdfs:label Set@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Sine
+mathkg:Sine rdf:type owl:Class ;
+            rdfs:subClassOf mathkg:MathObject ;
+            obo:IAO_0000115 "Sine is a trigonometric function that relates an angle to a ratio in a right triangle and to coordinates on the unit circle." ;
+            dc:source "OpenMath Content Dictionaries" ;
+            rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+            rdfs:label "Sine"@en ;
+            skos:exactMatch <http://www.openmath.org/cd/transc1#sin> ;
+            skos:note "merge_status: mapped" ;
+    skos:definition "Sine is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use sine when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official transc1 Content Dictionary includes sin as the sine function; selected as canonical source for the Sine operation" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "sine"@en ;
+    skos:definition "Sine is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use sine when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official transc1 Content Dictionary includes sin as the sine function; selected as canonical source for the Sine operation" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Subset
+mathkg:Subset rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:RelationConcept ;
+              obo:IAO_0000115 "A subset is a set whose every element is also an element of another set." ;
+              dc:source "OpenMath Content Dictionaries" ;
+              rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+              rdfs:label "Subset"@en ;
+              skos:exactMatch <http://www.openmath.org/cd/set1#subset> ;
+              skos:note "merge_status: mapped" ;
+    skos:definition "Subset is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use subset when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:conceptType "MathRelation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official set1 Content Dictionary includes subset as a relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "subset"@en ;
+    skos:definition "Subset is a mathematical relation used to compare or connect mathematical objects."@en ;
+    skos:example "Use subset when explaining how two mathematical objects or expressions are connected."@en ;
+    mathkg:provenanceNote "OpenMath Official set1 Content Dictionary includes subset as a relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should make the relation explicit rather than relying only on symbol names."@en .
+
+###  http://example.org/mathkg/Subtraction
+mathkg:Subtraction rdf:type owl:Class ;
+                   rdfs:subClassOf mathkg:MathOperation ;
+                   obo:IAO_0000115 "Subtraction is the operation of finding the difference between quantities." ;
+                   dc:source "OpenMath Content Dictionaries" ;
+                   rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                   rdfs:label "Subtraction"@en ;
+                   skos:exactMatch <http://www.openmath.org/cd/arith1#minus> ;
+                   skos:note "merge_status: mapped" ;
+    skos:definition "Subtraction is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use subtraction when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official arith1 Content Dictionary includes minus as the binary subtraction symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "subtraction"@en ;
+    skos:definition "Subtraction is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use subtraction when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official arith1 Content Dictionary includes minus as the binary subtraction symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Tangent
+mathkg:Tangent rdf:type owl:Class ;
+               rdfs:subClassOf mathkg:MathObject ;
+               obo:IAO_0000115 "Tangent may denote a trigonometric function or a geometric tangent concept, depending on context." ;
+               dc:source "OpenMath Content Dictionaries" ;
+               rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+               rdfs:label "Tangent"@en ;
+               skos:exactMatch <http://www.openmath.org/cd/transc1#tan> ;
+               skos:note "merge_status: mapped" ;
+    skos:definition "Tangent is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use tangent when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:conceptType "MathOperation" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OpenMath Official transc1 Content Dictionary includes tan as the tangent function; selected as canonical source instead of unrelated OntoMathPRO matches such as Tangent geometry" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "tangent"@en ;
+    skos:definition "Tangent is a mathematical operation used to transform one or more inputs into a result."@en ;
+    skos:example "Use tangent when reading a step that applies a mathematical rule to inputs."@en ;
+    mathkg:provenanceNote "OpenMath Official transc1 Content Dictionary includes tan as the tangent function; selected as canonical source instead of unrelated OntoMathPRO matches such as Tangent geometry" ;
+    mathkg:accessibilityNote "Speech rendering should name the operation and, where possible, identify its operands and result."@en .
+
+###  http://example.org/mathkg/Triangle
+mathkg:Triangle rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "A triangle is a polygon with three sides and three angles." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                rdfs:label "Triangle"@en ;
+                skos:exactMatch omp:E1183 ;
+                skos:note "merge_status: mapped" ;
+    skos:definition "Triangle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use triangle as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1183 has direct English label Triangle and Russian label треугольник; selected as canonical source for Triangle" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "triangle"@en ;
+    skos:definition "Triangle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use triangle as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1183 has direct English label Triangle and Russian label треугольник; selected as canonical source for Triangle" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Variable
+mathkg:Variable rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "A variable is a symbol used to represent a value, object, or quantity that may change or be unspecified within a mathematical context." ;
+                dc:source "MathModDB" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review because no exact general Variable concept was found across OntoMathPRO, OntoMathEdu, MathModDB, or OpenMath." ;
+                rdfs:label "Variable"@en ;
+                skos:definition "A symbol representing an unspecified or changing mathematical value, object, or quantity." ;
+                skos:exactMatch <https://mardi4nfdi.de/mathmoddb#DecisionVariable> ;
+                skos:note "Provisional specialized source mapping." ,
+                          "merge_status: mapped" ;
+    skos:definition "Variable is a context-dependent mathematical role used inside expressions, formulas, or models."@en ;
+    skos:example "Use variable when a symbol's meaning depends on its role in an expression or model."@en ;
+    mathkg:conceptType "Role" ;
+    mathkg:kindRoleClassification "role" ;
+    mathkg:mappingQuality "provisional_specialized_source_match" ;
+    mathkg:provenanceNote "MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources" ;
+    mathkg:accessibilityNote "Speech rendering should preserve the expression context because this concept changes meaning by role."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: provisional_specialized_source_match" ;
+    skos:altLabel "variable"@en ;
+    skos:definition "Variable is a context-dependent mathematical role used inside expressions, formulas, or models."@en ;
+    skos:example "Use variable when a symbol's meaning depends on its role in an expression or model."@en ;
+    mathkg:provenanceNote "MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources" ;
+    mathkg:accessibilityNote "Speech rendering should preserve the expression context because this concept changes meaning by role."@en .
+
+###  http://example.org/mathkg/Variance
+mathkg:Variance rdf:type owl:Class ;
+                rdfs:subClassOf mathkg:MathObject ;
+                obo:IAO_0000115 "Variance is a measure of how far values in a distribution spread from their mean." ;
+                dc:source "OntoMathPRO" ;
+                rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+                rdfs:label "Variance"@en ;
+                skos:exactMatch omp:E2573 ;
+                skos:note "merge_status: mapped" ;
+    skos:definition "Variance is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use variance as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2573 has English label Dispersion and Russian label дисперсия; selected as canonical source for the general Variance concept" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "variance"@en ;
+    skos:definition "Variance is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use variance as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E2573 has English label Dispersion and Russian label дисперсия; selected as canonical source for the general Variance concept" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Vector
+mathkg:Vector rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "A vector is a mathematical object with magnitude and direction, or an ordered list of components depending on context." ;
+              dc:source "OntoMathPRO" ;
+              rdfs:comment "Mapped from OntoMathPRO mathematics:E1693 based on a direct Vector@en label match." ;
+              rdfs:label "Vector"@en ;
+              skos:definition "A vector is a mathematical object with magnitude and direction, or an ordered list of components depending on context." ;
+              skos:exactMatch omp:E1693 ;
+    skos:definition "Vector is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use vector as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "canonical_match" ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1693 has direct rdfs:label Vector@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "ready_for_metadata_review" ;
+    skos:note "merge_status: canonical_match" ;
+    skos:altLabel "vector"@en ;
+    skos:definition "Vector is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use vector as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OntoMathPRO class mathematics:E1693 has direct rdfs:label Vector@en; selected as canonical IRI according to Week 2 rules" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  http://example.org/mathkg/Volume
+mathkg:Volume rdf:type owl:Class ;
+              rdfs:subClassOf mathkg:MathObject ;
+              obo:IAO_0000115 "Volume is the measure of the amount of three-dimensional space occupied by an object or region." ;
+              dc:source "OpenMath Experimental" ;
+              rdfs:comment "Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review." ;
+              rdfs:label "Volume"@en ;
+              skos:exactMatch <http://www.openmath.org/cd/dimensions1#volume> ;
+              skos:note "Mapped using OpenMath experimental dimensions1#volume; stronger canonical source may be reviewed later." ,
+                        "merge_status: mapped" ;
+    skos:definition "Volume is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use volume as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:conceptType "MathObject" ;
+    mathkg:kindRoleClassification "kind" ;
+    mathkg:mappingQuality "exact_label_match_experimental_source" ;
+    mathkg:provenanceNote "OpenMath experimental dimensions1 Content Dictionary includes exact symbol name volume; selected as source IRI for Volume with experimental-source status noted" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en ;
+    mathkg:reviewStatus "needs_definition_review" ;
+    skos:note "merge_status: exact_label_match_experimental_source" ;
+    skos:altLabel "volume"@en ;
+    skos:definition "Volume is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse."@en ;
+    skos:example "Use volume as the spoken semantic name for this concept in accessible math output."@en ;
+    mathkg:provenanceNote "OpenMath experimental dimensions1 Content Dictionary includes exact symbol name volume; selected as source IRI for Volume with experimental-source status noted" ;
+    mathkg:accessibilityNote "Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous."@en .
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

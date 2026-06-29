@@ -1,0 +1,5 @@
+{
+  "backend": "mock",
+  "text": "arXiv 2606.19198v1. Equation |n_x\u00b7v|. Matched concepts: Norm, Variable, Multiplication. Variable means a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Multiplication means a Multiplication is a mathematical operation or operator that transforms one or more inputs into a result.",
+  "ssml": "<speak version=\"1.0\" xml:lang=\"en-US\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name=\"en-US-JennyNeural\"><prosody rate=\"-8%\" pitch=\"+1st\" volume=\"medium\">arXiv 2606.19198v1.<break time=\"420ms\"/> Equation |n_x\u00b7v|.<break time=\"420ms\"/> Matched concepts:<break time=\"320ms\"/> Norm, Variable, Multiplication.<break time=\"420ms\"/> Variable means a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.<break time=\"420ms\"/> Multiplication means a Multiplication is a mathematical operation or operator that transforms one or more inputs into a result.</prosody></voice></speak>"
+}

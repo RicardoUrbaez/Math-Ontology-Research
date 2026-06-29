@@ -1,0 +1,41 @@
+metric	metric_value	metric_type
+abox_axiom_count	10795	single_value
+abox_axiom_count_incl	10795	single_value
+annotation_property_count	31	single_value
+annotation_property_count_incl	31	single_value
+axiom_count	18035	single_value
+axiom_count_incl	18035	single_value
+class_count	8	single_value
+class_count_incl	8	single_value
+dataproperty_count	11	single_value
+dataproperty_count_incl	11	single_value
+datatypes_count	7	single_value
+datatypes_count_incl	7	single_value
+individual_count	1418	single_value
+individual_count_incl	1418	single_value
+logical_axiom_count	11010	single_value
+logical_axiom_count_incl	11010	single_value
+obj_property_count	51	single_value
+obj_property_count_incl	51	single_value
+ontology_anno_count	20	single_value
+ontology_iri	https://mardi4nfdi.de/mathmoddb	single_value
+ontology_version_iri	https://mardi4nfdi.de/mathmoddb/1.0.0	single_value
+owl2	false	single_value
+owl2_dl	false	single_value
+owl2_el	false	single_value
+owl2_ql	false	single_value
+owl2_rl	false	single_value
+owl2dl_profile_violation	UseOfDefinedDatatypeInLiteral 3359	map_value
+owl2dl_profile_violation	UseOfReservedVocabularyForAnnotationPropertyIRI 1	map_value
+owl2dl_profile_violation	UseOfUnknownDatatype 1	map_value
+rbox_axiom_count	61	single_value
+rbox_axiom_count_incl	61	single_value
+rdfs	false	single_value
+rule_count	0	single_value
+rule_count_incl	0	single_value
+signature_entity_count	1526	single_value
+signature_entity_count_incl	1526	single_value
+tbox_axiom_count	154	single_value
+tbox_axiom_count_incl	154	single_value
+tboxrbox_axiom_count	215	single_value
+tboxrbox_axiom_count_incl	215	single_value

@@ -1,0 +1,5 @@
+{
+  "backend": "mock",
+  "text": "arXiv 2606.19200v1. Equation \u22652. Matched concepts: Inequality, Number. Inequality means an Inequality is a mathematical relation that specifies how two or more mathematical objects are connected. Number means a Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+  "ssml": "<speak version=\"1.0\" xml:lang=\"en-US\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name=\"en-US-JennyNeural\"><prosody rate=\"-8%\" pitch=\"+1st\" volume=\"medium\">arXiv 2606.19200v1.<break time=\"420ms\"/> Equation \u22652.<break time=\"420ms\"/> Matched concepts:<break time=\"320ms\"/> Inequality, Number.<break time=\"420ms\"/> Inequality means an Inequality is a mathematical relation that specifies how two or more mathematical objects are connected.<break time=\"420ms\"/> Number means a Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</prosody></voice></speak>"
+}

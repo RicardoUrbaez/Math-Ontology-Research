@@ -1,0 +1,1557 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/mathkg/"
+     xml:base="http://example.org/mathkg/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:IAO="http://purl.obolibrary.org/obo/IAO_"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:omp="http://cll.niimm.ksu.ru/ontologies/mathematics#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:mathkg="http://example.org/mathkg/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://example.org/mathkg/">
+        <dc:description>Initial Week 2 seed merge ontology for a math accessibility knowledge graph. This file defines project-local classes for verified mathematical concepts and links them to canonical OntoMathPRO IRIs using the Week 2 cross-ontology mapping table.</dc:description>
+        <dc:license>Research prototype for academic use; source ontologies retain their original licenses.</dc:license>
+        <dc:source>OntoMathPRO, MathModDB, OntoMathEdu, OpenMath Content Dictionaries</dc:source>
+        <dc:title>Math Accessibility Knowledge Graph Seed Ontology</dc:title>
+        <dcterms:license>Research prototype for academic use; source ontologies retain their original licenses.</dcterms:license>
+        <rdfs:comment>Initial Week 2 seed merge ontology based on the verified cross-ontology mapping table and canonical IRI review process.</rdfs:comment>
+        <rdfs:label>Math Accessibility Knowledge Graph Seed Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/mathkg/accessibilityNote -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/mathkg/accessibilityNote">
+        <obo:IAO_0000115 xml:lang="en">An annotation property recording speech, readability, or accessibility guidance for a concept.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Accessibility note</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/mathkg/conceptType -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/mathkg/conceptType">
+        <obo:IAO_0000115 xml:lang="en">An annotation property recording the project-level type assigned to a mathematical concept.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Concept type</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/mathkg/kindRoleClassification -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/mathkg/kindRoleClassification">
+        <obo:IAO_0000115 xml:lang="en">An annotation property recording whether a concept is treated as a rigid kind or a context-dependent role.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Kind/role classification</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/mathkg/mappingQuality -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/mathkg/mappingQuality">
+        <obo:IAO_0000115 xml:lang="en">An annotation property recording the confidence or decision status for a concept mapping.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Mapping quality</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/mathkg/provenanceNote -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/mathkg/provenanceNote">
+        <obo:IAO_0000115 xml:lang="en">An annotation property recording source and merge-decision notes for a concept.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Provenance note</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://example.org/mathkg/reviewStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://example.org/mathkg/reviewStatus">
+        <obo:IAO_0000115 xml:lang="en">An annotation property recording whether a concept metadata record is ready or needs further review.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Review status</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/mathkg/MathRelation -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/MathRelation">
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115>A mathematical relation property connects mathematical objects in the math accessibility knowledge graph.</obo:IAO_0000115>
+        <rdfs:comment>ObjectProperty root added to satisfy the Week 2 OWL 2 DL requirement for a MathRelation object-property subhierarchy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Math Relation</rdfs:label>
+        <skos:definition xml:lang="en">An upper-level object property used to organize mathematical relations between mathematical objects.</skos:definition>
+        <skos:note xml:lang="en">Upper-level object property branch for mathematical relations.</skos:note>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/dependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/dependsOn">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115 xml:lang="en">Relates a mathematical object or concept to another concept it depends on.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">depends on</rdfs:label>
+        <skos:definition xml:lang="en">Relates a mathematical object or concept to another concept it depends on.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/hasElement -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/hasElement">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <owl:inverseOf rdf:resource="http://example.org/mathkg/isElementOf"/>
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115 xml:lang="en">Relates a mathematical object, such as a set, to an element that belongs to it.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has element</rdfs:label>
+        <skos:definition xml:lang="en">Relates a mathematical object, such as a set, to an element that belongs to it.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/hasOperand -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/hasOperand">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <obo:IAO_0000115>Connects a mathematical operation to one of its input mathematical objects.</obo:IAO_0000115>
+        <rdfs:label>has operand</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/hasRelation -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/hasRelation">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <obo:IAO_0000115>Connects a mathematical object to a relation concept or related mathematical object.</obo:IAO_0000115>
+        <rdfs:label>has relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/hasResult">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <obo:IAO_0000115>Connects a mathematical operation to its output or result.</obo:IAO_0000115>
+        <rdfs:label>has result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/isElementOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/isElementOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115 xml:lang="en">Relates an element to the mathematical object it belongs to.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">is element of</rdfs:label>
+        <skos:definition xml:lang="en">Relates an element to the mathematical object it belongs to.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/isEqualTo -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/isEqualTo">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115 xml:lang="en">Relates two mathematical objects that are considered equal.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">is equal to</rdfs:label>
+        <skos:definition xml:lang="en">Relates two mathematical objects that are considered equal.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/isLessThan -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/isLessThan">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115 xml:lang="en">Relates one mathematical object or value to another that is greater than it.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">is less than</rdfs:label>
+        <skos:definition xml:lang="en">Relates one mathematical object or value to another that is greater than it.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/mathkg/isSubsetOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mathkg/isSubsetOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/mathkg/MathRelation"/>
+        <rdfs:domain rdf:resource="http://example.org/mathkg/MathObject"/>
+        <rdfs:range rdf:resource="http://example.org/mathkg/MathObject"/>
+        <obo:IAO_0000115 xml:lang="en">Relates one set to another set that contains it.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">is subset of</rdfs:label>
+        <skos:definition xml:lang="en">Relates one set to another set that contains it.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/mathkg/Addition -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Addition">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1315 has direct rdfs:label Addition@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>Addition is the operation of combining quantities to produce their sum.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1315 based on a direct Addition@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Addition</rdfs:label>
+        <skos:altLabel xml:lang="en">addition</skos:altLabel>
+        <skos:definition xml:lang="en">Addition is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:definition>Addition is the operation of combining quantities to produce their sum.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1315"/>
+        <skos:example xml:lang="en">Use addition when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Angle -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Angle">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1187 has direct English label Angle and Russian label угол; selected as canonical source for Angle</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>An angle is a measure of rotation or the figure formed by two rays sharing a common endpoint.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Angle</rdfs:label>
+        <skos:altLabel xml:lang="en">angle</skos:altLabel>
+        <skos:definition xml:lang="en">Angle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1187"/>
+        <skos:example xml:lang="en">Use angle as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Area -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Area">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>MathModDB individual mathmoddb:Area has direct English label Area and description as a quantity expressing the extent of a two-dimensional surface or shape; selected as canonical source for Area</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Area is the measure of the size of a two-dimensional region.</obo:IAO_0000115>
+        <dc:source>MathModDB</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
+        <skos:altLabel xml:lang="en">area</skos:altLabel>
+        <skos:definition xml:lang="en">Area is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="https://mardi4nfdi.de/mathmoddb#Area"/>
+        <skos:example xml:lang="en">Use area as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Circle -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Circle">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E109 has direct English label Circle and Russian label окружность; selected as canonical source for Circle</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A circle is the set of points in a plane that are all the same distance from a given center point.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Circle</rdfs:label>
+        <skos:altLabel xml:lang="en">circle</skos:altLabel>
+        <skos:definition xml:lang="en">Circle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E109"/>
+        <skos:example xml:lang="en">Use circle as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Coefficient -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Coefficient">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should preserve the expression context because this concept changes meaning by role.</accessibilityNote>
+        <conceptType>Role</conceptType>
+        <kindRoleClassification>role</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2129 has direct English label Coefficient and Russian label коэффициент; selected as canonical source for Coefficient</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A coefficient is a numerical or symbolic factor that multiplies another term in an expression.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review. Classified under MathematicalConcept pending review of a dedicated role hierarchy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Coefficient</rdfs:label>
+        <skos:altLabel xml:lang="en">coefficient</skos:altLabel>
+        <skos:definition xml:lang="en">Coefficient is a context-dependent mathematical role used inside expressions, formulas, or models.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2129"/>
+        <skos:example xml:lang="en">Use coefficient when a symbol&apos;s meaning depends on its role in an expression or model.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/ComplexNumber -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/ComplexNumber">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2127 has direct rdfs:label Complex number@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A complex number is a number with a real part and an imaginary part.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E2127 based on a direct Complex number@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Complex Number</rdfs:label>
+        <skos:altLabel xml:lang="en">complex number</skos:altLabel>
+        <skos:altLabel xml:lang="en">complexnumber</skos:altLabel>
+        <skos:definition>A complex number is a number with a real part and an imaginary part.</skos:definition>
+        <skos:definition xml:lang="en">Complex Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2127"/>
+        <skos:example xml:lang="en">Use complex number as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Constant -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Constant">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should preserve the expression context because this concept changes meaning by role.</accessibilityNote>
+        <conceptType>Role</conceptType>
+        <kindRoleClassification>role</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2134 has direct English label Constant and Russian labels Постоянная and Константа; selected as canonical source for Constant</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A constant is a value that is fixed within a given mathematical context.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review. Classified under MathematicalConcept pending review of a dedicated role hierarchy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Constant</rdfs:label>
+        <skos:altLabel xml:lang="en">constant</skos:altLabel>
+        <skos:definition xml:lang="en">Constant is a context-dependent mathematical role used inside expressions, formulas, or models.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2134"/>
+        <skos:example xml:lang="en">Use constant when a symbol&apos;s meaning depends on its role in an expression or model.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Cosine -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Cosine">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official transc1 Content Dictionary includes cos as the cosine function; selected as canonical source for the Cosine operation</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Cosine is a trigonometric function that relates an angle to a ratio in a right triangle and to coordinates on the unit circle.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cosine</rdfs:label>
+        <skos:altLabel xml:lang="en">cosine</skos:altLabel>
+        <skos:definition xml:lang="en">Cosine is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/transc1#cos"/>
+        <skos:example xml:lang="en">Use cosine when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Derivative -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Derivative">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official calculus1 Content Dictionary includes diff for ordinary differentiation of a unary function; selected as canonical source because no safer general OntoMathPRO derivative class was confirmed</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A derivative measures how a quantity changes with respect to another quantity.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Derivative</rdfs:label>
+        <skos:altLabel xml:lang="en">derivative</skos:altLabel>
+        <skos:definition xml:lang="en">Derivative is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/calculus1#diff"/>
+        <skos:example xml:lang="en">Use derivative when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Determinant -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Determinant">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official linalg1 Content Dictionary includes determinant as the unary function returning the determinant of a square matrix; selected as canonical source for Determinant</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A determinant is a value computed from a square matrix that captures key algebraic properties of the matrix.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Determinant</rdfs:label>
+        <skos:altLabel xml:lang="en">determinant</skos:altLabel>
+        <skos:definition xml:lang="en">Determinant is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/linalg1#determinant"/>
+        <skos:example xml:lang="en">Use determinant when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Division -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Division">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official arith1 Content Dictionary includes divide as the binary division symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Division is the operation of partitioning a quantity into equal parts or determining how many times one quantity contains another.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Division</rdfs:label>
+        <skos:altLabel xml:lang="en">division</skos:altLabel>
+        <skos:definition xml:lang="en">Division is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/arith1#divide"/>
+        <skos:example xml:lang="en">Use division when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Element -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Element">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>provisional_specialized_source_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2143 has English label Element of the theory of algebra and Russian label элемент теории алгебры; selected as provisional source IRI for Element because no clean general Element class was found</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>An element is an object considered as a member of a set or collection.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+        <skos:altLabel xml:lang="en">element</skos:altLabel>
+        <skos:definition xml:lang="en">Element is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2143"/>
+        <skos:example xml:lang="en">Use element as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>Provisional specialized source mapping.</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+        <skos:note>merge_status: provisional_specialized_source_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Equality -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Equality">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/RelationConcept"/>
+        <accessibilityNote xml:lang="en">Speech rendering should make the relation explicit rather than relying only on symbol names.</accessibilityNote>
+        <conceptType>MathRelation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Equality is the relation that holds when two expressions represent the same value or object.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equality</rdfs:label>
+        <skos:altLabel xml:lang="en">equality</skos:altLabel>
+        <skos:definition xml:lang="en">Equality is a mathematical relation used to compare or connect mathematical objects.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/relation1#eq"/>
+        <skos:example xml:lang="en">Use equality when explaining how two mathematical objects or expressions are connected.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Equation -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Equation">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1891 has direct rdfs:label Equation@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>An equation is a mathematical statement that asserts two expressions are equal.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1891 based on a direct Equation@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equation</rdfs:label>
+        <skos:altLabel xml:lang="en">equation</skos:altLabel>
+        <skos:definition>An equation is a mathematical statement that asserts two expressions are equal.</skos:definition>
+        <skos:definition xml:lang="en">Equation is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1891"/>
+        <skos:example xml:lang="en">Use equation as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/ExponentialFunction -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/ExponentialFunction">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1597 has English label Exponential and Russian label показательная функция; selected instead of mathematics:E1609 because E1609 has Russian label степенная функция, which indicates power function</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>An exponential function is a function in which the variable appears in the exponent.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exponential Function</rdfs:label>
+        <skos:altLabel xml:lang="en">exponential function</skos:altLabel>
+        <skos:altLabel xml:lang="en">exponentialfunction</skos:altLabel>
+        <skos:definition xml:lang="en">Exponential Function is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1597"/>
+        <skos:example xml:lang="en">Use exponential function as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Expression -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Expression">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>provisional_specialized_source_match</mappingQuality>
+        <provenanceNote>OpenMath experimental field1 Content Dictionary includes exact symbol name expression for arithmetic expressions over a field; selected as provisional source IRI for Expression because no clean general Expression class was found</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>An expression is a combination of symbols that represents a mathematical value, rule, or object.</obo:IAO_0000115>
+        <dc:source>OpenMath Experimental</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Expression</rdfs:label>
+        <skos:altLabel xml:lang="en">expression</skos:altLabel>
+        <skos:definition xml:lang="en">Expression is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/field1#expression"/>
+        <skos:example xml:lang="en">Use expression as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>Provisional specialized source mapping.</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+        <skos:note>merge_status: provisional_specialized_source_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Formula -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Formula">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1988 has direct English label Formula and Russian label формула; selected as canonical source for Formula</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A formula is a mathematical expression or rule used to calculate, describe, or summarize a relationship.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Formula</rdfs:label>
+        <skos:altLabel xml:lang="en">formula</skos:altLabel>
+        <skos:definition xml:lang="en">Formula is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1988"/>
+        <skos:example xml:lang="en">Use formula as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Function -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Function">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1505 has direct rdfs:label Function@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A function is a rule or mapping that assigns each input exactly one output.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1505 based on a direct Function@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+        <skos:altLabel xml:lang="en">function</skos:altLabel>
+        <skos:definition>A function is a rule or mapping that assigns each input exactly one output.</skos:definition>
+        <skos:definition xml:lang="en">Function is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1505"/>
+        <skos:example xml:lang="en">Use function as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Graph -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Graph">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E887 has direct English label Graph and Russian label граф; selected as canonical source for Graph</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Graph may denote either a graph-theoretic structure or a plotted visual representation, depending on context.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Graph</rdfs:label>
+        <skos:altLabel xml:lang="en">graph</skos:altLabel>
+        <skos:definition xml:lang="en">Graph is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E887"/>
+        <skos:example xml:lang="en">Use graph as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Inequality -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Inequality">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/RelationConcept"/>
+        <accessibilityNote xml:lang="en">Speech rendering should make the relation explicit rather than relying only on symbol names.</accessibilityNote>
+        <conceptType>MathRelation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1202 has direct rdfs:label Inequality@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>An inequality is a mathematical statement that compares two expressions as not equal in value.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1202 based on a direct Inequality@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inequality</rdfs:label>
+        <skos:altLabel xml:lang="en">inequality</skos:altLabel>
+        <skos:definition>An inequality is a mathematical statement that compares two expressions as not equal in value.</skos:definition>
+        <skos:definition xml:lang="en">Inequality is a mathematical relation used to compare or connect mathematical objects.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1202"/>
+        <skos:example xml:lang="en">Use inequality when explaining how two mathematical objects or expressions are connected.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Integer -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Integer">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2118 has Russian label Целое число and English label A whole number; selected as canonical IRI for Integer according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>An integer is a whole number that may be positive, negative, or zero.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped to OntoMathPRO mathematics:E2118 because it carries the Russian label for integer and the English label A whole number.</rdfs:comment>
+        <rdfs:label xml:lang="en">Integer</rdfs:label>
+        <skos:altLabel xml:lang="en">integer</skos:altLabel>
+        <skos:definition>An integer is a whole number that may be positive, negative, or zero.</skos:definition>
+        <skos:definition xml:lang="en">Integer is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2118"/>
+        <skos:example xml:lang="en">Use integer as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Integral -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Integral">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1307 has rdfs:label Integrating@en and a Russian comment stating that the process of finding an integral is integration; selected as the closest operation-level canonical IRI for Integral</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>An integral represents accumulation, area, or the inverse process of differentiation, depending on context.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped to OntoMathPRO mathematics:E1307 as the closest operation-level match because the source uses Integrating@en rather than Integral@en.</rdfs:comment>
+        <rdfs:label xml:lang="en">Integral</rdfs:label>
+        <skos:altLabel xml:lang="en">integral</skos:altLabel>
+        <skos:definition>An integral represents accumulation, area, or the inverse process of differentiation, depending on context.</skos:definition>
+        <skos:definition xml:lang="en">Integral is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1307"/>
+        <skos:example xml:lang="en">Use integral when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Limit -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Limit">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official limit1 Content Dictionary includes limit for the limit of a unary function; selected as canonical source because OntoMathPRO results showed narrower theorem-related limit concepts rather than a general limit concept</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A limit describes the value that a function, sequence, or expression approaches under specified conditions.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Limit</rdfs:label>
+        <skos:altLabel xml:lang="en">limit</skos:altLabel>
+        <skos:definition xml:lang="en">Limit is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/limit1#limit"/>
+        <skos:example xml:lang="en">Use limit as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Line -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Line">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1168 has direct English label Line and Russian label прямая; selected as canonical source for Line</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A line is a straight one-dimensional geometric object extending without end in both directions.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Line</rdfs:label>
+        <skos:altLabel xml:lang="en">line</skos:altLabel>
+        <skos:definition xml:lang="en">Line is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1168"/>
+        <skos:example xml:lang="en">Use line as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Logarithm -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Logarithm">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1308 has English label Taking the logarithm and Russian label Логарифмирование; selected as the canonical operation-level source for Logarithm</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A logarithm gives the exponent to which a base must be raised to produce a given value.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Logarithm</rdfs:label>
+        <skos:altLabel xml:lang="en">logarithm</skos:altLabel>
+        <skos:definition xml:lang="en">Logarithm is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1308"/>
+        <skos:example xml:lang="en">Use logarithm when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/MathObject -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/MathObject">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathematicalConcept"/>
+        <obo:IAO_0000115>A mathematical object is an entity such as a number, set, equation, or structure that can be named, described, or reasoned about in mathematics.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Math Object</rdfs:label>
+        <skos:definition xml:lang="en">A rigid mathematical entity or concept that can be treated as an object in the math accessibility knowledge graph.</skos:definition>
+        <skos:note xml:lang="en">Upper-level rigid class for mathematical objects.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/MathOperation -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/MathOperation">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathematicalConcept"/>
+        <obo:IAO_0000115>A mathematical operation is a process or rule that takes mathematical inputs and produces an output or result.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Math Operation</rdfs:label>
+        <skos:definition xml:lang="en">A processual mathematical concept representing an action, procedure, or transformation applied to mathematical objects.</skos:definition>
+        <skos:note xml:lang="en">Upper-level processual class for mathematical operations.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/MathematicalConcept -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/MathematicalConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115>A general concept used to represent mathematical objects, operations, or relations in the math accessibility knowledge graph.</obo:IAO_0000115>
+        <rdfs:comment>Top-level parent class added to organize the Week 2 seed ontology hierarchy.</rdfs:comment>
+        <rdfs:label>Mathematical Concept</rdfs:label>
+        <skos:definition>A broad category for mathematical entities represented in the math accessibility knowledge graph.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Matrix -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Matrix">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1703 has direct rdfs:label Matrix@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1703 based on a direct Matrix@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Matrix</rdfs:label>
+        <skos:altLabel xml:lang="en">matrix</skos:altLabel>
+        <skos:definition>A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns.</skos:definition>
+        <skos:definition xml:lang="en">Matrix is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1703"/>
+        <skos:example xml:lang="en">Use matrix as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Mean -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Mean">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1666 has English label Average value and Russian label Среднее значение; selected as canonical source for the Mean concept</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>The mean is a measure of central tendency, often computed by dividing the sum of values by the number of values.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mean</rdfs:label>
+        <skos:altLabel xml:lang="en">mean</skos:altLabel>
+        <skos:definition xml:lang="en">Mean is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1666"/>
+        <skos:example xml:lang="en">Use mean when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Multiplication -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Multiplication">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1318 has direct rdfs:label Multiplication@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>Multiplication is the operation of combining equal groups or scaling one quantity by another.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1318 based on a direct Multiplication@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Multiplication</rdfs:label>
+        <skos:altLabel xml:lang="en">multiplication</skos:altLabel>
+        <skos:definition xml:lang="en">Multiplication is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:definition>Multiplication is the operation of combining equal groups or scaling one quantity by another.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1318"/>
+        <skos:example xml:lang="en">Use multiplication when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/NaturalNumber -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/NaturalNumber">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2119 has direct rdfs:label Natural number@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A natural number is a counting number used to represent position or quantity in a sequence.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E2119 based on a direct Natural number@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Natural Number</rdfs:label>
+        <skos:altLabel xml:lang="en">natural number</skos:altLabel>
+        <skos:altLabel xml:lang="en">naturalnumber</skos:altLabel>
+        <skos:definition>A natural number is a counting number used to represent position or quantity in a sequence.</skos:definition>
+        <skos:definition xml:lang="en">Natural Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2119"/>
+        <skos:example xml:lang="en">Use natural number as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Number -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Number">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2114 has direct rdfs:label Number@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A number is a mathematical object used to count, measure, or represent quantity.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E2114 based on a direct Number@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Number</rdfs:label>
+        <skos:altLabel xml:lang="en">number</skos:altLabel>
+        <skos:definition>A number is a mathematical object used to count, measure, or represent quantity.</skos:definition>
+        <skos:definition xml:lang="en">Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2114"/>
+        <skos:example xml:lang="en">Use number as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Operation -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Operation">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E34 has direct rdfs:label Operation@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>An operation is a process or rule that transforms one or more mathematical inputs into an output.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E34 based on a direct Operation@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operation</rdfs:label>
+        <skos:altLabel xml:lang="en">operation</skos:altLabel>
+        <skos:definition>An operation is a process or rule that transforms one or more mathematical inputs into an output.</skos:definition>
+        <skos:definition xml:lang="en">Operation is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E34"/>
+        <skos:example xml:lang="en">Use operation when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Point -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Point">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E293 has direct English label Point and Russian label точка; selected as canonical source for Point</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A point is an exact location in space or in a coordinate system.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+        <skos:altLabel xml:lang="en">point</skos:altLabel>
+        <skos:definition xml:lang="en">Point is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E293"/>
+        <skos:example xml:lang="en">Use point as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Polynomial -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Polynomial">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2920 has Russian labels Полином and Многочлен, which correspond to Polynomial; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A polynomial is an expression made from variables, constants, and powers combined using addition, subtraction, and multiplication.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped to OntoMathPRO mathematics:E2920 using the Russian labels Polinom and Mnogochlen because no English Polynomial@en label was found.</rdfs:comment>
+        <rdfs:label xml:lang="en">Polynomial</rdfs:label>
+        <skos:altLabel xml:lang="en">polynomial</skos:altLabel>
+        <skos:definition>A polynomial is an expression made from variables, constants, and powers combined using addition, subtraction, and multiplication.</skos:definition>
+        <skos:definition xml:lang="en">Polynomial is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2920"/>
+        <skos:example xml:lang="en">Use polynomial as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Probability -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Probability">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2410 has direct English label Probability and Russian label вероятность; selected as canonical source for the general Probability concept</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Probability is a measure of how likely an event is to occur.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Probability</rdfs:label>
+        <skos:altLabel xml:lang="en">probability</skos:altLabel>
+        <skos:definition xml:lang="en">Probability is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2410"/>
+        <skos:example xml:lang="en">Use probability as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/RationalNumber -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/RationalNumber">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2117 has direct rdfs:label Rational number@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A rational number is a number that can be written as a fraction of two integers with a nonzero denominator.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E2117 based on a direct Rational number@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rational Number</rdfs:label>
+        <skos:altLabel xml:lang="en">rational number</skos:altLabel>
+        <skos:altLabel xml:lang="en">rationalnumber</skos:altLabel>
+        <skos:definition>A rational number is a number that can be written as a fraction of two integers with a nonzero denominator.</skos:definition>
+        <skos:definition xml:lang="en">Rational Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2117"/>
+        <skos:example xml:lang="en">Use rational number as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/RealNumber -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/RealNumber">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2116 has direct rdfs:label Real number@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A real number is any number on the continuous number line, including rational and irrational values.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E2116 based on a direct Real number@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Real Number</rdfs:label>
+        <skos:altLabel xml:lang="en">real number</skos:altLabel>
+        <skos:altLabel xml:lang="en">realnumber</skos:altLabel>
+        <skos:definition>A real number is any number on the continuous number line, including rational and irrational values.</skos:definition>
+        <skos:definition xml:lang="en">Real Number is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2116"/>
+        <skos:example xml:lang="en">Use real number as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/RelationConcept -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/RelationConcept">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should make the relation explicit rather than relying only on symbol names.</accessibilityNote>
+        <conceptType>MathRelation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2452 has direct English label Relation and Russian label отношение; selected as canonical source for Relation</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A relation is a mathematical connection or association between objects, values, or sets.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <skos:altLabel xml:lang="en">relation</skos:altLabel>
+        <skos:definition xml:lang="en">Relation is a mathematical relation used to compare or connect mathematical objects.</skos:definition>
+        <skos:definition xml:lang="en">The conceptual category of mathematical relations, represented structurally by the MathRelation object-property hierarchy.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2452"/>
+        <skos:example xml:lang="en">Use relation when explaining how two mathematical objects or expressions are connected.</skos:example>
+        <skos:note xml:lang="en">This class preserves the validation concept Relation, while mathkg:MathRelation is used for the OWL object-property hierarchy.</skos:note>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Scalar -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Scalar">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>provisional_specialized_source_match</mappingQuality>
+        <provenanceNote>OpenMath experimental linalg5 Content Dictionary includes exact symbol name scalar for a scalar matrix / scalar constant times identity; selected as provisional source IRI for Scalar because no clean general Scalar class was found</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A scalar is a quantity described by magnitude alone, without direction.</obo:IAO_0000115>
+        <dc:source>OpenMath Experimental</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scalar</rdfs:label>
+        <skos:altLabel xml:lang="en">scalar</skos:altLabel>
+        <skos:definition xml:lang="en">Scalar is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/linalg5#scalar"/>
+        <skos:example xml:lang="en">Use scalar as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>Provisional specialized source mapping.</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+        <skos:note>merge_status: provisional_specialized_source_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Sequence -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Sequence">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2931 has Russian label Последовательность and source comment referencing mathematical sequence; selected as canonical source for Sequence</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A sequence is an ordered list of mathematical objects, often numbers or expressions.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sequence</rdfs:label>
+        <skos:altLabel xml:lang="en">sequence</skos:altLabel>
+        <skos:definition xml:lang="en">Sequence is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2931"/>
+        <skos:example xml:lang="en">Use sequence as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>Mapping based on the exact Russian OntoMathPRO label.</skos:note>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Series -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Series">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E3050 has Russian label Ряд and comment defining a mathematical series as an infinite sum of terms; selected as canonical source for Series</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A series is a sum formed from the terms of a sequence.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Series</rdfs:label>
+        <skos:altLabel xml:lang="en">series</skos:altLabel>
+        <skos:definition xml:lang="en">Series is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E3050"/>
+        <skos:example xml:lang="en">Use series as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>Mapping based on the exact Russian OntoMathPRO label.</skos:note>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Set -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Set">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E847 has direct rdfs:label Set@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A set is a collection of distinct objects considered as one mathematical object.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E847 based on a direct Set@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Set</rdfs:label>
+        <skos:altLabel xml:lang="en">set</skos:altLabel>
+        <skos:definition>A set is a collection of distinct objects considered as one mathematical object.</skos:definition>
+        <skos:definition xml:lang="en">Set is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E847"/>
+        <skos:example xml:lang="en">Use set as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Sine -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Sine">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official transc1 Content Dictionary includes sin as the sine function; selected as canonical source for the Sine operation</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Sine is a trigonometric function that relates an angle to a ratio in a right triangle and to coordinates on the unit circle.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sine</rdfs:label>
+        <skos:altLabel xml:lang="en">sine</skos:altLabel>
+        <skos:definition xml:lang="en">Sine is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/transc1#sin"/>
+        <skos:example xml:lang="en">Use sine when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Subset -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Subset">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/RelationConcept"/>
+        <accessibilityNote xml:lang="en">Speech rendering should make the relation explicit rather than relying only on symbol names.</accessibilityNote>
+        <conceptType>MathRelation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official set1 Content Dictionary includes subset as a relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A subset is a set whose every element is also an element of another set.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subset</rdfs:label>
+        <skos:altLabel xml:lang="en">subset</skos:altLabel>
+        <skos:definition xml:lang="en">Subset is a mathematical relation used to compare or connect mathematical objects.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/set1#subset"/>
+        <skos:example xml:lang="en">Use subset when explaining how two mathematical objects or expressions are connected.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Subtraction -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Subtraction">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathOperation"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official arith1 Content Dictionary includes minus as the binary subtraction symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Subtraction is the operation of finding the difference between quantities.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subtraction</rdfs:label>
+        <skos:altLabel xml:lang="en">subtraction</skos:altLabel>
+        <skos:definition xml:lang="en">Subtraction is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/arith1#minus"/>
+        <skos:example xml:lang="en">Use subtraction when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Tangent -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Tangent">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should name the operation and, where possible, identify its operands and result.</accessibilityNote>
+        <conceptType>MathOperation</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OpenMath Official transc1 Content Dictionary includes tan as the tangent function; selected as canonical source instead of unrelated OntoMathPRO matches such as Tangent geometry</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Tangent may denote a trigonometric function or a geometric tangent concept, depending on context.</obo:IAO_0000115>
+        <dc:source>OpenMath Content Dictionaries</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tangent</rdfs:label>
+        <skos:altLabel xml:lang="en">tangent</skos:altLabel>
+        <skos:definition xml:lang="en">Tangent is a mathematical operation used to transform one or more inputs into a result.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/transc1#tan"/>
+        <skos:example xml:lang="en">Use tangent when reading a step that applies a mathematical rule to inputs.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Triangle -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Triangle">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1183 has direct English label Triangle and Russian label треугольник; selected as canonical source for Triangle</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>A triangle is a polygon with three sides and three angles.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Triangle</rdfs:label>
+        <skos:altLabel xml:lang="en">triangle</skos:altLabel>
+        <skos:definition xml:lang="en">Triangle is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1183"/>
+        <skos:example xml:lang="en">Use triangle as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Variable -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Variable">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should preserve the expression context because this concept changes meaning by role.</accessibilityNote>
+        <conceptType>Role</conceptType>
+        <kindRoleClassification>role</kindRoleClassification>
+        <mappingQuality>provisional_specialized_source_match</mappingQuality>
+        <provenanceNote>MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A variable is a symbol used to represent a value, object, or quantity that may change or be unspecified within a mathematical context.</obo:IAO_0000115>
+        <dc:source>MathModDB</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review because no exact general Variable concept was found across OntoMathPRO, OntoMathEdu, MathModDB, or OpenMath.</rdfs:comment>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
+        <skos:altLabel xml:lang="en">variable</skos:altLabel>
+        <skos:definition>A symbol representing an unspecified or changing mathematical value, object, or quantity.</skos:definition>
+        <skos:definition xml:lang="en">Variable is a context-dependent mathematical role used inside expressions, formulas, or models.</skos:definition>
+        <skos:exactMatch rdf:resource="https://mardi4nfdi.de/mathmoddb#DecisionVariable"/>
+        <skos:example xml:lang="en">Use variable when a symbol&apos;s meaning depends on its role in an expression or model.</skos:example>
+        <skos:note>Provisional specialized source mapping.</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+        <skos:note>merge_status: provisional_specialized_source_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Variance -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Variance">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E2573 has English label Dispersion and Russian label дисперсия; selected as canonical source for the general Variance concept</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Variance is a measure of how far values in a distribution spread from their mean.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Variance</rdfs:label>
+        <skos:altLabel xml:lang="en">variance</skos:altLabel>
+        <skos:definition xml:lang="en">Variance is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2573"/>
+        <skos:example xml:lang="en">Use variance as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Vector -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Vector">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>canonical_match</mappingQuality>
+        <provenanceNote>OntoMathPRO class mathematics:E1693 has direct rdfs:label Vector@en; selected as canonical IRI according to Week 2 rules</provenanceNote>
+        <reviewStatus>ready_for_metadata_review</reviewStatus>
+        <obo:IAO_0000115>A vector is a mathematical object with magnitude and direction, or an ordered list of components depending on context.</obo:IAO_0000115>
+        <dc:source>OntoMathPRO</dc:source>
+        <rdfs:comment>Mapped from OntoMathPRO mathematics:E1693 based on a direct Vector@en label match.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vector</rdfs:label>
+        <skos:altLabel xml:lang="en">vector</skos:altLabel>
+        <skos:definition>A vector is a mathematical object with magnitude and direction, or an ordered list of components depending on context.</skos:definition>
+        <skos:definition xml:lang="en">Vector is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1693"/>
+        <skos:example xml:lang="en">Use vector as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>merge_status: canonical_match</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/mathkg/Volume -->
+
+    <owl:Class rdf:about="http://example.org/mathkg/Volume">
+        <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathObject"/>
+        <accessibilityNote xml:lang="en">Speech rendering should use the canonical label and a concise definition when the notation may be ambiguous.</accessibilityNote>
+        <conceptType>MathObject</conceptType>
+        <kindRoleClassification>kind</kindRoleClassification>
+        <mappingQuality>exact_label_match_experimental_source</mappingQuality>
+        <provenanceNote>OpenMath experimental dimensions1 Content Dictionary includes exact symbol name volume; selected as source IRI for Volume with experimental-source status noted</provenanceNote>
+        <reviewStatus>needs_definition_review</reviewStatus>
+        <obo:IAO_0000115>Volume is the measure of the amount of three-dimensional space occupied by an object or region.</obo:IAO_0000115>
+        <dc:source>OpenMath Experimental</dc:source>
+        <rdfs:comment>Included for Week 2 validation coverage; exact canonical IRI and cross-source equivalence require further review.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+        <skos:altLabel xml:lang="en">volume</skos:altLabel>
+        <skos:definition xml:lang="en">Volume is a mathematical concept used as an object, quantity, structure, or named idea in mathematical discourse.</skos:definition>
+        <skos:exactMatch rdf:resource="http://www.openmath.org/cd/dimensions1#volume"/>
+        <skos:example xml:lang="en">Use volume as the spoken semantic name for this concept in accessible math output.</skos:example>
+        <skos:note>Mapped using OpenMath experimental dimensions1#volume; stronger canonical source may be reviewed later.</skos:note>
+        <skos:note>merge_status: exact_label_match_experimental_source</skos:note>
+        <skos:note>merge_status: mapped</skos:note>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

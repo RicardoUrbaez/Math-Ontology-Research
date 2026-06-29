@@ -1,0 +1,11 @@
+query_id,query_name,execution_context,response_time_ms,result_count,status
+Q01,Q01 hierarchy traversal,local_static_ttl_scan,0.323,487,completed_locally_fuseki_not_required
+Q02,Q02 role hierarchy traversal,local_static_ttl_scan,0.257,13,completed_locally_fuseki_not_required
+Q03,Q03 synonym lookup,local_static_ttl_scan,0.401,914,completed_locally_fuseki_not_required
+Q04,Q04 kind role retrieval,local_static_ttl_scan,0.299,501,completed_locally_fuseki_not_required
+Q05,Q05 cross-domain discovery,local_static_ttl_scan,0.190,34,completed_locally_fuseki_not_required
+Q06,Q06 provenance trace,local_static_ttl_scan,0.594,501,completed_locally_fuseki_not_required
+Q07,Q07 semantic type operator,local_static_ttl_scan,0.271,32,completed_locally_fuseki_not_required
+Q08,Q08 semantic type relation,local_static_ttl_scan,0.188,8,completed_locally_fuseki_not_required
+Q09,Q09 example retrieval,local_static_ttl_scan,0.291,500,completed_locally_fuseki_not_required
+Q10,Q10 source exact match trace,local_static_ttl_scan,0.229,476,completed_locally_fuseki_not_required

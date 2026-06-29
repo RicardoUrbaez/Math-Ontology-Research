@@ -1,0 +1,5 @@
+{
+  "backend": "mock",
+  "text": "arXiv 2606.19322v1. Equation \u039b\u21aa\u0393. Matched concepts: Variable, Embedding. Variable means a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Embedding means embedding is a map that represents one mathematical object faithfully inside another structure.",
+  "ssml": "<speak version=\"1.0\" xml:lang=\"en-US\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name=\"en-US-JennyNeural\"><prosody rate=\"-8%\" pitch=\"+1st\" volume=\"medium\">arXiv 2606.19322v1.<break time=\"420ms\"/> Equation \u039b\u21aa\u0393.<break time=\"420ms\"/> Matched concepts:<break time=\"320ms\"/> Variable, Embedding.<break time=\"420ms\"/> Variable means a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.<break time=\"420ms\"/> Embedding means embedding is a map that represents one mathematical object faithfully inside another structure.</prosody></voice></speak>"
+}

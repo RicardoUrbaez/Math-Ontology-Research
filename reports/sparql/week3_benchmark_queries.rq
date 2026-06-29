@@ -1,0 +1,34 @@
+PREFIX mathkg: <http://example.org/mathkg/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+# Q01 hierarchy traversal
+SELECT ?concept ?label WHERE { ?concept rdfs:subClassOf mathkg:KindConcept ; rdfs:label ?label . } LIMIT 25
+
+# Q02 role hierarchy traversal
+SELECT ?concept ?label WHERE { ?concept rdfs:subClassOf mathkg:RoleConcept ; rdfs:label ?label . } LIMIT 25
+
+# Q03 synonym lookup
+SELECT ?concept ?alt WHERE { ?concept skos:altLabel ?alt . FILTER(CONTAINS(LCASE(?alt), "matrix")) }
+
+# Q04 kind role retrieval
+SELECT ?concept ?label ?kindRole WHERE { ?concept rdfs:label ?label ; mathkg:kindRoleType ?kindRole . } LIMIT 50
+
+# Q05 cross-domain discovery
+SELECT ?concept ?label WHERE { ?concept rdfs:label ?label ; mathkg:domainTag "linear-algebra" . }
+
+# Q06 provenance trace
+SELECT ?concept ?label ?source WHERE { ?concept rdfs:label ?label ; dc:source ?source . } LIMIT 50
+
+# Q07 semantic type operator
+SELECT ?concept ?label WHERE { ?concept rdfs:label ?label ; mathkg:semanticType "operator" . } LIMIT 50
+
+# Q08 semantic type relation
+SELECT ?concept ?label WHERE { ?concept rdfs:label ?label ; mathkg:semanticType "relation" . } LIMIT 50
+
+# Q09 example retrieval
+SELECT ?concept ?label ?example WHERE { ?concept rdfs:label ?label ; skos:example ?example . } LIMIT 25
+
+# Q10 source exact match trace
+SELECT ?concept ?match WHERE { ?concept skos:exactMatch ?match . } LIMIT 50

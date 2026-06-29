@@ -1,0 +1,42 @@
+[
+  {
+    "semantic_type": "operator",
+    "canonical": "{label}: an operation that transforms inputs into a result.",
+    "usage": "Used for operations such as addition, derivative, or determinant."
+  },
+  {
+    "semantic_type": "relation",
+    "canonical": "{label}: a relation that compares or connects mathematical objects.",
+    "usage": "Used for equality, subset, ordering, and equivalence concepts."
+  },
+  {
+    "semantic_type": "set",
+    "canonical": "{label}: a set-theoretic concept about collections or membership.",
+    "usage": "Used for set, subset, element, union, and intersection concepts."
+  },
+  {
+    "semantic_type": "function",
+    "canonical": "{label}: a function concept that associates inputs with outputs.",
+    "usage": "Used for named functions and function families."
+  },
+  {
+    "semantic_type": "scalar",
+    "canonical": "{label}: a named object, value, or quantity.",
+    "usage": "Used for numbers, constants, parameters, and general scalar terms."
+  },
+  {
+    "semantic_type": "vector",
+    "canonical": "{label}: a vector concept with components, direction, or coordinates.",
+    "usage": "Used for vector and vector-space concepts."
+  },
+  {
+    "semantic_type": "matrix",
+    "canonical": "{label}: a matrix concept about rectangular arrays or matrix operations.",
+    "usage": "Used for matrix, determinant, and related linear algebra concepts."
+  },
+  {
+    "semantic_type": "transformation",
+    "canonical": "{label}: a structure-preserving mapping or change.",
+    "usage": "Used for transformations, mappings, projections, and rotations."
+  }
+]

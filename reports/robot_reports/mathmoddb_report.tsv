@@ -1,0 +1,219 @@
+Level	Rule Name	Subject	Property	Value
+ERROR	missing_ontology_description	https://mardi4nfdi.de/mathmoddb	dc:description	
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Acceleration	rdfs:label	Acceleration@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Acceleration	rdfs:label	Beschleunigung@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#AgeOfAnIndividual	rdfs:label	Age of an Individual@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#AgeOfAnIndividual	rdfs:label	Ηλικία@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#AngularMomentum	rdfs:label	Angular Momentum@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#AngularMomentum	rdfs:label	Drehimpuls@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Area	rdfs:label	Area@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Area	rdfs:label	Fläche@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#AzimuthalAngle	rdfs:label	Azimuthal Angle@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#AzimuthalAngle	rdfs:label	Azimutwinkel@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#BasisFunction	rdfs:label	Basis Function@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#BasisFunction	rdfs:label	Basisfunktion@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#BooleanVariable	rdfs:label	Boolean Variable@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#BooleanVariable	rdfs:label	Boolesche Variable@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Capacitance	rdfs:label	Electric Capacitance@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Capacitance	rdfs:label	Elektrische Kapazität@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ComplexDimensionless	rdfs:label	Complex Number (Dimensionless)@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ComplexDimensionless	rdfs:label	Komplexe Zahl (dimensionslos)@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ComputationalTask	rdfs:label	Berechnungsaufgabe@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ComputationalTask	rdfs:label	Computational Task@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Concentration	rdfs:label	Concentration@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Concentration	rdfs:label	Konzentration@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Costs	rdfs:label	Costs@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Costs	rdfs:label	Kosten@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Covariance	rdfs:label	Covariance@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Covariance	rdfs:label	Kovarianz@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#CovarianceFunction	rdfs:label	Covariance Function@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#CovarianceFunction	rdfs:label	Kovarianzfunktion@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Density	rdfs:label	Density@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Density	rdfs:label	Dichte@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricCharge	rdfs:label	Electric Charge@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricCharge	rdfs:label	Elektrische Ladung@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricCharge	rdfs:label	Ηλεκτρικό φορτίο@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricConductivity	rdfs:label	Electric Conductivity@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricConductivity	rdfs:label	Elektrische Leitfähigkeit@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricCurrent	rdfs:label	Electric Current@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricCurrent	rdfs:label	Elektrischer Strom@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricCurrent	rdfs:label	Ηλεκτρικό ρεύμα@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricDipoleMoment	rdfs:label	Electric Dipole Moment@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricDipoleMoment	rdfs:label	Elektrisches Dipolmoment@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricField	rdfs:label	Electric Field@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricField	rdfs:label	Elektrisches Feld@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricPolarizability	rdfs:label	Electric Polarizability@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricPolarizability	rdfs:label	Elektrische Polarisierbarkeit@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricPotential	rdfs:label	Electric Potential@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricPotential	rdfs:label	Elektrisches Potenzial@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricVoltage	rdfs:label	Elektrische Spannung@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricVoltage	rdfs:label	Voltage@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ElectricVoltage	rdfs:label	Ηλεκτρική Τάση@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Energy	rdfs:label	Energie@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Energy	rdfs:label	Energy@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Energy	rdfs:label	Ενέργεια@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ExpectationValue	rdfs:label	Erwartungswert@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ExpectationValue	rdfs:label	Expectation Value@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Flux	rdfs:label	Fluss@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Flux	rdfs:label	Flux@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Force	rdfs:label	Force@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Force	rdfs:label	Kraft@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Force	rdfs:label	Δύναμη@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Frequency	rdfs:label	Frequency@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Frequency	rdfs:label	Frequenz@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Frequency	rdfs:label	Συχνότητα@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#IntegerDimensionless	rdfs:label	Ganze Zahl (dimensionslos)@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#IntegerDimensionless	rdfs:label	Integer Number (Dimensionless)@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#IntegerDimensionless	rdfs:label	Ακέραιος αριθμός@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Length	rdfs:label	Length@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Length	rdfs:label	Länge@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Length	rdfs:label	Μήκος@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MagneticField	rdfs:label	Magnetic Field@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MagneticField	rdfs:label	Magnetisches Feld@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Mass	rdfs:label	Mass@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Mass	rdfs:label	Masse@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Mass	rdfs:label	Μάζα@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MathematicalFormulation	rdfs:label	Mathematical Formulation@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MathematicalFormulation	rdfs:label	Mathematische Formulierung@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MathematicalModel	rdfs:label	Mathematical Model@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MathematicalModel	rdfs:label	Mathematisches Modell@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MeanFieldEhrenfestModel	rdfs:label	Mean Field Ehrenfest@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MeanFieldEhrenfestModel	rdfs:label	Mean-Field Ehrenfest Model@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MechanicalDeformation	rdfs:label	Mechanical Deformation@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MechanicalDeformation	rdfs:label	Mechanische Deformation@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MechanicalStrain	rdfs:label	Mechanical Strain@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MechanicalStrain	rdfs:label	Mechanische Dehnung@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MechanicalStress	rdfs:label	Mechanical Stress@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#MechanicalStress	rdfs:label	Mechanische Spannung@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Momentum	rdfs:label	Impuls@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Momentum	rdfs:label	Momentum@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Momentum	rdfs:label	Ορμή@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#NumberDimensionless	rdfs:label	Number (Dimensionless)@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#NumberDimensionless	rdfs:label	Zahl (dimensionslos)@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#PolarAngle	rdfs:label	Polar Angle@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#PolarAngle	rdfs:label	Polarwinkel@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Position	rdfs:label	Ort@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Position	rdfs:label	Position@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Pressure	rdfs:label	Druck@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Pressure	rdfs:label	Pressure@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Pressure	rdfs:label	Πίεση@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Publication	rdfs:label	Publication@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Publication	rdfs:label	Publikation@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Quantity	rdfs:label	Quantity@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Quantity	rdfs:label	Quantität@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#QuantityKind	rdfs:label	Basisquantität@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#QuantityKind	rdfs:label	Quantity Kind@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#RandomVariable	rdfs:label	Random Variable@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#RandomVariable	rdfs:label	Zufallsvariable@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Rate	rdfs:label	Rate@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Rate	rdfs:label	Rate@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#RealDimensionless	rdfs:label	Real Number (Dimensionless)@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#RealDimensionless	rdfs:label	Reelle Zahl (dimensionslos)@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#RealDimensionless	rdfs:label	Πραγματικός αριθμός@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ResearchField	rdfs:label	Forschungsgebiet@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ResearchField	rdfs:label	Research Field@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ResearchProblem	rdfs:label	Forschungsthema@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#ResearchProblem	rdfs:label	Research Problem@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Stiffness	rdfs:label	Steifigkeit@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Stiffness	rdfs:label	Stiffness@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#StochasticProcess	rdfs:label	Stochastic Process@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#StochasticProcess	rdfs:label	Stochastischer Prozess@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Temperature	rdfs:label	Temperatur@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Temperature	rdfs:label	Temperature@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Temperature	rdfs:label	Θερμοκρασία@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Time	rdfs:label	Time@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Time	rdfs:label	Zeit@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Time	rdfs:label	Χρόνος@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Torque	rdfs:label	Drehmoment@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Torque	rdfs:label	Torque@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Variance	rdfs:label	Variance@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Variance	rdfs:label	Varianz@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Velocity	rdfs:label	Geschwindigkeit@de
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Velocity	rdfs:label	Velocity@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Velocity	rdfs:label	Ταχύτητα@el
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Viscosity	rdfs:label	Viscosity@en
+ERROR	multiple_labels	https://mardi4nfdi.de/mathmoddb#Viscosity	rdfs:label	Viskosität@de
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#ComputationalTask	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#MathematicalFormulation	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#MathematicalModel	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#Publication	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#Quantity	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#QuantityKind	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#ResearchField	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#ResearchProblem	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#approximatedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#approximates	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#arxivID	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#assumedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#assumes	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsBoundaryConditionIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsConstantIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsConstraintConditionIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsCouplingConditionIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsFinalConditionIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsInitialConditionIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsInputIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsObjectiveIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsOutputIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedAsParameterIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containedIn	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#contains	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsBoundaryCondition	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsConstant	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsConstraintCondition	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsCouplingCondition	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsFinalCondition	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsInitialCondition	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsInput	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsObjective	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsOutput	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#containsParameter	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#dbpediaID	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#definingFormulation	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describedAsDocumentedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describedAsInventedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describedAsStudiedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describedAsSurveyedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describedAsUsedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describes	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describesDocumentationOf	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describesInventionOf	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describesStudyOf	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describesSurveyOf	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#describesUseOf	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#discretizedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#discretizes	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#doiID	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#inDefiningFormulation	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isChemicalConstant	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isDeterministic	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isDimensionless	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isDynamic	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isLinear	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isMathematicalConstant	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isPhysicalConstant	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isSpaceContinuous	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#isTimeContinuous	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#linearizedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#linearizes	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#mardiID	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#modeledBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#models	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#nondimensionalizedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#nondimensionalizes	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#qudtID	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#similarTo	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#specializedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#specializes	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#usedBy	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#uses	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#wikidataID	IAO:0000115	
+WARN	missing_definition	https://mardi4nfdi.de/mathmoddb#zbmathID	IAO:0000115	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#ComputationalTask	rdfs:subClassOf	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#MathematicalFormulation	rdfs:subClassOf	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#MathematicalModel	rdfs:subClassOf	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#Publication	rdfs:subClassOf	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#Quantity	rdfs:subClassOf	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#ResearchField	rdfs:subClassOf	
+INFO	missing_superclass	https://mardi4nfdi.de/mathmoddb#ResearchProblem	rdfs:subClassOf	

@@ -1,0 +1,162 @@
+[
+  {
+    "backend": "mock",
+    "surface_name": "concise_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Set_concise_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Set_concise_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "pedagogical_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Set_pedagogical_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Set_pedagogical_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "expert_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Set_expert_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Set_expert_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "document_role_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Set_document_role_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Set_document_role_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "concise_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Subset_concise_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Subset_concise_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "pedagogical_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Subset_pedagogical_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Subset_pedagogical_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "expert_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Subset_expert_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Subset_expert_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "document_role_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Subset_document_role_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Subset_document_role_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "concise_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Element_concise_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Element_concise_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "pedagogical_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Element_pedagogical_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Element_pedagogical_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "expert_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Element_expert_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Element_expert_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "document_role_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Element_document_role_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Element_document_role_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "concise_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Function_concise_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Function_concise_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "pedagogical_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Function_pedagogical_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Function_pedagogical_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "expert_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Function_expert_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Function_expert_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "document_role_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Function_document_role_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Function_document_role_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "concise_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Relation_concise_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Relation_concise_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "pedagogical_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Relation_pedagogical_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Relation_pedagogical_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "expert_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Relation_expert_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Relation_expert_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  },
+  {
+    "backend": "mock",
+    "surface_name": "document_role_form",
+    "audio_path": "reports\\audio\\week4_tts\\mock\\Relation_document_role_form.json",
+    "ssml_path": "reports\\audio\\week4_tts\\ssml\\Relation_document_role_form.ssml",
+    "status": "ok",
+    "detail": "mock artifact written"
+  }
+]

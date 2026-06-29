@@ -1,0 +1,5 @@
+{
+  "backend": "mock",
+  "text": "arXiv 2606.19234v1. Equation \ud835\udd30\ud835\udd29_n. Matched concepts: Variable. Variable means a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+  "ssml": "<speak version=\"1.0\" xml:lang=\"en-US\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name=\"en-US-JennyNeural\"><prosody rate=\"-8%\" pitch=\"+1st\" volume=\"medium\">arXiv 2606.19234v1.<break time=\"420ms\"/> Equation \ud835\udd30\ud835\udd29_n.<break time=\"420ms\"/> Matched concepts:<break time=\"320ms\"/> Variable.<break time=\"420ms\"/> Variable means a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</prosody></voice></speak>"
+}

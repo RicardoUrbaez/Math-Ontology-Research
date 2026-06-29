@@ -1,0 +1,5 @@
+{
+  "backend": "mock",
+  "text": "arXiv 2606.19306v1. Equation 1/2. Matched concepts: Number, Division. Number means a Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Division means a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+  "ssml": "<speak version=\"1.0\" xml:lang=\"en-US\" xmlns=\"http://www.w3.org/2001/10/synthesis\"><voice name=\"en-US-JennyNeural\"><prosody rate=\"-8%\" pitch=\"+1st\" volume=\"medium\">arXiv 2606.19306v1.<break time=\"420ms\"/> Equation 1/2.<break time=\"420ms\"/> Matched concepts:<break time=\"320ms\"/> Number, Division.<break time=\"420ms\"/> Number means a Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.<break time=\"420ms\"/> Division means a Division is a mathematical operation or operator that transforms one or more inputs into a result.</prosody></voice></speak>"
+}

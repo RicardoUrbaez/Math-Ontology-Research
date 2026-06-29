@@ -1,0 +1,18 @@
+PREFIX mathkg: <http://example.org/mathkg/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# Purpose: list concepts grouped by MathObject, MathOperation, Role, etc.
+SELECT ?concept ?label ?conceptType ?parent
+WHERE {
+  ?concept rdf:type owl:Class ;
+           rdfs:label ?label .
+  OPTIONAL { ?concept mathkg:conceptType ?conceptType . }
+  OPTIONAL { ?concept rdfs:subClassOf ?parent . }
+  FILTER(STRSTARTS(STR(?concept), STR(mathkg:)))
+}
+ORDER BY ?conceptType ?label
