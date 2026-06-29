@@ -1,0 +1,7 @@
+MOCK TTS TRANSCRIPT
+
+TEXT:
+LaTeX expression: \begin{bmatrix} a & b \\ c & d \end{bmatrix}. Think of matrix as a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.
+
+SSML:
+<speak version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/10/synthesis"><voice name="en-US-JennyNeural"><prosody rate="-10%" pitch="+0%">LaTeX expression:<break time="250ms"/> \begin{bmatrix} a &amp;<break time="125ms"/> b \\ c &amp;<break time="125ms"/> d \end{bmatrix}.<break time="250ms"/> Think of matrix as a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.<break time="250ms"/> Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</prosody></voice></speak>

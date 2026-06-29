@@ -1,0 +1,271 @@
+{
+  "id": "eq_003",
+  "latex": "\\int_a^b f(x) dx",
+  "context": "calculus. Definite integral with a function-like expression.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "\\int",
+      "normalized": "\\int",
+      "symbol_type": "latex_command",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Integral",
+          "concept_iri": "http://example.org/mathkg/Integral",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\int",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "a",
+      "normalized": "a",
+      "symbol_type": "identifier",
+      "position": 5,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    },
+    {
+      "raw": "b",
+      "normalized": "b",
+      "symbol_type": "identifier",
+      "position": 7,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    },
+    {
+      "raw": "f",
+      "normalized": "f",
+      "symbol_type": "function_notation",
+      "position": 9,
+      "order": 4,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Function",
+          "concept_iri": "http://example.org/mathkg/Function",
+          "confidence": 0.86,
+          "reason": "function application notation",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 11,
+      "order": 5,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "d",
+      "normalized": "d",
+      "symbol_type": "identifier",
+      "position": 14,
+      "order": 6,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 15,
+      "order": 7,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "\\int",
+        "normalized": "\\int",
+        "symbol_type": "latex_command",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Integral",
+            "concept_iri": "http://example.org/mathkg/Integral",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\int",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Integral",
+        "concept_iri": "http://example.org/mathkg/Integral",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\int",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Integral",
+        "local_name": "Integral",
+        "canonical_label": "Integral",
+        "canonical_gloss": "Integral: An Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "concise_form": "Integral: An Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of integral as an Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Integral denotes an Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, integral usually signals a operator concept with provenance from OntoMathPRO; MathModDB; OpenMath.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "calculus"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1307",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Important calculus operation; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1307 has rdfs:label Integrating@en and a Russian comment stating that the process of finding an integral is integration; selected as the closest operation-level canonical IRI for Integral No exact rdfs:label Integral@en was found in the current search output; treat as operation-level mapping and add OpenMath integral identifier later Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Integral: An Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of integral as an Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Integral denotes an Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, integral usually signals a operator concept with provenance from OntoMathPRO; MathModDB; OpenMath."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "f",
+        "normalized": "f",
+        "symbol_type": "function_notation",
+        "position": 9,
+        "order": 4,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Function",
+            "concept_iri": "http://example.org/mathkg/Function",
+            "confidence": 0.86,
+            "reason": "function application notation",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Function",
+        "concept_iri": "http://example.org/mathkg/Function",
+        "confidence": 0.86,
+        "reason": "function application notation",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Function",
+        "local_name": "Function",
+        "canonical_label": "Function",
+        "canonical_gloss": "Function: A Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "concise_form": "Function: A Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of function as a Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Function denotes a Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, function usually signals a function concept with provenance from OntoMathPRO.",
+        "concept_type": "MathObject",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1505",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Strong merge candidate; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1505 has direct rdfs:label Function@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Function: A Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of function as a Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Function denotes a Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, function usually signals a function concept with provenance from OntoMathPRO."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "x",
+        "normalized": "x",
+        "symbol_type": "variable",
+        "position": 11,
+        "order": 5,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.8,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.8,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: \\int_a^b f(x) dx. Think of integral as an Integral is a mathematical operation or operator that transforms one or more inputs into a result. Think of function as a Function is a mathematical function concept that associates inputs with outputs according to a rule. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_003.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_003.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_003.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

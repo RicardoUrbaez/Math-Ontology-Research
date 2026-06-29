@@ -1,0 +1,364 @@
+[
+  {
+    "id": "eq_001",
+    "status": "ok",
+    "latex": "x + y = z",
+    "concept_count": 3,
+    "symbol_count": 5,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_001.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_001.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_001.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "algebra",
+    "expected_primary_concepts": [
+      "Variable",
+      "Addition",
+      "Equality"
+    ]
+  },
+  {
+    "id": "eq_002",
+    "status": "ok",
+    "latex": "\\frac{P^T}{P_0}",
+    "concept_count": 2,
+    "symbol_count": 4,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_002.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_002.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_002.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "algebra",
+    "expected_primary_concepts": [
+      "Division",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_003",
+    "status": "ok",
+    "latex": "\\int_a^b f(x) dx",
+    "concept_count": 3,
+    "symbol_count": 7,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_003.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_003.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_003.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "calculus",
+    "expected_primary_concepts": [
+      "Integral",
+      "Function",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_004",
+    "status": "ok",
+    "latex": "\\sin(x) + \\cos(x)",
+    "concept_count": 4,
+    "symbol_count": 5,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_004.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_004.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_004.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "calculus",
+    "expected_primary_concepts": [
+      "Sine",
+      "Cosine",
+      "Addition",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_005",
+    "status": "ok",
+    "latex": "A \\mathbf{x} = \\mathbf{b}",
+    "concept_count": 3,
+    "symbol_count": 4,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_005.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_005.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_005.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": [
+      "Matrix",
+      "Vector",
+      "Equality"
+    ]
+  },
+  {
+    "id": "eq_006",
+    "status": "ok",
+    "latex": "\\det(A)",
+    "concept_count": 2,
+    "symbol_count": 2,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_006.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_006.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_006.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": [
+      "Determinant",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_007",
+    "status": "ok",
+    "latex": "\\lim_{x \\to 0} \\frac{\\sin x}{x}",
+    "concept_count": 4,
+    "symbol_count": 7,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_007.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_007.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_007.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "calculus",
+    "expected_primary_concepts": [
+      "Limit",
+      "Division",
+      "Sine",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_008",
+    "status": "ok",
+    "latex": "E[X]",
+    "concept_count": 2,
+    "symbol_count": 2,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_008.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_008.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_008.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": [
+      "Mean",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_009",
+    "status": "ok",
+    "latex": "Var(X)",
+    "concept_count": 2,
+    "symbol_count": 2,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_009.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_009.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_009.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": [
+      "Variance",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_010",
+    "status": "ok",
+    "latex": "\\sum_{i=1}^{n} x_i",
+    "concept_count": 3,
+    "symbol_count": 6,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_010.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_010.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_010.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "calculus",
+    "expected_primary_concepts": [
+      "Series",
+      "Addition",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_011",
+    "status": "ok",
+    "latex": "a x^2 + b x + c = 0",
+    "concept_count": 3,
+    "symbol_count": 8,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_011.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_011.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_011.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "algebra",
+    "expected_primary_concepts": [
+      "Polynomial",
+      "Addition",
+      "Equality",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_012",
+    "status": "ok",
+    "latex": "\\tan(x) = \\frac{\\sin(x)}{\\cos(x)}",
+    "concept_count": 6,
+    "symbol_count": 8,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_012.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_012.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_012.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "calculus",
+    "expected_primary_concepts": [
+      "Tangent",
+      "Sine",
+      "Cosine",
+      "Division",
+      "Equality"
+    ]
+  },
+  {
+    "id": "eq_013",
+    "status": "ok",
+    "latex": "A B = C",
+    "concept_count": 2,
+    "symbol_count": 4,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_013.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_013.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_013.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": [
+      "Matrix",
+      "Multiplication",
+      "Equality"
+    ]
+  },
+  {
+    "id": "eq_014",
+    "status": "ok",
+    "latex": "\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}",
+    "concept_count": 2,
+    "symbol_count": 13,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_014.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_014.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_014.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": [
+      "Matrix"
+    ]
+  },
+  {
+    "id": "eq_015",
+    "status": "ok",
+    "latex": "P(A) = \\frac{|A|}{|S|}",
+    "concept_count": 4,
+    "symbol_count": 6,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_015.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_015.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_015.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": [
+      "Probability",
+      "Equality",
+      "Division"
+    ]
+  },
+  {
+    "id": "eq_016",
+    "status": "ok",
+    "latex": "\\mu = \\frac{1}{n}\\sum_{i=1}^{n} x_i",
+    "concept_count": 5,
+    "symbol_count": 10,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_016.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_016.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_016.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": [
+      "Mean",
+      "Division",
+      "Series",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_017",
+    "status": "ok",
+    "latex": "\\sigma^2 = Var(X)",
+    "concept_count": 3,
+    "symbol_count": 4,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_017.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_017.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_017.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": [
+      "Variance",
+      "Equality",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_018",
+    "status": "ok",
+    "latex": "f(x) = x^2 - 1",
+    "concept_count": 4,
+    "symbol_count": 5,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_018.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_018.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_018.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "algebra",
+    "expected_primary_concepts": [
+      "Function",
+      "Equality",
+      "Subtraction",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_019",
+    "status": "ok",
+    "latex": "\\frac{d}{dx} f(x)",
+    "concept_count": 4,
+    "symbol_count": 6,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_019.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_019.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_019.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "calculus",
+    "expected_primary_concepts": [
+      "Derivative",
+      "Division",
+      "Function",
+      "Variable"
+    ]
+  },
+  {
+    "id": "eq_020",
+    "status": "ok",
+    "latex": "\\mathbf{u} + \\mathbf{v} = \\mathbf{w}",
+    "concept_count": 3,
+    "symbol_count": 5,
+    "json_gloss_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\json_glosses\\eq_020.json",
+    "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_020.ssml",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_020.txt",
+    "backend": "mock",
+    "detail": "mock backend wrote transcript file",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": [
+      "Vector",
+      "Addition",
+      "Equality"
+    ]
+  }
+]

@@ -1,0 +1,1002 @@
+[
+  {
+    "concept_iri": "http://example.org/mathkg/Set",
+    "local_name": "Set",
+    "canonical_label": "Set",
+    "canonical_gloss": "Set: A Set is a set-theoretic concept used to describe collections, membership, or containment.",
+    "concise_form": "Set: A Set is a set-theoretic concept used to describe collections, membership, or containment.",
+    "pedagogical_form": "Think of set as a Set is a set-theoretic concept used to describe collections, membership, or containment.",
+    "expert_form": "Set denotes a Set is a set-theoretic concept used to describe collections, membership, or containment.",
+    "document_role_form": "In a mathematical document, set usually signals a set concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "set-theory"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E847",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Foundational concept; exact IRIs still need to be recorded OntoMathPRO class mathematics:E847 has direct rdfs:label Set@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Subset",
+    "local_name": "Subset",
+    "canonical_label": "Subset",
+    "canonical_gloss": "Subset: A Subset is a set-theoretic concept used to describe collections, membership, or containment.",
+    "concise_form": "Subset: A Subset is a set-theoretic concept used to describe collections, membership, or containment.",
+    "pedagogical_form": "Think of subset as a Subset is a set-theoretic concept used to describe collections, membership, or containment.",
+    "expert_form": "Subset denotes a Subset is a set-theoretic concept used to describe collections, membership, or containment.",
+    "document_role_form": "In a mathematical document, subset usually signals a set concept with provenance from OpenMath; MathModDB.",
+    "concept_type": "MathRelation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "set-theory"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/set1#subset",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Important set-theoretic relation; verify exact non-OpenMath source before marking fully verified OpenMath Official set1 Content Dictionary includes subset as a relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath match found; later check whether OntoMathPRO or MathModDB has an equivalent concept before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Element",
+    "local_name": "Element",
+    "canonical_label": "Element",
+    "canonical_gloss": "Element: An Element is a set-theoretic concept used to describe collections, membership, or containment.",
+    "concise_form": "Element: An Element is a set-theoretic concept used to describe collections, membership, or containment.",
+    "pedagogical_form": "Think of element as an Element is a set-theoretic concept used to describe collections, membership, or containment.",
+    "expert_form": "Element denotes an Element is a set-theoretic concept used to describe collections, membership, or containment.",
+    "document_role_form": "In a mathematical document, element usually signals a set concept with provenance from OpenMath; MathModDB; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "set-theory"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2143",
+    "mapping_quality": "provisional_specialized_source_match",
+    "accessibility_note": "Check if represented as object, relation, or role OntoMathPRO class mathematics:E2143 has English label Element of the theory of algebra and Russian label элемент теории алгебры; selected as provisional source IRI for Element because no clean general Element class was found Provisional specialized mapping; not equivalent to generic set element Confirmed mapped in seed ontology with canonical OntoMathPRO link. Element is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Function",
+    "local_name": "Function",
+    "canonical_label": "Function",
+    "canonical_gloss": "Function: A Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "concise_form": "Function: A Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "pedagogical_form": "Think of function as a Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "expert_form": "Function denotes a Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "document_role_form": "In a mathematical document, function usually signals a function concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1505",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Strong merge candidate; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1505 has direct rdfs:label Function@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Relation",
+    "local_name": "Relation",
+    "canonical_label": "Relation",
+    "canonical_gloss": "Relation: A Relation is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "concise_form": "Relation: A Relation is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "pedagogical_form": "Think of relation as a Relation is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "expert_form": "Relation denotes a Relation is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "document_role_form": "In a mathematical document, relation usually signals a relation concept with provenance from OntoMathPRO.",
+    "concept_type": "MathRelation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "logic"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2452",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check hierarchy placement OntoMathPRO class mathematics:E2452 has direct English label Relation and Russian label отношение; selected as canonical source for Relation Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Operation",
+    "local_name": "Operation",
+    "canonical_label": "Operation",
+    "canonical_gloss": "Operation: An Operation is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Operation: An Operation is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of operation as an Operation is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Operation denotes an Operation is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, operation usually signals a operator concept with provenance from OntoMathPRO.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E34",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Useful for MathOperation branch; exact IRIs still need to be recorded OntoMathPRO class mathematics:E34 has direct rdfs:label Operation@en; selected as canonical IRI according to Week 2 rules Need to add OpenMath operation identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Addition",
+    "local_name": "Addition",
+    "canonical_label": "Addition",
+    "canonical_gloss": "Addition: An Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Addition: An Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Addition denotes an Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, addition usually signals a operator concept with provenance from OntoMathPRO.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1315",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Basic arithmetic operation; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1315 has direct rdfs:label Addition@en; selected as canonical IRI according to Week 2 rules Need to add OntoMathEdu/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Subtraction",
+    "local_name": "Subtraction",
+    "canonical_label": "Subtraction",
+    "canonical_gloss": "Subtraction: A Subtraction is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Subtraction: A Subtraction is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of subtraction as a Subtraction is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Subtraction denotes a Subtraction is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, subtraction usually signals a operator concept with provenance from OpenMath; OntoMathPRO.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/arith1#minus",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Basic arithmetic operation; verify exact OntoMathPRO/OntoMathEdu label OpenMath Official arith1 Content Dictionary includes minus as the binary subtraction symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath operation match found; later check whether OntoMathPRO has an equivalent operation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Multiplication",
+    "local_name": "Multiplication",
+    "canonical_label": "Multiplication",
+    "canonical_gloss": "Multiplication: A Multiplication is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Multiplication: A Multiplication is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of multiplication as a Multiplication is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Multiplication denotes a Multiplication is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, multiplication usually signals a operator concept with provenance from OntoMathPRO.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1318",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Basic arithmetic operation; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1318 has direct rdfs:label Multiplication@en; selected as canonical IRI according to Week 2 rules Need to add OntoMathEdu/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Division",
+    "local_name": "Division",
+    "canonical_label": "Division",
+    "canonical_gloss": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Division denotes a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, division usually signals a operator concept with provenance from OpenMath; OntoMathPRO.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/arith1#divide",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Basic arithmetic operation; verify exact direct label in second source OpenMath Official arith1 Content Dictionary includes divide as the binary division symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath operation match found; later check whether OntoMathPRO has an equivalent operation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Equality",
+    "local_name": "Equality",
+    "canonical_label": "Equality",
+    "canonical_gloss": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB.",
+    "concept_type": "MathRelation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "logic"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/relation1#eq",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Core mathematical relation; verify exact non-OpenMath source label before marking fully verified OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath relation match found; later check whether OntoMathPRO has an equivalent relation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Inequality",
+    "local_name": "Inequality",
+    "canonical_label": "Inequality",
+    "canonical_gloss": "Inequality: An Inequality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "concise_form": "Inequality: An Inequality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "pedagogical_form": "Think of inequality as an Inequality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "expert_form": "Inequality denotes an Inequality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+    "document_role_form": "In a mathematical document, inequality usually signals a relation concept with provenance from OntoMathPRO.",
+    "concept_type": "MathRelation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "logic"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1202",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Core mathematical relation; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1202 has direct rdfs:label Inequality@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OntoMathEdu/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Number",
+    "local_name": "Number",
+    "canonical_label": "Number",
+    "canonical_gloss": "Number: A Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Number: A Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of number as a Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Number denotes a Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, number usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2114",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "General number concept; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2114 has direct rdfs:label Number@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Integer",
+    "local_name": "Integer",
+    "canonical_label": "Integer",
+    "canonical_gloss": "Integer: An Integer is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Integer: An Integer is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of integer as an Integer is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Integer denotes an Integer is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, integer usually signals a scalar concept with provenance from OntoMathPRO; MathModDB; OpenMath.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2118",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Common number type; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2118 has Russian label Целое число and English label A whole number; selected as canonical IRI for Integer according to Week 2 rules Review label wording because OntoMathPRO uses A whole number instead of exact English label Integer; add OpenMath integer/Z identifiers later Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/NaturalNumber",
+    "local_name": "NaturalNumber",
+    "canonical_label": "Natural Number",
+    "canonical_gloss": "Natural Number: A Natural Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Natural Number: A Natural Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of natural number as a Natural Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Natural Number denotes a Natural Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, natural number usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2119",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Common number type; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2119 has direct rdfs:label Natural number@en; selected as canonical IRI according to Week 2 rules Need to add OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/RationalNumber",
+    "local_name": "RationalNumber",
+    "canonical_label": "Rational Number",
+    "canonical_gloss": "Rational Number: A Rational Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Rational Number: A Rational Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of rational number as a Rational Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Rational Number denotes a Rational Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, rational number usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2117",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Common number type; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2117 has direct rdfs:label Rational number@en; selected as canonical IRI according to Week 2 rules Need to add OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/RealNumber",
+    "local_name": "RealNumber",
+    "canonical_label": "Real Number",
+    "canonical_gloss": "Real Number: A Real Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Real Number: A Real Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of real number as a Real Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Real Number denotes a Real Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, real number usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2116",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Strong merge candidate; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2116 has direct rdfs:label Real number@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/ComplexNumber",
+    "local_name": "ComplexNumber",
+    "canonical_label": "Complex Number",
+    "canonical_gloss": "Complex Number: A Complex Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Complex Number: A Complex Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of complex number as a Complex Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Complex Number denotes a Complex Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, complex number usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2127",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Strong merge candidate; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2127 has direct rdfs:label Complex number@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Variable",
+    "local_name": "Variable",
+    "canonical_label": "Variable",
+    "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+    "concept_type": "Role",
+    "kind_role_classification": "role",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "MathModDB",
+    "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+    "mapping_quality": "provisional_specialized_source_match",
+    "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Coefficient",
+    "local_name": "Coefficient",
+    "canonical_label": "Coefficient",
+    "canonical_gloss": "Coefficient: A Coefficient is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Coefficient: A Coefficient is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of coefficient as a Coefficient is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Coefficient denotes a Coefficient is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, coefficient usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "Role",
+    "kind_role_classification": "role",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2129",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Role in algebraic expressions; verify exact second-source label before marking fully verified OntoMathPRO class mathematics:E2129 has direct English label Coefficient and Russian label коэффициент; selected as canonical source for Coefficient Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Constant",
+    "local_name": "Constant",
+    "canonical_label": "Constant",
+    "canonical_gloss": "Constant: A Constant is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Constant: A Constant is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of constant as a Constant is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Constant denotes a Constant is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, constant usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "Role",
+    "kind_role_classification": "role",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2134",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Used in expressions and formulas; check if represented as object or role OntoMathPRO class mathematics:E2134 has direct English label Constant and Russian labels Постоянная and Константа; selected as canonical source for Constant Exact OntoMathPRO match found; do not map to narrower constants such as Lebesgue constant, Landau constant, or Chebyshev constant Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Expression",
+    "local_name": "Expression",
+    "canonical_label": "Expression",
+    "canonical_gloss": "Expression: An Expression is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Expression: An Expression is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of expression as an Expression is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Expression denotes an Expression is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, expression usually signals a scalar concept with provenance from MathModDB; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath Experimental",
+    "source_iri": "http://www.openmath.org/cd/field1#expression",
+    "mapping_quality": "provisional_specialized_source_match",
+    "accessibility_note": "Check labels: expression, mathematical expression OpenMath experimental field1 Content Dictionary includes exact symbol name expression for arithmetic expressions over a field; selected as provisional source IRI for Expression because no clean general Expression class was found Experimental and field-specific; review later if a general mathematical expression IRI is found Confirmed mapped in seed ontology with canonical OpenMath Experimental link. Expression is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Equation",
+    "local_name": "Equation",
+    "canonical_label": "Equation",
+    "canonical_gloss": "Equation: An Equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Equation: An Equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of equation as an Equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Equation denotes an Equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, equation usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "algebra"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1891",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Central accessibility concept; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1891 has direct rdfs:label Equation@en; selected as canonical IRI according to Week 2 rules Central accessibility concept; later add MathModDB/OpenMath identifiers if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Formula",
+    "local_name": "Formula",
+    "canonical_label": "Formula",
+    "canonical_gloss": "Formula: A Formula is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Formula: A Formula is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of formula as a Formula is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Formula denotes a Formula is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, formula usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1988",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Potential merge candidate, but must distinguish formula vs mathematical formulation OntoMathPRO class mathematics:E1988 has direct English label Formula and Russian label формула; selected as canonical source for Formula Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Polynomial",
+    "local_name": "Polynomial",
+    "canonical_label": "Polynomial",
+    "canonical_gloss": "Polynomial: A Polynomial is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Polynomial: A Polynomial is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of polynomial as a Polynomial is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Polynomial denotes a Polynomial is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, polynomial usually signals a scalar concept with provenance from OntoMathPRO; MathModDB; OpenMath.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "algebra"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2920",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Common algebra concept; exact IRIs still need to be recorded OntoMathPRO class mathematics:E2920 has Russian labels Полином and Многочлен, which correspond to Polynomial; selected as canonical IRI according to Week 2 rules English rdfs:label Polynomial@en is missing in OntoMathPRO; add English label later in merged ontology if needed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Matrix",
+    "local_name": "Matrix",
+    "canonical_label": "Matrix",
+    "canonical_gloss": "Matrix: A Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+    "concise_form": "Matrix: A Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+    "pedagogical_form": "Think of matrix as a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+    "expert_form": "Matrix denotes a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+    "document_role_form": "In a mathematical document, matrix usually signals a matrix concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "linear-algebra"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1703",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Strong merge candidate for linear algebra; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1703 has direct rdfs:label Matrix@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Vector",
+    "local_name": "Vector",
+    "canonical_label": "Vector",
+    "canonical_gloss": "Vector: Vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+    "concise_form": "Vector: Vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+    "pedagogical_form": "Think of vector as vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+    "expert_form": "Vector denotes vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+    "document_role_form": "In a mathematical document, vector usually signals a vector concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "linear-algebra"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1693",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Strong merge candidate for linear algebra; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1693 has direct rdfs:label Vector@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Scalar",
+    "local_name": "Scalar",
+    "canonical_label": "Scalar",
+    "canonical_gloss": "Scalar: A Scalar is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Scalar: A Scalar is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of scalar as a Scalar is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Scalar denotes a Scalar is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, scalar usually signals a scalar concept with provenance from OntoMathPRO; MathModDB; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "linear-algebra"
+    ],
+    "source_provenance": "OpenMath Experimental",
+    "source_iri": "http://www.openmath.org/cd/linalg5#scalar",
+    "mapping_quality": "provisional_specialized_source_match",
+    "accessibility_note": "Check if explicit in sources OpenMath experimental linalg5 Content Dictionary includes exact symbol name scalar for a scalar matrix / scalar constant times identity; selected as provisional source IRI for Scalar because no clean general Scalar class was found Experimental and specialized; review later if a general scalar concept IRI is found Confirmed mapped in seed ontology with canonical OpenMath Experimental link. Scalar is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Determinant",
+    "local_name": "Determinant",
+    "canonical_label": "Determinant",
+    "canonical_gloss": "Determinant: A Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+    "concise_form": "Determinant: A Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+    "pedagogical_form": "Think of determinant as a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+    "expert_form": "Determinant denotes a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+    "document_role_form": "In a mathematical document, determinant usually signals a matrix concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "linear-algebra"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/linalg1#determinant",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check operation vs object classification OpenMath Official linalg1 Content Dictionary includes determinant as the unary function returning the determinant of a square matrix; selected as canonical source for Determinant Exact OpenMath operation match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Derivative",
+    "local_name": "Derivative",
+    "canonical_label": "Derivative",
+    "canonical_gloss": "Derivative: A Derivative is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Derivative: A Derivative is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of derivative as a Derivative is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Derivative denotes a Derivative is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, derivative usually signals a operator concept with provenance from OntoMathPRO; MathModDB; OpenMath.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "calculus"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/calculus1#diff",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Important calculus operation; verify direct general Derivative concept before marking fully verified OpenMath Official calculus1 Content Dictionary includes diff for ordinary differentiation of a unary function; selected as canonical source because no safer general OntoMathPRO derivative class was confirmed Exact OpenMath operation match found; do not map to narrower OntoMathPRO entries such as Exterior derivative or Lie derivative Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Integral",
+    "local_name": "Integral",
+    "canonical_label": "Integral",
+    "canonical_gloss": "Integral: An Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Integral: An Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of integral as an Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Integral denotes an Integral is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, integral usually signals a operator concept with provenance from OntoMathPRO; MathModDB; OpenMath.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "calculus"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1307",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Important calculus operation; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1307 has rdfs:label Integrating@en and a Russian comment stating that the process of finding an integral is integration; selected as the closest operation-level canonical IRI for Integral No exact rdfs:label Integral@en was found in the current search output; treat as operation-level mapping and add OpenMath integral identifier later Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Limit",
+    "local_name": "Limit",
+    "canonical_label": "Limit",
+    "canonical_gloss": "Limit: A Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Limit: A Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of limit as a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Limit denotes a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, limit usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "calculus"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/limit1#limit",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "May be object or operation depending source OpenMath Official limit1 Content Dictionary includes limit for the limit of a unary function; selected as canonical source because OntoMathPRO results showed narrower theorem-related limit concepts rather than a general limit concept Exact OpenMath match found; later review whether project hierarchy should treat Limit as MathOperation instead of MathObject Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Sequence",
+    "local_name": "Sequence",
+    "canonical_label": "Sequence",
+    "canonical_gloss": "Sequence: A Sequence is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Sequence: A Sequence is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of sequence as a Sequence is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Sequence denotes a Sequence is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, sequence usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "calculus"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2931",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check exact labels OntoMathPRO class mathematics:E2931 has Russian label Последовательность and source comment referencing mathematical sequence; selected as canonical source for Sequence Exact Russian OntoMathPRO match found; no English label shown in source output Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Series",
+    "local_name": "Series",
+    "canonical_label": "Series",
+    "canonical_gloss": "Series: A Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Series: A Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of series as a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Series denotes a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, series usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "calculus"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E3050",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check overlap with sequence OntoMathPRO class mathematics:E3050 has Russian label Ряд and comment defining a mathematical series as an infinite sum of terms; selected as canonical source for Series Exact Russian OntoMathPRO match found; no English label shown in source output Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Logarithm",
+    "local_name": "Logarithm",
+    "canonical_label": "Logarithm",
+    "canonical_gloss": "Logarithm: A Logarithm is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "concise_form": "Logarithm: A Logarithm is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "pedagogical_form": "Think of logarithm as a Logarithm is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "expert_form": "Logarithm denotes a Logarithm is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "document_role_form": "In a mathematical document, logarithm usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1308",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check function vs operation classification OntoMathPRO class mathematics:E1308 has English label Taking the logarithm and Russian label Логарифмирование; selected as the canonical operation-level source for Logarithm Mapped to OntoMathPRO operation-level logarithm concept; later check OpenMath log/ln symbols for additional close or exact matches Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/ExponentialFunction",
+    "local_name": "ExponentialFunction",
+    "canonical_label": "Exponential Function",
+    "canonical_gloss": "Exponential Function: An Exponential Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "concise_form": "Exponential Function: An Exponential Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "pedagogical_form": "Think of exponential function as an Exponential Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "expert_form": "Exponential Function denotes an Exponential Function is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "document_role_form": "In a mathematical document, exponential function usually signals a function concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1597",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check source naming OntoMathPRO class mathematics:E1597 has English label Exponential and Russian label показательная функция; selected instead of mathematics:E1609 because E1609 has Russian label степенная функция, which indicates power function Mapped to OntoMathPRO exponential function concept; OpenMath transc1#exp may be added later as a symbol/function close match Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Sine",
+    "local_name": "Sine",
+    "canonical_label": "Sine",
+    "canonical_gloss": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "concise_form": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "pedagogical_form": "Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "expert_form": "Sine denotes a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "document_role_form": "In a mathematical document, sine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/transc1#sin",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check trig content dictionaries OpenMath Official transc1 Content Dictionary includes sin as the sine function; selected as canonical source for the Sine operation Exact OpenMath function-symbol match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Cosine",
+    "local_name": "Cosine",
+    "canonical_label": "Cosine",
+    "canonical_gloss": "Cosine: A Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "concise_form": "Cosine: A Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "pedagogical_form": "Think of cosine as a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "expert_form": "Cosine denotes a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "document_role_form": "In a mathematical document, cosine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/transc1#cos",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check trig content dictionaries OpenMath Official transc1 Content Dictionary includes cos as the cosine function; selected as canonical source for the Cosine operation Exact OpenMath function-symbol match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Tangent",
+    "local_name": "Tangent",
+    "canonical_label": "Tangent",
+    "canonical_gloss": "Tangent: A Tangent is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "concise_form": "Tangent: A Tangent is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "pedagogical_form": "Think of tangent as a Tangent is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "expert_form": "Tangent denotes a Tangent is a mathematical function concept that associates inputs with outputs according to a rule.",
+    "document_role_form": "In a mathematical document, tangent usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath",
+    "source_iri": "http://www.openmath.org/cd/transc1#tan",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Potential ambiguity: trig tangent vs tangent line OpenMath Official transc1 Content Dictionary includes tan as the tangent function; selected as canonical source instead of unrelated OntoMathPRO matches such as Tangent geometry Exact OpenMath function-symbol match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Point",
+    "local_name": "Point",
+    "canonical_label": "Point",
+    "canonical_gloss": "Point: A Point is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Point: A Point is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of point as a Point is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Point denotes a Point is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, point usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "geometry"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E293",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check geometry hierarchy OntoMathPRO class mathematics:E293 has direct English label Point and Russian label точка; selected as canonical source for Point Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Line",
+    "local_name": "Line",
+    "canonical_label": "Line",
+    "canonical_gloss": "Line: A Line is a geometric object representing a straight one-dimensional extent.",
+    "concise_form": "Line: A Line is a geometric object representing a straight one-dimensional extent.",
+    "pedagogical_form": "Think of line as a Line is a geometric object representing a straight one-dimensional extent.",
+    "expert_form": "Line denotes a Line is a geometric object representing a straight one-dimensional extent.",
+    "document_role_form": "In a mathematical document, line usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "geometry"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1168",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check source labels OntoMathPRO class mathematics:E1168 has direct English label Line and Russian label прямая; selected as canonical source for Line Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Circle",
+    "local_name": "Circle",
+    "canonical_label": "Circle",
+    "canonical_gloss": "Circle: A Circle is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Circle: A Circle is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of circle as a Circle is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Circle denotes a Circle is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, circle usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "geometry"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E109",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Likely present in OntoMathEdu OntoMathPRO class mathematics:E109 has direct English label Circle and Russian label окружность; selected as canonical source for Circle Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Angle",
+    "local_name": "Angle",
+    "canonical_label": "Angle",
+    "canonical_gloss": "Angle: An Angle is a geometric concept describing the amount of rotation or separation between two rays, lines, or directions.",
+    "concise_form": "Angle: An Angle is a geometric concept describing the amount of rotation or separation between two rays, lines, or directions.",
+    "pedagogical_form": "Think of angle as an Angle is a geometric concept describing the amount of rotation or separation between two rays, lines, or directions.",
+    "expert_form": "Angle denotes an Angle is a geometric concept describing the amount of rotation or separation between two rays, lines, or directions.",
+    "document_role_form": "In a mathematical document, angle usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "geometry"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1187",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check source labels OntoMathPRO class mathematics:E1187 has direct English label Angle and Russian label угол; selected as canonical source for Angle Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Triangle",
+    "local_name": "Triangle",
+    "canonical_label": "Triangle",
+    "canonical_gloss": "Triangle: A Triangle is a geometric figure with three sides and three vertices.",
+    "concise_form": "Triangle: A Triangle is a geometric figure with three sides and three vertices.",
+    "pedagogical_form": "Think of triangle as a Triangle is a geometric figure with three sides and three vertices.",
+    "expert_form": "Triangle denotes a Triangle is a geometric figure with three sides and three vertices.",
+    "document_role_form": "In a mathematical document, triangle usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "geometry"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1183",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check source labels OntoMathPRO class mathematics:E1183 has direct English label Triangle and Russian label треугольник; selected as canonical source for Triangle Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Area",
+    "local_name": "Area",
+    "canonical_label": "Area",
+    "canonical_gloss": "Area: An Area is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Area: An Area is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of area as an Area is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Area denotes an Area is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, area usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "MathModDB",
+    "source_iri": "https://mardi4nfdi.de/mathmoddb#Area",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check if concept or quantity MathModDB individual mathmoddb:Area has direct English label Area and description as a quantity expressing the extent of a two-dimensional surface or shape; selected as canonical source for Area Exact MathModDB match found Confirmed mapped in seed ontology with canonical MathModDB link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Volume",
+    "local_name": "Volume",
+    "canonical_label": "Volume",
+    "canonical_gloss": "Volume: A Volume is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Volume: A Volume is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of volume as a Volume is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Volume denotes a Volume is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, volume usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OpenMath Experimental",
+    "source_iri": "http://www.openmath.org/cd/dimensions1#volume",
+    "mapping_quality": "exact_label_match_experimental_source",
+    "accessibility_note": "Check if concept or quantity OpenMath experimental dimensions1 Content Dictionary includes exact symbol name volume; selected as source IRI for Volume with experimental-source status noted Mapped using exact OpenMath experimental CD label; review later if a stronger OntoMathPRO or MathModDB volume concept is found Confirmed mapped in seed ontology with canonical OpenMath Experimental link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Graph",
+    "local_name": "Graph",
+    "canonical_label": "Graph",
+    "canonical_gloss": "Graph: A Graph is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Graph: A Graph is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of graph as a Graph is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Graph denotes a Graph is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, graph usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "general-mathematics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E887",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Potential ambiguity; document carefully OntoMathPRO class mathematics:E887 has direct English label Graph and Russian label граф; selected as canonical source for Graph Exact OntoMathPRO match found Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Probability",
+    "local_name": "Probability",
+    "canonical_label": "Probability",
+    "canonical_gloss": "Probability: A Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Probability: A Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of probability as a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Probability denotes a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, probability usually signals a scalar concept with provenance from OntoMathPRO.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "statistics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2410",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check exact source availability OntoMathPRO class mathematics:E2410 has direct English label Probability and Russian label вероятность; selected as canonical source for the general Probability concept Exact OntoMathPRO match found; do not map to narrower entries such as Probability density, Conditional probability, or Probability distribution Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Mean",
+    "local_name": "Mean",
+    "canonical_label": "Mean",
+    "canonical_gloss": "Mean: A Mean is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "concise_form": "Mean: A Mean is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "pedagogical_form": "Think of mean as a Mean is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "expert_form": "Mean denotes a Mean is a mathematical operation or operator that transforms one or more inputs into a result.",
+    "document_role_form": "In a mathematical document, mean usually signals a operator concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathOperation",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "statistics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1666",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check if represented as average OntoMathPRO class mathematics:E1666 has English label Average value and Russian label Среднее значение; selected as canonical source for the Mean concept Mapped to Average value; later review whether project hierarchy should classify Mean as MathObject/value rather than MathOperation Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  },
+  {
+    "concept_iri": "http://example.org/mathkg/Variance",
+    "local_name": "Variance",
+    "canonical_label": "Variance",
+    "canonical_gloss": "Variance: A Variance is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "concise_form": "Variance: A Variance is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "pedagogical_form": "Think of variance as a Variance is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "expert_form": "Variance denotes a Variance is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+    "document_role_form": "In a mathematical document, variance usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+    "concept_type": "MathObject",
+    "kind_role_classification": "kind",
+    "domain_tags": [
+      "statistics"
+    ],
+    "source_provenance": "OntoMathPRO",
+    "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2573",
+    "mapping_quality": "canonical_match",
+    "accessibility_note": "Check source labels and definitions OntoMathPRO class mathematics:E2573 has English label Dispersion and Russian label дисперсия; selected as canonical source for the general Variance concept Exact OntoMathPRO match found using Russian label дисперсия; do not map to narrower entries such as Conditional variance, Residual variance, Sampling variance, or Variance ratio Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+    "examples": []
+  }
+]

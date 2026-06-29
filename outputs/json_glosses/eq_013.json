@@ -1,0 +1,192 @@
+{
+  "id": "eq_013",
+  "latex": "A B = C",
+  "context": "linear-algebra. Uppercase multiplication in a linear algebra context.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "A",
+      "normalized": "A",
+      "symbol_type": "variable",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.68,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+        }
+      ]
+    },
+    {
+      "raw": "B",
+      "normalized": "B",
+      "symbol_type": "variable",
+      "position": 2,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.68,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+        }
+      ]
+    },
+    {
+      "raw": "=",
+      "normalized": "=",
+      "symbol_type": "operator",
+      "position": 4,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Equality",
+          "concept_iri": "http://example.org/mathkg/Equality",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from =",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "C",
+      "normalized": "C",
+      "symbol_type": "variable",
+      "position": 6,
+      "order": 4,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.68,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "A",
+        "normalized": "A",
+        "symbol_type": "variable",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.68,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.68,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "=",
+        "normalized": "=",
+        "symbol_type": "operator",
+        "position": 4,
+        "order": 3,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Equality",
+            "concept_iri": "http://example.org/mathkg/Equality",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from =",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Equality",
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from =",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "local_name": "Equality",
+        "canonical_label": "Equality",
+        "canonical_gloss": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB.",
+        "concept_type": "MathRelation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "logic"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/relation1#eq",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Core mathematical relation; verify exact non-OpenMath source label before marking fully verified OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath relation match found; later check whether OntoMathPRO has an equivalent relation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: A B = C. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_013.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_013.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_013.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

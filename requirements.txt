@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+rdflib
+pylatexenc
+gTTS
+python-dotenv
+requests
+azure-cognitiveservices-speech

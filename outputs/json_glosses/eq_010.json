@@ -1,0 +1,268 @@
+{
+  "id": "eq_010",
+  "latex": "\\sum_{i=1}^{n} x_i",
+  "context": "calculus. Indexed summation with explicit ambiguity between series and repeated addition.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "\\sum",
+      "normalized": "\\sum",
+      "symbol_type": "latex_command",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Series",
+          "concept_iri": "http://example.org/mathkg/Series",
+          "confidence": 0.88,
+          "reason": "summation notation can denote a series",
+          "ambiguity_notes": "Summation can also express repeated addition."
+        },
+        {
+          "concept_label": "Addition",
+          "concept_iri": "http://example.org/mathkg/Addition",
+          "confidence": 0.72,
+          "reason": "summation aggregates terms by addition",
+          "ambiguity_notes": "Ranked below Series when indexed notation is present."
+        }
+      ]
+    },
+    {
+      "raw": "i",
+      "normalized": "i",
+      "symbol_type": "identifier",
+      "position": 6,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    },
+    {
+      "raw": "=",
+      "normalized": "=",
+      "symbol_type": "operator",
+      "position": 7,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Equality",
+          "concept_iri": "http://example.org/mathkg/Equality",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from =",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "n",
+      "normalized": "n",
+      "symbol_type": "identifier",
+      "position": 12,
+      "order": 4,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 15,
+      "order": 5,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "i",
+      "normalized": "i",
+      "symbol_type": "identifier",
+      "position": 17,
+      "order": 6,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "\\sum",
+        "normalized": "\\sum",
+        "symbol_type": "latex_command",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Series",
+            "concept_iri": "http://example.org/mathkg/Series",
+            "confidence": 0.88,
+            "reason": "summation notation can denote a series",
+            "ambiguity_notes": "Summation can also express repeated addition."
+          },
+          {
+            "concept_label": "Addition",
+            "concept_iri": "http://example.org/mathkg/Addition",
+            "confidence": 0.72,
+            "reason": "summation aggregates terms by addition",
+            "ambiguity_notes": "Ranked below Series when indexed notation is present."
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Series",
+        "concept_iri": "http://example.org/mathkg/Series",
+        "confidence": 0.88,
+        "reason": "summation notation can denote a series",
+        "ambiguity_notes": "Summation can also express repeated addition."
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Series",
+        "local_name": "Series",
+        "canonical_label": "Series",
+        "canonical_gloss": "Series: A Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Series: A Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of series as a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Series denotes a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, series usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+        "concept_type": "MathObject",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "calculus"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E3050",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Check overlap with sequence OntoMathPRO class mathematics:E3050 has Russian label Ряд and comment defining a mathematical series as an infinite sum of terms; selected as canonical source for Series Exact Russian OntoMathPRO match found; no English label shown in source output Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Series: A Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of series as a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Series denotes a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, series usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "=",
+        "normalized": "=",
+        "symbol_type": "operator",
+        "position": 7,
+        "order": 3,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Equality",
+            "concept_iri": "http://example.org/mathkg/Equality",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from =",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Equality",
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from =",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "local_name": "Equality",
+        "canonical_label": "Equality",
+        "canonical_gloss": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB.",
+        "concept_type": "MathRelation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "logic"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/relation1#eq",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Core mathematical relation; verify exact non-OpenMath source label before marking fully verified OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath relation match found; later check whether OntoMathPRO has an equivalent relation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "x",
+        "normalized": "x",
+        "symbol_type": "variable",
+        "position": 15,
+        "order": 5,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.8,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.8,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: \\sum_{i=1}^{n} x_i. Think of series as a Series is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_010.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_010.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_010.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

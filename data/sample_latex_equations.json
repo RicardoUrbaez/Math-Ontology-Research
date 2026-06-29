@@ -1,0 +1,142 @@
+[
+  {
+    "id": "eq_001",
+    "latex": "x + y = z",
+    "domain": "algebra",
+    "expected_primary_concepts": ["Variable", "Addition", "Equality"],
+    "notes": "Simple algebraic equality with three variables."
+  },
+  {
+    "id": "eq_002",
+    "latex": "\\frac{P^T}{P_0}",
+    "domain": "algebra",
+    "expected_primary_concepts": ["Division", "Variable"],
+    "notes": "Ratio expression; T is intentionally ambiguous as transpose or variable marker."
+  },
+  {
+    "id": "eq_003",
+    "latex": "\\int_a^b f(x) dx",
+    "domain": "calculus",
+    "expected_primary_concepts": ["Integral", "Function", "Variable"],
+    "notes": "Definite integral with a function-like expression."
+  },
+  {
+    "id": "eq_004",
+    "latex": "\\sin(x) + \\cos(x)",
+    "domain": "calculus",
+    "expected_primary_concepts": ["Sine", "Cosine", "Addition", "Variable"],
+    "notes": "Trigonometric expression with addition."
+  },
+  {
+    "id": "eq_005",
+    "latex": "A \\mathbf{x} = \\mathbf{b}",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": ["Matrix", "Vector", "Equality"],
+    "notes": "Linear system notation with matrix and vector hints."
+  },
+  {
+    "id": "eq_006",
+    "latex": "\\det(A)",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": ["Determinant", "Variable"],
+    "notes": "Determinant command applied to an uppercase symbol."
+  },
+  {
+    "id": "eq_007",
+    "latex": "\\lim_{x \\to 0} \\frac{\\sin x}{x}",
+    "domain": "calculus",
+    "expected_primary_concepts": ["Limit", "Division", "Sine", "Variable"],
+    "notes": "Standard limiting expression with a fraction."
+  },
+  {
+    "id": "eq_008",
+    "latex": "E[X]",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": ["Mean", "Variable"],
+    "notes": "Expectation-style notation represented as an arXiv-style fixture, not a downloaded paper equation."
+  },
+  {
+    "id": "eq_009",
+    "latex": "Var(X)",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": ["Variance", "Variable"],
+    "notes": "Variance-style notation represented as an arXiv-style fixture."
+  },
+  {
+    "id": "eq_010",
+    "latex": "\\sum_{i=1}^{n} x_i",
+    "domain": "calculus",
+    "expected_primary_concepts": ["Series", "Addition", "Variable"],
+    "notes": "Indexed summation with explicit ambiguity between series and repeated addition."
+  },
+  {
+    "id": "eq_011",
+    "latex": "a x^2 + b x + c = 0",
+    "domain": "algebra",
+    "expected_primary_concepts": ["Polynomial", "Addition", "Equality", "Variable"],
+    "notes": "Quadratic polynomial equation."
+  },
+  {
+    "id": "eq_012",
+    "latex": "\\tan(x) = \\frac{\\sin(x)}{\\cos(x)}",
+    "domain": "calculus",
+    "expected_primary_concepts": ["Tangent", "Sine", "Cosine", "Division", "Equality"],
+    "notes": "Trigonometric identity-style expression."
+  },
+  {
+    "id": "eq_013",
+    "latex": "A B = C",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": ["Matrix", "Multiplication", "Equality"],
+    "notes": "Uppercase multiplication in a linear algebra context."
+  },
+  {
+    "id": "eq_014",
+    "latex": "\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": ["Matrix"],
+    "notes": "Matrix environment hint."
+  },
+  {
+    "id": "eq_015",
+    "latex": "P(A) = \\frac{|A|}{|S|}",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": ["Probability", "Equality", "Division"],
+    "notes": "Probability notation with a fraction."
+  },
+  {
+    "id": "eq_016",
+    "latex": "\\mu = \\frac{1}{n}\\sum_{i=1}^{n} x_i",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": ["Mean", "Division", "Series", "Variable"],
+    "notes": "Sample mean formula."
+  },
+  {
+    "id": "eq_017",
+    "latex": "\\sigma^2 = Var(X)",
+    "domain": "probability-statistics",
+    "expected_primary_concepts": ["Variance", "Equality", "Variable"],
+    "notes": "Variance notation with a Greek identifier."
+  },
+  {
+    "id": "eq_018",
+    "latex": "f(x) = x^2 - 1",
+    "domain": "algebra",
+    "expected_primary_concepts": ["Function", "Equality", "Subtraction", "Variable"],
+    "notes": "Function notation with subtraction."
+  },
+  {
+    "id": "eq_019",
+    "latex": "\\frac{d}{dx} f(x)",
+    "domain": "calculus",
+    "expected_primary_concepts": ["Derivative", "Division", "Function", "Variable"],
+    "notes": "Derivative-like notation that the MVP parser partially resolves through the fraction."
+  },
+  {
+    "id": "eq_020",
+    "latex": "\\mathbf{u} + \\mathbf{v} = \\mathbf{w}",
+    "domain": "linear-algebra",
+    "expected_primary_concepts": ["Vector", "Addition", "Equality"],
+    "notes": "Vector addition with bold notation."
+  }
+]

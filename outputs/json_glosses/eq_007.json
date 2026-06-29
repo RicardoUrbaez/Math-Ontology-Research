@@ -1,0 +1,339 @@
+{
+  "id": "eq_007",
+  "latex": "\\lim_{x \\to 0} \\frac{\\sin x}{x}",
+  "context": "calculus. Standard limiting expression with a fraction.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "\\lim",
+      "normalized": "\\lim",
+      "symbol_type": "latex_command",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Limit",
+          "concept_iri": "http://example.org/mathkg/Limit",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\lim",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 6,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "\\to",
+      "normalized": "\\to",
+      "symbol_type": "latex_command",
+      "position": 8,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    },
+    {
+      "raw": "\\frac",
+      "normalized": "\\frac",
+      "symbol_type": "latex_command",
+      "position": 15,
+      "order": 4,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Division",
+          "concept_iri": "http://example.org/mathkg/Division",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\frac",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "\\sin",
+      "normalized": "\\sin",
+      "symbol_type": "latex_command",
+      "position": 21,
+      "order": 5,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Sine",
+          "concept_iri": "http://example.org/mathkg/Sine",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\sin",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 26,
+      "order": 6,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 29,
+      "order": 7,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "\\lim",
+        "normalized": "\\lim",
+        "symbol_type": "latex_command",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Limit",
+            "concept_iri": "http://example.org/mathkg/Limit",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\lim",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Limit",
+        "concept_iri": "http://example.org/mathkg/Limit",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\lim",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Limit",
+        "local_name": "Limit",
+        "canonical_label": "Limit",
+        "canonical_gloss": "Limit: A Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Limit: A Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of limit as a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Limit denotes a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, limit usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+        "concept_type": "MathObject",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "calculus"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/limit1#limit",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "May be object or operation depending source OpenMath Official limit1 Content Dictionary includes limit for the limit of a unary function; selected as canonical source because OntoMathPRO results showed narrower theorem-related limit concepts rather than a general limit concept Exact OpenMath match found; later review whether project hierarchy should treat Limit as MathOperation instead of MathObject Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Limit: A Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of limit as a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Limit denotes a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, limit usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "x",
+        "normalized": "x",
+        "symbol_type": "variable",
+        "position": 6,
+        "order": 2,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.8,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.8,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "\\frac",
+        "normalized": "\\frac",
+        "symbol_type": "latex_command",
+        "position": 15,
+        "order": 4,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Division",
+            "concept_iri": "http://example.org/mathkg/Division",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\frac",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Division",
+        "concept_iri": "http://example.org/mathkg/Division",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\frac",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Division",
+        "local_name": "Division",
+        "canonical_label": "Division",
+        "canonical_gloss": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "concise_form": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Division denotes a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, division usually signals a operator concept with provenance from OpenMath; OntoMathPRO.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/arith1#divide",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Basic arithmetic operation; verify exact direct label in second source OpenMath Official arith1 Content Dictionary includes divide as the binary division symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath operation match found; later check whether OntoMathPRO has an equivalent operation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Division denotes a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, division usually signals a operator concept with provenance from OpenMath; OntoMathPRO."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "\\sin",
+        "normalized": "\\sin",
+        "symbol_type": "latex_command",
+        "position": 21,
+        "order": 5,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Sine",
+            "concept_iri": "http://example.org/mathkg/Sine",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\sin",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Sine",
+        "concept_iri": "http://example.org/mathkg/Sine",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\sin",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Sine",
+        "local_name": "Sine",
+        "canonical_label": "Sine",
+        "canonical_gloss": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "concise_form": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Sine denotes a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, sine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/transc1#sin",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Check trig content dictionaries OpenMath Official transc1 Content Dictionary includes sin as the sine function; selected as canonical source for the Sine operation Exact OpenMath function-symbol match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Sine denotes a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, sine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: \\lim_{x \\to 0} \\frac{\\sin x}{x}. Think of limit as a Limit is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result. Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_007.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_007.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_007.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

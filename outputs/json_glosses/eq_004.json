@@ -1,0 +1,313 @@
+{
+  "id": "eq_004",
+  "latex": "\\sin(x) + \\cos(x)",
+  "context": "calculus. Trigonometric expression with addition.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "\\sin",
+      "normalized": "\\sin",
+      "symbol_type": "latex_command",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Sine",
+          "concept_iri": "http://example.org/mathkg/Sine",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\sin",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 5,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "+",
+      "normalized": "+",
+      "symbol_type": "operator",
+      "position": 8,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Addition",
+          "concept_iri": "http://example.org/mathkg/Addition",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from +",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "\\cos",
+      "normalized": "\\cos",
+      "symbol_type": "latex_command",
+      "position": 10,
+      "order": 4,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Cosine",
+          "concept_iri": "http://example.org/mathkg/Cosine",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\cos",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "x",
+      "normalized": "x",
+      "symbol_type": "variable",
+      "position": 15,
+      "order": 5,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.8,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": ""
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "\\sin",
+        "normalized": "\\sin",
+        "symbol_type": "latex_command",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Sine",
+            "concept_iri": "http://example.org/mathkg/Sine",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\sin",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Sine",
+        "concept_iri": "http://example.org/mathkg/Sine",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\sin",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Sine",
+        "local_name": "Sine",
+        "canonical_label": "Sine",
+        "canonical_gloss": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "concise_form": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Sine denotes a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, sine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/transc1#sin",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Check trig content dictionaries OpenMath Official transc1 Content Dictionary includes sin as the sine function; selected as canonical source for the Sine operation Exact OpenMath function-symbol match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Sine: A Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Sine denotes a Sine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, sine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "x",
+        "normalized": "x",
+        "symbol_type": "variable",
+        "position": 5,
+        "order": 2,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.8,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.8,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "+",
+        "normalized": "+",
+        "symbol_type": "operator",
+        "position": 8,
+        "order": 3,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Addition",
+            "concept_iri": "http://example.org/mathkg/Addition",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from +",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Addition",
+        "concept_iri": "http://example.org/mathkg/Addition",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from +",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Addition",
+        "local_name": "Addition",
+        "canonical_label": "Addition",
+        "canonical_gloss": "Addition: An Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "concise_form": "Addition: An Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Addition denotes an Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, addition usually signals a operator concept with provenance from OntoMathPRO.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1315",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Basic arithmetic operation; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1315 has direct rdfs:label Addition@en; selected as canonical IRI according to Week 2 rules Need to add OntoMathEdu/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Addition: An Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Addition denotes an Addition is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, addition usually signals a operator concept with provenance from OntoMathPRO."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "\\cos",
+        "normalized": "\\cos",
+        "symbol_type": "latex_command",
+        "position": 10,
+        "order": 4,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Cosine",
+            "concept_iri": "http://example.org/mathkg/Cosine",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\cos",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Cosine",
+        "concept_iri": "http://example.org/mathkg/Cosine",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\cos",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Cosine",
+        "local_name": "Cosine",
+        "canonical_label": "Cosine",
+        "canonical_gloss": "Cosine: A Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "concise_form": "Cosine: A Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of cosine as a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Cosine denotes a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, cosine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/transc1#cos",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Check trig content dictionaries OpenMath Official transc1 Content Dictionary includes cos as the cosine function; selected as canonical source for the Cosine operation Exact OpenMath function-symbol match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Cosine: A Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "pedagogical_form": "Think of cosine as a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "expert_form": "Cosine denotes a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+        "document_role_form": "In a mathematical document, cosine usually signals a function concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: \\sin(x) + \\cos(x). Think of sine as a Sine is a mathematical function concept that associates inputs with outputs according to a rule. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result. Think of cosine as a Cosine is a mathematical function concept that associates inputs with outputs according to a rule.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_004.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_004.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_004.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

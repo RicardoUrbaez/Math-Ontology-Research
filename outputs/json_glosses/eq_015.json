@@ -1,0 +1,336 @@
+{
+  "id": "eq_015",
+  "latex": "P(A) = \\frac{|A|}{|S|}",
+  "context": "probability-statistics. Probability notation with a fraction.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "P",
+      "normalized": "P",
+      "symbol_type": "variable",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Probability",
+          "concept_iri": "http://example.org/mathkg/Probability",
+          "confidence": 0.78,
+          "reason": "P appears in probability context",
+          "ambiguity_notes": "P can also be a variable outside probability notation."
+        },
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.66,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "P may denote probability, a point, a polynomial, or a variable."
+        }
+      ]
+    },
+    {
+      "raw": "A",
+      "normalized": "A",
+      "symbol_type": "variable",
+      "position": 2,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.68,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+        }
+      ]
+    },
+    {
+      "raw": "=",
+      "normalized": "=",
+      "symbol_type": "operator",
+      "position": 5,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Equality",
+          "concept_iri": "http://example.org/mathkg/Equality",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from =",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "\\frac",
+      "normalized": "\\frac",
+      "symbol_type": "latex_command",
+      "position": 7,
+      "order": 4,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Division",
+          "concept_iri": "http://example.org/mathkg/Division",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\frac",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "A",
+      "normalized": "A",
+      "symbol_type": "variable",
+      "position": 14,
+      "order": 5,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.68,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+        }
+      ]
+    },
+    {
+      "raw": "S",
+      "normalized": "S",
+      "symbol_type": "identifier",
+      "position": 19,
+      "order": 6,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": []
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "P",
+        "normalized": "P",
+        "symbol_type": "variable",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Probability",
+            "concept_iri": "http://example.org/mathkg/Probability",
+            "confidence": 0.78,
+            "reason": "P appears in probability context",
+            "ambiguity_notes": "P can also be a variable outside probability notation."
+          },
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.66,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": "P may denote probability, a point, a polynomial, or a variable."
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Probability",
+        "concept_iri": "http://example.org/mathkg/Probability",
+        "confidence": 0.78,
+        "reason": "P appears in probability context",
+        "ambiguity_notes": "P can also be a variable outside probability notation."
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Probability",
+        "local_name": "Probability",
+        "canonical_label": "Probability",
+        "canonical_gloss": "Probability: A Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Probability: A Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of probability as a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Probability denotes a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, probability usually signals a scalar concept with provenance from OntoMathPRO.",
+        "concept_type": "MathObject",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "statistics"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E2410",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Check exact source availability OntoMathPRO class mathematics:E2410 has direct English label Probability and Russian label вероятность; selected as canonical source for the general Probability concept Exact OntoMathPRO match found; do not map to narrower entries such as Probability density, Conditional probability, or Probability distribution Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Probability: A Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of probability as a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Probability denotes a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, probability usually signals a scalar concept with provenance from OntoMathPRO."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "A",
+        "normalized": "A",
+        "symbol_type": "variable",
+        "position": 2,
+        "order": 2,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.68,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.68,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "=",
+        "normalized": "=",
+        "symbol_type": "operator",
+        "position": 5,
+        "order": 3,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Equality",
+            "concept_iri": "http://example.org/mathkg/Equality",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from =",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Equality",
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from =",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "local_name": "Equality",
+        "canonical_label": "Equality",
+        "canonical_gloss": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB.",
+        "concept_type": "MathRelation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "logic"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/relation1#eq",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Core mathematical relation; verify exact non-OpenMath source label before marking fully verified OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath relation match found; later check whether OntoMathPRO has an equivalent relation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "\\frac",
+        "normalized": "\\frac",
+        "symbol_type": "latex_command",
+        "position": 7,
+        "order": 4,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Division",
+            "concept_iri": "http://example.org/mathkg/Division",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\frac",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Division",
+        "concept_iri": "http://example.org/mathkg/Division",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\frac",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Division",
+        "local_name": "Division",
+        "canonical_label": "Division",
+        "canonical_gloss": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "concise_form": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Division denotes a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, division usually signals a operator concept with provenance from OpenMath; OntoMathPRO.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/arith1#divide",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Basic arithmetic operation; verify exact direct label in second source OpenMath Official arith1 Content Dictionary includes divide as the binary division symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath operation match found; later check whether OntoMathPRO has an equivalent operation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Division: A Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "pedagogical_form": "Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "expert_form": "Division denotes a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+        "document_role_form": "In a mathematical document, division usually signals a operator concept with provenance from OpenMath; OntoMathPRO."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: P(A) = \\frac{|A|}{|S|}. Think of probability as a Probability is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected. Think of division as a Division is a mathematical operation or operator that transforms one or more inputs into a result.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_015.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_015.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_015.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

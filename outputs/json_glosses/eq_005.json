@@ -1,0 +1,244 @@
+{
+  "id": "eq_005",
+  "latex": "A \\mathbf{x} = \\mathbf{b}",
+  "context": "linear-algebra. Linear system notation with matrix and vector hints.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "A",
+      "normalized": "A",
+      "symbol_type": "variable",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Matrix",
+          "concept_iri": "http://example.org/mathkg/Matrix",
+          "confidence": 0.86,
+          "reason": "uppercase symbol used in matrix context",
+          "ambiguity_notes": "Uppercase letters can also be variables or sets."
+        }
+      ]
+    },
+    {
+      "raw": "\\mathbf{x}",
+      "normalized": "\\mathbf{x}",
+      "symbol_type": "vector_hint",
+      "position": 2,
+      "order": 2,
+      "notes": "bold or vector notation hint",
+      "candidates": [
+        {
+          "concept_label": "Vector",
+          "concept_iri": "http://example.org/mathkg/Vector",
+          "confidence": 0.92,
+          "reason": "bold or vector notation detected",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "=",
+      "normalized": "=",
+      "symbol_type": "operator",
+      "position": 13,
+      "order": 3,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Equality",
+          "concept_iri": "http://example.org/mathkg/Equality",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from =",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "\\mathbf{b}",
+      "normalized": "\\mathbf{b}",
+      "symbol_type": "vector_hint",
+      "position": 15,
+      "order": 4,
+      "notes": "bold or vector notation hint",
+      "candidates": [
+        {
+          "concept_label": "Vector",
+          "concept_iri": "http://example.org/mathkg/Vector",
+          "confidence": 0.92,
+          "reason": "bold or vector notation detected",
+          "ambiguity_notes": ""
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "A",
+        "normalized": "A",
+        "symbol_type": "variable",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Matrix",
+            "concept_iri": "http://example.org/mathkg/Matrix",
+            "confidence": 0.86,
+            "reason": "uppercase symbol used in matrix context",
+            "ambiguity_notes": "Uppercase letters can also be variables or sets."
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Matrix",
+        "concept_iri": "http://example.org/mathkg/Matrix",
+        "confidence": 0.86,
+        "reason": "uppercase symbol used in matrix context",
+        "ambiguity_notes": "Uppercase letters can also be variables or sets."
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Matrix",
+        "local_name": "Matrix",
+        "canonical_label": "Matrix",
+        "canonical_gloss": "Matrix: A Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "concise_form": "Matrix: A Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "pedagogical_form": "Think of matrix as a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "expert_form": "Matrix denotes a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "document_role_form": "In a mathematical document, matrix usually signals a matrix concept with provenance from OntoMathPRO.",
+        "concept_type": "MathObject",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "linear-algebra"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1703",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Strong merge candidate for linear algebra; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1703 has direct rdfs:label Matrix@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Matrix: A Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "pedagogical_form": "Think of matrix as a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "expert_form": "Matrix denotes a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.",
+        "document_role_form": "In a mathematical document, matrix usually signals a matrix concept with provenance from OntoMathPRO."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "\\mathbf{x}",
+        "normalized": "\\mathbf{x}",
+        "symbol_type": "vector_hint",
+        "position": 2,
+        "order": 2,
+        "notes": "bold or vector notation hint",
+        "candidates": [
+          {
+            "concept_label": "Vector",
+            "concept_iri": "http://example.org/mathkg/Vector",
+            "confidence": 0.92,
+            "reason": "bold or vector notation detected",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Vector",
+        "concept_iri": "http://example.org/mathkg/Vector",
+        "confidence": 0.92,
+        "reason": "bold or vector notation detected",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Vector",
+        "local_name": "Vector",
+        "canonical_label": "Vector",
+        "canonical_gloss": "Vector: Vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "concise_form": "Vector: Vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "pedagogical_form": "Think of vector as vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "expert_form": "Vector denotes vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "document_role_form": "In a mathematical document, vector usually signals a vector concept with provenance from OntoMathPRO.",
+        "concept_type": "MathObject",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "linear-algebra"
+        ],
+        "source_provenance": "OntoMathPRO",
+        "source_iri": "http://cll.niimm.ksu.ru/ontologies/mathematics#E1693",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Strong merge candidate for linear algebra; exact IRIs still need to be recorded OntoMathPRO class mathematics:E1693 has direct rdfs:label Vector@en; selected as canonical IRI according to Week 2 rules Need to add MathModDB/OpenMath identifiers later if exact matches are confirmed Confirmed mapped in seed ontology with canonical OntoMathPRO link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Vector: Vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "pedagogical_form": "Think of vector as vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "expert_form": "Vector denotes vector is a vector-related concept used to represent directed or component-based mathematical quantities.",
+        "document_role_form": "In a mathematical document, vector usually signals a vector concept with provenance from OntoMathPRO."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "=",
+        "normalized": "=",
+        "symbol_type": "operator",
+        "position": 13,
+        "order": 3,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Equality",
+            "concept_iri": "http://example.org/mathkg/Equality",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from =",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Equality",
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from =",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Equality",
+        "local_name": "Equality",
+        "canonical_label": "Equality",
+        "canonical_gloss": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB.",
+        "concept_type": "MathRelation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "logic"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/relation1#eq",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Core mathematical relation; verify exact non-OpenMath source label before marking fully verified OpenMath Official relation1 Content Dictionary includes eq as the equality relation symbol; selected as canonical source because no safer OntoMathPRO exact class was confirmed Exact OpenMath relation match found; later check whether OntoMathPRO has an equivalent relation class before adding owl:equivalentClass Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Equality: An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "pedagogical_form": "Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "expert_form": "Equality denotes an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+        "document_role_form": "In a mathematical document, equality usually signals a relation concept with provenance from OpenMath; OntoMathEdu; MathModDB."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: A \\mathbf{x} = \\mathbf{b}. Think of matrix as a Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations. Think of vector as vector is a vector-related concept used to represent directed or component-based mathematical quantities. Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_005.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_005.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_005.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

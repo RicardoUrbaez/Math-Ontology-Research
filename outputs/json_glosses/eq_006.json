@@ -1,0 +1,158 @@
+{
+  "id": "eq_006",
+  "latex": "\\det(A)",
+  "context": "linear-algebra. Determinant command applied to an uppercase symbol.",
+  "surface_form": "pedagogical",
+  "requested_backend": "mock",
+  "symbols": [
+    {
+      "raw": "\\det",
+      "normalized": "\\det",
+      "symbol_type": "latex_command",
+      "position": 0,
+      "order": 1,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Determinant",
+          "concept_iri": "http://example.org/mathkg/Determinant",
+          "confidence": 0.96,
+          "reason": "direct symbol mapping from \\det",
+          "ambiguity_notes": ""
+        }
+      ]
+    },
+    {
+      "raw": "A",
+      "normalized": "A",
+      "symbol_type": "variable",
+      "position": 5,
+      "order": 2,
+      "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+      "candidates": [
+        {
+          "concept_label": "Variable",
+          "concept_iri": "http://example.org/mathkg/Variable",
+          "confidence": 0.68,
+          "reason": "single-letter mathematical identifier",
+          "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+        }
+      ]
+    }
+  ],
+  "glosses": [
+    {
+      "symbol": {
+        "raw": "\\det",
+        "normalized": "\\det",
+        "symbol_type": "latex_command",
+        "position": 0,
+        "order": 1,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Determinant",
+            "concept_iri": "http://example.org/mathkg/Determinant",
+            "confidence": 0.96,
+            "reason": "direct symbol mapping from \\det",
+            "ambiguity_notes": ""
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Determinant",
+        "concept_iri": "http://example.org/mathkg/Determinant",
+        "confidence": 0.96,
+        "reason": "direct symbol mapping from \\det",
+        "ambiguity_notes": ""
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Determinant",
+        "local_name": "Determinant",
+        "canonical_label": "Determinant",
+        "canonical_gloss": "Determinant: A Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "concise_form": "Determinant: A Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "pedagogical_form": "Think of determinant as a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "expert_form": "Determinant denotes a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "document_role_form": "In a mathematical document, determinant usually signals a matrix concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.",
+        "concept_type": "MathOperation",
+        "kind_role_classification": "kind",
+        "domain_tags": [
+          "linear-algebra"
+        ],
+        "source_provenance": "OpenMath",
+        "source_iri": "http://www.openmath.org/cd/linalg1#determinant",
+        "mapping_quality": "canonical_match",
+        "accessibility_note": "Check operation vs object classification OpenMath Official linalg1 Content Dictionary includes determinant as the unary function returning the determinant of a square matrix; selected as canonical source for Determinant Exact OpenMath operation match found Confirmed mapped in seed ontology with canonical OpenMath link.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Determinant: A Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "pedagogical_form": "Think of determinant as a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "expert_form": "Determinant denotes a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.",
+        "document_role_form": "In a mathematical document, determinant usually signals a matrix concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu."
+      }
+    },
+    {
+      "symbol": {
+        "raw": "A",
+        "normalized": "A",
+        "symbol_type": "variable",
+        "position": 5,
+        "order": 2,
+        "notes": "parsed with pylatexenc available; regex token extraction used for MVP symbol stream",
+        "candidates": [
+          {
+            "concept_label": "Variable",
+            "concept_iri": "http://example.org/mathkg/Variable",
+            "confidence": 0.68,
+            "reason": "single-letter mathematical identifier",
+            "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+          }
+        ]
+      },
+      "selected_candidate": {
+        "concept_label": "Variable",
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "confidence": 0.68,
+        "reason": "single-letter mathematical identifier",
+        "ambiguity_notes": "Uppercase letters may denote matrices, sets, constants, events, or variables."
+      },
+      "gloss_record": {
+        "concept_iri": "http://example.org/mathkg/Variable",
+        "local_name": "Variable",
+        "canonical_label": "Variable",
+        "canonical_gloss": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB.",
+        "concept_type": "Role",
+        "kind_role_classification": "role",
+        "domain_tags": [
+          "general-mathematics"
+        ],
+        "source_provenance": "MathModDB",
+        "source_iri": "https://mardi4nfdi.de/mathmoddb#DecisionVariable",
+        "mapping_quality": "provisional_specialized_source_match",
+        "accessibility_note": "Mathematical role in expressions and models; exact IRIs still need to be recorded MathModDB contains DecisionVariable as a variable-related source IRI; selected as provisional source IRI for Variable because no clean general Variable class was found in the available seed sources Provisional specialized mapping; review later if a general Variable source IRI is found Confirmed mapped in seed ontology with canonical MathModDB link. Variable is retained as a provisional or specialized mapping where the source ontology evidence may not be a clean general-purpose concept match.",
+        "examples": []
+      },
+      "surface_forms": {
+        "concise_form": "Variable: A Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "pedagogical_form": "Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "expert_form": "Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+        "document_role_form": "In a mathematical document, variable usually signals a scalar concept with provenance from OntoMathPRO; MathModDB."
+      }
+    }
+  ],
+  "speech_text": "LaTeX expression: \\det(A). Think of determinant as a Determinant is a matrix-related concept used to describe rectangular arrays or operations on them. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.",
+  "ssml_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\ssml\\eq_006.ssml",
+  "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_006.txt",
+  "synthesis": {
+    "backend": "mock",
+    "status": "ok",
+    "audio_path": "C:\\Users\\Ricardo\\Documents\\Math-Ontology-Research\\outputs\\audio\\eq_006.txt",
+    "detail": "mock backend wrote transcript file"
+  }
+}

@@ -1,0 +1,7 @@
+MOCK TTS TRANSCRIPT
+
+TEXT:
+LaTeX expression: a x^2 + b x + c = 0. Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse. Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result. Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.
+
+SSML:
+<speak version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/10/synthesis"><voice name="en-US-JennyNeural"><prosody rate="-10%" pitch="+0%">LaTeX expression:<break time="250ms"/> a x^2 + b x + c = 0.<break time="250ms"/> Think of variable as a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.<break time="250ms"/> Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result.<break time="250ms"/> Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.</prosody></voice></speak>

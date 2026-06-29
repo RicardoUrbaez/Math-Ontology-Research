@@ -1,0 +1,7 @@
+MOCK TTS TRANSCRIPT
+
+TEXT:
+LaTeX expression: \mathbf{u} + \mathbf{v} = \mathbf{w}. Think of vector as vector is a vector-related concept used to represent directed or component-based mathematical quantities. Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result. Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.
+
+SSML:
+<speak version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/10/synthesis"><voice name="en-US-JennyNeural"><prosody rate="-10%" pitch="+0%">LaTeX expression:<break time="250ms"/> \mathbf{u} + \mathbf{v} = \mathbf{w}.<break time="250ms"/> Think of vector as vector is a vector-related concept used to represent directed or component-based mathematical quantities.<break time="250ms"/> Think of addition as an Addition is a mathematical operation or operator that transforms one or more inputs into a result.<break time="250ms"/> Think of equality as an Equality is a mathematical relation that specifies how two or more mathematical objects are connected.</prosody></voice></speak>
