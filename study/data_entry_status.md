@@ -55,6 +55,8 @@ A separate synthetic/demo response set is also available for dry-run testing:
 - `study/synthetic_demo/synthetic_comprehension_scores.csv`
 - `study/synthetic_demo/synthetic_nasa_tlx.csv`
 - `study/synthetic_demo/synthetic_interview_coding.csv`
+- `study/synthetic_demo/synthetic_demo_results_report.md`
+- `study/synthetic_demo/synthetic_demo_results_summary.json`
 - `study/analysis/mathontospeak_synthetic_demo_analysis.xlsx`
 
 These files are not real participant data. They are only for demonstrating that the spreadsheet, summaries, and coding structure work end to end.

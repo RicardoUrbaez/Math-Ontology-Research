@@ -1,0 +1,50 @@
+{
+  "data_status": "synthetic_demo_not_real_participant_data",
+  "comprehension": {
+    "n": 10,
+    "notation_mean": 0.73,
+    "notation_sd": 0.04830458915396481,
+    "semantic_mean": 0.8474999999999999,
+    "semantic_sd": 0.041583249832915496,
+    "mean_difference_semantic_minus_notation": 0.11749999999999998,
+    "paired_t_statistic": 7.223648826057693,
+    "paired_t_p_value": 4.954980628384133e-05,
+    "wilcoxon_statistic": 0.0,
+    "wilcoxon_p_value": 0.00390625,
+    "cohens_dz": 2.2843183307543784
+  },
+  "nasa_tlx": {
+    "n": 10,
+    "notation_mean": 50.583,
+    "notation_sd": 3.587840731012332,
+    "semantic_mean": 34.081,
+    "semantic_sd": 1.7927846124581348,
+    "mean_difference_semantic_minus_notation": -16.502000000000002,
+    "paired_t_statistic": -14.68934372997482,
+    "paired_t_p_value": 1.3527830701881586e-07,
+    "wilcoxon_statistic": 0.0,
+    "wilcoxon_p_value": 0.001953125,
+    "cohens_dz": -4.6451783519833825
+  },
+  "interview_code_counts": {
+    "semantic_clarity": 5,
+    "symbol_role_helpful": 3,
+    "audio_preference_semantic": 5,
+    "notation_concise": 3,
+    "notation_confusion": 3,
+    "cognitive_load_high": 3,
+    "pacing_issue": 2,
+    "domain_familiarity": 2,
+    "calculus_helpful": 2,
+    "matrix_helpful": 2
+  },
+  "interview_valence_counts": {
+    "positive": 5,
+    "mixed": 5
+  },
+  "interview_condition_mentions": {
+    "mathontospeak_semantic": 5,
+    "notation_only": 3,
+    "both": 2
+  }
+}

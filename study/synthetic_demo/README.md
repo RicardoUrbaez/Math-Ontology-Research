@@ -9,5 +9,7 @@ Files:
 - `synthetic_comprehension_scores.csv`
 - `synthetic_nasa_tlx.csv`
 - `synthetic_interview_coding.csv`
+- `synthetic_demo_results_report.md`
+- `synthetic_demo_results_summary.json`
 
 Use the real study workbook for actual participant sessions.

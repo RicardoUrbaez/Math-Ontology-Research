@@ -27,14 +27,28 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) 
         writer.writerows(rows)
 
 
-def response_for(participant_index: int, question_index: int, condition: str) -> tuple[str, str, int]:
-    """Return response, correctness label, and numeric score."""
-    if condition == "mathontospeak_semantic":
-        wrong = (participant_index + question_index) % 7 == 0
-    else:
-        wrong = (participant_index * 2 + question_index) % 4 == 0
+NOTATION_CORRECT_TARGETS = [26, 28, 30, 31, 29, 27, 32, 30, 28, 31]
+SEMANTIC_CORRECT_TARGETS = [33, 34, 35, 31, 36, 32, 35, 34, 33, 36]
 
-    if not wrong:
+
+def wrong_question_indices(participant_index: int, condition: str, total_questions: int) -> set[int]:
+    """Pick deterministic wrong-answer positions with participant variability."""
+    targets = SEMANTIC_CORRECT_TARGETS if condition == "mathontospeak_semantic" else NOTATION_CORRECT_TARGETS
+    correct_target = targets[(participant_index - 1) % len(targets)]
+    wrong_needed = total_questions - correct_target
+    ranked = sorted(
+        range(1, total_questions + 1),
+        key=lambda question_index: (
+            ((participant_index * 37) + (question_index * 19) + (11 if condition == "mathontospeak_semantic" else 0)) % 101,
+            question_index,
+        ),
+    )
+    return set(ranked[:wrong_needed])
+
+
+def response_for(participant_index: int, question_index: int, wrong_indices: set[int]) -> tuple[str, str, int]:
+    """Return response, correctness label, and numeric score."""
+    if question_index not in wrong_indices:
         return "A", "Yes", 1
 
     wrong_choices = ["B", "C", "D"]
@@ -125,8 +139,9 @@ def main() -> None:
     comprehension_rows: list[dict[str, object]] = []
     for p_idx, participant in enumerate(schedule, start=1):
         for condition in [participant["condition_1"], participant["condition_2"]]:
+            wrong_indices = wrong_question_indices(p_idx, condition, len(questions))
             for q_idx, question in enumerate(questions, start=1):
-                response, correct, score = response_for(p_idx, q_idx, condition)
+                response, correct, score = response_for(p_idx, q_idx, wrong_indices)
                 comprehension_rows.append(
                     {
                         "participant_id": participant["participant_id"],
