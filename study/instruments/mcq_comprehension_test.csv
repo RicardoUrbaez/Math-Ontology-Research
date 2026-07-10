@@ -1,0 +1,42 @@
+question_id,stimulus_id,condition_independent_prompt,choice_a,choice_b,choice_c,choice_d,correct_choice,construct
+ALG01_Q1,ALG01,What kind of statement is x + 3 = 7?,An equation,A matrix,A derivative,A set,A,concept_identification
+ALG01_Q2,ALG01,What does x represent in this expression?,A variable,A fixed number three,A matrix row,A function name,A,symbol_role
+ALG01_Q3,ALG01,Which operation appears on the left side?,Addition,Integration,Matrix multiplication,Limit,A,operation_identification
+ALG01_Q4,ALG01,What value of x makes the equation true?,4,7,10,3,A,computation
+ALG02_Q1,ALG02,What does the 2 in 2x represent?,A coefficient,A determinant,A bound of integration,A vector label,A,symbol_role
+ALG02_Q2,ALG02,Which operation is used between 2x and 5?,Subtraction,Set membership,Derivative,Matrix inverse,A,operation_identification
+ALG02_Q3,ALG02,What kind of equation is shown?,Linear equation,Quadratic equation,Integral equation,Matrix equation,A,concept_identification
+ALG02_Q4,ALG02,What value of x satisfies 2x - 5 = 9?,7,2,14,4,A,computation
+ALG03_Q1,ALG03,What does (x+1)(x-1) indicate?,A product of two factors,A vector norm,A derivative,A set union,A,concept_identification
+ALG03_Q2,ALG03,What does x^2 mean?,x squared,x divided by two,two times x,x subscript two,A,symbol_role
+ALG03_Q3,ALG03,Which statement best describes the expression?,Two equivalent algebraic forms are set equal,A matrix is singular,A limit is being evaluated,A vector is normalized,A,semantic_interpretation
+ALG03_Q4,ALG03,What is the expanded form of (x+1)(x-1)?,x^2 - 1,x^2 + 1,2x - 1,x - 2,A,computation
+ALG04_Q1,ALG04,What does the sigma symbol represent?,Summation,Derivative,Determinant,Subset,A,concept_identification
+ALG04_Q2,ALG04,What is i in the summation?,Index variable,Matrix determinant,Integration bound only,Vector magnitude,A,symbol_role
+ALG04_Q3,ALG04,What does the right side provide?,A closed-form formula for the sum,A derivative of the sum,A matrix inverse,A probability distribution,A,semantic_interpretation
+ALG04_Q4,ALG04,If n = 3, what is the sum 1 + 2 + 3?,6,3,9,12,A,computation
+CALC01_Q1,CALC01,What concept is represented by lim?,Limit,Matrix,Vector,Factor,A,concept_identification
+CALC01_Q2,CALC01,What does x -> 0 mean?,x approaches zero,x equals zero immediately,x is greater than zero,x is a matrix,A,symbol_role
+CALC01_Q3,CALC01,Which function appears in the numerator?,Sine,Cosine,Logarithm,Determinant,A,operation_identification
+CALC01_Q4,CALC01,What is the value of the limit shown?,1,0,infinity,-1,A,computation
+CALC02_Q1,CALC02,What operation is d/dx indicating?,Derivative,Integral,Vector addition,Set union,A,concept_identification
+CALC02_Q2,CALC02,What function is being differentiated?,x^3,3x^2,x,3,A,symbol_role
+CALC02_Q3,CALC02,Which rule is most directly illustrated?,Power rule,Product of matrices,Set complement,Triangle inequality,A,semantic_interpretation
+CALC02_Q4,CALC02,What is the derivative of x^3?,3x^2,x^2,3x,x^4,A,computation
+CALC03_Q1,CALC03,What operation is shown by the integral sign?,Integration,Differentiation,Matrix inversion,Summation only,A,concept_identification
+CALC03_Q2,CALC03,What are 0 and 1 in this expression?,Bounds of integration,Vector components,Matrix dimensions,Exponents,A,symbol_role
+CALC03_Q3,CALC03,What does dx indicate?,The variable of integration,A determinant,A vector direction,A coefficient,A,symbol_role
+CALC03_Q4,CALC03,What value is shown for the definite integral?,1/3,1,0,3,A,computation
+LIN01_Q1,LIN01,What kind of objects are u, v, and w?,Vectors,Scalars only,Functions,Sets,A,concept_identification
+LIN01_Q2,LIN01,What operation combines u and v?,Vector addition,Derivative,Integration,Determinant,A,operation_identification
+LIN01_Q3,LIN01,What does the equals sign state?,The sum equals vector w,The vectors are unrelated,A determinant is zero,A limit exists,A,semantic_interpretation
+LIN01_Q4,LIN01,If u=(1,2) and v=(3,4), what is w?,(4,6),(3,8),(2,2),(1,4),A,computation
+LIN02_Q1,LIN02,What kind of expression is A x = b?,Matrix-vector equation,Definite integral,Polynomial factorization,Set relation,A,concept_identification
+LIN02_Q2,LIN02,What does A usually represent here?,A matrix,A scalar constant only,A derivative operator,A probability event,A,symbol_role
+LIN02_Q3,LIN02,What does x usually represent here?,An unknown vector,A determinant value,A bound,A set of all numbers,A,symbol_role
+LIN02_Q4,LIN02,What is the result of multiplying A by x in the equation?,Vector b,Matrix A,Scalar zero,Derivative of x,A,semantic_interpretation
+LIN03_Q1,LIN03,What does det(A) mean?,Determinant of A,Derivative of A,Dimension of A,Distance from A,A,concept_identification
+LIN03_Q2,LIN03,What does det(A)=0 usually suggest about A?,A is singular or not invertible,A is the identity matrix,A is a vector,A has no entries,A,semantic_interpretation
+LIN03_Q3,LIN03,What object does A usually represent in det(A)?,A square matrix,A scalar variable,A set element,A limit value,A,symbol_role
+LIN03_Q4,LIN03,Which topic area best matches this expression?,Linear algebra,Calculus only,Probability only,Geometry only,A,domain_identification
+

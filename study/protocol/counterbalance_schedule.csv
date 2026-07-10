@@ -1,0 +1,12 @@
+participant_id,order,condition_1,condition_2,condition_1_stimuli,condition_2_stimuli,notes
+P01,AB,notation_only,mathontospeak_semantic,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with notation-only.
+P02,BA,mathontospeak_semantic,notation_only,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with MathOntoSpeak.
+P03,AB,notation_only,mathontospeak_semantic,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with notation-only.
+P04,BA,mathontospeak_semantic,notation_only,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with MathOntoSpeak.
+P05,AB,notation_only,mathontospeak_semantic,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with notation-only.
+P06,BA,mathontospeak_semantic,notation_only,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with MathOntoSpeak.
+P07,AB,notation_only,mathontospeak_semantic,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with notation-only.
+P08,BA,mathontospeak_semantic,notation_only,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with MathOntoSpeak.
+P09,AB,notation_only,mathontospeak_semantic,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with notation-only.
+P10,BA,mathontospeak_semantic,notation_only,ALG01-CALC03-LIN03,ALG01-CALC03-LIN03,Start with MathOntoSpeak.
+

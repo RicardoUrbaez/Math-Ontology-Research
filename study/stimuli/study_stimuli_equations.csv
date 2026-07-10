@@ -1,0 +1,12 @@
+arxiv_id,title,latex_equation,source_context
+ALG01,Study algebra easy linear equation,x + 3 = 7,"Study stimulus: basic linear equation with addition and equality."
+ALG02,Study algebra easy coefficient equation,2x - 5 = 9,"Study stimulus: one-variable equation with coefficient and subtraction."
+ALG03,Study algebra medium polynomial identity,(x+1)(x-1)=x^2-1,"Study stimulus: factored expression equals polynomial expression."
+ALG04,Study algebra hard finite series,\sum_{i=1}^{n} i = \frac{n(n+1)}{2},"Study stimulus: finite summation formula."
+CALC01,Study calculus easy limit,\lim_{x\to 0}\frac{\sin x}{x}=1,"Study stimulus: canonical trigonometric limit."
+CALC02,Study calculus medium derivative,\frac{d}{dx}x^3=3x^2,"Study stimulus: derivative power rule."
+CALC03,Study calculus hard definite integral,\int_0^1 x^2\,dx=\frac{1}{3},"Study stimulus: definite integral with bounds."
+LIN01,Study linear algebra easy vector addition,\mathbf{u}+\mathbf{v}=\mathbf{w},"Study stimulus: vector addition equation."
+LIN02,Study linear algebra medium matrix vector equation,A\mathbf{x}=\mathbf{b},"Study stimulus: matrix-vector equation."
+LIN03,Study linear algebra hard determinant zero,\det(A)=0,"Study stimulus: determinant equal to zero."
+

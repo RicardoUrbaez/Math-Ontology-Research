@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
+node_modules/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -9,5 +10,8 @@ env/
 .venv-corpus/
 data/arxiv_papers/
 reports/sparql/*.log
+study/analysis/previews/
+study/analysis/*.inspect.ndjson
+study/analysis/*.log
 *.tmp
 w3c_rdf_validator_response.html

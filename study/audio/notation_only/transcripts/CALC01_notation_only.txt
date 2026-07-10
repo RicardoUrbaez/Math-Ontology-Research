@@ -1,0 +1,1 @@
+limit as x approaches zero of sine x over x equals one

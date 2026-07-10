@@ -1,0 +1,1 @@
+matrix A times vector x equals vector b

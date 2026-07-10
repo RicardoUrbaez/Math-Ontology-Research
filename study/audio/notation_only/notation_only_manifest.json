@@ -1,0 +1,122 @@
+[
+  {
+    "stimulus_id": "ALG01",
+    "condition": "notation_only",
+    "domain": "algebra",
+    "difficulty": "easy",
+    "latex": "x + 3 = 7",
+    "spoken_text": "x plus three equals seven",
+    "audio_path": "study\\audio\\notation_only\\mp3\\ALG01_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\ALG01_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "ALG02",
+    "condition": "notation_only",
+    "domain": "algebra",
+    "difficulty": "easy",
+    "latex": "2x - 5 = 9",
+    "spoken_text": "two x minus five equals nine",
+    "audio_path": "study\\audio\\notation_only\\mp3\\ALG02_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\ALG02_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "ALG03",
+    "condition": "notation_only",
+    "domain": "algebra",
+    "difficulty": "medium",
+    "latex": "(x+1)(x-1)=x^2-1",
+    "spoken_text": "open parenthesis x plus one close parenthesis times open parenthesis x minus one close parenthesis equals x squared minus one",
+    "audio_path": "study\\audio\\notation_only\\mp3\\ALG03_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\ALG03_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "ALG04",
+    "condition": "notation_only",
+    "domain": "algebra",
+    "difficulty": "hard",
+    "latex": "\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}",
+    "spoken_text": "sum from i equals one to n of i equals n times n plus one divided by two",
+    "audio_path": "study\\audio\\notation_only\\mp3\\ALG04_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\ALG04_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "CALC01",
+    "condition": "notation_only",
+    "domain": "calculus",
+    "difficulty": "easy",
+    "latex": "\\lim_{x\\to 0}\\frac{\\sin x}{x}=1",
+    "spoken_text": "limit as x approaches zero of sine x over x equals one",
+    "audio_path": "study\\audio\\notation_only\\mp3\\CALC01_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\CALC01_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "CALC02",
+    "condition": "notation_only",
+    "domain": "calculus",
+    "difficulty": "medium",
+    "latex": "\\frac{d}{dx}x^3=3x^2",
+    "spoken_text": "the derivative with respect to x of x cubed equals three x squared",
+    "audio_path": "study\\audio\\notation_only\\mp3\\CALC02_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\CALC02_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "CALC03",
+    "condition": "notation_only",
+    "domain": "calculus",
+    "difficulty": "hard",
+    "latex": "\\int_0^1 x^2\\",
+    "spoken_text": "integral from 0 to 1 of x^2 dx = 1/3",
+    "audio_path": "study\\audio\\notation_only\\mp3\\CALC03_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\CALC03_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "LIN01",
+    "condition": "notation_only",
+    "domain": "linear_algebra",
+    "difficulty": "easy",
+    "latex": "\\mathbf{u}+\\mathbf{v}=\\mathbf{w}",
+    "spoken_text": "bold u plus bold v equals bold w",
+    "audio_path": "study\\audio\\notation_only\\mp3\\LIN01_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\LIN01_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "LIN02",
+    "condition": "notation_only",
+    "domain": "linear_algebra",
+    "difficulty": "medium",
+    "latex": "A\\mathbf{x}=\\mathbf{b}",
+    "spoken_text": "matrix A times vector x equals vector b",
+    "audio_path": "study\\audio\\notation_only\\mp3\\LIN02_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\LIN02_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "stimulus_id": "LIN03",
+    "condition": "notation_only",
+    "domain": "linear_algebra",
+    "difficulty": "hard",
+    "latex": "\\det(A)=0",
+    "spoken_text": "determinant of A equals zero",
+    "audio_path": "study\\audio\\notation_only\\mp3\\LIN03_notation_only.mp3",
+    "transcript_path": "study\\audio\\notation_only\\transcripts\\LIN03_notation_only.txt",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  }
+]

@@ -1,0 +1,1 @@
+open parenthesis x plus one close parenthesis times open parenthesis x minus one close parenthesis equals x squared minus one

@@ -1,0 +1,1 @@
+sum from i equals one to n of i equals n times n plus one divided by two

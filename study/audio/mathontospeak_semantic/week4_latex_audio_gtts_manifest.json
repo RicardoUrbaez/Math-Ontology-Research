@@ -1,0 +1,185 @@
+[
+  {
+    "arxiv_id": "ALG01",
+    "title": "Study algebra easy linear equation",
+    "latex": "x + 3 = 7",
+    "token_count": 5,
+    "resolved_count": 5,
+    "concepts": [
+      "Variable",
+      "Addition",
+      "Number",
+      "Equality"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_001_ALG01.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_001_ALG01.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "ALG02",
+    "title": "Study algebra easy coefficient equation",
+    "latex": "2x - 5 = 9",
+    "token_count": 6,
+    "resolved_count": 6,
+    "concepts": [
+      "Number",
+      "Variable",
+      "Subtraction",
+      "Equality"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_002_ALG02.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_002_ALG02.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "ALG03",
+    "title": "Study algebra medium polynomial identity",
+    "latex": "(x+1)(x-1)=x^2-1",
+    "token_count": 12,
+    "resolved_count": 12,
+    "concepts": [
+      "Variable",
+      "Addition",
+      "Number",
+      "Subtraction",
+      "Equality",
+      "Exponentiating"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_003_ALG03.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_003_ALG03.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "ALG04",
+    "title": "Study algebra hard finite series",
+    "latex": "\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}",
+    "token_count": 14,
+    "resolved_count": 14,
+    "concepts": [
+      "Addition",
+      "Variable",
+      "Equality",
+      "Number",
+      "Exponentiating",
+      "Division"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_004_ALG04.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_004_ALG04.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "CALC01",
+    "title": "Study calculus easy limit",
+    "latex": "\\lim_{x\\to 0}\\frac{\\sin x}{x}=1",
+    "token_count": 10,
+    "resolved_count": 9,
+    "concepts": [
+      "Variable",
+      "Map",
+      "Number",
+      "Division",
+      "Sine",
+      "Equality"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_005_CALC01.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_005_CALC01.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "CALC02",
+    "title": "Study calculus medium derivative",
+    "latex": "\\frac{d}{dx}x^3=3x^2",
+    "token_count": 12,
+    "resolved_count": 12,
+    "concepts": [
+      "Division",
+      "Variable",
+      "Exponentiating",
+      "Number",
+      "Equality"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_006_CALC02.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_006_CALC02.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "CALC03",
+    "title": "Study calculus hard definite integral",
+    "latex": "\\int_0^1 x^2\\",
+    "token_count": 7,
+    "resolved_count": 7,
+    "concepts": [
+      "Integral",
+      "Number",
+      "Exponentiating",
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_007_CALC03.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_007_CALC03.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "LIN01",
+    "title": "Study linear algebra easy vector addition",
+    "latex": "\\mathbf{u}+\\mathbf{v}=\\mathbf{w}",
+    "token_count": 8,
+    "resolved_count": 5,
+    "concepts": [
+      "Variable",
+      "Addition",
+      "Equality"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_008_LIN01.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_008_LIN01.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "LIN02",
+    "title": "Study linear algebra medium matrix vector equation",
+    "latex": "A\\mathbf{x}=\\mathbf{b}",
+    "token_count": 6,
+    "resolved_count": 4,
+    "concepts": [
+      "Variable",
+      "Equality"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_009_LIN02.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_009_LIN02.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "LIN03",
+    "title": "Study linear algebra hard determinant zero",
+    "latex": "\\det(A)=0",
+    "token_count": 4,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable",
+      "Equality",
+      "Number"
+    ],
+    "backend": "gtts",
+    "audio_path": "study\\audio\\mathontospeak_semantic\\equation_gtts\\eq_010_LIN03.mp3",
+    "ssml_path": "study\\audio\\mathontospeak_semantic\\equation_ssml\\eq_010_LIN03.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  }
+]
