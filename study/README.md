@@ -11,6 +11,7 @@ This folder contains the June 15-June 22 study package for comparing notation-on
 - `instruments/post_study_interview_guide.md` - 5-minute interview guide.
 - `protocol/counterbalance_schedule.csv` - AB/BA participant order schedule.
 - `protocol/study_protocol.md` - concise session procedure.
+- `protocol/manual_study_runbook.md` - point-by-point manual checklist for running the study.
 - `analysis/mathontospeak_study_analysis_template.xlsx` - spreadsheet for comprehension scores, NASA-TLX ratings, interview coding, and summary calculations.
 - `audio/notation_only/` - notation-only TTS audio condition.
 - `audio/mathontospeak_semantic/` - MathOntoSpeak semantic TTS audio condition.
@@ -25,4 +26,3 @@ Use the counterbalance schedule so half of participants hear A then B, and half 
 ## Manual Research Note
 
 Before collecting data from real participants, confirm with the professor whether this class project needs consent language, IRB review, or an exempt classroom/demo designation.
-
