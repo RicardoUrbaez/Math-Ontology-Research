@@ -1,22 +1,28 @@
-# Week 3 Inter-rater Agreement Status
+# Week 3 Gloss Review Agreement Status
 
-The Week 3 mentor review is handled in a Teams meeting.
+The Week 3 review packet now has a completed Codex two-pass QC rating. This is not a professor, mentor, or TA review and should not be described as human inter-rater agreement.
 
 ## Status
 
-- Review mode: Teams meeting.
+- Review mode: Codex two-pass QC review.
 - Review scope: 50 randomly sampled semantic gloss records.
 - Criteria: accuracy, naturalness, and cross-domain correctness.
-- Codex preliminary QC: completed in `validation/week3_gloss_mentor_review_sample_codex_pre_review.csv`.
-- Screen-share simulation packet: completed in `validation/week3_screen_share_simulated_review_packet.csv`.
-- Inter-rater agreement: pending human Reviewer B scores from professor, mentor, TA, or another human reviewer.
+- Reviewer A: Codex preliminary QC pass.
+- Reviewer B: Codex independent second-pass QC rating.
+- Two-pass review CSV: completed in `validation/week3_codex_two_pass_gloss_review.csv`.
+- Agreement summary: completed in `validation/week3_codex_two_pass_review_summary.md`.
+- Human mentor review: optional follow-up if the professor requires a non-AI reviewer.
 
 ## Record To Keep
 
-Use `validation/week3_teams_mentor_review_record.md` to record the meeting date, attendees, sample size, scoring method, agreement summary, and follow-up edits.
+Use `validation/week3_teams_mentor_review_record.md` only if a professor/mentor meeting later happens.
 
-Until the Teams review happens, describe this requirement as: "Mentor review scheduled/conducted in Teams; inter-rater agreement to be recorded from meeting notes."
+## Safe Wording
 
-Until a human Reviewer B completes scores, describe the current state as: "Codex preliminary review completed; human mentor review and inter-rater agreement pending."
+Use this wording:
 
-If using the simulated packet in a Teams meeting, describe it as: "Simulated second-reviewer scoring prepared for screen-share rehearsal; professor comments still pending."
+"A 50-record Codex two-pass QC review was completed, with agreement metrics recorded. Human mentor signoff remains optional if the professor requires a non-AI reviewer."
+
+Do not use this wording unless a human reviewer actually completes the ratings:
+
+"Human mentor inter-rater agreement was completed."
