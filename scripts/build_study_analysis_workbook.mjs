@@ -4,8 +4,12 @@ import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 
 const root = process.cwd();
 const outputDir = path.join(root, "study", "analysis");
-const outputPath = path.join(outputDir, "mathontospeak_study_analysis_template.xlsx");
-const previewDir = path.join(outputDir, "previews");
+const syntheticDemo = process.argv.includes("--synthetic-demo");
+const outputPath = path.join(
+  outputDir,
+  syntheticDemo ? "mathontospeak_synthetic_demo_analysis.xlsx" : "mathontospeak_study_analysis_template.xlsx",
+);
+const previewDir = path.join(outputDir, syntheticDemo ? "previews_synthetic_demo" : "previews");
 
 function parseCsv(text) {
   const rows = [];
@@ -99,52 +103,98 @@ function columnName(index) {
 const stimuli = await readCsv("study/stimuli/study_stimuli.csv");
 const questions = await readCsv("study/instruments/mcq_comprehension_test.csv");
 const schedule = await readCsv("study/protocol/counterbalance_schedule.csv");
+const syntheticComprehension = syntheticDemo
+  ? await readCsv("study/synthetic_demo/synthetic_comprehension_scores.csv")
+  : [];
+const syntheticNasa = syntheticDemo ? await readCsv("study/synthetic_demo/synthetic_nasa_tlx.csv") : [];
+const syntheticInterviews = syntheticDemo ? await readCsv("study/synthetic_demo/synthetic_interview_coding.csv") : [];
 
-const comprehensionEntryRows = schedule.flatMap((participant) =>
-  [participant.condition_1, participant.condition_2].flatMap((condition) =>
-    questions.map((question) => [
+const comprehensionEntryRows = syntheticDemo
+  ? syntheticComprehension.map((row) => [
+      row.participant_id,
+      row.condition,
+      row.stimulus_id,
+      row.question_id,
+      row.response,
+      row.correct_choice,
+      row.correct,
+      row.score,
+    ])
+  : schedule.flatMap((participant) =>
+      [participant.condition_1, participant.condition_2].flatMap((condition) =>
+        questions.map((question) => [
+          participant.participant_id,
+          condition,
+          question.stimulus_id,
+          question.question_id,
+          "",
+          question.correct_choice,
+          "",
+          "",
+        ]),
+      ),
+    );
+
+const nasaEntryRows = syntheticDemo
+  ? syntheticNasa.map((row) => [
+      row.participant_id,
+      row.condition,
+      row.mental,
+      row.physical,
+      row.temporal,
+      row.performance,
+      row.effort,
+      row.frustration,
+      row.notes,
+      row.raw_tlx_mean,
+    ])
+  : schedule.flatMap((participant) =>
+      [participant.condition_1, participant.condition_2].map((condition) => [
+        participant.participant_id,
+        condition,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "pending participant data",
+        "",
+      ]),
+    );
+
+const interviewEntryRows = syntheticDemo
+  ? syntheticInterviews.map((row) => [
+      row.participant_id,
+      row.excerpt_summary,
+      row.code_1,
+      row.code_2,
+      row.code_3,
+      row.valence,
+      row.condition_mentioned,
+      row.researcher_notes,
+    ])
+  : schedule.map((participant) => [
       participant.participant_id,
-      condition,
-      question.stimulus_id,
-      question.question_id,
-      "",
-      question.correct_choice,
+      "pending interview transcript",
       "",
       "",
-    ]),
-  ),
-);
-
-const nasaEntryRows = schedule.flatMap((participant) =>
-  [participant.condition_1, participant.condition_2].map((condition) => [
-    participant.participant_id,
-    condition,
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "pending participant data",
-    "",
-  ]),
-);
-
-const interviewEntryRows = schedule.map((participant) => [
-  participant.participant_id,
-  "pending interview transcript",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "Not collected yet; enter notes after the 5-minute interview.",
-]);
+      "",
+      "",
+      "",
+      "Not collected yet; enter notes after the 5-minute interview.",
+    ]);
 
 const workbook = Workbook.create();
 
 const summary = workbook.worksheets.add("Summary");
-setTitle(summary, "MathOntoSpeak Study Analysis Template", "Enter participant data in the scoring sheets; summary formulas update automatically.");
+setTitle(
+  summary,
+  syntheticDemo ? "MathOntoSpeak Synthetic Demo Analysis" : "MathOntoSpeak Study Analysis Template",
+  syntheticDemo
+    ? "Synthetic/demo responses only. Do not report these as real participant data."
+    : "Enter participant data in the scoring sheets; summary formulas update automatically.",
+);
 styleSheet(summary);
 summary.getRange("A4:B14").values = [
   ["Metric", "Value"],
@@ -157,7 +207,7 @@ summary.getRange("A4:B14").values = [
   ["Semantic score mean", ""],
   ["Notation-only NASA mean", ""],
   ["Semantic NASA mean", ""],
-  ["Manual status", "Ready for pilot data entry"],
+  ["Manual status", syntheticDemo ? "Synthetic demo data loaded; not real participants" : "Ready for pilot data entry"],
 ];
 summary.getRange("B10").formulas = [["=IFERROR(AVERAGEIFS('Comprehension Scores'!$H:$H,'Comprehension Scores'!$B:$B,\"notation_only\"),\"\")"]];
 summary.getRange("B11").formulas = [["=IFERROR(AVERAGEIFS('Comprehension Scores'!$H:$H,'Comprehension Scores'!$B:$B,\"mathontospeak_semantic\"),\"\")"]];
@@ -259,6 +309,27 @@ writeTable(
   interviewEntryRows,
 );
 setWidths(interviewSheet, [18, 58, 28, 28, 28, 16, 28, 48]);
+
+if (syntheticDemo) {
+  const provenanceSheet = workbook.worksheets.add("Demo Provenance");
+  setTitle(provenanceSheet, "Synthetic Demo Data Provenance", "This workbook contains generated demo values only.");
+  styleSheet(provenanceSheet);
+  writeTable(
+    provenanceSheet,
+    "A4",
+    ["Field", "Value"],
+    [
+      ["Data type", "Synthetic demo data"],
+      ["Real participants", "No"],
+      ["Purpose", "Workbook testing and dry-run presentation only"],
+      ["Comprehension source", "study/synthetic_demo/synthetic_comprehension_scores.csv"],
+      ["NASA-TLX source", "study/synthetic_demo/synthetic_nasa_tlx.csv"],
+      ["Interview source", "study/synthetic_demo/synthetic_interview_coding.csv"],
+      ["Required next step", "Replace with real participant responses after study sessions"],
+    ],
+  );
+  setWidths(provenanceSheet, [28, 90]);
+}
 
 await fs.mkdir(outputDir, { recursive: true });
 await fs.mkdir(previewDir, { recursive: true });

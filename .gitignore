@@ -11,6 +11,7 @@ env/
 data/arxiv_papers/
 reports/sparql/*.log
 study/analysis/previews/
+study/analysis/previews_synthetic_demo/
 study/analysis/*.inspect.ndjson
 study/analysis/*.log
 *.tmp

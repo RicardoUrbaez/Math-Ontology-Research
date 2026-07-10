@@ -48,3 +48,17 @@ For each participant:
 
 Do not invent scores or interview responses. Real values should only be added after participant sessions are actually run.
 
+## Synthetic Demo Dataset
+
+A separate synthetic/demo response set is also available for dry-run testing:
+
+- `study/synthetic_demo/synthetic_comprehension_scores.csv`
+- `study/synthetic_demo/synthetic_nasa_tlx.csv`
+- `study/synthetic_demo/synthetic_interview_coding.csv`
+- `study/analysis/mathontospeak_synthetic_demo_analysis.xlsx`
+
+These files are not real participant data. They are only for demonstrating that the spreadsheet, summaries, and coding structure work end to end.
+
+The clean real-data workbook remains:
+
+- `study/analysis/mathontospeak_study_analysis_template.xlsx`

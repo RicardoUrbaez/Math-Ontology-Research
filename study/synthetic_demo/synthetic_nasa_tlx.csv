@@ -1,0 +1,21 @@
+participant_id,condition,mental,physical,temporal,performance,effort,frustration,notes,raw_tlx_mean
+P01,notation_only,60,25,55,45,58,42,Synthetic demo NASA-TLX rating; replace with real participant rating.,47.5
+P01,mathontospeak_semantic,43,20,36,30,42,26,Synthetic demo NASA-TLX rating; replace with real participant rating.,32.83
+P02,mathontospeak_semantic,46,22,39,32,45,28,Synthetic demo NASA-TLX rating; replace with real participant rating.,35.33
+P02,notation_only,64,28,59,48,62,46,Synthetic demo NASA-TLX rating; replace with real participant rating.,51.17
+P03,notation_only,68,31,63,51,66,50,Synthetic demo NASA-TLX rating; replace with real participant rating.,54.83
+P03,mathontospeak_semantic,49,18,42,34,48,30,Synthetic demo NASA-TLX rating; replace with real participant rating.,36.83
+P04,mathontospeak_semantic,40,20,33,36,39,24,Synthetic demo NASA-TLX rating; replace with real participant rating.,32.0
+P04,notation_only,72,22,67,54,70,38,Synthetic demo NASA-TLX rating; replace with real participant rating.,53.83
+P05,notation_only,56,25,51,42,54,42,Synthetic demo NASA-TLX rating; replace with real participant rating.,45.0
+P05,mathontospeak_semantic,43,22,36,28,42,26,Synthetic demo NASA-TLX rating; replace with real participant rating.,32.83
+P06,mathontospeak_semantic,46,18,39,30,45,28,Synthetic demo NASA-TLX rating; replace with real participant rating.,34.33
+P06,notation_only,60,28,55,45,58,46,Synthetic demo NASA-TLX rating; replace with real participant rating.,48.67
+P07,notation_only,64,31,59,48,62,50,Synthetic demo NASA-TLX rating; replace with real participant rating.,52.33
+P07,mathontospeak_semantic,49,20,42,32,48,30,Synthetic demo NASA-TLX rating; replace with real participant rating.,36.83
+P08,mathontospeak_semantic,40,22,33,34,39,24,Synthetic demo NASA-TLX rating; replace with real participant rating.,32.0
+P08,notation_only,68,22,63,51,66,38,Synthetic demo NASA-TLX rating; replace with real participant rating.,51.33
+P09,notation_only,72,25,67,54,70,42,Synthetic demo NASA-TLX rating; replace with real participant rating.,55.0
+P09,mathontospeak_semantic,43,18,36,36,42,26,Synthetic demo NASA-TLX rating; replace with real participant rating.,33.5
+P10,mathontospeak_semantic,46,20,39,28,45,28,Synthetic demo NASA-TLX rating; replace with real participant rating.,34.33
+P10,notation_only,56,28,51,42,54,46,Synthetic demo NASA-TLX rating; replace with real participant rating.,46.17
