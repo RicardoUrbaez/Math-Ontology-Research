@@ -6,5 +6,8 @@ __pycache__/
 .venv/
 venv/
 env/
+.venv-corpus/
+data/arxiv_papers/
+reports/sparql/*.log
 *.tmp
 w3c_rdf_validator_response.html

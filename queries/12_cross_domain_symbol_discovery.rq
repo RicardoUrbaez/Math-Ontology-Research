@@ -1,0 +1,23 @@
+PREFIX mathkg: <http://example.org/mathkg/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# Purpose: inspect concepts that may participate in cross-domain symbol ambiguity.
+# The API keeps a curated ambiguity table for symbols such as T; this query
+# finds local concept records often used to resolve those meanings.
+SELECT ?concept ?label ?domain ?definition ?note
+WHERE {
+  VALUES ?labelCandidate {
+    "Variable" "Matrix" "Transformation" "Function" "Probability" "Mean"
+  }
+  ?concept rdfs:label ?label .
+  FILTER(LCASE(STR(?label)) = LCASE(?labelCandidate))
+  OPTIONAL { ?concept mathkg:domainTag ?domain . }
+  OPTIONAL { ?concept skos:definition ?definition . }
+  OPTIONAL { ?concept mathkg:accessibilityNote ?note . }
+}
+ORDER BY ?label ?domain

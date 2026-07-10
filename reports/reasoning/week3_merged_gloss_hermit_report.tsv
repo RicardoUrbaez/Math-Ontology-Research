@@ -1,0 +1,11 @@
+Level	Rule Name	Subject	Property	Value
+WARN	missing_definition	http://example.org/mathkg/GlossRecord	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/canonicalGloss	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/conciseForm	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/documentRoleForm	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/expertForm	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/glossForConcept	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/hasGlossRecord	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/pedagogicalForm	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/sourceProvenance	IAO:0000115	
+WARN	missing_definition	http://example.org/mathkg/sourceProvenanceNote	IAO:0000115	

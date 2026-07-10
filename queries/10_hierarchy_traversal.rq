@@ -6,11 +6,14 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 
-# Purpose: traverse subclass hierarchy under MathObject and MathOperation.
-SELECT ?root ?concept ?label
+# Purpose: traverse the current Week 3 kind/role hierarchy for the 500-concept layer.
+SELECT ?root ?rootLabel ?concept ?label ?kindRole ?semanticType
 WHERE {
-  VALUES ?root { mathkg:MathObject mathkg:MathOperation }
-  ?concept rdfs:subClassOf* ?root ;
+  VALUES ?root { mathkg:KindConcept mathkg:RoleConcept }
+  ?root rdfs:label ?rootLabel .
+  ?concept rdfs:subClassOf+ ?root ;
            rdfs:label ?label .
+  OPTIONAL { ?concept mathkg:kindRoleType ?kindRole . }
+  OPTIONAL { ?concept mathkg:semanticType ?semanticType . }
 }
-ORDER BY ?root ?label
+ORDER BY ?rootLabel ?kindRole ?semanticType ?label

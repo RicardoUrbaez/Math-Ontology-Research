@@ -1,0 +1,21 @@
+PREFIX mathkg: <http://example.org/mathkg/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# Purpose: retrieve glossary fields needed by the LaTeX-to-JSON accessibility endpoint.
+# Replace mathkg:Integral with any local concept IRI.
+SELECT ?concept ?label ?definition ?concise ?pedagogical ?expert ?documentRole ?note
+WHERE {
+  VALUES ?concept { mathkg:Integral }
+  OPTIONAL { ?concept rdfs:label ?label . }
+  OPTIONAL { ?concept skos:definition ?definition . }
+  OPTIONAL { ?concept mathkg:conciseForm ?concise . }
+  OPTIONAL { ?concept mathkg:pedagogicalForm ?pedagogical . }
+  OPTIONAL { ?concept mathkg:expertForm ?expert . }
+  OPTIONAL { ?concept mathkg:documentRoleForm ?documentRole . }
+  OPTIONAL { ?concept mathkg:accessibilityNote ?note . }
+}

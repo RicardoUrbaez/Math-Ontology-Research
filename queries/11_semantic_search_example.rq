@@ -1,0 +1,27 @@
+PREFIX mathkg: <http://example.org/mathkg/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# Purpose: local semantic-search example for concepts matching a text fragment.
+# Replace "matrix" with another search term when running in Fuseki.
+SELECT ?concept ?label ?definition ?domain ?source ?accessibilityNote
+WHERE {
+  ?concept rdfs:label ?label .
+  OPTIONAL { ?concept skos:definition ?definition . }
+  OPTIONAL { ?concept mathkg:domainTag ?domain . }
+  OPTIONAL { ?concept dc:source ?source . }
+  OPTIONAL { ?concept mathkg:accessibilityNote ?accessibilityNote . }
+  FILTER(
+    CONTAINS(LCASE(STR(?label)), "matrix") ||
+    CONTAINS(LCASE(STR(?definition)), "matrix") ||
+    CONTAINS(LCASE(STR(?domain)), "matrix") ||
+    CONTAINS(LCASE(STR(?source)), "matrix") ||
+    CONTAINS(LCASE(STR(?accessibilityNote)), "matrix")
+  )
+}
+ORDER BY LCASE(STR(?label))
+LIMIT 25

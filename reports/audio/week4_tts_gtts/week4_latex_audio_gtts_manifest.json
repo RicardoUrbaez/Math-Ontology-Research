@@ -1,0 +1,334 @@
+[
+  {
+    "arxiv_id": "2606.19323v1",
+    "title": "Cohomogeneity one actions on symmetric spaces of mixed type",
+    "latex": "\\mathbb{R}^n \\times M_-",
+    "token_count": 6,
+    "resolved_count": 6,
+    "concepts": [
+      "Real Number",
+      "Exponentiating",
+      "Variable",
+      "Multiplication",
+      "Subtraction"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_001_2606_19323v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_001_2606_19323v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19322v1",
+    "title": "Existential Inclusions of Bi-exact Groups are Conjugacy Representation Rigid",
+    "latex": "\\Lambda\\hookrightarrow \\Gamma",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable",
+      "Embedding"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_002_2606_19322v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_002_2606_19322v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19313v1",
+    "title": "Stability of Khintchine-type inequalities via log-monotonicity",
+    "latex": "S=\\sum_k a_k X_k",
+    "token_count": 8,
+    "resolved_count": 8,
+    "concepts": [
+      "Variable",
+      "Equality",
+      "Addition"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_003_2606_19313v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_003_2606_19313v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19309v1",
+    "title": "Norm inflation for the cubic hyperbolic NLS on the torus",
+    "latex": "\\mathbb{T}^2",
+    "token_count": 4,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable",
+      "Exponentiating",
+      "Number"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_004_2606_19309v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_004_2606_19309v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19306v1",
+    "title": "Stick-breaking constructions of the normalized inverse Gaussian process",
+    "latex": "1/2",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Number",
+      "Division"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_005_2606_19306v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_005_2606_19306v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19298v1",
+    "title": "Secretary Problem Thresholds and Convergents of one over e",
+    "latex": "1/e",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Number",
+      "Division",
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_006_2606_19298v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_006_2606_19298v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19288v1",
+    "title": "Two weight estimates for difference quotients",
+    "latex": "L^p",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable",
+      "Exponentiating"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_007_2606_19288v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_007_2606_19288v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19260v1",
+    "title": "Dynamics of simply parabolic inner functions",
+    "latex": "\\int_{\\mathbb{R}} \\log |F'| d\\ell < \\infty",
+    "token_count": 10,
+    "resolved_count": 7,
+    "concepts": [
+      "Integral",
+      "Real Number",
+      "Logarithm",
+      "Norm",
+      "Variable",
+      "Inequality"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_008_2606_19260v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_008_2606_19260v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19250v1",
+    "title": "Local and global well-posedness for the extended Schrodinger-Benjamin-Ono system",
+    "latex": "\\partial_{x}(v^2)",
+    "token_count": 5,
+    "resolved_count": 5,
+    "concepts": [
+      "Derivative",
+      "Variable",
+      "Exponentiating",
+      "Number"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_009_2606_19250v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_009_2606_19250v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19241v1",
+    "title": "The Moduli Space of Twisted Exact Differential Forms",
+    "latex": "\\mathbf{m}",
+    "token_count": 2,
+    "resolved_count": 1,
+    "concepts": [
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_010_2606_19241v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_010_2606_19241v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19234v1",
+    "title": "Classical freeness of affine sl n at level one",
+    "latex": "\\widehat{\\mathfrak{sl}}_n",
+    "token_count": 5,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_011_2606_19234v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_011_2606_19234v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19223v1",
+    "title": "Diffeomorphic Logarithm of Special Orthogonal Matrices",
+    "latex": "\\mathbb{SO}_n",
+    "token_count": 4,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_012_2606_19223v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_012_2606_19223v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19217v1",
+    "title": "Explicit thresholds in a generalized Turan problem",
+    "latex": "\\ex(n",
+    "token_count": 2,
+    "resolved_count": 1,
+    "concepts": [
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_013_2606_19217v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_013_2606_19217v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19207v1",
+    "title": "Extrema of microscopically slowed-down Gaussian fields",
+    "latex": "\\log",
+    "token_count": 1,
+    "resolved_count": 1,
+    "concepts": [
+      "Logarithm"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_014_2606_19207v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_014_2606_19207v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19200v1",
+    "title": "Holomorphic tensors on products of algebraic cones",
+    "latex": "\\geq 2",
+    "token_count": 2,
+    "resolved_count": 2,
+    "concepts": [
+      "Inequality",
+      "Number"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_015_2606_19200v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_015_2606_19200v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19198v1",
+    "title": "Well-posedness and trace theory for the Kolmogorov equation",
+    "latex": "|n_x\\cdot v|",
+    "token_count": 6,
+    "resolved_count": 4,
+    "concepts": [
+      "Norm",
+      "Variable",
+      "Multiplication"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_016_2606_19198v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_016_2606_19198v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19179v1",
+    "title": "Compute Efficiency and Serial Runtime Tradeoffs",
+    "latex": "\\sqrt{\\kappa}",
+    "token_count": 2,
+    "resolved_count": 2,
+    "concepts": [
+      "Exponentiating",
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_017_2606_19179v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_017_2606_19179v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19178v1",
+    "title": "Shortest paths in polynomial lemniscate sublevel sets",
+    "latex": "f(z)=\\prod_{j=1}^{n}(z-a_j)",
+    "token_count": 13,
+    "resolved_count": 13,
+    "concepts": [
+      "Variable",
+      "Equality",
+      "Multiplication",
+      "Number",
+      "Exponentiating",
+      "Subtraction"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_018_2606_19178v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_018_2606_19178v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19177v1",
+    "title": "Global dynamics in the 3D pressureless Euler-Poisson system",
+    "latex": "\\mathbb{R}^3",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Real Number",
+      "Exponentiating",
+      "Number"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_019_2606_19177v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_019_2606_19177v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  },
+  {
+    "arxiv_id": "2606.19173v1",
+    "title": "Higher-spin self-dual gravity from holomorphic planes in twistor space",
+    "latex": "M_{HS}",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable"
+    ],
+    "backend": "gtts",
+    "audio_path": "reports\\audio\\week4_tts_gtts\\equation_gtts\\eq_020_2606_19173v1.mp3",
+    "ssml_path": "reports\\audio\\week4_tts_gtts\\equation_ssml\\eq_020_2606_19173v1.ssml",
+    "status": "ok",
+    "detail": "gTTS MP3 written"
+  }
+]

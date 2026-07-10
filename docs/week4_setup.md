@@ -21,6 +21,25 @@ python scripts/run_week4_pipeline_tests.py
 python -m compileall src scripts
 ```
 
+Run the assignment-shaped Week 4 FastAPI app locally:
+
+```powershell
+python -m uvicorn api.main:app --reload
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+The four required API routes are:
+
+- `GET /api/search`
+- `POST /api/discover`
+- `POST /api/recommend`
+- `POST /api/accessibility/latex-gloss`
+
 Outputs are written to:
 
 - `outputs/json_glosses/`

@@ -7,3 +7,5 @@ gTTS
 python-dotenv
 requests
 azure-cognitiveservices-speech
+spacy
+pypdf

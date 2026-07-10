@@ -1,0 +1,2311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:mathkg="http://example.org/mathkg/"
+   xmlns:ns1="http://purl.obolibrary.org/obo/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofloopintegration">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CoefficientOfHyperbolicRotation">
+    <mathkg:documentRoleForm>In a mathematical document, coefficient of hyperbolic rotation usually signals a transformation concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <skos:prefLabel>Coefficient of hyperbolic rotation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfConsecutiveApproximating">
+    <mathkg:documentRoleForm>In a mathematical document, method of consecutive approximating usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Riccitensor">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <ns1:IAO_0000115>Ricci tensor is a tensor-related concept used to represent multilinear geometric or algebraic information.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Variationaliterationmethod">
+    <dc:source>OntoMathPRO</dc:source>
+    <skos:example>Use variational iteration method as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AnalyticalGeometry">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+    <mathkg:documentRoleForm>In a mathematical document, analytical geometry usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <mathkg:pedagogicalForm>Think of analytical geometry as an Analytical geometry is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Middleproductalgorithm">
+    <skos:altLabel>middleproductalgorithm</skos:altLabel>
+    <skos:definition>A Middle product algorithm is a mathematical operation or operator that transforms one or more inputs into a result.</skos:definition>
+    <skos:example>Use middle product algorithm when reading an expression step that applies a rule to inputs.</skos:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Method">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <skos:example>Use method as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <skos:definition>A Method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SturmLiouvilleProblem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <mathkg:expertForm>Sturm-Liouville problem denotes a Sturm-Liouville problem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Boundedgroup">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Freeboundaryproblem">
+    <skos:example>Use free boundary problem as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Stablesubgroup">
+    <skos:altLabel>stablesubgroup</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/EllipticalRotation">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+    <skos:prefLabel>Elliptical rotation</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CurvatureOfSpaceCurves">
+    <mathkg:conciseForm>Curvature of space curves: Curvature of space curves is a geometric concept describing how a curve, surface, or space deviates from being flat.</mathkg:conciseForm>
+    <mathkg:pedagogicalForm>Think of curvature of space curves as curvature of space curves is a geometric concept describing how a curve, surface, or space deviates from being flat.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TriangularGroup">
+    <mathkg:conciseForm>Triangular group: A Triangular group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ContactTransformation">
+    <mathkg:conciseForm>Contact transformation: A Contact transformation is a transformation concept that describes a structure-preserving change or mapping.</mathkg:conciseForm>
+    <mathkg:documentRoleForm>In a mathematical document, contact transformation usually signals a transformation concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Algebra">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Algebra"/>
+    <rdfs:label>Algebra</rdfs:label>
+    <skos:definition>An Algebra is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Almostcertainversion">
+    <skos:example>Use almost certain version as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Computationalsolutionofincorrectproblem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Cosine">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <ns1:IAO_0000115>A Cosine is a mathematical function concept that associates inputs with outputs according to a rule.</ns1:IAO_0000115>
+    <skos:altLabel>cosine</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RationalNumber">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2117"/>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Greenfunctionmethod">
+    <rdfs:label>Green function method</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Metabeliangroup">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Numericalevaluationofnonstationarystream">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Division">
+    <mathkg:expertForm>Division denotes a Division is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:expertForm>
+    <rdfs:label>Division gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Derivation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Permutationgroup">
+    <rdfs:label>Permutation group</rdfs:label>
+    <ns1:IAO_0000115>A Permutation group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Twovaluegroup">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Threelevelscheme">
+    <ns1:IAO_0000115>A Three-level scheme is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <skos:altLabel>three-levelscheme</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Quantization">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Quantization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Locallyfinitenormalgroup">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <rdfs:label>Locally finite normal group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Stochasticallymatrix">
+    <mathkg:semanticType>matrix</mathkg:semanticType>
+    <rdfs:label>Stochastically matrix</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Weingartentensor">
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CollectingTerms">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Ringwithoutidentity">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+    <skos:example>Use ring without identity as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LimitAlmostCertainTheorem">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/KleinianGroup">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Kleiniangroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AffineEquivalence">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1330"/>
+    <rdfs:label>Affine equivalence gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Deformation">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1380"/>
+    <skos:example>Use deformation as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Affinetransform">
+    <skos:altLabel>affinetransform</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HausdorffMeasure">
+    <mathkg:documentRoleForm>In a mathematical document, hausdorff measure usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2104"/>
+    <mathkg:pedagogicalForm>Think of hausdorff measure as hausdorff measure is a mathematical assignment of size, extent, or magnitude to sets or geometric objects.</mathkg:pedagogicalForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ChristiansenSederbergmethod">
+    <skos:example>Use christiansen-sederberg method as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <ns1:IAO_0000115>A Christiansen-Sederberg method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CocuclicGroup">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tissueconnectivity">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Variable">
+    <mathkg:expertForm>Variable denotes a Variable is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+    <dcterms:source rdf:resource="http://example.org/mathkg/Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/KieferAndWolfowitzTheorem">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GraduatedRing">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <mathkg:pedagogicalForm>Think of graduated ring as a Graduated ring is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TransitionProbabilityMatrix">
+    <rdfs:label>Transition probability matrix gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SecondFundamentalForm">
+    <mathkg:expertForm>Second fundamental form denotes second fundamental form is a mathematical form used to encode geometric, algebraic, or analytic structure.</mathkg:expertForm>
+    <mathkg:canonicalGloss>Second fundamental form: Second fundamental form is a mathematical form used to encode geometric, algebraic, or analytic structure.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ArithmeticRing">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Arithmeticring"/>
+    <rdfs:label>Arithmetic ring gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Gradient">
+    <mathkg:canonicalGloss>Gradient: A Gradient is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Gradient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Orthogonalgroups">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AlgorithmOfLinearCombination">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Algorithmoflinearcombination"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/IsometricEmbedding">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Hermiteanconjugatedoperator">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1300"/>
+    <skos:altLabel>hermitean-conjugated operator</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Isometry">
+    <ns1:IAO_0000115>Isometry is a distance-preserving map between metric or geometric spaces.</ns1:IAO_0000115>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Logarithm">
+    <skos:prefLabel>Logarithm</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Pseudoscalar">
+    <skos:prefLabel>Pseudoscalar</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Tangent">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Diffeomorphism">
+    <mathkg:canonicalGloss>Diffeomorphism: Diffeomorphism is a smooth structure-preserving correspondence between differentiable spaces.</mathkg:canonicalGloss>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1357"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/GlossRecord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RicciTensor">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Join">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Join"/>
+    <rdfs:label>Join</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Nilpotentbyfinitesolvablegroup">
+    <skos:altLabel>nilpotent-by-finite solvable group</skos:altLabel>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProjectivelyDiffeomorphy">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+    <mathkg:documentRoleForm>In a mathematical document, projectively diffeomorphy usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <mathkg:pedagogicalForm>Think of projectively diffeomorphy as projectively diffeomorphy is a smooth structure-preserving correspondence between differentiable spaces.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TheoremOfUniqueExistence">
+    <skos:prefLabel>Theorem of unique existence</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TakingTheLogarithm">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MixedProblem">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E404"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CarlemanMatrixMethod">
+    <rdfs:label>Carleman matrix method gloss record</rdfs:label>
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocalDeMoivreLaplaceTheorem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Groupring">
+    <skos:altLabel>groupring</skos:altLabel>
+    <skos:example>Use group ring as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TissueConnectivity">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2109"/>
+    <mathkg:pedagogicalForm>Think of tissue connectivity as a Tissue connectivity is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Paulimatrices">
+    <skos:definition>A Pauli matrices is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <skos:altLabel>paulimatrices</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GradeAutomorphism">
+    <mathkg:canonicalGloss>Grade automorphism: A Grade automorphism is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ThePoissontensor">
+    <dc:source>OntoMathPRO</dc:source>
+    <rdfs:label>The Poisson tensor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HardyLittlewoodTheorem">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/HardyLittlewoodtheorem"/>
+    <mathkg:conciseForm>Hardy Littlewood theorem: A Hardy Littlewood theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Hessianmatrix">
+    <skos:example>Use hessian matrix when an expression involves rows, columns, or linear transformations.</skos:example>
+    <skos:definition>A Hessian matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Projectionmethod">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/RationalNumber">
+    <skos:altLabel>rationalnumber</skos:altLabel>
+    <skos:example>Use rational number as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Derivative">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Derivative"/>
+    <skos:note>No exact external source IRI is asserted for this project-local validation concept.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/AbsolutelydecomposableAbeliangroup">
+    <rdfs:label>Absolutely decomposable Abelian group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Circle">
+    <rdfs:label>Circle gloss record</rdfs:label>
+    <mathkg:canonicalGloss>Circle: A Circle is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/OuterProductAlgorithm">
+    <mathkg:expertForm>Outer product algorithm denotes an Outer product algorithm is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Vector">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1693"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/EquiaffineTransformation">
+    <mathkg:conciseForm>Equiaffine transformation: An Equiaffine transformation is a transformation concept that describes a structure-preserving change or mapping.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Contacttransformation">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/BubnovGalerkinmethod">
+    <ns1:IAO_0000115>A Bubnov Galerkin method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProblemWithTheNeymanCondition">
+    <rdfs:label>Problem with the Neyman condition gloss record</rdfs:label>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/FreeAbeliangroup">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/FreeAbelianGroup"/>
+    <skos:altLabel>free abelian group</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/EqualCoefficient">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Parafreegroup">
+    <ns1:IAO_0000115>A Parafree group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Theoremoftheoryofgeometry">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RadiallyRelatedEllipticalRotation">
+    <mathkg:conciseForm>Radially related elliptical rotation: A Radially related elliptical rotation is a transformation concept that describes a structure-preserving change or mapping.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofdirectingfunction">
+    <mathkg:semanticType>function</mathkg:semanticType>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Wienerstechniqueofoptimuslinearfiltering">
+    <ns1:IAO_0000115>A Wiener's technique of optimus linear filtering is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <rdfs:label>Wiener's technique of optimus linear filtering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Affinegeometry">
+    <rdfs:label>Affine geometry</rdfs:label>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E5"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Brightonmethod">
+    <skos:example>Use brighton method as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Positivenumber">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/GaussSeideldecompositionmethod">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E521"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Additivegroup">
+    <skos:definition>An Additive group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/AdditiveGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Arithmeticring">
+    <skos:altLabel>arithmetic ring</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Algebraicallyclosedgroup">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/AlgebraicallyClosedGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CentralLimitTheorem">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Centrallimittheorem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Gradientoptimalcontrolmethod">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FreeAbelianGroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+    <mathkg:documentRoleForm>In a mathematical document, free abelian group usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/EvenInteger">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RiemannMethod">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Constant">
+    <skos:definition>A Constant is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <rdfs:label>Constant</rdfs:label>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2134"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ModifiedNewtonmethod">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/ModifiedNewtonMethod"/>
+    <skos:altLabel>modifiednewtonmethod</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CentroaffineTransformation">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TransversallyManipulation">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Transversallymanipulation"/>
+    <mathkg:documentRoleForm>In a mathematical document, transversally manipulation usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ArtinianGroup">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Chebyshevradius">
+    <skos:altLabel>chebyshev radius</skos:altLabel>
+    <skos:altLabel>chebyshevradius</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Characteristicideal">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Distance">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <rdfs:label>Distance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Formula">
+    <ns1:IAO_0000115>A Formula is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ThelocalHamiltonian">
+    <skos:altLabel>thelocalhamiltonian</skos:altLabel>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/TheLocalHamiltonian"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ProblemwiththeDirichletcondition">
+    <rdfs:label>Problem with the Dirichlet condition</rdfs:label>
+    <dc:source>OntoMathPRO</dc:source>
+    <skos:altLabel>problem with the dirichlet condition</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Subtraction">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Subtraction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Linearmapping">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Subset">
+    <mathkg:provenanceNote>Anchored in Week 2 validation set as MathRelation; status source-provenance verified for Week 3 expansion.</mathkg:provenanceNote>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <mathkg:semanticType>set</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfCut">
+    <mathkg:pedagogicalForm>Think of method of cut as a Method of cut is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Method">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Method"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RingWithoutIdentity">
+    <rdfs:label>Ring without identity gloss record</rdfs:label>
+    <mathkg:conciseForm>Ring without identity: A Ring without identity is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <mathkg:documentRoleForm>In a mathematical document, ring without identity usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Finitelydefinedgroup">
+    <ns1:IAO_0000115>A Finitely defined group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2184"/>
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Killingtensor">
+    <rdfs:label>Killing tensor</rdfs:label>
+    <skos:definition>A Killing tensor is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Distortion">
+    <skos:altLabel>distortion</skos:altLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Goldbachnumber">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2123"/>
+    <rdfs:label>Goldbach number</rdfs:label>
+    <skos:definition>A Goldbach number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/HardyLittlewoodtheorem">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/HardyLittlewoodTheorem"/>
+    <skos:altLabel>hardylittlewoodtheorem</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Schaudertheorem">
+    <skos:example>Use schauder theorem as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Curvatureofcurve">
+    <skos:example>Use curvature of curve as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Extremumproblem">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:definition>An Extremum problem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AutomorphismLieGroup">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+    <mathkg:pedagogicalForm>Think of automorphism lie group as an Automorphism Lie group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Element">
+    <mathkg:domainTag>set-theory</mathkg:domainTag>
+    <mathkg:expertForm>Element denotes an Element is a set-theoretic concept used to describe collections, membership, or containment.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TangentVector">
+    <mathkg:expertForm>Tangent vector denotes tangent vector is a vector-related concept used to represent directed or component-based mathematical quantities.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Datacondensation">
+    <skos:definition>A Data condensation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <skos:altLabel>data condensation</skos:altLabel>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/DataCondensation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Computationalsolutionrigidtypes">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RingOfSkewPolynomials">
+    <mathkg:expertForm>Ring of skew polynomials denotes a Ring of skew polynomials is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+    <mathkg:documentRoleForm>In a mathematical document, ring of skew polynomials usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tangent">
+    <mathkg:provenanceNote>Anchored in Week 2 validation set as MathOperation; status source-provenance verified for Week 3 expansion.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Locallyfinitegroup">
+    <skos:altLabel>locallyfinitegroup</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2188"/>
+    <ns1:IAO_0000115>A Locally finite group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/OrthogonalGroups">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2204"/>
+    <mathkg:expertForm>Orthogonal groups denotes an Orthogonal groups is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/UnimodularGroup">
+    <mathkg:canonicalGloss>Unimodular group: An Unimodular group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Theorem">
+    <mathkg:pedagogicalForm>Think of theorem as a Theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Union">
+    <skos:prefLabel>Union</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Matrixring">
+    <dc:source>OntoMathPRO</dc:source>
+    <skos:definition>A Matrix ring is a matrix-related concept used to describe rectangular arrays or operations on them.</skos:definition>
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/MatrixRing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Theoremoftheoryoftopology">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DistributiveRingLeft">
+    <rdfs:label>Distributive ring left gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Deformation">
+    <mathkg:documentRoleForm>In a mathematical document, deformation usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Exteriorderivative">
+    <mathkg:semanticType>operator</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Exteriorform">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Limit">
+    <mathkg:sourceProvenanceNote>Anchored in Week 2 validation set as MathObject; status candidate.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ExteriorForm">
+    <skos:prefLabel>Exterior form</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RadiallyRelatedHyperbolicRotation">
+    <mathkg:conciseForm>Radially related hyperbolic rotation: A Radially related hyperbolic rotation is a transformation concept that describes a structure-preserving change or mapping.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocallyFiniteNormalGroup">
+    <mathkg:pedagogicalForm>Think of locally finite normal group as a Locally finite normal group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/IntegralDeMoivreLaplaceTheorem">
+    <mathkg:canonicalGloss>Integral de Moivre Laplace theorem: An Integral de Moivre Laplace theorem is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofinverseproblemofscattering">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E485"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NilpotentByFinitePolycyclicGroup">
+    <mathkg:conciseForm>Nilpotent-by-finite polycyclic group: A Nilpotent-by-finite polycyclic group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <mathkg:expertForm>Nilpotent-by-finite polycyclic group denotes a Nilpotent-by-finite polycyclic group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Secondfundamentalform">
+    <skos:definition>Second fundamental form is a mathematical form used to encode geometric, algebraic, or analytic structure.</skos:definition>
+    <rdfs:label>Second fundamental form</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Reflectedideal">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/ReflectedIdeal"/>
+    <rdfs:label>Reflected ideal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Mobiustransformation">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SchwartzConstant">
+    <skos:prefLabel>Schwartz constant</skos:prefLabel>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Covariancematrix">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Localisomorphism">
+    <skos:altLabel>localisomorphism</skos:altLabel>
+    <mathkg:semanticType>relation</mathkg:semanticType>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Primenumber">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/IntrinsicGeometry">
+    <rdfs:label>Intrinsic geometry gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DifferentialGeometry">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HypercentralGroup">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2200"/>
+    <mathkg:expertForm>Hypercentral group denotes a Hypercentral group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DualAlgorithmOfExternalProduct">
+    <mathkg:conciseForm>Dual algorithm of external product: A Dual algorithm of external product is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:conciseForm>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Dualalgorithmofexternalproduct"/>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E525"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CommutativeRing">
+    <skos:prefLabel>Commutative ring</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Matrix">
+    <ns1:IAO_0000115>A Matrix is a rectangular array or matrix-related structure used to organize mathematical quantities and transformations.</ns1:IAO_0000115>
+    <mathkg:provenanceNote>Anchored in Week 2 validation set as MathObject; status verified.</mathkg:provenanceNote>
+    <rdfs:label>Matrix</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Determinant">
+    <ns1:IAO_0000115>A Determinant is a matrix-related concept used to describe rectangular arrays or operations on them.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RationalGroup">
+    <skos:prefLabel>Rational group</skos:prefLabel>
+    <rdfs:label>Rational group gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GradientOptimalControlMethod">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Uniformgroup">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SupersolubleGroup">
+    <skos:prefLabel>Supersoluble group</skos:prefLabel>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Supersolublegroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Lyapunovtheorem">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/LyapunovTheorem"/>
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Archimedeanring">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2274"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/WedgeProduct">
+    <mathkg:conciseForm>Wedge product: Wedge product is an operation or construction that combines mathematical objects according to a defined rule.</mathkg:conciseForm>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <mathkg:documentRoleForm>In a mathematical document, wedge product usually signals a operator concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Computationalsolutionofsingularintegropartialdifferentialequation">
+    <mathkg:domainTag>calculus</mathkg:domainTag>
+    <skos:definition>A Computational solution of singular integro-partial differential equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AutomorphismGroup">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <mathkg:conciseForm>Automorphism group: An Automorphism group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Basisvector">
+    <rdfs:label>Basis vector</rdfs:label>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Recursivelyenumerablegroup">
+    <skos:definition>A Recursively enumerable group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Abeliangroup">
+    <rdfs:label>Abelian group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Poincarduality">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PauliMatrices">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Paulimatrices"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Orientation">
+    <skos:altLabel>orientation</skos:altLabel>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BezoutRing">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2286"/>
+    <mathkg:documentRoleForm>In a mathematical document, bezout ring usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <skos:prefLabel>Bezout ring</skos:prefLabel>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Charactergroup">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Cobordism">
+    <mathkg:canonicalGloss>Cobordism: A Cobordism is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:pedagogicalForm>Think of cobordism as a Cobordism is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/OddNumber">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2120"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Solvablegroup">
+    <skos:example>Use solvable group as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GenusOfAffineTransform">
+    <skos:prefLabel>Genus of affine transform</skos:prefLabel>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Genusofaffinetransform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Relation">
+    <mathkg:documentRoleForm>In a mathematical document, relation usually signals a relation concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CauchyTheorem">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1865"/>
+    <mathkg:canonicalGloss>Cauchy theorem: A Cauchy theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Ringlimitedfromright">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Completecontinuousgroup">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GoldbachNumber">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Goldbachnumber"/>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <mathkg:canonicalGloss>Goldbach number: A Goldbach number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:pedagogicalForm>Think of goldbach number as a Goldbach number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Union">
+    <dc:source>OntoMathPRO</dc:source>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Union"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/GroupofdegreeN">
+    <skos:altLabel>groupofdegreen</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Primarygroup">
+    <skos:example>Use primary group as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <ns1:IAO_0000115>A Primary group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CovariantlyConstantTensor">
+    <skos:prefLabel>Covariantly constant tensor</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Fishermatrix">
+    <mathkg:semanticType>matrix</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Killingform">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Limittheorem">
+    <skos:example>Use limit theorem as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Integrating">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Integrating"/>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Radiallyrelatedellipticalrotation">
+    <skos:altLabel>radiallyrelatedellipticalrotation</skos:altLabel>
+    <mathkg:semanticType>transformation</mathkg:semanticType>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/RadiallyRelatedEllipticalRotation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Parabolicturn">
+    <skos:example>Use parabolic turn as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Line">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1168"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Directedgroup">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/DirectedGroup"/>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <skos:altLabel>directed group</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AlgebraicallyCompactAbelianGroup">
+    <rdfs:label>Algebraically compact Abelian group gloss record</rdfs:label>
+    <mathkg:canonicalGloss>Algebraically compact Abelian group: An Algebraically compact Abelian group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HamiltonAction">
+    <mathkg:canonicalGloss>Hamilton action: Hamilton action is a mathematical action describing how elements of one structure transform or operate on another structure.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/AlgebraicallycompactAbeliangroup">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Ring">
+    <skos:definition>A Ring is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Dedekindring">
+    <skos:altLabel>dedekind ring</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Computationalsolutiondiffusionproblems">
+    <skos:altLabel>computational solution diffusion problems</skos:altLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Grtzschmethod">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocallyFiniteGroup">
+    <mathkg:canonicalGloss>Locally finite group: A Locally finite group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Locallyfinitegroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Lineargroup">
+    <skos:definition>A Linear group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Isomorphism">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <skos:altLabel>isomorphism</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Fieldofmathematics">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GroupAction">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1365"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Diffeomorphism">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Deformationquantization">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1393"/>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RichardsonIterativeMethod">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Richardsoniterativemethod"/>
+    <mathkg:pedagogicalForm>Think of richardson iterative method as a Richardson iterative method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <skos:prefLabel>Richardson iterative method</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LeftInvariantTensor">
+    <mathkg:canonicalGloss>Left-invariant tensor: A Left-invariant tensor is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Liederivative">
+    <mathkg:domainTag>calculus</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FibonacciGroup">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Infinitesimaltransformation">
+    <skos:altLabel>infinitesimaltransformation</skos:altLabel>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Outerautomorphismclassgroup">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <ns1:IAO_0000115>An Outer automorphism class group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComputationalSolutionOfFredholmIntegralEquationOfSecondKind">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AntilinearMapping">
+    <mathkg:canonicalGloss>Antilinear mapping: An Antilinear mapping is a transformation concept that describes a structure-preserving change or mapping.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/SturmLiouvilleproblem">
+    <skos:example>Use sturm-liouville problem as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Eveninteger">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2122"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/InfinitesimalManipulation">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Reduction">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Semiprimeideal">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Operation">
+    <ns1:IAO_0000115>An Operation is a mathematical operation or operator that transforms one or more inputs into a result.</ns1:IAO_0000115>
+    <rdfs:label>Operation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Numericalsolutionoftransferequation">
+    <ns1:IAO_0000115>A Numerical solution of transfer equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Exponentiating">
+    <mathkg:expertForm>Exponentiating denotes an Exponentiating is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SimpleGroup">
+    <mathkg:documentRoleForm>In a mathematical document, simple group usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodoftheoryofdifferentialequations">
+    <skos:example>Use method of theory of differential equations as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RingLimitedFromRight">
+    <rdfs:label>Ring limited from right gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Cosine">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Poissontheorem">
+    <skos:altLabel>poissontheorem</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComplexNumber">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Vector">
+    <mathkg:expertForm>Vector denotes vector is a vector-related concept used to represent directed or component-based mathematical quantities.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Limit">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <skos:altLabel>limit</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tangentvector">
+    <skos:definition>Tangent vector is a vector-related concept used to represent directed or component-based mathematical quantities.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ProjectivelyLiegroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2215"/>
+    <ns1:IAO_0000115>A Projectively Lie group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <rdfs:label>Projectively Lie group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProfiniteGroup">
+    <mathkg:pedagogicalForm>Think of profinite group as a Profinite group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Map">
+    <mathkg:expertForm>Map denotes a Map is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Steinersymmetrization">
+    <rdfs:label>Steiner symmetrization</rdfs:label>
+    <ns1:IAO_0000115>A Steiner symmetrization is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Supersolublegroup">
+    <ns1:IAO_0000115>A Supersoluble group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/SupersolubleGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Projectivelydeformation">
+    <rdfs:label>Projectively deformation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Triangle">
+    <skos:definition>A Triangle is a geometric figure with three sides and three vertices.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BoundedGroup">
+    <mathkg:canonicalGloss>Bounded group: A Bounded group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:pedagogicalForm>Think of bounded group as a Bounded group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tripleproduct">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <rdfs:label>Triple product</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Gibbschoicemethod">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E524"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Wilkinsonalgorithm">
+    <skos:example>Use wilkinson algorithm as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <rdfs:label>Wilkinson algorithm</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Coefficient">
+    <ns1:IAO_0000115>A Coefficient is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Coefficient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LebesgueConstant">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2135"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PositiveNumber">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BooleanRing">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HessianMatrix">
+    <mathkg:documentRoleForm>In a mathematical document, hessian matrix usually signals a matrix concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <rdfs:label>Hessian matrix gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ModifiedNewtonMethod">
+    <mathkg:canonicalGloss>Modified Newton method: A Modified Newton method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Yamabeconjecture">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Thelawoflargenumbers">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Compactification">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Compactification"/>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/OptimalControlProblems">
+    <mathkg:documentRoleForm>In a mathematical document, optimal control problems usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Polynomial">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Twovaluemethodofmeanproduct">
+    <skos:example>Use two-value method of mean product when reading an expression step that applies a rule to inputs.</skos:example>
+    <skos:altLabel>two-valuemethodofmeanproduct</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Division">
+    <mathkg:provenanceNote>Anchored in Week 2 validation set as MathOperation; status source-provenance verified for Week 3 expansion.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Invertingring">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Existencetheorem">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/ExistenceTheorem"/>
+    <skos:altLabel>existencetheorem</skos:altLabel>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Quasiconformalmapping">
+    <dc:source>OntoMathPRO</dc:source>
+    <rdfs:label>Quasi-conformal mapping</rdfs:label>
+    <ns1:IAO_0000115>A Quasi-conformal mapping is a transformation concept that describes a structure-preserving change or mapping.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Computationalsolutionofnonlinearequation">
+    <skos:definition>A Computational solution of nonlinear equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Absolutelyidempotentring">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ChebyshevRadius">
+    <mathkg:canonicalGloss>Chebyshev radius: A Chebyshev radius is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Duality">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1362"/>
+    <rdfs:label>Duality</rdfs:label>
+    <skos:definition>Duality is a correspondence principle that relates two mathematical structures, statements, or constructions.</skos:definition>
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PolycyclicGroup">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2207"/>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MetabelianGroup">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Metabeliangroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BernoulliTheorem">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TrivialGroup">
+    <mathkg:conciseForm>Trivial group: A Trivial group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <rdfs:label>Trivial group gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CovarianceMatrix">
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Number">
+    <rdfs:label>Number gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Motion">
+    <ns1:IAO_0000115>A Motion is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <skos:altLabel>motion</skos:altLabel>
+    <rdfs:label>Motion</rdfs:label>
+    <dc:source>OntoMathPRO</dc:source>
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/Motion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Ringofskewpolynomials">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <skos:altLabel>ringofskewpolynomials</skos:altLabel>
+    <skos:definition>A Ring of skew polynomials is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2295"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Essentialideal">
+    <rdfs:label>Essential ideal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GeodesicMap">
+    <rdfs:label>Geodesic map gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/PoincarHopftheorem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Diracmatrix">
+    <ns1:IAO_0000115>A Dirac matrix is a matrix-related concept used to describe rectangular arrays or operations on them.</ns1:IAO_0000115>
+    <skos:altLabel>diracmatrix</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Integral">
+    <mathkg:provenanceNote>Anchored in Week 2 validation set as MathOperation; status verified.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Distortion">
+    <mathkg:documentRoleForm>In a mathematical document, distortion usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Unimodulargroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SemiprimeIdeal">
+    <mathkg:canonicalGloss>Semiprime ideal: A Semiprime ideal is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TwoValueMethodOfMeanProduct">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MatrixOfSecondMoment">
+    <mathkg:canonicalGloss>Matrix of second moment: A Matrix of second moment is a matrix-related concept used to describe rectangular arrays or operations on them.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/NaturalNumber">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2119"/>
+    <rdfs:label>Natural Number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ApostolicoGiancarlomethod">
+    <rdfs:label>Apostolico-Giancarlo method</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/StableSubgroup">
+    <mathkg:expertForm>Stable subgroup denotes a Stable subgroup is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LieAlgebraDerivative">
+    <mathkg:conciseForm>Lie algebra derivative: A Lie algebra derivative is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Curvatureform">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/InvertingRing">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2281"/>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+    <rdfs:label>Inverting ring gloss record</rdfs:label>
+    <skos:prefLabel>Inverting ring</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/JacobiBlockAlgorithm">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bernoullimethod">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <skos:altLabel>bernoulli method</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Formula">
+    <mathkg:documentRoleForm>In a mathematical document, formula usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <mathkg:pedagogicalForm>Think of formula as a Formula is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Holomorphicmapping">
+    <skos:definition>A Holomorphic mapping is a transformation concept that describes a structure-preserving change or mapping.</skos:definition>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1355"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AdamsMethod">
+    <mathkg:pedagogicalForm>Think of adams method as an Adams method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Projectivelydiffeomorphy">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:label>Projectively diffeomorphy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ProblemwiththeNeymancondition">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NumericalEvaluationOfNonstationaryStream">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Coefficient">
+    <mathkg:sourceProvenanceNote>Anchored in Week 2 validation set as Role; status needs_review.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComputationalSolutionDiffusionProblems">
+    <mathkg:expertForm>Computational solution diffusion problems denotes a Computational solution diffusion problems is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NonZeroRightIdeal">
+    <mathkg:expertForm>Non-zero right ideal denotes a Non-zero right ideal is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/InfinitesimalDeformation">
+    <mathkg:expertForm>Infinitesimal deformation denotes infinitesimal deformation is a mathematical form used to encode geometric, algebraic, or analytic structure.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Numericalanalysistheoreticalproblem">
+    <skos:definition>A Numerical analysis theoretical problem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E412"/>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GroupOfDegreeN">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Jacobianmatrixofavectorfunction">
+    <skos:altLabel>jacobian matrix of a vector function</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/IntegrationAlongLayer">
+    <mathkg:expertForm>Integration along layer denotes an Integration along layer is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:expertForm>
+    <skos:prefLabel>Integration along layer</skos:prefLabel>
+    <rdfs:label>Integration along layer gloss record</rdfs:label>
+    <mathkg:conciseForm>Integration along layer: An Integration along layer is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:conciseForm>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1386"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComplexNumber">
+    <skos:example>Use complex number as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <skos:definition>A Complex Number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Embedding">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Transitiveaction">
+    <skos:definition>A Transitive action is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/NumericalsolutionofOrdinaryDifferentialEquations">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E442"/>
+    <skos:altLabel>numericalsolutionofordinarydifferentialequations</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NumericalSolutionOfTransferEquation">
+    <rdfs:label>Numerical solution of transfer equation gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BernoulliMethod">
+    <mathkg:expertForm>Bernoulli method denotes a Bernoulli method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+    <mathkg:canonicalGloss>Bernoulli method: A Bernoulli method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <rdfs:label>Bernoulli method gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Angle">
+    <skos:example>Use angle as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComputationalsolutionofVolterraequationofsecondkind">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/ComputationalSolutionOfVolterraEquationOfSecondKind"/>
+    <skos:altLabel>computational solution of volterra equation of second kind</skos:altLabel>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Intersection">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AdoTheorem">
+    <mathkg:expertForm>Ado theorem denotes ado theorem is a named mathematical result that states a proven relationship or property within its domain.</mathkg:expertForm>
+    <rdfs:label>Ado theorem gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tensorofvalence2">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Parametermarchingmethod">
+    <mathkg:kindRoleType>role</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Multiplicativegroupofring">
+    <rdfs:label>Multiplicative group of ring</rdfs:label>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CayleyDicksonRing">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2284"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ChebyshevTheorem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <skos:prefLabel>Chebyshev theorem</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Pseudoscalar">
+    <skos:altLabel>pseudoscalar</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Ring">
+    <skos:prefLabel>Ring</skos:prefLabel>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Leftinvarianttensor">
+    <rdfs:label>Left-invariant tensor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FundamentalIdeal">
+    <rdfs:label>Fundamental ideal gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Closedmapping">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1379"/>
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <skos:altLabel>closed mapping</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Nilpotentbyfinitepolycyclicgroup">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/GaussBonnettheorem">
+    <rdfs:label>Gauss-Bonnet theorem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Kleingroup">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2155"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocalIsomorphism">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1384"/>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Series">
+    <dc:source>OntoMathPRO; OpenMath; OntoMathEdu</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Multiplicativegroupoffield">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2198"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DeformationQuantization">
+    <mathkg:conciseForm>Deformation quantization: Deformation quantization is a procedure or framework that replaces continuous or classical structures with discrete or operator-based ones.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tikhonovtheorem">
+    <rdfs:label>Tikhonov theorem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/QuasiConformalMapping">
+    <mathkg:documentRoleForm>In a mathematical document, quasi-conformal mapping usually signals a transformation concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Contiguousdevelopment">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NumericalSolutionOfExtremumProblem">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Numericalsolutionofextremumproblem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Equiaffinetransformation">
+    <rdfs:label>Equiaffine transformation</rdfs:label>
+    <mathkg:semanticType>transformation</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SolvableGroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+    <rdfs:label>Solvable group gloss record</rdfs:label>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:canonicalGloss>Solvable group: A Solvable group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComputationalsolutionofWienerHopfequationoffirstkind">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Dimension">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Richardsoniterativemethod">
+    <ns1:IAO_0000115>A Richardson iterative method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E528"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Area">
+    <mathkg:documentRoleForm>In a mathematical document, area usually signals a scalar concept with provenance from OntoMathPRO; OpenMath; OntoMathEdu.</mathkg:documentRoleForm>
+    <mathkg:sourceProvenance>OntoMathPRO; OpenMath; OntoMathEdu</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Cascadealgorithm">
+    <skos:altLabel>cascade algorithm</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Correlationmatrix">
+    <skos:altLabel>correlation matrix</skos:altLabel>
+    <skos:definition>A Correlation matrix is a matrix-related concept used to describe rectangular arrays or operations on them.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProbabilityTheorem">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1831"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Parabolicaltranslation">
+    <mathkg:semanticType>transformation</mathkg:semanticType>
+    <ns1:IAO_0000115>A Parabolical translation is a transformation concept that describes a structure-preserving change or mapping.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ContiguousDevelopment">
+    <mathkg:documentRoleForm>In a mathematical document, contiguous development usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfInverseProblem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofcomplexpotential">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <skos:altLabel>method of complex potential</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Fibonaccigroup">
+    <ns1:IAO_0000115>A Fibonacci group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfCurtailment">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HypercomplexNumber">
+    <skos:prefLabel>Hypercomplex number</skos:prefLabel>
+    <mathkg:expertForm>Hypercomplex number denotes a Hypercomplex number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Closing">
+    <skos:prefLabel>Closing</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Deformationratiovolume">
+    <skos:definition>A Deformation ratio volume is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComputationalsolutionofVolterraequationoffirstkind">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/ComputationalSolutionOfVolterraEquationOfFirstKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/RealNumber">
+    <skos:altLabel>realnumber</skos:altLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Carlemanmatrixmethod">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CohnVossenTheorem">
+    <mathkg:conciseForm>Cohn-Vossen theorem: A Cohn-Vossen theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/canonicalGloss">
+    <rdfs:label>canonical gloss</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CollectivelyTriangularGroup">
+    <mathkg:documentRoleForm>In a mathematical document, collectively triangular group usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Geodesicmap">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1354"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComputationalsolutionofCauchyproblem">
+    <rdfs:label>Computational solution of Cauchy problem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TikhonovTheorem">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1799"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Geometry">
+    <ns1:IAO_0000115>A Geometry is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Function">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProjectivelyLieGroup">
+    <mathkg:expertForm>Projectively Lie group denotes a Projectively Lie group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BairstowMethod">
+    <mathkg:documentRoleForm>In a mathematical document, bairstow method usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/VariationalIterationMethod">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E523"/>
+    <mathkg:documentRoleForm>In a mathematical document, variational iteration method usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComputationalsolutionofWienerHopfequationofsecondkind">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E436"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CyclicRightIdeal">
+    <rdfs:label>Cyclic right ideal gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Linearlyorderedgroup">
+    <skos:example>Use linearly ordered group as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+    <ns1:IAO_0000115>A Linearly ordered group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TripleProduct">
+    <mathkg:conciseForm>Triple product: Triple product is an operation or construction that combines mathematical objects according to a defined rule.</mathkg:conciseForm>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Antilinearmapping">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NaturalNumber">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/NaturalNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/StrongLawOfLargeNumbers">
+    <mathkg:expertForm>Strong law of large numbers denotes a Strong law of large numbers is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+    <skos:prefLabel>Strong law of large numbers</skos:prefLabel>
+    <rdfs:label>Strong law of large numbers gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Rationalgroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Differentialring">
+    <mathkg:domainTag>calculus</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Positionvector">
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+    <skos:altLabel>position vector</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Takingthelogarithm">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/TakingTheLogarithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Cauchyresiduetheorem">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Matrixofsecondmoment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TheoremOfTheoryOfTopology">
+    <mathkg:canonicalGloss>Theorem of theory of topology: A Theorem of theory of topology is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/VectorSumAlgorithm">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E511"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LatticeOrderedGroup">
+    <mathkg:canonicalGloss>Lattice ordered group: A Lattice ordered group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Point">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:definition>A Point is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Integrating">
+    <ns1:IAO_0000115>An Integrating is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NumericalSolutionOfOrdinaryDifferentialEquations">
+    <mathkg:canonicalGloss>Numerical solution of Ordinary Differential Equations: A Numerical solution of Ordinary Differential Equations is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Extensiontheoremofprobability">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComputationalSolutionOfIncorrectProblem">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Affinedifferentialgeometry">
+    <skos:altLabel>affinedifferentialgeometry</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Set">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <skos:definition>A Set is a set-theoretic concept used to describe collections, membership, or containment.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfInverseProblemOfScattering">
+    <mathkg:conciseForm>Method of inverse problem of scattering: A Method of inverse problem of scattering is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TorsionTensorOfTissue">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Rasingtothepower">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <skos:altLabel>rasingtothepower</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/NeumannPearsontheorem">
+    <skos:definition>A Neumann Pearson theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Multiplicativegroupofresiduering">
+    <ns1:IAO_0000115>A Multiplicative group of residue ring is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <skos:altLabel>multiplicative group of residue ring</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DeformationRatioVolume">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Deformationratiovolume"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Wedgeproduct">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <mathkg:semanticType>operator</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/YamabeConjecture">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DedekindRing">
+    <mathkg:documentRoleForm>In a mathematical document, dedekind ring usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <mathkg:pedagogicalForm>Think of dedekind ring as a Dedekind ring is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Liealgebraderivative">
+    <mathkg:domainTag>calculus</mathkg:domainTag>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FirstFundamentalForm">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Adamsmethod">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ClassGroupOfMapping">
+    <mathkg:conciseForm>Class group of mapping: A Class group of mapping is a transformation concept that describes a structure-preserving change or mapping.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Dynkindiagram">
+    <rdfs:label>Dynkin diagram</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Algebra">
+    <mathkg:pedagogicalForm>Think of algebra as an Algebra is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Collectingterms">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ExtremumProblem">
+    <mathkg:conciseForm>Extremum problem: An Extremum problem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Abellemma">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Torsiontensorofconnection">
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1736"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CurvatureOfCurve">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Addition">
+    <mathkg:conciseForm>Addition: An Addition is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:conciseForm>
+    <mathkg:documentRoleForm>In a mathematical document, addition usually signals a operator concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/WilkinsonAlgorithm">
+    <skos:prefLabel>Wilkinson algorithm</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Periodicgroup">
+    <ns1:IAO_0000115>A Periodic group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <skos:altLabel>periodic group</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FreeGroup">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfAnalysis">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Methodofanalysis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProjectionMethod">
+    <mathkg:documentRoleForm>In a mathematical document, projection method usually signals a transformation concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Oneelementgroup">
+    <ns1:IAO_0000115>An One-element group is a set-theoretic concept used to describe collections, membership, or containment.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Spectralmethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Onepointcompactification">
+    <skos:example>Use one-point compactification as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ImplicitFunctionTheorem">
+    <mathkg:pedagogicalForm>Think of implicit function theorem as an Implicit function theorem is a mathematical function concept that associates inputs with outputs according to a rule.</mathkg:pedagogicalForm>
+    <mathkg:documentRoleForm>In a mathematical document, implicit function theorem usually signals a function concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ContiguousExtremumProblem">
+    <mathkg:conciseForm>Contiguous extremum problem: A Contiguous extremum problem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Contiguousextremumproblem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GeometricQuantization">
+    <mathkg:conciseForm>Geometric quantization: Geometric quantization is a procedure or framework that replaces continuous or classical structures with discrete or operator-based ones.</mathkg:conciseForm>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Isometricembedding">
+    <skos:example>Use isometric embedding as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Volume">
+    <skos:definition>A Volume is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CharacteristicProblem">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+    <rdfs:label>Characteristic problem gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FinalRingOutDedekind">
+    <mathkg:canonicalGloss>Final ring out Dedekind: A Final ring out Dedekind is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <rdfs:label>Final ring out Dedekind gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Serreduality">
+    <skos:example>Use serre duality as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LimitTheorem">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Limittheorem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NumericalAnalysisTheoreticalProblem">
+    <skos:prefLabel>Numerical analysis theoretical problem</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NilpotentByFiniteGroup">
+    <mathkg:conciseForm>Nilpotent-by-finite group: A Nilpotent-by-finite group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Cleavage">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Problemofmixedoptimalcontrol">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Mean">
+    <mathkg:sourceProvenance>OntoMathPRO; OpenMath; OntoMathEdu</mathkg:sourceProvenance>
+    <mathkg:expertForm>Mean denotes a Mean is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CurvatureForm">
+    <mathkg:conciseForm>Curvature form: Curvature form is a mathematical form used to encode geometric, algebraic, or analytic structure.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/NumericalSolutionOfSystemOfLinearEquation">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Numericalsolutionofsystemoflinearequation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Khinchintheorem">
+    <rdfs:label>Khinchin theorem</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/BorelCantellilemma">
+    <skos:example>Use borel-cantelli lemma as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RadiantExtension">
+    <mathkg:documentRoleForm>In a mathematical document, radiant extension usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/CohnVossentheorem">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/CohnVossenTheorem"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Computationalsolutionofeigenvalueproblem">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Integer">
+    <skos:definition>An Integer is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CoherenceRightRing">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2283"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Finegrainalgorithmofmatrixdecomposition">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Centroaffinetransformation">
+    <skos:altLabel>centroaffine transformation</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FinitelyDefinedGroup">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RingOfDifferentialPolynomial">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RecursiveGroup">
+    <rdfs:label>Recursive group gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Propergroupaction">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:label>Proper group action</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BettiNumber">
+    <mathkg:pedagogicalForm>Think of betti number as a Betti number is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ZygmundTheorem">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1863"/>
+    <mathkg:documentRoleForm>In a mathematical document, zygmund theorem usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Riemannmethod">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/GaussNewtondampedmethod">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+    <skos:definition>A Gauss-Newton damped method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/InfinitesimalTransformation">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/StokesTheorem">
+    <rdfs:label>Stokes theorem gloss record</rdfs:label>
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bairstowmethod">
+    <skos:definition>A Bairstow method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Determinant">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Determinant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Theorem">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+    <skos:definition>A Theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Coefficientofhyperbolicrotation">
+    <mathkg:kindRoleType>role</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bettinumber">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Affinetransformofspace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:altLabel>affinetransformofspace</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bayestheorem">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/BayesTheorem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Morphism">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Freegroupofvarifold">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Logarithm">
+    <ns1:IAO_0000115>A Logarithm is a mathematical function concept that associates inputs with outputs according to a rule.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Covariantlyconstanttensor">
+    <skos:altLabel>covariantlyconstanttensor</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tabularintegration">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/MathematicalConcept">
+    <skos:definition>A broad category for mathematical entities represented in the math accessibility knowledge graph.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Groupaction">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1365"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PrimeNumber">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2121"/>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfComplexPotential">
+    <mathkg:documentRoleForm>In a mathematical document, method of complex potential usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/DarbouxTheorem">
+    <mathkg:canonicalGloss>Darboux theorem: Darboux theorem is a named mathematical result that states a proven relationship or property within its domain.</mathkg:canonicalGloss>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1858"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Archimedeangroup">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2153"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Principalidealring">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocallyEuclideanGroup">
+    <rdfs:label>Locally Euclidean group gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ComputationalsolutionofFredholmintegralequationoffirstkind">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfLoopIntegration">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Methodofloopintegration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Ringofdifferentialpolynomial">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Nilpotentbyfinitegroup">
+    <skos:altLabel>nilpotent-by-finite group</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Probabilitytheorem">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BilinearMapping">
+    <mathkg:pedagogicalForm>Think of bilinear mapping as a Bilinear mapping is a transformation concept that describes a structure-preserving change or mapping.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Group">
+    <rdfs:label>Group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Embedding">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Embedding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofaveraging">
+    <ns1:IAO_0000115>A Method of averaging is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+    <skos:example>Use method of averaging as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Associativering">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/AssociativeRing"/>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Locallyfinitehypercentralgroup">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocalHomeomorphism">
+    <mathkg:canonicalGloss>Local homeomorphism: Local homeomorphism is a structure-preserving map between topological spaces with a continuous inverse.</mathkg:canonicalGloss>
+    <rdfs:label>Local homeomorphism gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/VariationalProcedure">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Torsiontensoroftissue">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfPriorEstimate">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Comparison">
+    <mathkg:expertForm>Comparison denotes a Comparison is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Polyhedralgroup">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2167"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Point">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ElementOfTheTheoryOfAlgebra">
+    <mathkg:conciseForm>Element of the theory of algebra: An Element of the theory of algebra is a set-theoretic concept used to describe collections, membership, or containment.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Subset">
+    <rdfs:label>Subset gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Infinitesimalmanipulation">
+    <rdfs:label>Infinitesimal manipulation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Kleiniangroup">
+    <rdfs:label>Kleinian group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Obliquecarry">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MarcusSymmetrization">
+    <mathkg:pedagogicalForm>Think of marcus symmetrization as a Marcus symmetrization is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/WienerSTechniqueOfOptimusLinearFiltering">
+    <mathkg:canonicalGloss>Wiener's technique of optimus linear filtering: A Wiener's technique of optimus linear filtering is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ConformalMapping">
+    <mathkg:pedagogicalForm>Think of conformal mapping as a Conformal mapping is a transformation concept that describes a structure-preserving change or mapping.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HellyTheoremGeneralization">
+    <mathkg:canonicalGloss>Helly theorem generalization: A Helly theorem generalization is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+    <skos:prefLabel>Helly theorem generalization</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SchauderTheorem">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfBoundaryIntegralEquation">
+    <mathkg:expertForm>Method of boundary integral equation denotes a Method of boundary integral equation is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/ShermanCompressedscheme">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BlaschkeProduct">
+    <mathkg:canonicalGloss>Blaschke product: A Blaschke product is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Matrix">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MultiplicativeGroupOfRing">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Multiplicativegroupofring"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Stronglawoflargenumbers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HyperbolicRotation">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/InvariantRingLeft">
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Polycyclicgroup">
+    <ns1:IAO_0000115>A Polycyclic group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Contactform">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TheoremOfTheoryOfGeometry">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Freegroup">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/HilleYosidaTheorem">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/HilleYosidatheorem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bezoutring">
+    <rdfs:label>Bezout ring</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Dualalgorithmofexternalproduct">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E525"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Equalcoefficient">
+    <mathkg:kindRoleType>role</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BellmanSDynamicProgrammingMethod">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E473"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/SobolevTheorem">
+    <skos:prefLabel>Sobolev theorem</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AlmostCertainVersion">
+    <skos:prefLabel>Almost certain version</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Commutativering">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2299"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AbelLemma">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofcurtailment">
+    <skos:example>Use method of curtailment as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PrimaryGroup">
+    <mathkg:pedagogicalForm>Think of primary group as a Primary group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Metrizablegroup">
+    <dc:source>OntoMathPRO</dc:source>
+    <skos:altLabel>metrizable group</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Multiplication">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Transfinitenumber">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Classgroupofmapping">
+    <ns1:IAO_0000115>A Class group of mapping is a transformation concept that describes a structure-preserving change or mapping.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FieldOfMathematics">
+    <mathkg:canonicalGloss>Field of mathematics: A Field of mathematics is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CompleteContinuousGroup">
+    <mathkg:canonicalGloss>Complete continuous group: A Complete continuous group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Hausdorffmeasure">
+    <skos:altLabel>hausdorffmeasure</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TangentGeometry">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bernoullitheorem">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1837"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofcharacteristicfunction">
+    <skos:altLabel>methodofcharacteristicfunction</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PoincarDuality">
+    <dcterms:source rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1363"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/GalerkinMethod">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+    <mathkg:sourceProvenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:sourceProvenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/IntegerPi">
+    <mathkg:conciseForm>Integer pi: An Integer pi is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Artiniangroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BorelCantelliLemma">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/BorelCantellilemma"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Cobordism">
+    <ns1:IAO_0000115>A Cobordism is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Infinitegroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Affineequivalence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofboundaryintegralequation">
+    <skos:altLabel>methodofboundaryintegralequation</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofinverseproblem">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Limitalmostcertaintheorem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Circle">
+    <rdfs:label>Circle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Equality">
+    <skos:prefLabel>Equality</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Triangulargroup">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/TriangularGroup"/>
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E2234"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Localhomeomorphism">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E1359"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Centrallimittheorem">
+    <skos:altLabel>central limit theorem</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Variationalprocedure">
+    <skos:definition>A Variational procedure is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Curvatureofspacecurves">
+    <mathkg:semanticType>scalar</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MultiplicativeGroupOfField">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Motion">
+    <mathkg:pedagogicalForm>Think of motion as a Motion is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Homomorphismgroup">
+    <rdfs:label>Homomorphism group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Element">
+    <mathkg:provenanceNote>Anchored in Week 2 validation set as MathObject; status source-provenance verified for Week 3 expansion.</mathkg:provenanceNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Radiallyrelatedhyperbolicrotation">
+    <skos:example>Use radially related hyperbolic rotation when a mathematical object is mapped or changed while preserving structure.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Equality">
+    <ns1:IAO_0000115>An Equality is a mathematical relation that specifies how two or more mathematical objects are connected.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PermutationGroup">
+    <skos:prefLabel>Permutation group</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LocallyFiniteSolvableGroup">
+    <mathkg:conciseForm>Locally finite solvable group: A Locally finite solvable group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BasisVector">
+    <mathkg:conciseForm>Basis vector: A Basis vector is a vector-related concept used to represent directed or component-based mathematical quantities.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CauchyResidueTheorem">
+    <mathkg:expertForm>Cauchy residue theorem denotes a Cauchy residue theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+    <mathkg:canonicalGloss>Cauchy residue theorem: A Cauchy residue theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Darbouxtheorem">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Expression">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Tangentgeometry">
+    <skos:altLabel>tangentgeometry</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Reduction">
+    <skos:altLabel>reduction</skos:altLabel>
+    <skos:example>Use reduction as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Elementofthetheoryofalgebra">
+    <skos:example>Use element of the theory of algebra when describing membership, containment, or a collection of objects.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PrincipalIdealRing">
+    <skos:prefLabel>Principal ideal ring</skos:prefLabel>
+    <rdfs:label>Principal ideal ring gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Infinitesimaldeformation">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LinearGroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Vectorproduct">
+    <skos:altLabel>vectorproduct</skos:altLabel>
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+    <ns1:IAO_0000115>A Vector product is a vector-related concept used to represent directed or component-based mathematical quantities.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComputationalSolutionOfNonlinearEquation">
+    <mathkg:pedagogicalForm>Think of computational solution of nonlinear equation as a Computational solution of nonlinear equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+    <mathkg:canonicalGloss>Computational solution of nonlinear equation: A Computational solution of nonlinear equation is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:canonicalGloss>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Conformalmapping">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TheoremTheoryOfDifferentialEquations">
+    <mathkg:domainTag>calculus</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfNumericalAnalysis">
+    <mathkg:expertForm>Method of numerical analysis denotes a Method of numerical analysis is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Lebesgueconstant">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MiddleProductAlgorithm">
+    <mathkg:pedagogicalForm>Think of middle product algorithm as a Middle product algorithm is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:pedagogicalForm>
+    <mathkg:conciseForm>Middle product algorithm: A Middle product algorithm is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Graph">
+    <mathkg:pedagogicalForm>Think of graph as a Graph is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Residueringmodulo">
+    <mathkg:provenanceNote>Selected from OntoMathPRO English-labeled class inventory to complete the 500 target concept layer.</mathkg:provenanceNote>
+    <skos:altLabel>residueringmodulo</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/KhinchinTheorem">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Khinchintheorem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ScalarProduct">
+    <mathkg:domainTag>linear-algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LebesgueTheoremAboutDominatedConvergence">
+    <mathkg:pedagogicalForm>Think of lebesgue theorem about dominated convergence as a Lebesgue theorem about dominated convergence is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Affinetransformofplane">
+    <mathkg:semanticType>transformation</mathkg:semanticType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Mean">
+    <mathkg:domainTag>statistics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofpriorestimate">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Binomialring">
+    <skos:altLabel>binomialring</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/BroydenSMethod">
+    <skos:prefLabel>Broyden's method</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ParabolicTurn">
+    <mathkg:conciseForm>Parabolic turn: A Parabolic turn is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TranscendentalNumber">
+    <rdfs:label>Transcendental number gloss record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Controlproblem">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Vectorsumalgorithm">
+    <skos:example>Use vector sum algorithm when a quantity has components, direction, or coordinate representation.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfIntegralRelation">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Methodofintegralrelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofanalysis">
+    <skos:altLabel>methodofanalysis</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Simplegroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComputationalSolutionOfVolterraEquationOfSecondKind">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/ComputationalsolutionofVolterraequationofsecondkind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TransfiniteNumber">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Algorithmoflinearcombination">
+    <skos:example>Use algorithm of linear combination as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Implicitfunctiontheorem">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/CharacteristicIdeal">
+    <skos:prefLabel>Characteristic ideal</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Relation">
+    <ns1:IAO_0000115>A Relation is a mathematical relation that specifies how two or more mathematical objects are connected.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Minimumdegreealgorithm">
+    <skos:example>Use minimum degree algorithm as the spoken semantic name for the corresponding mathematical concept.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Gradeautomorphism">
+    <skos:altLabel>gradeautomorphism</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/FreeBoundaryProblem">
+    <mathkg:documentRoleForm>In a mathematical document, free boundary problem usually signals a scalar concept with provenance from OntoMathPRO.</mathkg:documentRoleForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MethodOfCharacteristicFunction">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Methodofcharacteristicfunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Operation">
+    <mathkg:conciseForm>Operation: An Operation is a mathematical operation or operator that transforms one or more inputs into a result.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Comparison">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Nijenhuistensor">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/AdditiveGroup">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Additivegroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Sobolevtheorem">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/KindConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Hellytheoremgeneralization">
+    <dc:source>OntoMathPRO</dc:source>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Geometricalmethod">
+    <mathkg:hasGlossRecord rdf:resource="http://example.org/mathkg/gloss/GeometricalMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/IntegraldeMoivreLaplacetheorem">
+    <skos:altLabel>integraldemoivrelaplacetheorem</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Cauchytheorem">
+    <skos:definition>A Cauchy theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ComputationalInvestigationElectrodynamicProblems">
+    <skos:prefLabel>Computational investigation electrodynamic problems</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Transversallymanipulation">
+    <mathkg:domainTag>general-mathematics</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Analyticalgeometry">
+    <skos:exactMatch rdf:resource="http://cll.niimm.ksu.ru/ontologies/mathematics#E4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ThePoissonTensor">
+    <skos:prefLabel>The Poisson tensor</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/CayleyDicksonring">
+    <skos:altLabel>cayley dickson ring</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Radiantextension">
+    <skos:definition>A Radiant extension is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Duality">
+    <mathkg:pedagogicalForm>Think of duality as duality is a correspondence principle that relates two mathematical structures, statements, or constructions.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/MorseLemma">
+    <mathkg:expertForm>Morse lemma denotes a Morse lemma is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:expertForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Methodofnumericalanalysis">
+    <skos:definition>A Method of numerical analysis is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/RemovingParentheses">
+    <mathkg:conciseForm>Removing parentheses: A Removing parentheses is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:conciseForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/LieDerivative">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Bellmansdynamicprogrammingmethod">
+    <skos:definition>A Bellman's dynamic programming method is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Trivialgroup">
+    <ns1:IAO_0000115>A Trivial group is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</ns1:IAO_0000115>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Landauconstant">
+    <mathkg:kindRoleType>role</mathkg:kindRoleType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/TheLocalHamiltonian">
+    <rdf:type rdf:resource="http://example.org/mathkg/GlossRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/RoleConcept">
+    <rdfs:subClassOf rdf:resource="http://example.org/mathkg/MathematicalConcept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Automorphismgroup">
+    <mathkg:domainTag>algebra</mathkg:domainTag>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/ProblemWithTheDirichletCondition">
+    <mathkg:sourceProvenance>OntoMathPRO</mathkg:sourceProvenance>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/PoissonTheorem">
+    <mathkg:pedagogicalForm>Think of poisson theorem as a Poisson theorem is a mathematical concept used as a named object, value, or quantity in formal mathematical discourse.</mathkg:pedagogicalForm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/gloss/Variance">
+    <mathkg:glossForConcept rdf:resource="http://example.org/mathkg/Variance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/mathkg/Polynilpotentgroup">
+    <mathkg:kindRoleType>kind</mathkg:kindRoleType>
+  </rdf:Description>
+</rdf:RDF>

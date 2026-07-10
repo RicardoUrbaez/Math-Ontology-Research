@@ -11,7 +11,7 @@ SELECT ?concept ?label ?kindRole
 WHERE {
   ?concept rdf:type owl:Class ;
            rdfs:label ?label .
-  OPTIONAL { ?concept mathkg:kindRoleClassification ?kindRole . }
+  OPTIONAL { ?concept mathkg:kindRoleType ?kindRole . }
   FILTER(STRSTARTS(STR(?concept), STR(mathkg:)))
 }
 ORDER BY ?kindRole ?label
