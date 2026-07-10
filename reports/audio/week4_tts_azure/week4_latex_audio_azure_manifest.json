@@ -1,0 +1,54 @@
+[
+  {
+    "arxiv_id": "2606.19323v1",
+    "title": "Cohomogeneity one actions on symmetric spaces of mixed type",
+    "latex": "\\mathbb{R}^n \\times M_-",
+    "token_count": 6,
+    "resolved_count": 6,
+    "concepts": [
+      "Real Number",
+      "Exponentiating",
+      "Variable",
+      "Multiplication",
+      "Subtraction"
+    ],
+    "backend": "azure",
+    "audio_path": "reports\\audio\\week4_tts_azure\\equation_azure\\eq_001_2606_19323v1.wav",
+    "ssml_path": "reports\\audio\\week4_tts_azure\\equation_ssml\\eq_001_2606_19323v1.ssml",
+    "status": "ok",
+    "detail": "Azure WAV written"
+  },
+  {
+    "arxiv_id": "2606.19322v1",
+    "title": "Existential Inclusions of Bi-exact Groups are Conjugacy Representation Rigid",
+    "latex": "\\Lambda\\hookrightarrow \\Gamma",
+    "token_count": 3,
+    "resolved_count": 3,
+    "concepts": [
+      "Variable",
+      "Embedding"
+    ],
+    "backend": "azure",
+    "audio_path": "reports\\audio\\week4_tts_azure\\equation_azure\\eq_002_2606_19322v1.wav",
+    "ssml_path": "reports\\audio\\week4_tts_azure\\equation_ssml\\eq_002_2606_19322v1.ssml",
+    "status": "ok",
+    "detail": "Azure WAV written"
+  },
+  {
+    "arxiv_id": "2606.19313v1",
+    "title": "Stability of Khintchine-type inequalities via log-monotonicity",
+    "latex": "S=\\sum_k a_k X_k",
+    "token_count": 8,
+    "resolved_count": 8,
+    "concepts": [
+      "Variable",
+      "Equality",
+      "Addition"
+    ],
+    "backend": "azure",
+    "audio_path": "reports\\audio\\week4_tts_azure\\equation_azure\\eq_003_2606_19313v1.wav",
+    "ssml_path": "reports\\audio\\week4_tts_azure\\equation_ssml\\eq_003_2606_19313v1.ssml",
+    "status": "ok",
+    "detail": "Azure WAV written"
+  }
+]

@@ -59,7 +59,7 @@ The mock backend is implemented and used by default. It writes local `.txt` tran
 
 ## Azure/gTTS Readiness
 
-Azure is Azure-ready but requires `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION`. If credentials are missing or synthesis fails, the backend falls back to mock output and reports a warning.
+Azure requires `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION` for live synthesis. After credentials were supplied through local PowerShell environment variables, the Week 4 pipeline produced live Azure WAV evidence for three arXiv equation examples under `reports/audio/week4_tts_azure/`. If credentials are missing or synthesis fails, the backend falls back to mock output and reports a warning.
 
 gTTS is gTTS-ready when the package is installed and network synthesis succeeds. If gTTS fails, it falls back to the mock backend and reports a warning.
 

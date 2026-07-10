@@ -28,6 +28,7 @@
 - `python scripts\week4_tts_rendering.py --backend mock --limit 5 --out reports\audio\week4_tts`
 - `python scripts\week4_tts_rendering.py --equations validation\week4_20_arxiv_equation_fixture.csv --backend mock --limit 20 --out reports\audio\week4_tts`
 - `python scripts\week4_tts_rendering.py --equations validation\week4_20_arxiv_equation_fixture.csv --backend gtts --limit 20 --out reports\audio\week4_tts_gtts`
+- `python scripts\week4_tts_rendering.py --equations validation\week4_20_arxiv_equation_fixture.csv --backend azure --limit 3 --out reports\audio\week4_tts_azure`
 
 The smoke run generated 20 artifacts: 5 concepts times 4 surface forms. The manifest is:
 
@@ -41,6 +42,10 @@ The live gTTS equation run generated 20 MP3 artifacts and matching SSML files. T
 
 `reports/audio/week4_tts_gtts/week4_latex_audio_gtts_manifest.json`
 
+The live Azure equation run generated 3 WAV artifacts and matching SSML files. The manifest is:
+
+`reports/audio/week4_tts_azure/week4_latex_audio_azure_manifest.json`
+
 ## Manual Items
 
 - Install live backend dependencies when ready:
@@ -48,5 +53,6 @@ The live gTTS equation run generated 20 MP3 artifacts and matching SSML files. T
 - For Azure Speech, set:
   - `AZURE_SPEECH_KEY`
   - `AZURE_SPEECH_REGION`
-- gTTS and Azure both require internet access during live synthesis. The gTTS verification above was run with network access.
+- gTTS and Azure both require internet access during live synthesis. The gTTS and Azure verification above were run with network access.
 - gTTS does not support SSML directly, so the gTTS backend synthesizes the plain surface text while the pipeline still writes the matching SSML files for inspection and Azure use.
+- Do not store Azure credentials in repository files or chat messages.

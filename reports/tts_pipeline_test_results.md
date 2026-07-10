@@ -29,7 +29,7 @@ Scope: 20 arXiv-style test equations across algebra, calculus, linear algebra, a
 
 Known limitations:
 
-- Azure is Azure-ready but not deployed or tested unless AZURE_SPEECH_KEY and AZURE_SPEECH_REGION are configured.
+- Azure was later live-tested with AZURE_SPEECH_KEY and AZURE_SPEECH_REGION supplied through local PowerShell environment variables. The live Azure evidence is stored in `reports/audio/week4_tts_azure/`.
 - gTTS is gTTS-ready but may require network access and the gTTS package at runtime.
 - The LaTeX parser is an MVP symbol recognizer, not a full mathematical semantics parser.
 - These are 20 arXiv-style test equations; no real arXiv papers were downloaded by this runner.
