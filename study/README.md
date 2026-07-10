@@ -12,6 +12,7 @@ This folder contains the June 15-June 22 study package for comparing notation-on
 - `protocol/counterbalance_schedule.csv` - AB/BA participant order schedule.
 - `protocol/study_protocol.md` - concise session procedure.
 - `protocol/manual_study_runbook.md` - point-by-point manual checklist for running the study.
+- `data_entry_status.md` - status note for transcript coding and score/NASA-TLX entry.
 - `analysis/mathontospeak_study_analysis_template.xlsx` - spreadsheet for comprehension scores, NASA-TLX ratings, interview coding, and summary calculations.
 - `audio/notation_only/` - notation-only TTS audio condition.
 - `audio/mathontospeak_semantic/` - MathOntoSpeak semantic TTS audio condition.

@@ -100,6 +100,47 @@ const stimuli = await readCsv("study/stimuli/study_stimuli.csv");
 const questions = await readCsv("study/instruments/mcq_comprehension_test.csv");
 const schedule = await readCsv("study/protocol/counterbalance_schedule.csv");
 
+const comprehensionEntryRows = schedule.flatMap((participant) =>
+  [participant.condition_1, participant.condition_2].flatMap((condition) =>
+    questions.map((question) => [
+      participant.participant_id,
+      condition,
+      question.stimulus_id,
+      question.question_id,
+      "",
+      question.correct_choice,
+      "",
+      "",
+    ]),
+  ),
+);
+
+const nasaEntryRows = schedule.flatMap((participant) =>
+  [participant.condition_1, participant.condition_2].map((condition) => [
+    participant.participant_id,
+    condition,
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "pending participant data",
+    "",
+  ]),
+);
+
+const interviewEntryRows = schedule.map((participant) => [
+  participant.participant_id,
+  "pending interview transcript",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "Not collected yet; enter notes after the 5-minute interview.",
+]);
+
 const workbook = Workbook.create();
 
 const summary = workbook.worksheets.add("Summary");
@@ -118,10 +159,10 @@ summary.getRange("A4:B14").values = [
   ["Semantic NASA mean", ""],
   ["Manual status", "Ready for pilot data entry"],
 ];
-summary.getRange("B10").formulas = [["=IFERROR(AVERAGEIFS('Comprehension Scores'!$H$2:$H$201,'Comprehension Scores'!$B$2:$B$201,\"notation_only\"),\"\")"]];
-summary.getRange("B11").formulas = [["=IFERROR(AVERAGEIFS('Comprehension Scores'!$H$2:$H$201,'Comprehension Scores'!$B$2:$B$201,\"mathontospeak_semantic\"),\"\")"]];
-summary.getRange("B12").formulas = [["=IFERROR(AVERAGEIFS('NASA TLX'!$J$2:$J$101,'NASA TLX'!$B$2:$B$101,\"notation_only\"),\"\")"]];
-summary.getRange("B13").formulas = [["=IFERROR(AVERAGEIFS('NASA TLX'!$J$2:$J$101,'NASA TLX'!$B$2:$B$101,\"mathontospeak_semantic\"),\"\")"]];
+summary.getRange("B10").formulas = [["=IFERROR(AVERAGEIFS('Comprehension Scores'!$H:$H,'Comprehension Scores'!$B:$B,\"notation_only\"),\"\")"]];
+summary.getRange("B11").formulas = [["=IFERROR(AVERAGEIFS('Comprehension Scores'!$H:$H,'Comprehension Scores'!$B:$B,\"mathontospeak_semantic\"),\"\")"]];
+summary.getRange("B12").formulas = [["=IFERROR(AVERAGEIFS('NASA TLX'!$J:$J,'NASA TLX'!$B:$B,\"notation_only\"),\"\")"]];
+summary.getRange("B13").formulas = [["=IFERROR(AVERAGEIFS('NASA TLX'!$J:$J,'NASA TLX'!$B:$B,\"mathontospeak_semantic\"),\"\")"]];
 summary.getRange("A4:B14").format.borders = { preset: "all", style: "thin", color: "#D9E2F3" };
 summary.getRange("A4:A14").format = { fill: "#EAF2F8", font: { bold: true } };
 summary.getRange("B10:B13").format.numberFormat = "0.00";
@@ -165,11 +206,11 @@ writeTable(
   compSheet,
   "A4",
   ["Participant ID", "Condition", "Stimulus ID", "Question ID", "Response", "Correct Choice", "Correct", "Score"],
-  Array.from({ length: 200 }, () => ["", "", "", "", "", "", "", ""]),
+  comprehensionEntryRows,
 );
 compSheet.getRange("H5").formulas = [["=IF(G5=\"Yes\",1,IF(G5=\"No\",0,\"\"))"]];
-compSheet.getRange("H5:H204").fillDown();
-compSheet.getRange("H5:H204").format.numberFormat = "0";
+compSheet.getRange(`H5:H${4 + comprehensionEntryRows.length}`).fillDown();
+compSheet.getRange(`H5:H${4 + comprehensionEntryRows.length}`).format.numberFormat = "0";
 setWidths(compSheet, [20, 24, 18, 20, 14, 16, 12, 12]);
 
 const nasaSheet = workbook.worksheets.add("NASA TLX");
@@ -179,12 +220,12 @@ writeTable(
   nasaSheet,
   "A4",
   ["Participant ID", "Condition", "Mental", "Physical", "Temporal", "Performance", "Effort", "Frustration", "Notes", "Raw TLX Mean"],
-  Array.from({ length: 100 }, () => ["", "", "", "", "", "", "", "", "", ""]),
+  nasaEntryRows,
 );
 nasaSheet.getRange("J5").formulas = [["=IF(COUNT(C5:H5)=6,AVERAGE(C5:H5),\"\")"]];
-nasaSheet.getRange("J5:J104").fillDown();
-nasaSheet.getRange("C5:H104").format.numberFormat = "0";
-nasaSheet.getRange("J5:J104").format.numberFormat = "0.00";
+nasaSheet.getRange(`J5:J${4 + nasaEntryRows.length}`).fillDown();
+nasaSheet.getRange(`C5:H${4 + nasaEntryRows.length}`).format.numberFormat = "0";
+nasaSheet.getRange(`J5:J${4 + nasaEntryRows.length}`).format.numberFormat = "0.00";
 setWidths(nasaSheet, [20, 26, 12, 12, 12, 14, 12, 14, 42, 16]);
 
 const questionsSheet = workbook.worksheets.add("MCQ Items");
@@ -215,7 +256,7 @@ writeTable(
   interviewSheet,
   "A4",
   ["Participant ID", "Excerpt / Summary", "Code 1", "Code 2", "Code 3", "Valence", "Condition Mentioned", "Researcher Notes"],
-  Array.from({ length: 100 }, () => ["", "", "", "", "", "", "", ""]),
+  interviewEntryRows,
 );
 setWidths(interviewSheet, [18, 58, 28, 28, 28, 16, 28, 48]);
 
