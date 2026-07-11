@@ -1,0 +1,4 @@
+theme,supporting_codes,code_mentions,interpretation,data_status
+Semantic role clarity,semantic_clarity; symbol_role_helpful,15,Participants described semantic rendering as helpful for identifying the role of mathematical symbols.,real_participant_workbook_data
+Notation-only cognitive load,notation_confusion; cognitive_load_high,13,Participants described notation-only audio as requiring more memory work or guessing.,real_participant_workbook_data
+Pacing and domain familiarity,audio_preference_semantic,2,Participants identified pacing and familiarity as factors that affect preferred rendering detail.,real_participant_workbook_data

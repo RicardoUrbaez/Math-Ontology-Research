@@ -1,0 +1,14 @@
+category,metric,value,source,note
+ontology,N classes,504,ontologies\merged\math_accessibility_kg_merged_gloss.ttl,OWL class count in merged gloss TTL
+ontology,N properties,13,ontologies\merged\math_accessibility_kg_merged_gloss.ttl,Declared RDF/OWL property count
+ontology,N axioms/statements,13986,ontologies\merged\math_accessibility_kg_merged_gloss.ttl,RDF triples used as axiom-like statement count
+ontology,N provenance-tagged classes,500,ontologies\merged\math_accessibility_kg_merged_gloss.ttl,Classes with source/provenance annotation
+sparql,Benchmark queries completed,10,reports\sparql\week3_fuseki_query_results_mathkg500.csv,Fuseki /mathkg500 benchmark
+sparql,Mean response time ms,52.359,reports\sparql\week3_fuseki_query_results_mathkg500.csv,Average over benchmark queries
+sparql,Max response time ms,170.884,reports\sparql\week3_fuseki_query_results_mathkg500.csv,Slowest benchmark query
+gloss_qc,Codex two-pass gloss QC overall Cohen kappa,0.93,validation\week3_codex_two_pass_review_summary.md,50-record Codex two-pass QC agreement; not labeled as human mentor review.
+gloss_qc,Codex two-pass gloss QC accuracy Cohen kappa,0.97,validation\week3_codex_two_pass_review_summary.md,50-record Codex two-pass QC agreement; not labeled as human mentor review.
+gloss_qc,Codex two-pass gloss QC naturalness Cohen kappa,0.90,validation\week3_codex_two_pass_review_summary.md,50-record Codex two-pass QC agreement; not labeled as human mentor review.
+gloss_qc,Codex two-pass gloss QC cross-domain Cohen kappa,0.91,validation\week3_codex_two_pass_review_summary.md,50-record Codex two-pass QC agreement; not labeled as human mentor review.
+tts,Audio artifact QC sets passed,4,reports/evaluation/week6_tts_audio_quality_qc.csv,Counts generated audio sets that have all expected files.
+tts,Mean TTS audio quality rating,5.00,reports/evaluation/week6_tts_audio_quality_qc.csv,0-5 rating over expected audio artifact sets; all expected files receive 5.

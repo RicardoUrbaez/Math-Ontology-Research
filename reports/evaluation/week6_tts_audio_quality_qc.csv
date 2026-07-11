@@ -1,0 +1,5 @@
+audio_set,backend,files_found,expected_files,artifact_qc,tts_quality_rating
+Week 4 arXiv gTTS,gTTS,20,20,pass,5
+Week 4 Azure live sample,Azure Speech,3,3,pass,5
+Study notation-only condition,gTTS,10,10,pass,5
+Study MathOntoSpeak semantic condition,gTTS,10,10,pass,5

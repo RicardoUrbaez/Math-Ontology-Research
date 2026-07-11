@@ -9,3 +9,11 @@ requests
 azure-cognitiveservices-speech
 spacy
 pypdf
+matplotlib
+numpy
+openpyxl
+scipy
+SciencePlots
+LovelyPlots
+CairoSVG
+pytest

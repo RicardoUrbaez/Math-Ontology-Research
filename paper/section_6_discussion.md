@@ -1,0 +1,11 @@
+# 6. Discussion
+
+MathOntoSpeak contributes a multi-perspective knowledge graph approach to mathematical accessibility. Its central design choice is to treat a mathematical concept as one graph node that can support several formally distinct renderings. The concise, pedagogical, expert, and document-role forms are not merely alternate phrasings; they encode different perspectives over the same ontology-backed object.
+
+This distinction matters because mathematical notation compresses role, context, and domain convention into compact symbols. A symbol such as `T` can surface as a letter, a transformation, an operator, or a document-specific referent. A notation-only TTS pipeline can pronounce the surface symbol, but it cannot reliably explain the conceptual role being invoked. MathOntoSpeak addresses that problem by linking a symbol to a concept IRI and selecting a perspective-specific rendering from graph metadata.
+
+The four surface forms bridge formal semantic-web representation and learner-facing audio. The concise form supports quick access, the pedagogical form supports explanation, the expert form preserves technical language, and the document-role form explains how the concept functions in mathematical prose. These are separate communicative views of the same node, which is why the contribution is a KG modeling contribution rather than only a TTS formatting layer.
+
+The evaluation evidence supports this architecture. The graph has measurable ontology coverage, provenance tagging, SPARQL benchmark timings, generated audio artifacts, real-participant user-study results, and internal gloss-review agreement. Together, these results show end-to-end movement from linked data to accessible speech output: a concept node is modeled once, queried through the graph, rendered through formally named perspectives, and evaluated as a speech-facing accessibility interface.
+
+The broader implication is that accessibility rendering can be treated as a knowledge representation problem. By representing mathematical meaning once and rendering it through multiple formally named perspectives, MathOntoSpeak gives downstream interfaces a principled way to adapt speech to the listener, task, and document role.

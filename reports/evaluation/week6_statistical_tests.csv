@@ -1,0 +1,3 @@
+measure,primary_test,n,notation_mean,semantic_mean,mean_difference_semantic_minus_notation,test_statistic,p_value,cohens_dz,data_status
+comprehension_accuracy,paired_t_test,10,0.350,0.433,0.083,1.627,0.138185,0.514,real_participant_workbook_data
+nasa_tlx_raw_mean,wilcoxon_signed_rank,10,61.683,64.250,2.567,19.000,0.734375,0.182,real_participant_workbook_data
