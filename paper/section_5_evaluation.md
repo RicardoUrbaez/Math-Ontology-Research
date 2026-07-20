@@ -20,6 +20,8 @@ Gloss quality was evaluated with a 50-record Codex two-pass QC review. The revie
 
 The audio artifact check confirms that 4 generated audio sets contain their expected files. The mean TTS audio quality rating is 5.00 on a 0-5 completeness scale.
 
+As an additional ASR intelligibility check, the generated study audio was transcribed with the Whisper `tiny.en` model and compared with the intended notation-only or semantic gloss text. Whisper produced transcripts for 20 of 20 reviewed audio files, with a mean word error rate of 0.220. For the MathOntoSpeak semantic condition, mean concept-keyword recall was 0.883, showing that most generated semantic concept names were recoverable from the audio transcript. The weakest case was the hard finite-series example, where ASR failed to recover the repeated summation structure cleanly; this identifies pacing and equation complexity as useful targets for future audio tuning. The generated evidence is stored in `reports/evaluation/week6_whisper_asr_audio_qc.csv` and `reports/evaluation/week6_whisper_asr_audio_qc.md`.
+
 ## 5.4 User Study Results
 
 In the real-participant within-subjects workbook, MathOntoSpeak semantic TTS produced a mean comprehension accuracy of 43.3%, compared with 35.0% for notation-only TTS. The paired t-test was t = 1.627, p = 0.138, with Cohen's dz = 0.514. NASA-TLX workload was 64.2 for MathOntoSpeak semantic TTS and 61.7 for notation-only TTS; the Wilcoxon signed-rank test was W = 19.000, p = 0.734.

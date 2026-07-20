@@ -17,3 +17,6 @@ SciencePlots
 LovelyPlots
 CairoSVG
 pytest
+openai-whisper
+jiwer
+imageio-ffmpeg
