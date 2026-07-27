@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from api.services import MathKGService
@@ -12,6 +13,16 @@ app = FastAPI(
     title="Math Accessibility Knowledge Graph API",
     description="FastAPI endpoints for semantic search, cross-disciplinary discovery, concept recommendation, and LaTeX accessibility glosses.",
     version="0.1.0",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://127.0.0.1:5173",
+        "http://localhost:5173",
+    ],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["*"],
 )
 service = MathKGService()
 
@@ -42,6 +53,17 @@ class AccessibilityRequest(BaseModel):
     audience: Literal["concise", "pedagogical", "expert", "document_role"] = "concise"
     arxiv_id: str = "ad-hoc"
     title: str = "Ad-hoc equation"
+
+
+class PaperAnalysisRequest(BaseModel):
+    title: str = "Untitled paper"
+    abstract_or_context: str = ""
+    equations: list[str] = Field(default_factory=list)
+    audience: Literal["concise", "pedagogical", "expert", "document_role"] = "pedagogical"
+    audio_backend: Literal["none", "mock", "gtts", "azure"] = "none"
+    generate_audio: bool = False
+    pdf_base64: str = ""
+    pdf_filename: str = ""
 
 
 @app.get("/health")
@@ -103,3 +125,16 @@ def latex_accessibility_gloss(request: AccessibilityRequest) -> dict:
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
+
+@app.post("/api/paper/analyze")
+def paper_analysis(request: PaperAnalysisRequest) -> dict:
+    return service.analyze_paper(
+        title=request.title,
+        abstract_or_context=request.abstract_or_context,
+        equations=request.equations,
+        audience=request.audience,
+        audio_backend=request.audio_backend,
+        generate_audio=request.generate_audio,
+        pdf_base64=request.pdf_base64,
+        pdf_filename=request.pdf_filename,
+    )

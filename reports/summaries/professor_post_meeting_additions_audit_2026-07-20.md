@@ -10,6 +10,18 @@ Research plan source: `C:\Users\Ricardo\Downloads\Research Materials 2026\Resear
 
 Weeks 1 through 6 are completed as a project evidence package, based on the current repository artifacts and local verification checks. The post-meeting additions are now represented in the repository: NER evidence, grouped Protege visualization, TTS/audio evidence, and Whisper ASR validation. The TTS/audio work is the generation layer, while Whisper/ASR is an evaluation layer that checks whether generated audio can be transcribed back into recognizable text.
 
+## New Research Sprint After the Latest Professor Feedback
+
+The next project step is no longer to follow the original research-plan PDF line by line. The professor's updated direction is to make the system demonstrate the accessibility goal directly: take a math paper context, choose or extract an equation, and explain it in a way a blind researcher can understand before hearing the raw notation.
+
+New demo evidence is implemented through:
+
+- `POST /api/paper/analyze` in `api/main.py`
+- context-aware analysis logic in `api/services.py`
+- local professor demo frontend in `demo/frontend/`
+
+This demo accepts pasted paper context or PDF text extraction, analyzes supplied or detected LaTeX equations, returns notation-only and semantic MathOntoSpeak readings, lists ontology-backed concepts, explains the surrounding paper context, and keeps Azure Speech plus Whisper/ASR as optional evidence layers.
+
 ## Where the Three Items Fit
 
 | Professor item | Where it appears in the plan | Current status | Evidence |

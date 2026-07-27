@@ -23,6 +23,7 @@ The mock backend is the default for reproducible local testing. It writes transc
 - `POST /api/discover`
 - `POST /api/recommend`
 - `POST /api/accessibility/latex-gloss`
+- `POST /api/paper/analyze`
 
 ## Sample GET URLs
 
@@ -63,6 +64,7 @@ curl.exe "http://127.0.0.1:8000/api/search?q=matrix%20linear%20algebra&limit=3"
 curl.exe -X POST "http://127.0.0.1:8000/api/discover" -H "Content-Type: application/json" -d "{\"seed_concept\":\"Matrix\",\"target_domains\":[\"calculus\"],\"limit\":3}"
 curl.exe -X POST "http://127.0.0.1:8000/api/recommend" -H "Content-Type: application/json" -d "{\"latex\":\"S=\\\\sum_k a_k X_k\",\"limit\":5}"
 curl.exe -X POST "http://127.0.0.1:8000/api/accessibility/latex-gloss" -H "Content-Type: application/json" -d "{\"latex\":\"x \\\\in \\\\mathbb{R}\",\"audience\":\"pedagogical\"}"
+curl.exe -X POST "http://127.0.0.1:8000/api/paper/analyze" -H "Content-Type: application/json" -d "{\"title\":\"Demo paper\",\"abstract_or_context\":\"The paper states $x \\\\in \\\\mathbb{R}$ before solving the model.\",\"equations\":[],\"audience\":\"pedagogical\"}"
 ```
 
 ## Example Responses
@@ -132,5 +134,31 @@ curl.exe -X POST "http://127.0.0.1:8000/api/accessibility/latex-gloss" -H "Conte
   "ssml": "<speak version=\"1.0\" ...>...</speak>",
   "resolved_count": 3,
   "tokens": []
+}
+```
+
+`POST /api/paper/analyze` returns paper-context equation analysis for the professor demo:
+
+```json
+{
+  "title": "Demo paper",
+  "audience": "pedagogical",
+  "audio_backend": "none",
+  "source_text_length": 63,
+  "extracted_equation_count": 1,
+  "pdf": {"status": "not_provided", "detail": "No PDF payload supplied."},
+  "equations": [
+    {
+      "index": 1,
+      "latex": "x \\in \\mathbb{R}",
+      "plain_notation_reading": "x in R",
+      "semantic_reading": "...",
+      "contextual_explanation": "...",
+      "why_it_helps": "...",
+      "resolved_count": 3,
+      "concepts": ["Variable", "Element", "Real Number"],
+      "audio": {"status": "skipped", "backend": "none"}
+    }
+  ]
 }
 ```

@@ -39,7 +39,21 @@ class MathKGServiceTests(unittest.TestCase):
         self.assertIn("Real Number", labels)
         self.assertTrue(any("Think of" in token["surface_form"] for token in payload["tokens"]))
 
+    def test_paper_analysis_keeps_unknown_symbols_explainable(self):
+        payload = self.service.analyze_paper(
+            title="Unknown symbol demo",
+            abstract_or_context="A short proof introduces a custom operator for a local argument.",
+            equations=[r"\mysteryop(z)=q"],
+            audience="expert",
+        )
+
+        self.assertEqual(len(payload["equations"]), 1)
+        equation = payload["equations"][0]
+        self.assertEqual(equation["audio"]["status"], "skipped")
+        self.assertIn("blind researcher", equation["why_it_helps"])
+        self.assertIn("semantic_reading", equation)
+        self.assertIn("Variable", equation["concepts"])
+
 
 if __name__ == "__main__":
     unittest.main()
-

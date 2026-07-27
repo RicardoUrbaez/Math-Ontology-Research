@@ -14,6 +14,7 @@ The central modeling idea is that one mathematical concept node can support seve
 | TTS and LaTeX pipeline | `src/mathontospeak/`, `scripts/week4_tts_rendering.py`, `scripts/generate_study_audio.py` |
 | SPARQL query library | `queries/01_list_all_concepts.rq` through `queries/10_hierarchy_traversal.rq`; additional API-oriented examples in `queries/11_*.rq` through `queries/15_*.rq` |
 | FastAPI server | `api/main.py`, `api/services.py` |
+| Professor paper demo | `demo/frontend/`, `POST /api/paper/analyze` |
 | Evaluation package | `scripts/week6_evaluation_package.py`, `reports/evaluation/`, `figures/`, `paper/section_5_evaluation.md`, `paper/section_6_discussion.md` |
 | Rapid pilot study | `scripts/run_rapid_pilot.py`, `scripts/finalize_rapid_pilot.py`, `study/rapid_pilot/rapid_pilot_results.xlsx` |
 
@@ -220,7 +221,41 @@ Invoke-RestMethod `
   -Body '{"latex":"x \\in \\mathbb{R}","audience":"concise"}'
 ```
 
+Paper-to-contextual-equation analysis:
+
+```powershell
+Invoke-RestMethod `
+  -Method Post `
+  -ContentType "application/json" `
+  -Uri "http://127.0.0.1:8000/api/paper/analyze" `
+  -Body '{"title":"Demo paper","abstract_or_context":"The paper states $x \\in \\mathbb{R}$ before solving the model.","equations":[],"audience":"pedagogical"}'
+```
+
 If Fuseki is unavailable, the API still serves deterministic concept and gloss results from the local gloss dictionary.
+
+## Running the Professor Paper Demo
+
+Start the API:
+
+```powershell
+python -m uvicorn api.main:app --reload
+```
+
+In another PowerShell window, start the local frontend:
+
+```powershell
+cd demo\frontend
+npm install
+npm run dev
+```
+
+Open:
+
+```text
+http://127.0.0.1:5173
+```
+
+The demo lets a reviewer paste paper context or upload a PDF, provide or extract LaTeX equations, choose an audience mode, inspect ontology-backed concepts, and play the semantic MathOntoSpeak reading in the browser. Optional backend audio generation can use mock, gTTS, or Azure Speech; Azure requires `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION`.
 
 ## Running the LaTeX to Audio Pipeline
 

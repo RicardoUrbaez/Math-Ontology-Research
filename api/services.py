@@ -1,12 +1,15 @@
 from __future__ import annotations
 
+import base64
+import binascii
 import json
 import os
 import re
+from dataclasses import asdict, dataclass
+from io import BytesIO
 import urllib.error
 import urllib.parse
 import urllib.request
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +17,7 @@ from scripts.week4_tts_rendering import (
     ArxivEquation,
     GlossRepository,
     SymbolConceptLookup,
+    backend_for,
     build_equation_speech_bundle,
     build_surface_forms,
     latex_to_plain_text,
@@ -26,11 +30,18 @@ from scripts.week4_tts_rendering import (
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GLOSS_PATH = ROOT / "gloss" / "week3_gloss_dictionary.json"
 DEFAULT_SPARQL_ENDPOINT = "http://localhost:3030/mathkg500/query"
+DEFAULT_PAPER_AUDIO_DIR = ROOT / "reports" / "audio" / "paper_demo"
 AUDIENCE_TO_FIELD = {
     "concise": "concise_form",
     "pedagogical": "pedagogical_form",
     "expert": "expert_form",
     "document_role": "document_role_form",
+}
+DISPLAY_AUDIENCE = {
+    "concise": "Concise",
+    "pedagogical": "Pedagogical",
+    "expert": "Expert",
+    "document_role": "Document role",
 }
 
 
@@ -44,6 +55,64 @@ def normalize_key(value: str) -> str:
 
 def tokens_for(value: str) -> set[str]:
     return {token for token in normalize_text(value).split() if len(token) > 1}
+
+
+def sentence_for_context(context: str, latex: str, labels: list[str]) -> str:
+    context = re.sub(r"\s+", " ", context or "").strip()
+    if not context:
+        return ""
+    candidates = [part.strip() for part in re.split(r"(?<=[.!?])\s+", context) if part.strip()]
+    if not candidates:
+        return context[:360]
+    label_tokens = {token for label in labels for token in tokens_for(label)}
+    latex_tokens = tokens_for(latex)
+
+    def score(sentence: str) -> tuple[int, int]:
+        terms = tokens_for(sentence)
+        return (len(terms.intersection(label_tokens)), len(terms.intersection(latex_tokens)))
+
+    best = max(candidates, key=score)
+    return best[:420]
+
+
+def extract_latex_equations(text: str, limit: int = 12) -> list[str]:
+    patterns = [
+        r"\$\$(.+?)\$\$",
+        r"\\\[(.+?)\\\]",
+        r"\\\((.+?)\\\)",
+        r"(?<!\\)\$(?!\$)(.+?)(?<!\\)\$",
+    ]
+    equations: list[str] = []
+    seen: set[str] = set()
+    for pattern in patterns:
+        for match in re.finditer(pattern, text or "", flags=re.DOTALL):
+            equation = re.sub(r"\s+", " ", match.group(1)).strip()
+            if equation and equation not in seen:
+                seen.add(equation)
+                equations.append(equation)
+            if len(equations) >= limit:
+                return equations
+    return equations
+
+
+def extract_pdf_text_from_base64(pdf_base64: str) -> tuple[str, dict[str, str]]:
+    if not pdf_base64:
+        return "", {"status": "not_provided", "detail": "No PDF payload supplied."}
+    try:
+        raw = base64.b64decode(pdf_base64, validate=True)
+    except (binascii.Error, ValueError) as exc:
+        return "", {"status": "failed", "detail": f"PDF base64 decode failed: {exc}"}
+    try:
+        from pypdf import PdfReader
+
+        reader = PdfReader(BytesIO(raw))
+        chunks = [(page.extract_text() or "") for page in reader.pages[:20]]
+        text = re.sub(r"\s+", " ", "\n".join(chunks)).strip()
+    except Exception as exc:  # noqa: BLE001 - returned as user-facing provenance.
+        return "", {"status": "failed", "detail": f"PDF extraction failed: {type(exc).__name__}: {exc}"}
+    if not text:
+        return "", {"status": "empty", "detail": "PDF parsed, but no extractable text was found."}
+    return text, {"status": "ok", "detail": f"Extracted text from {len(reader.pages)} PDF page(s)."}
 
 
 def split_multi_value(value: Any) -> list[str]:
@@ -290,6 +359,174 @@ class MathKGService:
             "resolved_count": sum(1 for token in bundle.tokens if token.concept_iri),
             "tokens": token_payloads,
         }
+
+    def analyze_paper(
+        self,
+        *,
+        title: str = "Untitled paper",
+        abstract_or_context: str = "",
+        equations: list[str] | None = None,
+        audience: str = "pedagogical",
+        audio_backend: str = "none",
+        generate_audio: bool = False,
+        pdf_base64: str = "",
+        pdf_filename: str = "",
+    ) -> dict[str, Any]:
+        pdf_text, pdf_status = extract_pdf_text_from_base64(pdf_base64)
+        if pdf_filename:
+            pdf_status["filename"] = pdf_filename
+
+        context_parts = [part for part in (abstract_or_context, pdf_text) if part]
+        source_text = "\n\n".join(context_parts).strip()
+        supplied_equations = [equation.strip() for equation in equations or [] if equation and equation.strip()]
+        extracted_equations = extract_latex_equations(source_text)
+        selected_equations = supplied_equations or extracted_equations
+
+        analyses = [
+            self._analyze_equation(
+                latex=latex,
+                index=index,
+                title=title,
+                context=source_text,
+                audience=audience,
+                audio_backend=audio_backend,
+                generate_audio=generate_audio,
+            )
+            for index, latex in enumerate(selected_equations, start=1)
+        ]
+
+        return {
+            "title": title or "Untitled paper",
+            "audience": audience,
+            "audio_backend": audio_backend,
+            "source_text_length": len(source_text),
+            "extracted_equation_count": len(extracted_equations),
+            "pdf": pdf_status,
+            "equations": analyses,
+        }
+
+    def _analyze_equation(
+        self,
+        *,
+        latex: str,
+        index: int,
+        title: str,
+        context: str,
+        audience: str,
+        audio_backend: str,
+        generate_audio: bool,
+    ) -> dict[str, Any]:
+        gloss = self.latex_accessibility_gloss(latex, audience=audience, arxiv_id="paper-demo", title=title)
+        labels = [token["canonical_label"] for token in gloss["tokens"] if token.get("canonical_label")]
+        unique_labels = list(dict.fromkeys(labels))
+        linked_span = sentence_for_context(context, latex, unique_labels)
+        recommendations = self.recommend_concepts(context=context, latex=latex, seed_concepts=unique_labels, limit=5)
+        context_clause = (
+            f"The surrounding paper context says: {linked_span}"
+            if linked_span
+            else "No surrounding paper context was supplied, so the analysis uses the equation symbols only."
+        )
+        concept_clause = (
+            "Resolved ontology concepts include " + ", ".join(unique_labels[:6]) + "."
+            if unique_labels
+            else "No ontology-backed concepts were resolved for this equation."
+        )
+        audience_label = DISPLAY_AUDIENCE.get(audience, audience)
+        semantic_reading = (
+            f"{audience_label} MathOntoSpeak reading: {gloss['speech_text']} "
+            f"{context_clause}"
+        )
+        contextual_explanation = (
+            f"{concept_clause} {context_clause} "
+            "The explanation combines the selected equation, nearby paper language, and the knowledge graph surface forms."
+        )
+        why_it_helps = (
+            "This gives a blind researcher meaning, role, and document context before the notation is spoken, "
+            "so the equation is heard as a concept-bearing statement instead of only a sequence of symbols."
+        )
+        return {
+            "index": index,
+            "latex": latex,
+            "plain_notation_reading": gloss["plain_text"] or latex_to_plain_text(latex),
+            "semantic_reading": semantic_reading,
+            "contextual_explanation": contextual_explanation,
+            "why_it_helps": why_it_helps,
+            "resolved_count": gloss["resolved_count"],
+            "tokens": gloss["tokens"],
+            "concepts": unique_labels,
+            "linked_text_span": linked_span,
+            "recommendations": recommendations["results"],
+            "ssml": gloss["ssml"],
+            "audio": self._maybe_generate_equation_audio(
+                latex=latex,
+                index=index,
+                title=title,
+                speech_text=semantic_reading,
+                ssml=gloss["ssml"],
+                audio_backend=audio_backend,
+                generate_audio=generate_audio,
+            ),
+        }
+
+    def _maybe_generate_equation_audio(
+        self,
+        *,
+        latex: str,
+        index: int,
+        title: str,
+        speech_text: str,
+        ssml: str,
+        audio_backend: str,
+        generate_audio: bool,
+    ) -> dict[str, str]:
+        if not generate_audio or audio_backend == "none":
+            return {
+                "status": "skipped",
+                "backend": audio_backend,
+                "detail": "Audio generation was not requested.",
+                "audio_path": "",
+            }
+        if audio_backend == "azure" and not (os.getenv("AZURE_SPEECH_KEY") and os.getenv("AZURE_SPEECH_REGION")):
+            return {
+                "status": "not_configured",
+                "backend": audio_backend,
+                "detail": "Azure Speech is not configured; set AZURE_SPEECH_KEY and AZURE_SPEECH_REGION.",
+                "audio_path": "",
+                "ssml_path": "",
+            }
+        try:
+            backend = backend_for(audio_backend)
+            from scripts.week4_tts_rendering import EquationSpeechBundle, synthesize_equation_bundle
+
+            bundle = EquationSpeechBundle(
+                arxiv_id="paper-demo",
+                title=title,
+                latex=latex,
+                plain_text=latex_to_plain_text(latex),
+                speech_text=speech_text,
+                ssml=ssml,
+                tokens=[],
+            )
+            result = synthesize_equation_bundle(bundle, backend, DEFAULT_PAPER_AUDIO_DIR, index)
+            return asdict(result)
+        except RuntimeError as exc:
+            detail = str(exc)
+            status = "not_configured" if "AZURE_SPEECH_KEY" in detail or "Azure" in detail else "failed"
+            return {
+                "status": status,
+                "backend": audio_backend,
+                "detail": detail,
+                "audio_path": "",
+                "ssml_path": "",
+            }
+        except Exception as exc:  # noqa: BLE001 - keep the demo endpoint graceful.
+            return {
+                "status": "failed",
+                "backend": audio_backend,
+                "detail": f"{type(exc).__name__}: {exc}",
+                "audio_path": "",
+                "ssml_path": "",
+            }
 
     def find_record(self, label_or_iri: str | None) -> dict[str, Any] | None:
         if not label_or_iri:
