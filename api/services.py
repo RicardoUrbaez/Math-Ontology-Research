@@ -17,6 +17,7 @@ from scripts.week4_tts_rendering import (
     ArxivEquation,
     GlossRepository,
     SymbolConceptLookup,
+    assemble_ssml,
     backend_for,
     build_equation_speech_bundle,
     build_surface_forms,
@@ -42,6 +43,42 @@ DISPLAY_AUDIENCE = {
     "pedagogical": "Pedagogical",
     "expert": "Expert",
     "document_role": "Document role",
+}
+CONTEXT_DOMAIN_TERMS = {
+    "attention",
+    "channel",
+    "covariance",
+    "energy",
+    "frequency",
+    "matrix",
+    "noise",
+    "power",
+    "probability",
+    "received",
+    "receiver",
+    "signal",
+    "transmission",
+    "transmitted",
+    "variance",
+    "voltage",
+}
+SECTION_NAMES = {
+    "abstract",
+    "background",
+    "conclusion",
+    "discussion",
+    "introduction",
+    "methods",
+    "methodology",
+    "results",
+    "system model",
+}
+PDF_SPACED_WORDS = {
+    r"\ba\s+n\s+d\b": "and",
+    r"\bc\s+o\s+s\b": "cos",
+    r"\bl\s+o\s+g\b": "log",
+    r"\bs\s+i\s+n\b": "sin",
+    r"\bw\s+h\s+e\s+r\s+e(?=\s|[A-Z])": "where ",
 }
 
 
@@ -75,44 +112,212 @@ def sentence_for_context(context: str, latex: str, labels: list[str]) -> str:
     return best[:420]
 
 
-def extract_latex_equations(text: str, limit: int = 12) -> list[str]:
+def _is_section_heading(value: str) -> bool:
+    cleaned = re.sub(r"\s+", " ", value).strip(" :")
+    if not cleaned or len(cleaned) > 120 or "=" in cleaned:
+        return False
+    normalized = normalize_text(cleaned)
+    if normalized in SECTION_NAMES:
+        return True
+    if re.match(r"^\d+(?:\.\d+)*\s+[A-Za-z][A-Za-z\s-]{2,}$", cleaned):
+        return True
+    return cleaned.isupper() and 3 <= len(cleaned.split()) <= 10
+
+
+def repair_pdf_spacing(value: str) -> str:
+    repaired = value or ""
+    for pattern, replacement in PDF_SPACED_WORDS.items():
+        repaired = re.sub(pattern, replacement, repaired, flags=re.IGNORECASE)
+    return repaired
+
+
+def context_chunks_from_text(
+    text: str,
+    *,
+    source: str,
+    page: int | None = None,
+    include_title: bool = False,
+) -> list[dict[str, Any]]:
+    raw_lines = [re.sub(r"\s+", " ", line).strip() for line in (text or "").splitlines()]
+    lines = [line for line in raw_lines if line]
+    if not lines:
+        normalized = re.sub(r"\s+", " ", text or "").strip()
+        lines = [normalized] if normalized else []
+
+    chunks: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    current_heading = ""
+    paragraph_lines: list[str] = []
+
+    def add_chunk(value: str, kind: str, heading: str = "") -> None:
+        cleaned = re.sub(r"\s+", " ", value).strip()
+        key = (kind, cleaned)
+        if not cleaned or key in seen:
+            return
+        seen.add(key)
+        payload: dict[str, Any] = {
+            "source": source,
+            "kind": kind,
+            "text": cleaned[:1200],
+        }
+        if page is not None:
+            payload["page"] = page
+        if heading:
+            payload["section_heading"] = heading
+        chunks.append(payload)
+
+    def flush_paragraph() -> None:
+        nonlocal paragraph_lines
+        paragraph = " ".join(paragraph_lines).strip()
+        paragraph_lines = []
+        if not paragraph:
+            return
+        kind = "abstract" if normalize_text(current_heading) == "abstract" else "paragraph"
+        add_chunk(paragraph, kind, current_heading)
+        for sentence in re.split(r"(?<=[.!?])\s+", paragraph):
+            if sentence.strip() and sentence.strip() != paragraph:
+                add_chunk(sentence, "sentence", current_heading)
+
+    if include_title and lines:
+        add_chunk(lines[0], "title")
+
+    for line_number, line in enumerate(lines):
+        if include_title and line_number == 0:
+            continue
+        if _is_section_heading(line):
+            flush_paragraph()
+            current_heading = line
+            add_chunk(line, "section_heading", line)
+            continue
+        paragraph_lines.append(line)
+        if line.endswith((".", "!", "?")):
+            flush_paragraph()
+    flush_paragraph()
+    return chunks
+
+
+def extract_plain_text_equations(text: str, limit: int = 12) -> list[str]:
+    pattern = re.compile(
+        r"(?P<lhs>[^\W\d_][\w]*(?:\s*[_^]\s*(?:\{[^}]+\}|[\w]+))?"
+        r"(?:\s*[\[(][^\])]{1,32}[\])])?)\s*=\s*(?P<rhs>[^.;]{1,260})",
+        flags=re.UNICODE,
+    )
+    equations: list[str] = []
+    seen: set[str] = set()
+    for match in pattern.finditer(text or ""):
+        lhs = re.sub(r"\s+", " ", match.group("lhs")).strip()
+        rhs = re.split(
+            r",\s*(?:where|with|which|whose|for)\b"
+            r"|,\s*(?:and\s+)?[A-Za-z][A-Za-z0-9_]*(?:\s*[\[(][^\])]+[\])])?\s+"
+            r"(?:is|denotes|represents)\b"
+            r"|\s+(?:where|with|which)\b",
+            repair_pdf_spacing(match.group("rhs")),
+            maxsplit=1,
+            flags=re.IGNORECASE,
+        )[0]
+        rhs = re.sub(r"\s+", " ", rhs).strip(" ,")
+        rhs = re.sub(r"\s*\(\d+\)\s*$", "", rhs).strip()
+        if not lhs or not rhs:
+            continue
+        if not re.search(r"[A-Za-z0-9\u0370-\u03ff]", rhs):
+            continue
+        equation = f"{lhs} = {rhs}"
+        if equation not in seen:
+            seen.add(equation)
+            equations.append(equation)
+        if len(equations) >= limit:
+            break
+    return equations
+
+
+def extract_equation_candidates(text: str, limit: int = 12) -> list[dict[str, str]]:
     patterns = [
         r"\$\$(.+?)\$\$",
         r"\\\[(.+?)\\\]",
         r"\\\((.+?)\\\)",
         r"(?<!\\)\$(?!\$)(.+?)(?<!\\)\$",
     ]
-    equations: list[str] = []
+    equations: list[dict[str, str]] = []
     seen: set[str] = set()
     for pattern in patterns:
         for match in re.finditer(pattern, text or "", flags=re.DOTALL):
             equation = re.sub(r"\s+", " ", match.group(1)).strip()
             if equation and equation not in seen:
                 seen.add(equation)
-                equations.append(equation)
+                equations.append(
+                    {
+                        "latex": equation,
+                        "confidence": "high",
+                        "method": "latex_delimiter",
+                    }
+                )
             if len(equations) >= limit:
                 return equations
+    if equations:
+        return equations
+    for equation in extract_plain_text_equations(text, limit=limit):
+        equations.append(
+            {
+                "latex": equation,
+                "confidence": "medium",
+                "method": "plain_text_equation",
+            }
+        )
     return equations
 
 
-def extract_pdf_text_from_base64(pdf_base64: str) -> tuple[str, dict[str, str]]:
+def extract_latex_equations(text: str, limit: int = 12) -> list[str]:
+    return [candidate["latex"] for candidate in extract_equation_candidates(text, limit=limit)]
+
+
+def extract_pdf_context_from_base64(
+    pdf_base64: str,
+) -> tuple[str, list[dict[str, Any]], dict[str, Any]]:
     if not pdf_base64:
-        return "", {"status": "not_provided", "detail": "No PDF payload supplied."}
+        return "", [], {"status": "not_provided", "detail": "No PDF payload supplied."}
     try:
         raw = base64.b64decode(pdf_base64, validate=True)
     except (binascii.Error, ValueError) as exc:
-        return "", {"status": "failed", "detail": f"PDF base64 decode failed: {exc}"}
+        return "", [], {"status": "failed", "detail": f"PDF base64 decode failed: {exc}"}
     try:
         from pypdf import PdfReader
 
         reader = PdfReader(BytesIO(raw))
-        chunks = [(page.extract_text() or "") for page in reader.pages[:20]]
-        text = re.sub(r"\s+", " ", "\n".join(chunks)).strip()
+        page_texts: list[str] = []
+        context_chunks: list[dict[str, Any]] = []
+        for page_number, page in enumerate(reader.pages[:20], start=1):
+            page_text = repair_pdf_spacing(page.extract_text() or "")
+            if not page_text.strip():
+                continue
+            page_texts.append(f"[Page {page_number}]\n{page_text}")
+            context_chunks.extend(
+                context_chunks_from_text(
+                    page_text,
+                    source="pdf",
+                    page=page_number,
+                    include_title=page_number == 1,
+                )
+            )
+        text = "\n\n".join(page_texts).strip()
     except Exception as exc:  # noqa: BLE001 - returned as user-facing provenance.
-        return "", {"status": "failed", "detail": f"PDF extraction failed: {type(exc).__name__}: {exc}"}
+        return "", [], {"status": "failed", "detail": f"PDF extraction failed: {type(exc).__name__}: {exc}"}
     if not text:
-        return "", {"status": "empty", "detail": "PDF parsed, but no extractable text was found."}
-    return text, {"status": "ok", "detail": f"Extracted text from {len(reader.pages)} PDF page(s)."}
+        return "", [], {"status": "empty", "detail": "PDF parsed, but no extractable text was found."}
+    return (
+        text,
+        context_chunks,
+        {
+            "status": "ok",
+            "detail": f"Extracted text from {len(reader.pages)} PDF page(s).",
+            "page_count": len(reader.pages),
+            "context_chunk_count": len(context_chunks),
+        },
+    )
+
+
+def extract_pdf_text_from_base64(pdf_base64: str) -> tuple[str, dict[str, Any]]:
+    text, _chunks, status = extract_pdf_context_from_base64(pdf_base64)
+    return text, status
 
 
 def split_multi_value(value: Any) -> list[str]:
@@ -121,6 +326,300 @@ def split_multi_value(value: Any) -> list[str]:
     if isinstance(value, list):
         return [str(item).strip() for item in value if str(item).strip()]
     return [part.strip() for part in re.split(r"[;,]", str(value)) if part.strip()]
+
+
+def rank_context_evidence(
+    chunks: list[dict[str, Any]],
+    *,
+    latex: str,
+    labels: list[str],
+    limit: int = 3,
+) -> list[dict[str, Any]]:
+    equation_terms = {
+        normalize_key(term)
+        for term in re.findall(r"[A-Za-z][A-Za-z0-9_]*", latex)
+        if len(term) > 1 or term.lower() in {"h", "n", "p", "r", "s", "x", "y"}
+    }
+    macro_names = {"bar", "hat", "left", "right", "sqrt", "sum", "tilde"}
+    lhs_terms = [
+        normalize_key(term)
+        for term in re.findall(r"[A-Za-z][A-Za-z0-9_]*", latex.split("=", 1)[0])
+        if normalize_key(term) not in macro_names
+    ]
+    lhs_symbol = lhs_terms[0] if lhs_terms else ""
+    label_terms = {token for label in labels for token in normalize_text(label).split()}
+    ranked: list[tuple[float, int, dict[str, Any]]] = []
+    for position, chunk in enumerate(chunks):
+        text = str(chunk.get("text") or "").strip()
+        if not text:
+            continue
+        normalized_terms = set(normalize_text(text).split())
+        chunk_equation_terms = {
+            normalize_key(term) for term in re.findall(r"[A-Za-z][A-Za-z0-9_]*", text)
+        }
+        symbol_matches = len(equation_terms.intersection(chunk_equation_terms))
+        chunk_sequence = [
+            normalize_key(term) for term in re.findall(r"[A-Za-z][A-Za-z0-9_]*", text)
+        ]
+        clustered_matches = 0
+        for start in range(len(chunk_sequence)):
+            window = set(chunk_sequence[start : start + 60])
+            clustered_matches = max(clustered_matches, len(equation_terms.intersection(window)))
+        lhs_bonus = 0
+        if lhs_symbol:
+            lhs_pattern = rf"(?<!\w){re.escape(lhs_symbol)}\s*(?:[\[(][^\])]*[\])])?\s*="
+            lhs_bonus = 8 if re.search(lhs_pattern, text, re.IGNORECASE) else 0
+        label_matches = len(normalized_terms.intersection(label_terms))
+        domain_matches = len(normalized_terms.intersection(CONTEXT_DOMAIN_TERMS))
+        definition_bonus = 2 if re.search(r"\b(?:is|denotes|represents|refers to)\b", text, re.IGNORECASE) else 0
+        symbol_definition_matches = 0
+        for term in equation_terms:
+            if not term:
+                continue
+            definition_pattern = (
+                rf"(?<!\w){re.escape(term)}\s*(?:[\[(][^\])]*[\])])?\s+"
+                r"(?:is|denotes|represents|refers to)\b"
+            )
+            if re.search(definition_pattern, normalize_text(text), re.IGNORECASE):
+                symbol_definition_matches += 1
+        kind_bonus = 1 if chunk.get("kind") in {"abstract", "paragraph", "sentence"} else 0
+        length_penalty = min(len(text) / 500.0, 2.0)
+        score = (
+            (clustered_matches * 5.0)
+            + symbol_matches
+            + (label_matches * 1.5)
+            + (domain_matches * 0.5)
+            + definition_bonus
+            + (symbol_definition_matches * 6.0)
+            + kind_bonus
+            + lhs_bonus
+            - length_penalty
+        )
+        ranked.append((score, -position, chunk))
+
+    ranked.sort(key=lambda item: (item[0], item[1]), reverse=True)
+    evidence: list[dict[str, Any]] = []
+    seen_text: set[str] = set()
+    seen_normalized: list[str] = []
+    for score, _position, chunk in ranked:
+        text = str(chunk.get("text") or "")
+        if text in seen_text:
+            continue
+        normalized_candidate = normalize_text(text)
+        if any(
+            len(normalized_candidate) > 100
+            and len(previous) > 100
+            and (normalized_candidate in previous or previous in normalized_candidate)
+            for previous in seen_normalized
+        ):
+            continue
+        seen_text.add(text)
+        seen_normalized.append(normalized_candidate)
+        payload = dict(chunk)
+        payload["relevance_score"] = round(score, 2)
+        evidence.append(payload)
+        if len(evidence) >= limit:
+            break
+    return evidence
+
+
+def infer_context_summary(equation_label: str, context: str, evidence: list[dict[str, Any]]) -> str:
+    evidence_text = " ".join(str(item.get("text") or "") for item in evidence)
+    normalized = normalize_text(evidence_text or context)
+    terms = set(normalized.split())
+    signal_present = bool(terms.intersection({"signal", "signals", "transmitted", "received", "receiver"}))
+    channel_present = bool(terms.intersection({"channel", "channels", "gain", "scaling"}))
+    noise_present = bool(terms.intersection({"noise", "noises", "gaussian", "covariance"}))
+    if signal_present and channel_present and noise_present:
+        return (
+            f"{equation_label} describes a received or transmitted signal after wireless-channel "
+            "scaling, with additive noise terms."
+        )
+    if signal_present and noise_present:
+        return f"{equation_label} describes a signal model that includes additive noise."
+    if terms.intersection({"probability", "distribution", "variance", "covariance", "expectation"}):
+        return f"{equation_label} expresses a probability or statistical relationship used in the paper."
+    if terms.intersection({"matrix", "vector", "attention", "embedding"}):
+        return f"{equation_label} expresses a matrix or vector relationship used by the paper's model."
+    if terms.intersection({"energy", "power", "voltage", "frequency"}):
+        return f"{equation_label} relates physical quantities in the paper's system model."
+    if evidence:
+        excerpt = re.sub(r"\s+", " ", str(evidence[0].get("text") or "")).strip()
+        if len(excerpt) > 220:
+            excerpt = excerpt[:217].rstrip() + "..."
+        return f"{equation_label} is explained by this nearby paper context: {excerpt}"
+    return (
+        f"{equation_label} has no nearby explanatory prose, so only its notation and "
+        "ontology-backed concepts can be described."
+    )
+
+
+def context_symbol_definitions(context: str, latex: str) -> list[dict[str, str]]:
+    definition_pattern = re.compile(
+        r"(?=(?<!\w)(?P<symbol>[A-Za-z][A-Za-z0-9_]*(?:\s*[\[(][^\])]{1,24}[\])])?)\s+"
+        r"(?:is|denotes|represents|refers to)\s+(?P<meaning>[^,.;]{3,180}))",
+        flags=re.IGNORECASE,
+    )
+    compact_latex = normalize_key(latex)
+    latex_symbols = set(re.findall(r"[A-Za-z][A-Za-z0-9_]*", latex))
+    best_definitions: dict[str, tuple[float, dict[str, str]]] = {}
+    for match in definition_pattern.finditer(context or ""):
+        symbol_with_args = re.sub(r"\s+", "", match.group("symbol"))
+        symbol = re.sub(r"[\[(].*$", "", symbol_with_args)
+        key = normalize_key(symbol)
+        if not key or key not in compact_latex:
+            continue
+        if len(symbol) == 1 and symbol not in latex_symbols and symbol.lower() not in {"x", "y"}:
+            continue
+        meaning = re.sub(r"\s+", " ", match.group("meaning")).strip()
+        meaning_terms = set(normalize_text(meaning).split())
+        if (
+            not meaning
+            or "=" in meaning
+            or normalize_text(meaning) in {"complex", "defined", "given", "real"}
+        ):
+            continue
+        domain_score = len(meaning_terms.intersection(CONTEXT_DOMAIN_TERMS)) * 4.0
+        score = domain_score + min(len(meaning_terms), 12) / 4.0
+        candidate = {"symbol": symbol, "meaning": meaning}
+        if key not in best_definitions or score > best_definitions[key][0]:
+            best_definitions[key] = (score, candidate)
+    return [item[1] for item in best_definitions.values()]
+
+
+def _definition_from_gloss(gloss: str, fallback: str) -> str:
+    definition = re.sub(r"^[^:]{1,80}:\s*", "", gloss or "").strip()
+    definition = re.sub(r"\s+", " ", definition).strip(" .")
+    if not definition:
+        return fallback
+    return definition[:220]
+
+
+def build_term_explanations(
+    *,
+    latex: str,
+    context: str,
+    tokens: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    terms: list[dict[str, Any]] = []
+    covered: set[str] = set()
+
+    token_by_symbol: dict[str, dict[str, Any]] = {}
+    for token in tokens:
+        raw = str(token.get("raw") or "")
+        key = normalize_key(raw)
+        if key and key not in token_by_symbol:
+            token_by_symbol[key] = token
+
+    for definition in context_symbol_definitions(context, latex):
+        symbol = definition["symbol"]
+        key = normalize_key(symbol)
+        matching_token = token_by_symbol.get(key)
+        if matching_token is None and key.startswith("n"):
+            matching_token = token_by_symbol.get("n")
+        terms.append(
+            {
+                "symbol": symbol,
+                "spoken": str(matching_token.get("spoken") if matching_token else symbol),
+                "meaning": definition["meaning"],
+                "source": "paper_context",
+                "ontology_concept": str(matching_token.get("canonical_label") if matching_token else ""),
+                "confidence": "high",
+            }
+        )
+        covered.add(key)
+
+    operator_meanings = {
+        "=": "states that the expression on the left is equal to the expression on the right",
+        "+": "adds another quantity or component to the expression",
+        "-": "subtracts one quantity or component from another",
+        r"\sum": "combines a sequence of terms through summation",
+        r"\sqrt": "takes a square root, often used here as part of a scaling factor",
+    }
+    operator_spoken = {
+        "=": "equals",
+        "+": "plus",
+        "-": "minus",
+        r"\sum": "summation",
+        r"\sqrt": "square root",
+    }
+    seen_raw: set[str] = set()
+    for token in tokens:
+        raw = str(token.get("raw") or "").strip()
+        if not raw or raw in seen_raw:
+            continue
+        seen_raw.add(raw)
+        key = normalize_key(raw)
+        if key and key in covered:
+            continue
+
+        canonical_label = str(token.get("canonical_label") or "")
+        concept_iri = str(token.get("concept_iri") or "")
+        if raw in operator_meanings:
+            meaning = operator_meanings[raw]
+            source = "ontology" if concept_iri else "notation"
+            confidence = "medium"
+        elif not concept_iri:
+            meaning = (
+                f"The available paper context and ontology do not define {raw}; "
+                "it should be treated as unresolved notation."
+            )
+            source = "unresolved"
+            confidence = "low"
+        elif str(token.get("token_type") or "") == "identifier":
+            meaning = (
+                f"{raw} is recognized as a variable, but its domain-specific meaning "
+                "is not stated in the available context"
+            )
+            source = "ontology"
+            confidence = "medium"
+        else:
+            meaning = _definition_from_gloss(
+                str(token.get("gloss") or ""),
+                f"{raw} is linked to the ontology concept {canonical_label}",
+            )
+            source = "ontology"
+            confidence = "medium"
+
+        terms.append(
+            {
+                "symbol": raw,
+                "spoken": operator_spoken.get(raw, str(token.get("spoken") or raw)),
+                "meaning": meaning,
+                "source": source,
+                "ontology_concept": canonical_label,
+                "confidence": confidence,
+            }
+        )
+        if len(terms) >= 16:
+            break
+    return terms
+
+
+def build_spoken_script(
+    *,
+    equation_label: str,
+    context_summary: str,
+    term_explanations: list[dict[str, Any]],
+    plain_notation: str,
+) -> str:
+    script_parts = [f"Next I am going to read {equation_label}.", context_summary]
+    source_priority = {"paper_context": 0, "ontology": 1, "notation": 2, "unresolved": 3}
+    spoken_terms = sorted(
+        term_explanations,
+        key=lambda term: (
+            source_priority.get(str(term.get("source") or ""), 3),
+            str(term.get("symbol") or "") in {"k", "t"},
+        ),
+    )[:8]
+    if spoken_terms:
+        explanations = []
+        for term in spoken_terms:
+            meaning = str(term.get("meaning") or "").strip().rstrip(".")
+            explanations.append(f"{term.get('spoken') or term.get('symbol')} means {meaning}")
+        script_parts.append("Term by term, " + "; ".join(explanations) + ".")
+    script_parts.append(f"Now the notation is: {plain_notation}.")
+    return re.sub(r"\s+", " ", " ".join(script_parts)).strip()
 
 
 @dataclass(frozen=True)
@@ -372,27 +871,45 @@ class MathKGService:
         pdf_base64: str = "",
         pdf_filename: str = "",
     ) -> dict[str, Any]:
-        pdf_text, pdf_status = extract_pdf_text_from_base64(pdf_base64)
+        pdf_text, pdf_chunks, pdf_status = extract_pdf_context_from_base64(pdf_base64)
         if pdf_filename:
             pdf_status["filename"] = pdf_filename
 
         context_parts = [part for part in (abstract_or_context, pdf_text) if part]
         source_text = "\n\n".join(context_parts).strip()
+        context_chunks = context_chunks_from_text(
+            abstract_or_context,
+            source="provided_context",
+        )
+        context_chunks.extend(pdf_chunks)
         supplied_equations = [equation.strip() for equation in equations or [] if equation and equation.strip()]
-        extracted_equations = extract_latex_equations(source_text)
-        selected_equations = supplied_equations or extracted_equations
+        extracted_candidates = extract_equation_candidates(source_text)
+        selected_candidates = (
+            [
+                {
+                    "latex": equation,
+                    "confidence": "user_supplied",
+                    "method": "manual_equation",
+                }
+                for equation in supplied_equations
+            ]
+            or extracted_candidates
+        )
 
         analyses = [
             self._analyze_equation(
-                latex=latex,
+                latex=candidate["latex"],
                 index=index,
                 title=title,
                 context=source_text,
+                context_chunks=context_chunks,
                 audience=audience,
                 audio_backend=audio_backend,
                 generate_audio=generate_audio,
+                extraction_confidence=candidate["confidence"],
+                extraction_method=candidate["method"],
             )
-            for index, latex in enumerate(selected_equations, start=1)
+            for index, candidate in enumerate(selected_candidates, start=1)
         ]
 
         return {
@@ -400,7 +917,8 @@ class MathKGService:
             "audience": audience,
             "audio_backend": audio_backend,
             "source_text_length": len(source_text),
-            "extracted_equation_count": len(extracted_equations),
+            "context_chunk_count": len(context_chunks),
+            "extracted_equation_count": len(extracted_candidates),
             "pdf": pdf_status,
             "equations": analyses,
         }
@@ -412,15 +930,44 @@ class MathKGService:
         index: int,
         title: str,
         context: str,
+        context_chunks: list[dict[str, Any]],
         audience: str,
         audio_backend: str,
         generate_audio: bool,
+        extraction_confidence: str,
+        extraction_method: str,
     ) -> dict[str, Any]:
         gloss = self.latex_accessibility_gloss(latex, audience=audience, arxiv_id="paper-demo", title=title)
         labels = [token["canonical_label"] for token in gloss["tokens"] if token.get("canonical_label")]
         unique_labels = list(dict.fromkeys(labels))
-        linked_span = sentence_for_context(context, latex, unique_labels)
+        evidence = rank_context_evidence(context_chunks, latex=latex, labels=unique_labels)
+        linked_span = (
+            str(evidence[0].get("text") or "")
+            if evidence
+            else sentence_for_context(context, latex, unique_labels)
+        )
         recommendations = self.recommend_concepts(context=context, latex=latex, seed_concepts=unique_labels, limit=5)
+        equation_label = f"Equation {index}"
+        context_summary = infer_context_summary(equation_label, context, evidence)
+        evidence_context = " ".join(str(item.get("text") or "") for item in evidence)
+        term_explanations = build_term_explanations(
+            latex=latex,
+            context=evidence_context or context,
+            tokens=gloss["tokens"],
+        )
+        ontology_links = self._ontology_links_for_tokens(
+            gloss["tokens"],
+            latex=latex,
+            context=evidence_context,
+        )
+        plain_notation = gloss["plain_text"] or latex_to_plain_text(latex)
+        spoken_script = build_spoken_script(
+            equation_label=equation_label,
+            context_summary=context_summary,
+            term_explanations=term_explanations,
+            plain_notation=plain_notation,
+        )
+        spoken_ssml = assemble_ssml(spoken_script)
         context_clause = (
             f"The surrounding paper context says: {linked_span}"
             if linked_span
@@ -446,27 +993,116 @@ class MathKGService:
         )
         return {
             "index": index,
+            "equation_label": equation_label,
             "latex": latex,
-            "plain_notation_reading": gloss["plain_text"] or latex_to_plain_text(latex),
+            "plain_notation_reading": plain_notation,
             "semantic_reading": semantic_reading,
             "contextual_explanation": contextual_explanation,
+            "equation_summary": context_summary,
+            "context_summary": context_summary,
+            "context_evidence": evidence,
+            "term_explanations": term_explanations,
+            "ontology_links": ontology_links,
+            "spoken_script": spoken_script,
+            "extraction_confidence": extraction_confidence,
+            "extraction_method": extraction_method,
             "why_it_helps": why_it_helps,
             "resolved_count": gloss["resolved_count"],
             "tokens": gloss["tokens"],
             "concepts": unique_labels,
             "linked_text_span": linked_span,
             "recommendations": recommendations["results"],
-            "ssml": gloss["ssml"],
+            "ssml": spoken_ssml,
             "audio": self._maybe_generate_equation_audio(
                 latex=latex,
                 index=index,
                 title=title,
-                speech_text=semantic_reading,
-                ssml=gloss["ssml"],
+                speech_text=spoken_script,
+                ssml=spoken_ssml,
                 audio_backend=audio_backend,
                 generate_audio=generate_audio,
             ),
         }
+
+    def _ontology_links_for_tokens(
+        self,
+        tokens: list[dict[str, Any]],
+        *,
+        latex: str = "",
+        context: str = "",
+    ) -> list[dict[str, Any]]:
+        links_by_iri: dict[str, dict[str, Any]] = {}
+        for token in tokens:
+            concept_iri = str(token.get("concept_iri") or "")
+            canonical_label = str(token.get("canonical_label") or "")
+            if not concept_iri or not canonical_label:
+                continue
+            record = self.find_record(concept_iri) or self.find_record(canonical_label)
+            public_record = self._public_record(record)
+            if public_record is None:
+                public_record = {
+                    "concept_iri": concept_iri,
+                    "canonical_label": canonical_label,
+                    "kind_role": "",
+                    "semantic_type": "",
+                    "domain_tags": list(token.get("domain_tags") or []),
+                    "source_provenance": str(token.get("source") or ""),
+                }
+            link = links_by_iri.setdefault(
+                concept_iri,
+                {
+                    "concept_iri": public_record.get("concept_iri") or concept_iri,
+                    "canonical_label": public_record.get("canonical_label") or canonical_label,
+                    "kind_role": public_record.get("kind_role", ""),
+                    "semantic_type": public_record.get("semantic_type", ""),
+                    "domain_tags": public_record.get("domain_tags", []),
+                    "source_provenance": public_record.get("source_provenance", ""),
+                    "symbols": [],
+                    "source": "knowledge_graph",
+                },
+            )
+            raw = str(token.get("raw") or "")
+            if raw and raw not in link["symbols"]:
+                link["symbols"].append(raw)
+
+        inferred_labels: list[tuple[str, str, str]] = []
+        if re.search(r"(?:\}|\]|\)|[A-Za-z0-9])\s+(?:\\?[A-Za-z]|\()", latex):
+            inferred_labels.append(("Multiplication", "implicit product", "equation_structure"))
+        if re.search(r"[A-Za-z][A-Za-z0-9_]*\s*[\[(]", latex):
+            inferred_labels.append(("Function", "function notation", "equation_structure"))
+        normalized_context = set(normalize_text(context).split())
+        for keyword, label in (
+            ("probability", "Probability"),
+            ("matrix", "Matrix"),
+            ("vector", "Vector"),
+        ):
+            if keyword in normalized_context:
+                inferred_labels.append((label, keyword, "paper_context"))
+
+        for label, symbol, source in inferred_labels:
+            record = self.find_record(label)
+            public_record = self._public_record(record)
+            if public_record is None:
+                continue
+            concept_iri = str(public_record.get("concept_iri") or "")
+            if not concept_iri:
+                continue
+            link = links_by_iri.setdefault(
+                concept_iri,
+                {
+                    "concept_iri": concept_iri,
+                    "canonical_label": public_record.get("canonical_label") or label,
+                    "kind_role": public_record.get("kind_role", ""),
+                    "semantic_type": public_record.get("semantic_type", ""),
+                    "domain_tags": public_record.get("domain_tags", []),
+                    "source_provenance": public_record.get("source_provenance", ""),
+                    "symbols": [],
+                    "source": source,
+                },
+            )
+            if symbol not in link["symbols"]:
+                link["symbols"].append(symbol)
+        return list(links_by_iri.values())
 
     def _maybe_generate_equation_audio(
         self,

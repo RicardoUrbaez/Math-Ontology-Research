@@ -71,6 +71,13 @@ class MathKGAPIRouteTests(unittest.TestCase):
         self.assertIn("semantic_reading", first)
         self.assertIn("contextual_explanation", first)
         self.assertIn("why_it_helps", first)
+        self.assertIn("equation_label", first)
+        self.assertIn("context_summary", first)
+        self.assertIn("context_evidence", first)
+        self.assertIn("term_explanations", first)
+        self.assertIn("ontology_links", first)
+        self.assertIn("spoken_script", first)
+        self.assertIn("extraction_confidence", first)
         self.assertGreater(first["resolved_count"], 0)
 
     def test_paper_analysis_route_extracts_equations_from_pasted_context(self):

@@ -395,6 +395,55 @@ textarea:focus {
   gap: 6px;
 }
 
+.term-table {
+  display: grid;
+  gap: 7px;
+}
+
+.term-row {
+  display: grid;
+  grid-template-columns: 54px minmax(180px, 1fr) 110px 58px;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 7px 8px;
+  border: 1px solid #d8e1ec;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.term-row p {
+  color: #263244;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.term-row small {
+  color: #5d6a7c;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.term-row em {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 720;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.confidence.high {
+  color: #18814a;
+}
+
+.confidence.medium {
+  color: #9a6500;
+}
+
+.confidence.low {
+  color: #a33a3a;
+}
+
 .concept-row {
   display: grid;
   grid-template-columns: 46px 1fr minmax(100px, 0.8fr) 48px;
@@ -592,6 +641,16 @@ dd {
 
   .concept-row {
     grid-template-columns: 42px 1fr;
+  }
+
+  .term-row {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .term-row small,
+  .term-row em {
+    grid-column: 2;
+    text-align: left;
   }
 
   .concept-row small,

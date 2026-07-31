@@ -22,6 +22,38 @@ function defaultAnalysis() {
           "Pedagogical MathOntoSpeak reading: Equation S equals sum k a k X k. Matched concepts: Equality, Addition, Variable.",
         contextual_explanation:
           "Resolved ontology concepts include Equality, Addition, and Variable. The surrounding paper context explains how attention mechanisms weight output values.",
+        context_summary:
+          "Equation 1 expresses a matrix or vector relationship used by the paper's attention model.",
+        context_evidence: [
+          {
+            source: "provided_context",
+            kind: "sentence",
+            text:
+              "Scaled dot-product attention computes relevance with a query matrix, key matrix, and value matrix, then normalizes the scores before weighting the output."
+          }
+        ],
+        term_explanations: [
+          {
+            symbol: "S",
+            spoken: "S",
+            meaning: "the attention score produced by the expression",
+            source: "paper_context",
+            ontology_concept: "Variable",
+            confidence: "high"
+          },
+          {
+            symbol: "\\sum",
+            spoken: "sum",
+            meaning: "combines the indexed terms through summation",
+            source: "ontology",
+            ontology_concept: "Addition",
+            confidence: "medium"
+          }
+        ],
+        ontology_links: [],
+        spoken_script:
+          "Next I am going to read Equation 1. Equation 1 expresses a matrix or vector relationship used by the paper's attention model. Term by term, S means the attention score produced by the expression; sum combines the indexed terms through summation. Now the notation is: S equals sum k a k X k.",
+        extraction_confidence: "user_supplied",
         why_it_helps:
           "This gives a blind researcher meaning, role, and document context before the notation is spoken.",
         resolved_count: 3,
@@ -145,16 +177,25 @@ function EquationList({ equations, selectedIndex, setSelectedIndex }) {
 function AnalysisPanel({ analysis, selectedIndex, setSelectedIndex }) {
   const equations = analysis?.equations || [];
   const equation = equations[selectedIndex] || equations[0];
-  const conceptRows = equation
+  const ontologyRows = equation
+    ? (equation.ontology_links || []).map((link) => ({
+        symbol: link.symbols?.join(", ") || "KG",
+        label: link.canonical_label,
+        domain: link.domain_tags?.join(", ") || link.source_provenance || "knowledge graph",
+        confidence: "Linked"
+      }))
+    : [];
+  const tokenRows = equation
     ? (equation.tokens || [])
         .filter((token) => token.canonical_label)
         .map((token) => ({
           symbol: token.raw,
           label: token.canonical_label,
           domain: token.domain_tags?.join(", ") || "general",
-          confidence: token.concept_iri ? "High" : "Low"
+          confidence: token.concept_iri ? "Linked" : "Open"
         }))
     : [];
+  const conceptRows = ontologyRows.length ? ontologyRows : tokenRows;
   const fallbackConceptRows =
     equation && conceptRows.length === 0
       ? (equation.concepts || []).map((label) => ({
@@ -188,10 +229,12 @@ function AnalysisPanel({ analysis, selectedIndex, setSelectedIndex }) {
         <div className="analysis-stack">
           <Readout title="Raw LaTeX" text={equation.latex} mono />
           <Readout title="Plain Notation Reading" text={equation.plain_notation_reading} />
-          <Readout title="MathOntoSpeak Semantic Reading" text={equation.semantic_reading} accent />
+          <Readout title="Context Summary" text={equation.context_summary} accent />
+          <TermExplanationTable terms={equation.term_explanations || []} />
+          <Readout title="Spoken Script" text={equation.spoken_script || equation.semantic_reading} />
           <Readout title="Contextual Explanation" text={equation.contextual_explanation} />
           <div>
-            <h3>Ontology-Backed Concepts</h3>
+            <h3>Ontology Evidence</h3>
             <div className="concept-table">
               {visibleConceptRows.slice(0, 8).map((row, index) => (
                 <div className="concept-row" key={`${row.label}-${index}`}>
@@ -212,6 +255,25 @@ function AnalysisPanel({ analysis, selectedIndex, setSelectedIndex }) {
   );
 }
 
+function TermExplanationTable({ terms }) {
+  return (
+    <div>
+      <h3>Term-by-Term</h3>
+      <div className="term-table">
+        {terms.slice(0, 12).map((term, index) => (
+          <div className="term-row" key={`${term.symbol}-${index}`}>
+            <span className="symbol">{term.symbol}</span>
+            <p>{term.meaning}</p>
+            <small>{term.source?.replace("_", " ") || "unresolved"}</small>
+            <em className={`confidence ${term.confidence || "low"}`}>{term.confidence || "low"}</em>
+          </div>
+        ))}
+        {!terms.length && <p className="empty-note">No term explanations are available yet.</p>}
+      </div>
+    </div>
+  );
+}
+
 function Readout({ title, text, mono = false, accent = false }) {
   return (
     <div className={`readout ${accent ? "accent" : ""}`}>
@@ -227,7 +289,8 @@ function EvidencePanel({ audience, setAudience, backend, setBackend, generateAud
   function speak() {
     if (!selectedEquation || !window.speechSynthesis) return;
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(selectedEquation.semantic_reading);
+    const script = selectedEquation.spoken_script || selectedEquation.semantic_reading;
+    const utterance = new SpeechSynthesisUtterance(script);
     utterance.rate = 0.95;
     utterance.onend = () => setSpeaking(false);
     setSpeaking(true);
@@ -279,7 +342,7 @@ function EvidencePanel({ audience, setAudience, backend, setBackend, generateAud
       <div className="play-row">
         <button className="primary-button" type="button" onClick={speaking ? stop : speak}>
           <Icon name={speaking ? "stop" : "play"} />
-          {speaking ? "Stop" : "Play semantic reading"}
+          {speaking ? "Stop" : "Play with context"}
         </button>
         <button className="secondary-button" type="button" onClick={speak}>
           <Icon name="wave" />
@@ -288,7 +351,11 @@ function EvidencePanel({ audience, setAudience, backend, setBackend, generateAud
       </div>
       <div className="evidence-tabs">
         <h3>Linked Text Span</h3>
-        <p>{selectedEquation?.linked_text_span || "Analyze a paper to connect the equation back to nearby text."}</p>
+        <p>
+          {selectedEquation?.context_evidence?.[0]?.text ||
+            selectedEquation?.linked_text_span ||
+            "Analyze a paper to connect the equation back to nearby text."}
+        </p>
         <h3>ASR / Evaluation (Whisper)</h3>
         <p>
           Whisper remains an evaluation layer: generate speech, transcribe it, then compare concept-keyword recall and WER.
