@@ -65,7 +65,7 @@ function defaultAnalysis() {
         audio: { status: "skipped", detail: "Audio generation was not requested." }
       }
     ],
-    pdf: { status: "not_provided", detail: "No PDF payload supplied." },
+    pdf: { status: "not_provided", detail: "No PDF payload supplied.", extractor: "pypdf" },
     extracted_equation_count: 0
   };
 }
@@ -124,7 +124,11 @@ function PaperInput({
       <label className="drop-zone">
         <Icon name="upload" />
         <span>{pdfFile ? pdfFile.name : "Upload PDF (optional)"}</span>
-        <small>{pdfFile ? `${(pdfFile.size / 1024 / 1024).toFixed(2)} MB` : "PDF text will be extracted for context"}</small>
+        <small>
+          {pdfFile
+            ? `${(pdfFile.size / 1024 / 1024).toFixed(2)} MB`
+            : "Automatic text and equation OCR"}
+        </small>
         <input type="file" accept="application/pdf" onChange={onPdf} />
       </label>
       <label>
@@ -403,6 +407,12 @@ export default function App() {
   async function onPdf(event) {
     const file = event.target.files?.[0];
     setPdfFile(file || null);
+    if (file) {
+      setEquations("");
+      if (title === samplePaper.title) {
+        setTitle(file.name.replace(/\.pdf$/i, ""));
+      }
+    }
     setPdfBase64(file ? await fileToBase64(file) : "");
   }
 
@@ -460,7 +470,12 @@ export default function App() {
       <footer className="app-footer">
         <span>Project: paper equation demo</span>
         <span>Equations: {analysis?.equations?.length || 0}</span>
-        <span>PDF: {analysis?.pdf?.status || "not_provided"}</span>
+        <span>
+          PDF: {analysis?.pdf?.status || "not_provided"}
+          {analysis?.pdf?.status === "ok" && analysis?.pdf?.extractor
+            ? ` via ${analysis.pdf.extractor === "marker" ? "Marker OCR" : "fast parser"}`
+            : ""}
+        </span>
         <span>Auto-save: local state only</span>
       </footer>
     </div>

@@ -5,6 +5,8 @@ import binascii
 import json
 import os
 import re
+import subprocess
+import tempfile
 from dataclasses import asdict, dataclass
 from io import BytesIO
 import urllib.error
@@ -32,6 +34,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GLOSS_PATH = ROOT / "gloss" / "week3_gloss_dictionary.json"
 DEFAULT_SPARQL_ENDPOINT = "http://localhost:3030/mathkg500/query"
 DEFAULT_PAPER_AUDIO_DIR = ROOT / "reports" / "audio" / "paper_demo"
+DEFAULT_MARKER_TIMEOUT_SECONDS = 600
+DEFAULT_PDF_PAGE_LIMIT = 100
 AUDIENCE_TO_FIELD = {
     "concise": "concise_form",
     "pedagogical": "pedagogical_form",
@@ -80,6 +84,13 @@ PDF_SPACED_WORDS = {
     r"\bs\s+i\s+n\b": "sin",
     r"\bw\s+h\s+e\s+r\s+e(?=\s|[A-Z])": "where ",
 }
+
+
+def positive_int_env(name: str, default: int) -> int:
+    try:
+        return max(1, int(os.getenv(name, str(default))))
+    except ValueError:
+        return default
 
 
 def normalize_text(value: str) -> str:
@@ -285,7 +296,9 @@ def extract_pdf_context_from_base64(
         reader = PdfReader(BytesIO(raw))
         page_texts: list[str] = []
         context_chunks: list[dict[str, Any]] = []
-        for page_number, page in enumerate(reader.pages[:20], start=1):
+        page_limit = positive_int_env("MATHONTOSPEAK_PDF_PAGE_LIMIT", DEFAULT_PDF_PAGE_LIMIT)
+        pages_processed = min(len(reader.pages), page_limit)
+        for page_number, page in enumerate(reader.pages[:page_limit], start=1):
             page_text = repair_pdf_spacing(page.extract_text() or "")
             if not page_text.strip():
                 continue
@@ -308,8 +321,12 @@ def extract_pdf_context_from_base64(
         context_chunks,
         {
             "status": "ok",
-            "detail": f"Extracted text from {len(reader.pages)} PDF page(s).",
+            "detail": (
+                f"Extracted text from {pages_processed} of {len(reader.pages)} PDF page(s)."
+            ),
             "page_count": len(reader.pages),
+            "pages_processed": pages_processed,
+            "truncated": len(reader.pages) > pages_processed,
             "context_chunk_count": len(context_chunks),
         },
     )
@@ -318,6 +335,284 @@ def extract_pdf_context_from_base64(
 def extract_pdf_text_from_base64(pdf_base64: str) -> tuple[str, dict[str, Any]]:
     text, _chunks, status = extract_pdf_context_from_base64(pdf_base64)
     return text, status
+
+
+def marker_executable_path() -> Path:
+    configured = os.getenv("MARKER_SINGLE_PATH", "").strip()
+    if configured:
+        return Path(configured)
+    external_root = Path(
+        os.getenv(
+            "MATHONTOSPEAK_EXTERNAL_ROOT",
+            str(Path.home() / "Documents" / "MathOntoSpeak-External"),
+        )
+    )
+    executable_name = "marker_single.exe" if os.name == "nt" else "marker_single"
+    scripts_dir = "Scripts" if os.name == "nt" else "bin"
+    return external_root / ".venvs" / "marker" / scripts_dir / executable_name
+
+
+def marker_runtime_status() -> dict[str, Any]:
+    executable = marker_executable_path()
+    return {
+        "available": executable.is_file(),
+        "path": str(executable),
+        "strategy": os.getenv("MATHONTOSPEAK_PDF_EXTRACTOR", "auto").strip().lower() or "auto",
+    }
+
+
+def marker_markdown_context_chunks(markdown: str) -> list[dict[str, Any]]:
+    chunks: list[dict[str, Any]] = []
+    current_heading = ""
+    page_number = 1
+    for block in re.split(r"\n\s*\n", markdown or ""):
+        cleaned = block.strip()
+        if not cleaned:
+            continue
+        if re.fullmatch(r"-{20,}", cleaned):
+            page_number += 1
+            continue
+        heading_match = re.match(r"^(#{1,6})\s+(.+)$", cleaned)
+        if heading_match:
+            current_heading = re.sub(r"\s+", " ", heading_match.group(2)).strip()
+            chunks.append(
+                {
+                    "source": "marker",
+                    "kind": "section_heading",
+                    "text": current_heading,
+                    "page": page_number,
+                    "section_heading": current_heading,
+                }
+            )
+            continue
+
+        kind = "equation" if cleaned.startswith(("$$", r"\[")) else "paragraph"
+        text = re.sub(r"\s+", " ", cleaned).strip()
+        payload: dict[str, Any] = {
+            "source": "marker",
+            "kind": kind,
+            "text": text[:1600],
+            "page": page_number,
+        }
+        if current_heading:
+            payload["section_heading"] = current_heading
+        chunks.append(payload)
+        if kind == "paragraph":
+            for sentence in re.split(r"(?<=[.!?])\s+", text):
+                sentence = sentence.strip()
+                if sentence and sentence != text:
+                    sentence_payload = {
+                        "source": "marker",
+                        "kind": "sentence",
+                        "text": sentence[:1200],
+                        "page": page_number,
+                    }
+                    if current_heading:
+                        sentence_payload["section_heading"] = current_heading
+                    chunks.append(sentence_payload)
+    return chunks
+
+
+def extract_pdf_context_with_marker(
+    raw_pdf: bytes,
+    *,
+    pdf_filename: str = "",
+    executable: Path | None = None,
+    timeout_seconds: int | None = None,
+) -> tuple[str, list[dict[str, Any]], dict[str, Any]]:
+    executable = executable or marker_executable_path()
+    timeout_seconds = timeout_seconds or positive_int_env(
+        "MATHONTOSPEAK_MARKER_TIMEOUT_SECONDS",
+        DEFAULT_MARKER_TIMEOUT_SECONDS,
+    )
+    try:
+        with tempfile.TemporaryDirectory(prefix="mathontospeak-marker-") as temp_dir:
+            temp_root = Path(temp_dir)
+            input_path = temp_root / "paper.pdf"
+            output_dir = temp_root / "output"
+            input_path.write_bytes(raw_pdf)
+            command = [
+                str(executable),
+                str(input_path),
+                "--mode",
+                "fast",
+                "--output_format",
+                "markdown",
+                "--output_dir",
+                str(output_dir),
+                "--disable_multiprocessing",
+            ]
+            result = subprocess.run(
+                command,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=timeout_seconds,
+                check=False,
+            )
+            if result.returncode != 0:
+                detail = (result.stderr or result.stdout or "Marker exited without details.").strip()
+                return (
+                    "",
+                    [],
+                    {
+                        "status": "failed",
+                        "extractor": "marker",
+                        "detail": f"Marker exited with code {result.returncode}: {detail[-800:]}",
+                    },
+                )
+            markdown_files = sorted(
+                output_dir.rglob("*.md"),
+                key=lambda path: path.stat().st_size,
+                reverse=True,
+            )
+            if not markdown_files:
+                return (
+                    "",
+                    [],
+                    {
+                        "status": "empty",
+                        "extractor": "marker",
+                        "detail": "Marker completed but produced no Markdown output.",
+                    },
+                )
+            markdown = markdown_files[0].read_text(encoding="utf-8", errors="replace").strip()
+            chunks = marker_markdown_context_chunks(markdown)
+    except subprocess.TimeoutExpired:
+        return (
+            "",
+            [],
+            {
+                "status": "failed",
+                "extractor": "marker",
+                "detail": f"Marker exceeded the {timeout_seconds}-second processing limit.",
+            },
+        )
+    except (OSError, ValueError) as exc:
+        return (
+            "",
+            [],
+            {
+                "status": "failed",
+                "extractor": "marker",
+                "detail": f"Marker could not run: {type(exc).__name__}: {exc}",
+            },
+        )
+
+    if not markdown:
+        return (
+            "",
+            [],
+            {
+                "status": "empty",
+                "extractor": "marker",
+                "detail": "Marker produced an empty Markdown document.",
+            },
+        )
+    equation_count = len(extract_equation_candidates(markdown))
+    return (
+        markdown,
+        chunks,
+        {
+            "status": "ok",
+            "extractor": "marker",
+            "detail": (
+                f"Marker extracted {len(chunks)} context chunk(s) and "
+                f"{equation_count} equation candidate(s)."
+            ),
+            "filename": pdf_filename,
+            "context_chunk_count": len(chunks),
+            "equation_candidate_count": equation_count,
+            "mode": "fast",
+        },
+    )
+
+
+def extract_pdf_context(
+    pdf_base64: str,
+    *,
+    pdf_filename: str = "",
+    manual_equations_present: bool = False,
+) -> tuple[str, list[dict[str, Any]], dict[str, Any]]:
+    pypdf_text, pypdf_chunks, pypdf_status = extract_pdf_context_from_base64(pdf_base64)
+    pypdf_status = dict(pypdf_status)
+    pypdf_status.setdefault("extractor", "pypdf")
+    pypdf_status["fallback_used"] = False
+    if pdf_filename:
+        pypdf_status["filename"] = pdf_filename
+    if not pdf_base64:
+        return pypdf_text, pypdf_chunks, pypdf_status
+
+    strategy = os.getenv("MATHONTOSPEAK_PDF_EXTRACTOR", "auto").strip().lower() or "auto"
+    if strategy not in {"auto", "marker", "pypdf"}:
+        strategy = "auto"
+        pypdf_status["configuration_warning"] = (
+            "Unknown MATHONTOSPEAK_PDF_EXTRACTOR value; using auto."
+        )
+    candidates = extract_equation_candidates(pypdf_text)
+    has_high_confidence_equation = any(
+        candidate.get("confidence") == "high" for candidate in candidates
+    )
+    marker_needed = strategy == "marker" or (
+        strategy == "auto"
+        and (
+            pypdf_status.get("status") != "ok"
+            or not pypdf_text
+            or (not manual_equations_present and not has_high_confidence_equation)
+        )
+    )
+    if strategy == "pypdf" or not marker_needed:
+        return pypdf_text, pypdf_chunks, pypdf_status
+
+    executable = marker_executable_path()
+    if not executable.is_file():
+        pypdf_status["marker"] = {
+            "status": "not_configured",
+            "extractor": "marker",
+            "detail": f"Marker executable was not found at {executable}.",
+        }
+        return pypdf_text, pypdf_chunks, pypdf_status
+    try:
+        raw_pdf = base64.b64decode(pdf_base64, validate=True)
+    except (binascii.Error, ValueError) as exc:
+        pypdf_status["marker"] = {
+            "status": "failed",
+            "extractor": "marker",
+            "detail": f"Marker input decode failed: {exc}",
+        }
+        return pypdf_text, pypdf_chunks, pypdf_status
+
+    marker_text, marker_chunks, marker_status = extract_pdf_context_with_marker(
+        raw_pdf,
+        pdf_filename=pdf_filename,
+        executable=executable,
+    )
+    if marker_status.get("status") == "ok" and marker_text:
+        marker_status = dict(marker_status)
+        marker_status["fallback_used"] = True
+        marker_status["pypdf"] = pypdf_status
+        return marker_text, marker_chunks, marker_status
+
+    if pypdf_status.get("status") == "ok" and pypdf_text:
+        pypdf_status["marker"] = marker_status
+        return pypdf_text, pypdf_chunks, pypdf_status
+    return (
+        "",
+        [],
+        {
+            "status": "failed",
+            "extractor": "none",
+            "detail": (
+                f"pypdf: {pypdf_status.get('detail', 'failed')} "
+                f"Marker: {marker_status.get('detail', 'failed')}"
+            ),
+            "filename": pdf_filename,
+            "fallback_used": True,
+            "pypdf": pypdf_status,
+            "marker": marker_status,
+        },
+    )
 
 
 def split_multi_value(value: Any) -> list[str]:
@@ -678,6 +973,7 @@ class MathKGService:
             "gloss_records": len(self.records),
             "gloss_path": str(self.gloss_path),
             "fuseki": status.__dict__,
+            "marker": marker_runtime_status(),
         }
 
     def semantic_search(
@@ -871,10 +1167,12 @@ class MathKGService:
         pdf_base64: str = "",
         pdf_filename: str = "",
     ) -> dict[str, Any]:
-        pdf_text, pdf_chunks, pdf_status = extract_pdf_context_from_base64(pdf_base64)
-        if pdf_filename:
-            pdf_status["filename"] = pdf_filename
-
+        supplied_equations = [equation.strip() for equation in equations or [] if equation and equation.strip()]
+        pdf_text, pdf_chunks, pdf_status = extract_pdf_context(
+            pdf_base64,
+            pdf_filename=pdf_filename,
+            manual_equations_present=bool(supplied_equations),
+        )
         context_parts = [part for part in (abstract_or_context, pdf_text) if part]
         source_text = "\n\n".join(context_parts).strip()
         context_chunks = context_chunks_from_text(
@@ -882,7 +1180,6 @@ class MathKGService:
             source="provided_context",
         )
         context_chunks.extend(pdf_chunks)
-        supplied_equations = [equation.strip() for equation in equations or [] if equation and equation.strip()]
         extracted_candidates = extract_equation_candidates(source_text)
         selected_candidates = (
             [
