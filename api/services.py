@@ -36,6 +36,7 @@ DEFAULT_SPARQL_ENDPOINT = "http://localhost:3030/mathkg500/query"
 DEFAULT_PAPER_AUDIO_DIR = ROOT / "reports" / "audio" / "paper_demo"
 DEFAULT_MARKER_TIMEOUT_SECONDS = 600
 DEFAULT_PDF_PAGE_LIMIT = 100
+DEFAULT_DOCUMENT_CONTEXT_PREVIEW_LIMIT = 2400
 AUDIENCE_TO_FIELD = {
     "concise": "concise_form",
     "pedagogical": "pedagogical_form",
@@ -205,6 +206,61 @@ def context_chunks_from_text(
             flush_paragraph()
     flush_paragraph()
     return chunks
+
+
+def build_document_context_payload(
+    *,
+    pdf_text: str,
+    pdf_chunks: list[dict[str, Any]],
+    pdf_status: dict[str, Any],
+    provided_context: str,
+) -> dict[str, Any]:
+    using_pdf = bool(pdf_text.strip() or pdf_chunks)
+    source_chunks = (
+        pdf_chunks
+        if using_pdf
+        else context_chunks_from_text(provided_context, source="provided_context")
+    )
+    preferred_kinds = ("abstract", "paragraph", "sentence")
+    ordered_chunks = sorted(
+        source_chunks,
+        key=lambda chunk: (
+            preferred_kinds.index(str(chunk.get("kind")))
+            if str(chunk.get("kind")) in preferred_kinds
+            else len(preferred_kinds)
+        ),
+    )
+    preview_parts: list[str] = []
+    seen: set[str] = set()
+    preview_length = 0
+    for chunk in ordered_chunks:
+        kind = str(chunk.get("kind") or "")
+        text = re.sub(r"\s+", " ", str(chunk.get("text") or "")).strip()
+        normalized = normalize_text(text)
+        if kind not in preferred_kinds or len(text) < 40 or normalized in seen:
+            continue
+        seen.add(normalized)
+        remaining = DEFAULT_DOCUMENT_CONTEXT_PREVIEW_LIMIT - preview_length
+        if remaining <= 0:
+            break
+        preview_parts.append(text[:remaining])
+        preview_length += len(preview_parts[-1]) + 2
+        if preview_length >= DEFAULT_DOCUMENT_CONTEXT_PREVIEW_LIMIT:
+            break
+
+    fallback_text = pdf_text if using_pdf else provided_context
+    preview = "\n\n".join(preview_parts).strip()
+    if not preview:
+        preview = re.sub(r"\[Page \d+\]\s*", "", fallback_text or "")
+        preview = re.sub(r"\s+", " ", preview).strip()[:DEFAULT_DOCUMENT_CONTEXT_PREVIEW_LIMIT]
+
+    return {
+        "source": "pdf" if using_pdf else "provided_context" if provided_context.strip() else "none",
+        "preview": preview,
+        "context_chunk_count": len(source_chunks),
+        "extractor": pdf_status.get("extractor", "none") if using_pdf else "none",
+        "pages_processed": pdf_status.get("pages_processed", 0) if using_pdf else 0,
+    }
 
 
 def extract_plain_text_equations(text: str, limit: int = 12) -> list[str]:
@@ -1180,6 +1236,12 @@ class MathKGService:
             source="provided_context",
         )
         context_chunks.extend(pdf_chunks)
+        document_context = build_document_context_payload(
+            pdf_text=pdf_text,
+            pdf_chunks=pdf_chunks,
+            pdf_status=pdf_status,
+            provided_context=abstract_or_context,
+        )
         extracted_candidates = extract_equation_candidates(source_text)
         selected_candidates = (
             [
@@ -1216,6 +1278,7 @@ class MathKGService:
             "source_text_length": len(source_text),
             "context_chunk_count": len(context_chunks),
             "extracted_equation_count": len(extracted_candidates),
+            "document_context": document_context,
             "pdf": pdf_status,
             "equations": analyses,
         }

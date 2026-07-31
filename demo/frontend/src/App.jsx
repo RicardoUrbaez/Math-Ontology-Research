@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { analyzePaper, fileToBase64, getHealth } from "./api.js";
 import { audiences, backends, samplePaper } from "./sampleData.js";
 import { Icon } from "./icons.jsx";
+import { resetForPaperUpload } from "./paperState.js";
 
 function splitEquations(value) {
   return value
@@ -103,13 +104,15 @@ function PaperInput({
   title,
   setTitle,
   context,
-  setContext,
+  contextSource,
+  onContextChange,
   equations,
   setEquations,
   pdfFile,
   onPdf,
   onAnalyze,
-  loading
+  loading,
+  pdfReading
 }) {
   return (
     <section className="panel input-panel" aria-labelledby="input-heading">
@@ -132,8 +135,8 @@ function PaperInput({
         <input type="file" accept="application/pdf" onChange={onPdf} />
       </label>
       <label>
-        Abstract / context
-        <textarea value={context} onChange={(event) => setContext(event.target.value)} rows={10} />
+        {contextSource === "pdf" ? "Extracted paper context" : "Abstract / context"}
+        <textarea value={context} onChange={(event) => onContextChange(event.target.value)} rows={10} />
       </label>
       <label>
         Equations in paper
@@ -148,9 +151,9 @@ function PaperInput({
       <button className="secondary-button" type="button" onClick={() => setEquations("")}>
         Extract from context
       </button>
-      <button className="primary-button" type="button" onClick={onAnalyze} disabled={loading}>
+      <button className="primary-button" type="button" onClick={onAnalyze} disabled={loading || pdfReading}>
         <Icon name="spark" />
-        {loading ? "Analyzing" : "Analyze paper"}
+        {pdfReading ? "Reading PDF" : loading ? "Analyzing" : "Analyze paper"}
       </button>
     </section>
   );
@@ -388,7 +391,9 @@ export default function App() {
   const [generateAudio, setGenerateAudio] = useState(false);
   const [pdfFile, setPdfFile] = useState(null);
   const [pdfBase64, setPdfBase64] = useState("");
+  const [pdfReading, setPdfReading] = useState(false);
   const [analysis, setAnalysis] = useState(defaultAnalysis);
+  const [contextSource, setContextSource] = useState("sample");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -407,13 +412,33 @@ export default function App() {
   async function onPdf(event) {
     const file = event.target.files?.[0];
     setPdfFile(file || null);
-    if (file) {
-      setEquations("");
-      if (title === samplePaper.title) {
-        setTitle(file.name.replace(/\.pdf$/i, ""));
-      }
+    if (!file) {
+      setPdfBase64("");
+      return;
     }
-    setPdfBase64(file ? await fileToBase64(file) : "");
+
+    const resetState = resetForPaperUpload(file.name);
+    setTitle(resetState.title);
+    setContext(resetState.context);
+    setContextSource("empty");
+    setEquations(resetState.equations);
+    setAnalysis(resetState.analysis);
+    setSelectedIndex(0);
+    setError("");
+    setPdfReading(true);
+    try {
+      setPdfBase64(await fileToBase64(file));
+    } catch (exc) {
+      setPdfBase64("");
+      setError(`Could not read the selected PDF: ${exc.message}`);
+    } finally {
+      setPdfReading(false);
+    }
+  }
+
+  function onContextChange(value) {
+    setContext(value);
+    setContextSource(value.trim() ? "user" : "empty");
   }
 
   async function onAnalyze() {
@@ -422,7 +447,7 @@ export default function App() {
     try {
       const payload = await analyzePaper({
         title,
-        abstract_or_context: context,
+        abstract_or_context: contextSource === "pdf" ? "" : context,
         equations: splitEquations(equations),
         audience,
         audio_backend: backend,
@@ -432,6 +457,11 @@ export default function App() {
       });
       setAnalysis(payload);
       setSelectedIndex(0);
+      const extractedPreview = payload?.document_context?.preview || "";
+      if (pdfFile && contextSource === "empty" && extractedPreview) {
+        setContext(extractedPreview);
+        setContextSource("pdf");
+      }
     } catch (exc) {
       setError(exc.message);
     } finally {
@@ -448,13 +478,15 @@ export default function App() {
           title={title}
           setTitle={setTitle}
           context={context}
-          setContext={setContext}
+          contextSource={contextSource}
+          onContextChange={onContextChange}
           equations={equations}
           setEquations={setEquations}
           pdfFile={pdfFile}
           onPdf={onPdf}
           onAnalyze={onAnalyze}
           loading={loading}
+          pdfReading={pdfReading}
         />
         <AnalysisPanel analysis={analysis} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
         <EvidencePanel

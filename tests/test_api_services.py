@@ -124,6 +124,47 @@ class MathKGServiceTests(unittest.TestCase):
         self.assertIn("channel", equation["context_summary"].lower())
         self.assertIn("noise", equation["spoken_script"].lower())
 
+    def test_uploaded_pdf_returns_document_context_preview(self):
+        pdf_text = (
+            "[Page 1]\nA wireless receiver observes a channel-scaled information signal. "
+            "The received waveform also contains antenna and conversion noise."
+        )
+        pdf_chunks = [
+            {
+                "source": "pdf",
+                "kind": "abstract",
+                "text": (
+                    "A wireless receiver observes a channel-scaled information signal. "
+                    "The received waveform also contains antenna and conversion noise."
+                ),
+                "page": 1,
+                "section_heading": "Abstract",
+            }
+        ]
+        pdf_status = {
+            "status": "ok",
+            "extractor": "pypdf",
+            "context_chunk_count": 1,
+        }
+
+        with patch(
+            "api.services.extract_pdf_context",
+            return_value=(pdf_text, pdf_chunks, pdf_status),
+        ):
+            payload = self.service.analyze_paper(
+                title="Wireless paper",
+                abstract_or_context="",
+                equations=[r"y=hx+n"],
+                pdf_base64="pdf-payload",
+                pdf_filename="wireless.pdf",
+            )
+
+        document_context = payload["document_context"]
+        self.assertEqual(document_context["source"], "pdf")
+        self.assertEqual(document_context["extractor"], "pypdf")
+        self.assertIn("wireless receiver", document_context["preview"].lower())
+        self.assertNotIn("transformer", document_context["preview"].lower())
+
     def test_backend_audio_receives_the_contextual_spoken_script(self):
         skipped_audio = {
             "status": "skipped",
