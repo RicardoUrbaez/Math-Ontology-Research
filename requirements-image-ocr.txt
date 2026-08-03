@@ -1,0 +1,4 @@
+# Install into the Python 3.11 external runtime used by Marker.
+pix2tex==0.1.4
+rapidocr==3.9.2
+onnxruntime==1.28.0

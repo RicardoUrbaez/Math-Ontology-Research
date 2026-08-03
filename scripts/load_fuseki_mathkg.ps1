@@ -1,6 +1,6 @@
 param(
     [string]$Dataset = "mathkg500",
-    [string]$Ontology = "C:\Users\Ricardo\Documents\Math-Ontology-Research\reports\reasoning\math_accessibility_kg_week3_clean.ttl",
+    [string]$Ontology = "C:\Users\Ricardo\Documents\Math-Ontology-Research\ontologies\merged\math_accessibility_kg_week3_grouped_for_protege.ttl",
     [int]$Port = 3030
 )
 
@@ -14,4 +14,3 @@ $uri = "http://localhost:$Port/$Dataset/data?default"
 Write-Host "Loading $Ontology into $uri"
 $response = Invoke-RestMethod -Uri $uri -Method Post -ContentType "text/turtle" -InFile $Ontology
 $response
-

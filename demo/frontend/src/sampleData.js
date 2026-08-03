@@ -16,5 +16,6 @@ export const backends = [
   { value: "none", label: "No file" },
   { value: "mock", label: "Mock transcript" },
   { value: "gtts", label: "gTTS MP3" },
+  { value: "kokoro", label: "Kokoro local neural voice" },
   { value: "azure", label: "Azure Speech" }
 ];

@@ -1,0 +1,743 @@
+02:55:11 INFO  Fuseki          :: Apache Jena Fuseki 6.1.0
+02:55:11 INFO  Server          :: Dataset: in-memory: load file: C:\Users\Ricardo\Documents\Math-Ontology-Research\ontologies\merged\math_accessibility_kg_week3_grouped_for_protege.ttl
+02:55:11 INFO  Config          :: Fuseki Base = C:\Users\Ricardo\AppData\Local\MathOntoSpeak\fuseki
+02:55:12 INFO  Config          :: Database: /mathkg500
+02:55:12 INFO  Config          :: UI Base: fuseki-server.jar
+02:55:12 INFO  Shiro           :: Shiro configuration: file:C:\Users\Ricardo\AppData\Local\MathOntoSpeak\fuseki\shiro.ini
+02:55:12 INFO  Server          :: Path = /mathkg500
+02:55:12 INFO  Server          :: System
+02:55:12 INFO  Server          ::   Memory: 3.9 GiB
+02:55:12 INFO  Server          ::   PID:    8500
+02:55:12 INFO  Server          ::   Port:   http=3030
+02:55:12 INFO  Server          :: Start Fuseki
+02:55:29 INFO  Fuseki          :: [1] POST http://127.0.0.1:3030/mathkg500/query
+02:55:29 INFO  Fuseki          :: [1] Query = ASK { ?s ?p ?o }
+02:55:29 INFO  Fuseki          :: [1] 200 OK (110 ms)
+02:55:41 INFO  Fuseki          :: [2] POST http://localhost:3030/mathkg500/query
+02:55:41 INFO  Fuseki          :: [2] Query = ASK { ?s ?p ?o }
+02:55:41 INFO  Fuseki          :: [2] 200 OK (4 ms)
+02:55:41 INFO  Fuseki          :: [3] POST http://localhost:3030/mathkg500/query
+02:55:41 INFO  Fuseki          :: [3] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   {     BIND(?requestedIri AS ?concept)     ?concept ?directPredicate ?directObject .   }   UNION   {     ?concept skos:exactMatch ?requestedIri .   }   UNION   {     ?concept rdfs:label ?candidateLabel .     FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   }   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:55:42 WARN  Fuseki          :: [3] Runtime IO Exception (client left?) RC = 500 : org.eclipse.jetty.io.EofException: Closed
+02:55:42 INFO  Fuseki          :: [3] 500 Server Error (786 ms)
+02:55:50 INFO  Fuseki          :: [4] POST http://localhost:3030/mathkg500/query
+02:55:50 INFO  Fuseki          :: [4] Query = ASK { ?s ?p ?o }
+02:55:50 INFO  Fuseki          :: [4] 200 OK (5 ms)
+02:55:50 INFO  Fuseki          :: [5] POST http://localhost:3030/mathkg500/query
+02:55:50 INFO  Fuseki          :: [5] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://example.org/mathkg/Cosine> "Cosine")   }   {     BIND(?requestedIri AS ?concept)     ?concept ?directPredicate ?directObject .   }   UNION   {     ?concept skos:exactMatch ?requestedIri .   }   UNION   {     ?concept rdfs:label ?candidateLabel .     FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   }   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:55:52 INFO  Fuseki          :: [5] 200 OK (1.740 s)
+02:56:22 INFO  Fuseki          :: [6] POST http://localhost:3030/mathkg500/query
+02:56:22 INFO  Fuseki          :: [6] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://example.org/mathkg/Cosine> "Cosine")   }   {     {       BIND(?requestedIri AS ?concept)       ?concept ?directPredicate ?directObject .     }     UNION     {       ?concept skos:exactMatch ?requestedIri .     }     UNION     {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   }   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:56:24 INFO  Fuseki          :: [6] 200 OK (1.673 s)
+02:56:46 INFO  Fuseki          :: [7] POST http://localhost:3030/mathkg500/query
+02:56:46 INFO  Fuseki          :: [7] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://example.org/mathkg/Cosine> "Cosine")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:56:47 INFO  Fuseki          :: [7] 200 OK (577 ms)
+02:56:57 INFO  Fuseki          :: [8] POST http://localhost:3030/mathkg500/query
+02:56:57 INFO  Fuseki          :: [8] Query = ASK { ?s ?p ?o }
+02:56:57 INFO  Fuseki          :: [8] 200 OK (4 ms)
+02:56:57 INFO  Fuseki          :: [9] POST http://localhost:3030/mathkg500/query
+02:56:57 INFO  Fuseki          :: [9] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:56:59 WARN  Fuseki          :: [9] Runtime IO Exception (client left?) RC = 500 : org.eclipse.jetty.io.EofException: An established connection was aborted by the software in your host machine
+02:56:59 INFO  Fuseki          :: [9] 500 Server Error (2.156 s)
+02:57:19 INFO  Fuseki          :: [10] POST http://localhost:3030/mathkg500/query
+02:57:19 INFO  Fuseki          :: [10] Query = ASK { ?s ?p ?o }
+02:57:19 INFO  Fuseki          :: [10] 200 OK (4 ms)
+02:57:19 INFO  Fuseki          :: [11] POST http://localhost:3030/mathkg500/query
+02:57:19 INFO  Fuseki          :: [11] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:57:21 INFO  Fuseki          :: [11] 200 OK (2.090 s)
+02:58:44 INFO  Fuseki          :: [12] POST http://localhost:3030/mathkg500/query
+02:58:44 INFO  Fuseki          :: [12] Query = ASK { ?s ?p ?o }
+02:58:44 INFO  Fuseki          :: [12] 200 OK (4 ms)
+02:58:44 INFO  Fuseki          :: [13] POST http://localhost:3030/mathkg500/query
+02:58:44 INFO  Fuseki          :: [13] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:45 INFO  Fuseki          :: [13] 200 OK (915 ms)
+02:58:45 INFO  Fuseki          :: [14] POST http://localhost:3030/mathkg500/query
+02:58:45 INFO  Fuseki          :: [14] Query = ASK { ?s ?p ?o }
+02:58:45 INFO  Fuseki          :: [14] 200 OK (4 ms)
+02:58:45 INFO  Fuseki          :: [15] POST http://localhost:3030/mathkg500/query
+02:58:45 INFO  Fuseki          :: [15] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:46 INFO  Fuseki          :: [15] 200 OK (918 ms)
+02:58:46 INFO  Fuseki          :: [16] POST http://localhost:3030/mathkg500/query
+02:58:46 INFO  Fuseki          :: [16] Query = ASK { ?s ?p ?o }
+02:58:46 INFO  Fuseki          :: [16] 200 OK (3 ms)
+02:58:46 INFO  Fuseki          :: [17] POST http://localhost:3030/mathkg500/query
+02:58:46 INFO  Fuseki          :: [17] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:47 INFO  Fuseki          :: [17] 200 OK (1.037 s)
+02:58:47 INFO  Fuseki          :: [18] POST http://localhost:3030/mathkg500/query
+02:58:47 INFO  Fuseki          :: [18] Query = ASK { ?s ?p ?o }
+02:58:47 INFO  Fuseki          :: [18] 200 OK (6 ms)
+02:58:47 INFO  Fuseki          :: [19] POST http://localhost:3030/mathkg500/query
+02:58:47 INFO  Fuseki          :: [19] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:48 INFO  Fuseki          :: [19] 200 OK (942 ms)
+02:58:48 INFO  Fuseki          :: [20] POST http://localhost:3030/mathkg500/query
+02:58:48 INFO  Fuseki          :: [20] Query = ASK { ?s ?p ?o }
+02:58:48 INFO  Fuseki          :: [20] 200 OK (3 ms)
+02:58:48 INFO  Fuseki          :: [21] POST http://localhost:3030/mathkg500/query
+02:58:48 INFO  Fuseki          :: [21] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1703> "Matrix")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:49 INFO  Fuseki          :: [21] 200 OK (1.036 s)
+02:58:50 INFO  Fuseki          :: [22] POST http://localhost:3030/mathkg500/query
+02:58:50 INFO  Fuseki          :: [22] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1703> "Matrix")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:51 INFO  Fuseki          :: [22] 200 OK (1.196 s)
+02:58:51 INFO  Fuseki          :: [23] POST http://localhost:3030/mathkg500/query
+02:58:51 INFO  Fuseki          :: [23] Query = ASK { ?s ?p ?o }
+02:58:51 INFO  Fuseki          :: [23] 200 OK (3 ms)
+02:58:51 INFO  Fuseki          :: [24] POST http://localhost:3030/mathkg500/query
+02:58:51 INFO  Fuseki          :: [24] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:54 INFO  Fuseki          :: [24] 200 OK (2.948 s)
+02:58:54 INFO  Fuseki          :: [25] POST http://localhost:3030/mathkg500/query
+02:58:54 INFO  Fuseki          :: [25] Query = ASK { ?s ?p ?o }
+02:58:54 INFO  Fuseki          :: [25] 200 OK (5 ms)
+02:58:54 INFO  Fuseki          :: [26] POST http://localhost:3030/mathkg500/query
+02:58:54 INFO  Fuseki          :: [26] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:58:55 INFO  Fuseki          :: [26] 200 OK (1.005 s)
+02:59:17 INFO  Fuseki          :: [27] POST http://localhost:3030/mathkg500/query
+02:59:17 INFO  Fuseki          :: [27] Query = ASK { ?s ?p ?o }
+02:59:17 INFO  Fuseki          :: [27] 200 OK (3 ms)
+02:59:30 INFO  Fuseki          :: [28] POST http://localhost:3030/mathkg500/query
+02:59:30 INFO  Fuseki          :: [28] Query = ASK { ?s ?p ?o }
+02:59:30 INFO  Fuseki          :: [28] 200 OK (4 ms)
+02:59:30 INFO  Fuseki          :: [29] POST http://localhost:3030/mathkg500/query
+02:59:30 INFO  Fuseki          :: [29] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:59:31 INFO  Fuseki          :: [29] 200 OK (590 ms)
+02:59:31 INFO  Fuseki          :: [30] POST http://localhost:3030/mathkg500/query
+02:59:31 INFO  Fuseki          :: [30] Query = ASK { ?s ?p ?o }
+02:59:31 INFO  Fuseki          :: [30] 200 OK (3 ms)
+02:59:31 INFO  Fuseki          :: [31] POST http://localhost:3030/mathkg500/query
+02:59:31 INFO  Fuseki          :: [31] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept ?directPredicate ?directObject .   FILTER(     sameTerm(?concept, ?requestedIri)     || EXISTS { ?concept skos:exactMatch ?requestedIri }     || EXISTS {       ?concept rdfs:label ?candidateLabel .       FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))     }   )   OPTIONAL { ?concept rdfs:label ?label }   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+02:59:33 INFO  Fuseki          :: [31] 200 OK (2.082 s)
+03:00:21 INFO  Fuseki          :: [32] POST http://localhost:3030/mathkg500/query
+03:00:21 INFO  Fuseki          :: [32] Query = ASK { ?s ?p ?o }
+03:00:21 INFO  Fuseki          :: [32] 200 OK (4 ms)
+03:00:21 INFO  Fuseki          :: [33] POST http://localhost:3030/mathkg500/query
+03:00:21 INFO  Fuseki          :: [33] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:21 INFO  Fuseki          :: [33] 200 OK (29 ms)
+03:00:21 INFO  Fuseki          :: [34] POST http://localhost:3030/mathkg500/query
+03:00:21 INFO  Fuseki          :: [34] Query = ASK { ?s ?p ?o }
+03:00:21 INFO  Fuseki          :: [34] 200 OK (5 ms)
+03:00:21 INFO  Fuseki          :: [35] POST http://localhost:3030/mathkg500/query
+03:00:21 INFO  Fuseki          :: [35] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:21 INFO  Fuseki          :: [35] 200 OK (21 ms)
+03:00:21 INFO  Fuseki          :: [36] POST http://localhost:3030/mathkg500/query
+03:00:21 INFO  Fuseki          :: [36] Query = ASK { ?s ?p ?o }
+03:00:21 INFO  Fuseki          :: [36] 200 OK (4 ms)
+03:00:21 INFO  Fuseki          :: [37] POST http://localhost:3030/mathkg500/query
+03:00:21 INFO  Fuseki          :: [37] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:21 INFO  Fuseki          :: [37] 200 OK (20 ms)
+03:00:39 INFO  Fuseki          :: [38] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [38] Query = ASK { ?s ?p ?o }
+03:00:39 INFO  Fuseki          :: [38] 200 OK (4 ms)
+03:00:39 INFO  Fuseki          :: [39] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [39] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [39] 200 OK (11 ms)
+03:00:39 INFO  Fuseki          :: [40] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [40] Query = ASK { ?s ?p ?o }
+03:00:39 INFO  Fuseki          :: [40] 200 OK (5 ms)
+03:00:39 INFO  Fuseki          :: [41] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [41] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [41] 200 OK (16 ms)
+03:00:39 INFO  Fuseki          :: [42] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [42] Query = ASK { ?s ?p ?o }
+03:00:39 INFO  Fuseki          :: [42] 200 OK (3 ms)
+03:00:39 INFO  Fuseki          :: [43] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [43] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [43] 200 OK (15 ms)
+03:00:39 INFO  Fuseki          :: [44] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [44] Query = ASK { ?s ?p ?o }
+03:00:39 INFO  Fuseki          :: [44] 200 OK (4 ms)
+03:00:39 INFO  Fuseki          :: [45] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [45] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [45] 200 OK (11 ms)
+03:00:39 INFO  Fuseki          :: [46] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [46] Query = ASK { ?s ?p ?o }
+03:00:39 INFO  Fuseki          :: [46] 200 OK (3 ms)
+03:00:39 INFO  Fuseki          :: [47] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [47] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1703> "Matrix")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [47] 200 OK (19 ms)
+03:00:39 INFO  Fuseki          :: [48] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [48] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Element> "Element")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2116> "Real Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1703> "Matrix")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [48] 200 OK (19 ms)
+03:00:39 INFO  Fuseki          :: [49] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [49] Query = ASK { ?s ?p ?o }
+03:00:39 INFO  Fuseki          :: [49] 200 OK (5 ms)
+03:00:39 INFO  Fuseki          :: [50] POST http://localhost:3030/mathkg500/query
+03:00:39 INFO  Fuseki          :: [50] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:39 INFO  Fuseki          :: [50] 200 OK (20 ms)
+03:00:40 INFO  Fuseki          :: [51] POST http://localhost:3030/mathkg500/query
+03:00:40 INFO  Fuseki          :: [51] Query = ASK { ?s ?p ?o }
+03:00:40 INFO  Fuseki          :: [51] 200 OK (3 ms)
+03:00:40 INFO  Fuseki          :: [52] POST http://localhost:3030/mathkg500/query
+03:00:40 INFO  Fuseki          :: [52] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:00:40 INFO  Fuseki          :: [52] 200 OK (16 ms)
+03:00:59 INFO  Fuseki          :: [53] POST http://localhost:3030/mathkg500/query
+03:00:59 INFO  Fuseki          :: [53] Query = ASK { ?s ?p ?o }
+03:00:59 INFO  Fuseki          :: [53] 200 OK (6 ms)
+03:01:12 INFO  Fuseki          :: [54] POST http://localhost:3030/mathkg500/query
+03:01:12 INFO  Fuseki          :: [54] Query = ASK { ?s ?p ?o }
+03:01:12 INFO  Fuseki          :: [54] 200 OK (3 ms)
+03:01:12 INFO  Fuseki          :: [55] POST http://localhost:3030/mathkg500/query
+03:01:12 INFO  Fuseki          :: [55] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:01:12 INFO  Fuseki          :: [55] 200 OK (12 ms)
+03:01:12 INFO  Fuseki          :: [56] POST http://localhost:3030/mathkg500/query
+03:01:12 INFO  Fuseki          :: [56] Query = ASK { ?s ?p ?o }
+03:01:12 INFO  Fuseki          :: [56] 200 OK (3 ms)
+03:01:12 INFO  Fuseki          :: [57] POST http://localhost:3030/mathkg500/query
+03:01:12 INFO  Fuseki          :: [57] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:01:12 INFO  Fuseki          :: [57] 200 OK (23 ms)
+03:02:24 INFO  Fuseki          :: [58] POST http://localhost:3030/mathkg500/query
+03:02:24 INFO  Fuseki          :: [58] Query = ASK { ?s ?p ?o }
+03:02:24 INFO  Fuseki          :: [58] 200 OK (2 ms)
+03:02:26 INFO  Fuseki          :: [59] POST http://localhost:3030/mathkg500/query
+03:02:26 INFO  Fuseki          :: [59] Query = ASK { ?s ?p ?o }
+03:02:26 INFO  Fuseki          :: [59] 200 OK (3 ms)
+03:02:28 INFO  Fuseki          :: [60] POST http://localhost:3030/mathkg500/query
+03:02:28 INFO  Fuseki          :: [60] Query = ASK { ?s ?p ?o }
+03:02:28 INFO  Fuseki          :: [60] 200 OK (5 ms)
+03:02:31 INFO  Fuseki          :: [61] POST http://localhost:3030/mathkg500/query
+03:02:31 INFO  Fuseki          :: [61] Query = ASK { ?s ?p ?o }
+03:02:31 INFO  Fuseki          :: [61] 200 OK (6 ms)
+03:02:33 INFO  Fuseki          :: [62] POST http://localhost:3030/mathkg500/query
+03:02:33 INFO  Fuseki          :: [62] Query = ASK { ?s ?p ?o }
+03:02:33 INFO  Fuseki          :: [62] 200 OK (4 ms)
+03:02:35 INFO  Fuseki          :: [63] POST http://localhost:3030/mathkg500/query
+03:02:35 INFO  Fuseki          :: [63] Query = ASK { ?s ?p ?o }
+03:02:35 INFO  Fuseki          :: [63] 200 OK (6 ms)
+03:02:38 INFO  Fuseki          :: [64] POST http://localhost:3030/mathkg500/query
+03:02:38 INFO  Fuseki          :: [64] Query = ASK { ?s ?p ?o }
+03:02:38 INFO  Fuseki          :: [64] 200 OK (8 ms)
+03:02:40 INFO  Fuseki          :: [65] POST http://localhost:3030/mathkg500/query
+03:02:40 INFO  Fuseki          :: [65] Query = ASK { ?s ?p ?o }
+03:02:40 INFO  Fuseki          :: [65] 200 OK (10 ms)
+03:02:42 INFO  Fuseki          :: [66] POST http://localhost:3030/mathkg500/query
+03:02:42 INFO  Fuseki          :: [66] Query = ASK { ?s ?p ?o }
+03:02:42 INFO  Fuseki          :: [66] 200 OK (25 ms)
+03:02:44 INFO  Fuseki          :: [67] POST http://localhost:3030/mathkg500/query
+03:02:44 INFO  Fuseki          :: [67] Query = ASK { ?s ?p ?o }
+03:02:44 INFO  Fuseki          :: [67] 200 OK (4 ms)
+03:02:47 INFO  Fuseki          :: [68] POST http://localhost:3030/mathkg500/query
+03:02:47 INFO  Fuseki          :: [68] Query = ASK { ?s ?p ?o }
+03:02:48 WARN  Fuseki          :: [68] RC = 500 : Unable to allocate 5242880 bytes
+java.lang.OutOfMemoryError: Unable to allocate 5242880 bytes
+	at java.base/jdk.internal.misc.Unsafe.allocateMemory(Unsafe.java:638)
+	at java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:112)
+	at java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:367)
+	at org.eclipse.jetty.util.BufferUtil.allocateDirect(BufferUtil.java:142)
+	at org.eclipse.jetty.util.BufferUtil.allocate(BufferUtil.java:158)
+	at org.eclipse.jetty.io.ArrayByteBufferPool.acquire(ArrayByteBufferPool.java:241)
+	at org.eclipse.jetty.io.ByteBufferPool$Sized.acquire(ByteBufferPool.java:144)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.lockedAcquireBuffer(HttpOutput.java:691)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.write(HttpOutput.java:862)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:220)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:315)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:320)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:150)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:249)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:306)
+	at org.apache.jena.atlas.io.IO.flush(IO.java:387)
+	at org.apache.jena.atlas.io.IndentedWriter.flush(IndentedWriter.java:332)
+	at org.apache.jena.atlas.json.io.JSWriter.finishOutput(JSWriter.java:55)
+	at org.apache.jena.riot.rowset.rw.RowSetWriterJSON.write(RowSetWriterJSON.java:81)
+	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:191)
+	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:173)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.lambda$generalOutput$1(Responses.java:298)
+	at org.apache.jena.fuseki.servlets.Responses.output(Responses.java:132)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.generalOutput(Responses.java:303)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.doResponseResultSet$(Responses.java:263)
+	at org.apache.jena.fuseki.servlets.Responses.doResponseBoolean(Responses.java:157)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.sendResults(SPARQLQueryProcessor.java:458)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execute(SPARQLQueryProcessor.java:297)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.executeWithParameter(SPARQLQueryProcessor.java:227)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execute(SPARQLQueryProcessor.java:212)
+	at org.apache.jena.fuseki.servlets.ActionService.executeLifecycle(ActionService.java:61)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execPost(SPARQLQueryProcessor.java:87)
+	at org.apache.jena.fuseki.servlets.ActionProcessor.process(ActionProcessor.java:38)
+	at org.apache.jena.fuseki.servlets.ActionBase.process(ActionBase.java:57)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execActionSub(ActionExecLib.java:127)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execAction(ActionExecLib.java:101)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatchAction(Dispatcher.java:242)
+	at org.apache.jena.fuseki.server.Dispatcher.process(Dispatcher.java:232)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatch(Dispatcher.java:150)
+	at org.apache.jena.fuseki.servlets.FusekiFilter.doFilter(FusekiFilter.java:52)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:65)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:463)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.lambda$doFilterInternal$0(AbstractShiroFilter.java:378)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:91)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:84)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:389)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:376)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:351)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:304)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:449)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:469)
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763)
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1226)
+	at org.eclipse.jetty.server.Server.handle(Server.java:197)
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:788)
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1809)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+03:02:49 ERROR Fuseki          :: Internal error
+java.lang.OutOfMemoryError: Unable to allocate 5242880 bytes
+	at java.base/jdk.internal.misc.Unsafe.allocateMemory(Unsafe.java:638)
+	at java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:112)
+	at java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:367)
+	at org.eclipse.jetty.util.BufferUtil.allocateDirect(BufferUtil.java:142)
+	at org.eclipse.jetty.util.BufferUtil.allocate(BufferUtil.java:158)
+	at org.eclipse.jetty.io.ArrayByteBufferPool.acquire(ArrayByteBufferPool.java:241)
+	at org.eclipse.jetty.io.ByteBufferPool$Sized.acquire(ByteBufferPool.java:144)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.lockedAcquireBuffer(HttpOutput.java:691)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.write(HttpOutput.java:862)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.print(HttpOutput.java:1124)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.print(HttpOutput.java:1102)
+	at org.apache.jena.fuseki.servlets.ServletOps.writeMessagePlainText(ServletOps.java:83)
+	at org.apache.jena.fuseki.servlets.ServletOps.writeMessagePlainTextError(ServletOps.java:91)
+	at org.apache.jena.fuseki.servlets.ServletOps.responseSendError(ServletOps.java:60)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execActionSub(ActionExecLib.java:185)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execAction(ActionExecLib.java:101)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatchAction(Dispatcher.java:242)
+	at org.apache.jena.fuseki.server.Dispatcher.process(Dispatcher.java:232)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatch(Dispatcher.java:150)
+	at org.apache.jena.fuseki.servlets.FusekiFilter.doFilter(FusekiFilter.java:52)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:65)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:463)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.lambda$doFilterInternal$0(AbstractShiroFilter.java:378)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:91)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:84)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:389)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:376)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:351)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:304)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:449)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:469)
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763)
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1226)
+	at org.eclipse.jetty.server.Server.handle(Server.java:197)
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:788)
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1809)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+03:02:49 INFO  Fuseki          :: [69] POST http://localhost:3030/mathkg500/query
+03:02:49 INFO  Fuseki          :: [69] Query = ASK { ?s ?p ?o }
+03:02:50 WARN  Fuseki          :: [69] RC = 500 : Unable to allocate 5242880 bytes
+java.lang.OutOfMemoryError: Unable to allocate 5242880 bytes
+	at java.base/jdk.internal.misc.Unsafe.allocateMemory(Unsafe.java:638)
+	at java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:112)
+	at java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:367)
+	at org.eclipse.jetty.util.BufferUtil.allocateDirect(BufferUtil.java:142)
+	at org.eclipse.jetty.util.BufferUtil.allocate(BufferUtil.java:158)
+	at org.eclipse.jetty.io.ArrayByteBufferPool.acquire(ArrayByteBufferPool.java:241)
+	at org.eclipse.jetty.io.ByteBufferPool$Sized.acquire(ByteBufferPool.java:144)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.lockedAcquireBuffer(HttpOutput.java:691)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.write(HttpOutput.java:862)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:220)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:315)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:320)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:150)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:249)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:306)
+	at org.apache.jena.atlas.io.IO.flush(IO.java:387)
+	at org.apache.jena.atlas.io.IndentedWriter.flush(IndentedWriter.java:332)
+	at org.apache.jena.atlas.json.io.JSWriter.finishOutput(JSWriter.java:55)
+	at org.apache.jena.riot.rowset.rw.RowSetWriterJSON.write(RowSetWriterJSON.java:81)
+	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:191)
+	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:173)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.lambda$generalOutput$1(Responses.java:298)
+	at org.apache.jena.fuseki.servlets.Responses.output(Responses.java:132)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.generalOutput(Responses.java:303)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.doResponseResultSet$(Responses.java:263)
+	at org.apache.jena.fuseki.servlets.Responses.doResponseBoolean(Responses.java:157)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.sendResults(SPARQLQueryProcessor.java:458)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execute(SPARQLQueryProcessor.java:297)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.executeWithParameter(SPARQLQueryProcessor.java:227)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execute(SPARQLQueryProcessor.java:212)
+	at org.apache.jena.fuseki.servlets.ActionService.executeLifecycle(ActionService.java:61)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execPost(SPARQLQueryProcessor.java:87)
+	at org.apache.jena.fuseki.servlets.ActionProcessor.process(ActionProcessor.java:38)
+	at org.apache.jena.fuseki.servlets.ActionBase.process(ActionBase.java:57)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execActionSub(ActionExecLib.java:127)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execAction(ActionExecLib.java:101)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatchAction(Dispatcher.java:242)
+	at org.apache.jena.fuseki.server.Dispatcher.process(Dispatcher.java:232)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatch(Dispatcher.java:150)
+	at org.apache.jena.fuseki.servlets.FusekiFilter.doFilter(FusekiFilter.java:52)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:65)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:463)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.lambda$doFilterInternal$0(AbstractShiroFilter.java:378)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:91)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:84)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:389)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:376)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:351)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:304)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:449)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:469)
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763)
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1226)
+	at org.eclipse.jetty.server.Server.handle(Server.java:197)
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:788)
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1809)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+03:02:51 ERROR Fuseki          :: Internal error
+java.lang.OutOfMemoryError: Unable to allocate 5242880 bytes
+	at java.base/jdk.internal.misc.Unsafe.allocateMemory(Unsafe.java:638)
+	at java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:112)
+	at java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:367)
+	at org.eclipse.jetty.util.BufferUtil.allocateDirect(BufferUtil.java:142)
+	at org.eclipse.jetty.util.BufferUtil.allocate(BufferUtil.java:158)
+	at org.eclipse.jetty.io.ArrayByteBufferPool.acquire(ArrayByteBufferPool.java:241)
+	at org.eclipse.jetty.io.ByteBufferPool$Sized.acquire(ByteBufferPool.java:144)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.lockedAcquireBuffer(HttpOutput.java:691)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.write(HttpOutput.java:862)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.print(HttpOutput.java:1124)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.print(HttpOutput.java:1102)
+	at org.apache.jena.fuseki.servlets.ServletOps.writeMessagePlainText(ServletOps.java:83)
+	at org.apache.jena.fuseki.servlets.ServletOps.writeMessagePlainTextError(ServletOps.java:91)
+	at org.apache.jena.fuseki.servlets.ServletOps.responseSendError(ServletOps.java:60)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execActionSub(ActionExecLib.java:185)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execAction(ActionExecLib.java:101)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatchAction(Dispatcher.java:242)
+	at org.apache.jena.fuseki.server.Dispatcher.process(Dispatcher.java:232)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatch(Dispatcher.java:150)
+	at org.apache.jena.fuseki.servlets.FusekiFilter.doFilter(FusekiFilter.java:52)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:65)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:463)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.lambda$doFilterInternal$0(AbstractShiroFilter.java:378)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:91)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:84)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:389)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:376)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:351)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:304)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:449)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:469)
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763)
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1226)
+	at org.eclipse.jetty.server.Server.handle(Server.java:197)
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:788)
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1809)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+03:02:51 INFO  Fuseki          :: [70] POST http://localhost:3030/mathkg500/query
+03:02:51 INFO  Fuseki          :: [70] Query = ASK { ?s ?p ?o }
+03:02:52 WARN  Fuseki          :: [70] RC = 500 : Unable to allocate 5242880 bytes
+java.lang.OutOfMemoryError: Unable to allocate 5242880 bytes
+	at java.base/jdk.internal.misc.Unsafe.allocateMemory(Unsafe.java:638)
+	at java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:112)
+	at java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:367)
+	at org.eclipse.jetty.util.BufferUtil.allocateDirect(BufferUtil.java:142)
+	at org.eclipse.jetty.util.BufferUtil.allocate(BufferUtil.java:158)
+	at org.eclipse.jetty.io.ArrayByteBufferPool.acquire(ArrayByteBufferPool.java:241)
+	at org.eclipse.jetty.io.ByteBufferPool$Sized.acquire(ByteBufferPool.java:144)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.lockedAcquireBuffer(HttpOutput.java:691)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.write(HttpOutput.java:862)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:220)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:315)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:320)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:150)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:249)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:306)
+	at org.apache.jena.atlas.io.IO.flush(IO.java:387)
+	at org.apache.jena.atlas.io.IndentedWriter.flush(IndentedWriter.java:332)
+	at org.apache.jena.atlas.json.io.JSWriter.finishOutput(JSWriter.java:55)
+	at org.apache.jena.riot.rowset.rw.RowSetWriterJSON.write(RowSetWriterJSON.java:81)
+	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:191)
+	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:173)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.lambda$generalOutput$1(Responses.java:298)
+	at org.apache.jena.fuseki.servlets.Responses.output(Responses.java:132)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.generalOutput(Responses.java:303)
+	at org.apache.jena.fuseki.servlets.Responses$ResponseResults.doResponseResultSet$(Responses.java:263)
+	at org.apache.jena.fuseki.servlets.Responses.doResponseBoolean(Responses.java:157)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.sendResults(SPARQLQueryProcessor.java:458)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execute(SPARQLQueryProcessor.java:297)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.executeWithParameter(SPARQLQueryProcessor.java:227)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execute(SPARQLQueryProcessor.java:212)
+	at org.apache.jena.fuseki.servlets.ActionService.executeLifecycle(ActionService.java:61)
+	at org.apache.jena.fuseki.servlets.SPARQLQueryProcessor.execPost(SPARQLQueryProcessor.java:87)
+	at org.apache.jena.fuseki.servlets.ActionProcessor.process(ActionProcessor.java:38)
+	at org.apache.jena.fuseki.servlets.ActionBase.process(ActionBase.java:57)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execActionSub(ActionExecLib.java:127)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execAction(ActionExecLib.java:101)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatchAction(Dispatcher.java:242)
+	at org.apache.jena.fuseki.server.Dispatcher.process(Dispatcher.java:232)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatch(Dispatcher.java:150)
+	at org.apache.jena.fuseki.servlets.FusekiFilter.doFilter(FusekiFilter.java:52)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:65)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:463)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.lambda$doFilterInternal$0(AbstractShiroFilter.java:378)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:91)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:84)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:389)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:376)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:351)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:304)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:449)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:469)
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763)
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1226)
+	at org.eclipse.jetty.server.Server.handle(Server.java:197)
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:788)
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1809)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+03:02:53 ERROR Fuseki          :: Internal error
+java.lang.OutOfMemoryError: Unable to allocate 5242880 bytes
+	at java.base/jdk.internal.misc.Unsafe.allocateMemory(Unsafe.java:638)
+	at java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:112)
+	at java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:367)
+	at org.eclipse.jetty.util.BufferUtil.allocateDirect(BufferUtil.java:142)
+	at org.eclipse.jetty.util.BufferUtil.allocate(BufferUtil.java:158)
+	at org.eclipse.jetty.io.ArrayByteBufferPool.acquire(ArrayByteBufferPool.java:241)
+	at org.eclipse.jetty.io.ByteBufferPool$Sized.acquire(ByteBufferPool.java:144)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.lockedAcquireBuffer(HttpOutput.java:691)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.write(HttpOutput.java:862)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.print(HttpOutput.java:1124)
+	at org.eclipse.jetty.ee11.servlet.HttpOutput.print(HttpOutput.java:1102)
+	at org.apache.jena.fuseki.servlets.ServletOps.writeMessagePlainText(ServletOps.java:83)
+	at org.apache.jena.fuseki.servlets.ServletOps.writeMessagePlainTextError(ServletOps.java:91)
+	at org.apache.jena.fuseki.servlets.ServletOps.responseSendError(ServletOps.java:60)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execActionSub(ActionExecLib.java:185)
+	at org.apache.jena.fuseki.servlets.ActionExecLib.execAction(ActionExecLib.java:101)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatchAction(Dispatcher.java:242)
+	at org.apache.jena.fuseki.server.Dispatcher.process(Dispatcher.java:232)
+	at org.apache.jena.fuseki.server.Dispatcher.dispatch(Dispatcher.java:150)
+	at org.apache.jena.fuseki.servlets.FusekiFilter.doFilter(FusekiFilter.java:52)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:65)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:109)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:138)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:70)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:463)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.lambda$doFilterInternal$0(AbstractShiroFilter.java:378)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:91)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:84)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:389)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:376)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:156)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:351)
+	at org.apache.jena.fuseki.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:304)
+	at org.eclipse.jetty.ee11.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1602)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.dispatch(ServletChannel.java:871)
+	at org.eclipse.jetty.ee11.servlet.ServletChannel.handle(ServletChannel.java:449)
+	at org.eclipse.jetty.ee11.servlet.ServletHandler.handle(ServletHandler.java:469)
+	at org.eclipse.jetty.ee11.servlet.SessionHandler.handle(SessionHandler.java:763)
+	at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1226)
+	at org.eclipse.jetty.server.Server.handle(Server.java:197)
+	at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:788)
+	at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+	at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1809)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+03:02:53 INFO  Fuseki          :: [71] POST http://localhost:3030/mathkg500/query
+03:02:53 INFO  Fuseki          :: [71] Query = ASK { ?s ?p ?o }
+03:02:53 INFO  Fuseki          :: [71] 200 OK (5 ms)
+03:03:14 INFO  Fuseki          :: [72] POST http://localhost:3030/mathkg500/query
+03:03:14 INFO  Fuseki          :: [72] Query = ASK { ?s ?p ?o }
+03:03:14 INFO  Fuseki          :: [72] 200 OK (5 ms)
+03:03:28 INFO  Fuseki          :: [73] POST http://localhost:3030/mathkg500/query
+03:03:28 INFO  Fuseki          :: [73] Query = ASK { ?s ?p ?o }
+03:03:28 INFO  Fuseki          :: [73] 200 OK (3 ms)
+03:03:28 INFO  Fuseki          :: [74] POST http://localhost:3030/mathkg500/query
+03:03:28 INFO  Fuseki          :: [74] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:03:28 INFO  Fuseki          :: [74] 200 OK (41 ms)
+03:03:51 INFO  Fuseki          :: [75] POST http://localhost:3030/mathkg500/query
+03:03:51 INFO  Fuseki          :: [75] Query = ASK { ?s ?p ?o }
+03:03:51 INFO  Fuseki          :: [75] 200 OK (8 ms)
+03:03:52 INFO  Fuseki          :: [76] POST http://localhost:3030/mathkg500/query
+03:03:52 INFO  Fuseki          :: [76] Query = ASK { ?s ?p ?o }
+03:03:52 INFO  Fuseki          :: [76] 200 OK (4 ms)
+03:03:53 INFO  Fuseki          :: [77] POST http://localhost:3030/mathkg500/query
+03:03:53 INFO  Fuseki          :: [77] Query = ASK { ?s ?p ?o }
+03:03:53 INFO  Fuseki          :: [77] 200 OK (3 ms)
+03:03:54 INFO  Fuseki          :: [78] POST http://localhost:3030/mathkg500/query
+03:03:54 INFO  Fuseki          :: [78] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:03:54 INFO  Fuseki          :: [78] 200 OK (42 ms)
+03:03:54 INFO  Fuseki          :: [79] POST http://localhost:3030/mathkg500/query
+03:03:54 INFO  Fuseki          :: [79] Query = ASK { ?s ?p ?o }
+03:03:54 INFO  Fuseki          :: [79] 200 OK (6 ms)
+03:03:55 INFO  Fuseki          :: [80] POST http://localhost:3030/mathkg500/query
+03:03:55 INFO  Fuseki          :: [80] Query = ASK { ?s ?p ?o }
+03:03:55 INFO  Fuseki          :: [80] 200 OK (4 ms)
+03:03:57 INFO  Fuseki          :: [81] POST http://localhost:3030/mathkg500/query
+03:03:57 INFO  Fuseki          :: [81] Query = ASK { ?s ?p ?o }
+03:03:57 INFO  Fuseki          :: [81] 200 OK (4 ms)
+03:03:57 INFO  Fuseki          :: [82] POST http://localhost:3030/mathkg500/query
+03:03:57 INFO  Fuseki          :: [82] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:03:57 INFO  Fuseki          :: [82] 200 OK (39 ms)
+03:07:11 INFO  Fuseki          :: [83] POST http://localhost:3030/mathkg500/query
+03:07:11 INFO  Fuseki          :: [83] Query = ASK { ?s ?p ?o }
+03:07:11 INFO  Fuseki          :: [83] 200 OK (5 ms)
+03:07:12 INFO  Fuseki          :: [84] POST http://localhost:3030/mathkg500/query
+03:07:12 INFO  Fuseki          :: [84] Query = ASK { ?s ?p ?o }
+03:07:12 INFO  Fuseki          :: [84] 200 OK (8 ms)
+03:07:35 INFO  Fuseki          :: [85] POST http://localhost:3030/mathkg500/query
+03:07:35 INFO  Fuseki          :: [85] Query = ASK { ?s ?p ?o }
+03:07:35 INFO  Fuseki          :: [85] 200 OK (7 ms)
+03:07:35 INFO  Fuseki          :: [86] POST http://localhost:3030/mathkg500/query
+03:07:35 INFO  Fuseki          :: [86] Query =  PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX mathkg: <http://example.org/mathkg/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX skos: <http://www.w3.org/2004/02/skos/core#>  SELECT ?requestedIri ?requestedLabel ?concept ?label ?definition ?semanticType        ?kindRole ?domainTag ?sourceOntology ?provenanceNote ?parent ?parentLabel ?exactMatch WHERE {   VALUES (?requestedIri ?requestedLabel) {     (<http://example.org/mathkg/Variable> "Variable")     (<http://example.org/mathkg/Equality> "Equality")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1303> "Taking root")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1311> "Exponentiating")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E2114> "Number")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1315> "Addition")     (<http://example.org/mathkg/Subtraction> "Subtraction")     (<http://example.org/mathkg/Cosine> "Cosine")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1318> "Multiplication")     (<http://cll.niimm.ksu.ru/ontologies/mathematics#E1505> "Function")   }   ?concept rdfs:label ?candidateLabel .   FILTER(LCASE(STR(?candidateLabel)) = LCASE(STR(?requestedLabel)))   BIND(?candidateLabel AS ?label)   OPTIONAL { ?concept skos:definition ?definition }   OPTIONAL { ?concept mathkg:semanticType ?semanticType }   OPTIONAL { ?concept mathkg:kindRoleType ?kindRole }   OPTIONAL { ?concept mathkg:domainTag ?domainTag }   OPTIONAL { ?concept dc:source ?sourceOntology }   OPTIONAL { ?concept mathkg:provenanceNote ?provenanceNote }   OPTIONAL {     ?concept rdfs:subClassOf ?parent .     FILTER(isIRI(?parent))     OPTIONAL { ?parent rdfs:label ?parentLabel }   }   OPTIONAL { ?concept skos:exactMatch ?exactMatch } } 
+03:07:35 INFO  Fuseki          :: [86] 200 OK (97 ms)
+03:08:29 INFO  Fuseki          :: [87] POST http://localhost:3030/mathkg500/query
+03:08:29 INFO  Fuseki          :: [87] Query = ASK { ?s ?p ?o }
+03:08:29 INFO  Fuseki          :: [87] 200 OK (4 ms)

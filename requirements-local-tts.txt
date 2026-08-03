@@ -1,0 +1,3 @@
+# Optional offline neural speech backend. Install in the isolated AI runtime.
+kokoro==0.9.4
+soundfile==0.14.0

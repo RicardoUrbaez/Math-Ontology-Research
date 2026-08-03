@@ -9,6 +9,7 @@ node_modules/
 .venv/
 venv/
 env/
+.env
 .venv-corpus/
 data/arxiv_papers/
 reports/sparql/*.log

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-07-11T15:15:28.774985</dc:date>
+    <dc:date>2026-07-20T11:05:08.045302</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ C 292.023926 192.436312 282.852 205.974855 282.852 220.0896
 C 282.852 234.204345 292.023926 247.742888 308.347769 257.72352 
 C 324.671611 267.704152 346.814601 273.312 369.9 273.312 
 z
-" clip-path="url(#p4c9faa2e77)" style="fill: #dde7f2; stroke: #1f2937; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p8e6fea2196)" style="fill: #dde7f2; stroke: #1f2937; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 10.827 166.8672 
@@ -48,7 +48,7 @@ L 279.225 166.8672
 L 279.225 73.728 
 L 10.827 73.728 
 z
-" clip-path="url(#p4c9faa2e77)" style="fill: #ede7d6; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p8e6fea2196)" style="fill: #ede7d6; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 460.575 166.8672 
@@ -56,7 +56,7 @@ L 728.973 166.8672
 L 728.973 73.728 
 L 460.575 73.728 
 z
-" clip-path="url(#p4c9faa2e77)" style="fill: #e3e9d7; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p8e6fea2196)" style="fill: #e3e9d7; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 10.827 388.6272 
@@ -64,7 +64,7 @@ L 279.225 388.6272
 L 279.225 295.488 
 L 10.827 295.488 
 z
-" clip-path="url(#p4c9faa2e77)" style="fill: #f1ddd3; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p8e6fea2196)" style="fill: #f1ddd3; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 460.575 388.6272 
@@ -72,7 +72,7 @@ L 728.973 388.6272
 L 728.973 295.488 
 L 460.575 295.488 
 z
-" clip-path="url(#p4c9faa2e77)" style="fill: #e7dcea; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p8e6fea2196)" style="fill: #e7dcea; stroke: #1f2937; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- Symbol T -->
@@ -2421,7 +2421,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p4c9faa2e77">
+  <clipPath id="p8e6fea2196">
    <rect x="7.2" y="7.2" width="725.4" height="443.52"/>
   </clipPath>
  </defs>

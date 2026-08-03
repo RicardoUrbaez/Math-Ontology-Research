@@ -4,9 +4,11 @@ from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from api.services import MathKGService
+from api.paper_jobs import PaperJobManager
+from api.services import DEFAULT_PAPER_AUDIO_DIR, MathKGService
 
 
 app = FastAPI(
@@ -24,7 +26,14 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
+DEFAULT_PAPER_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+app.mount(
+    "/api/generated-audio",
+    StaticFiles(directory=str(DEFAULT_PAPER_AUDIO_DIR)),
+    name="generated-audio",
+)
 service = MathKGService()
+paper_jobs = PaperJobManager(service.analyze_paper)
 
 
 class SearchResponse(BaseModel):
@@ -60,10 +69,13 @@ class PaperAnalysisRequest(BaseModel):
     abstract_or_context: str = ""
     equations: list[str] = Field(default_factory=list)
     audience: Literal["concise", "pedagogical", "expert", "document_role"] = "pedagogical"
-    audio_backend: Literal["none", "mock", "gtts", "azure"] = "none"
+    audio_backend: Literal["none", "mock", "gtts", "kokoro", "azure"] = "none"
     generate_audio: bool = False
     pdf_base64: str = ""
     pdf_filename: str = ""
+    document_base64: str = ""
+    document_filename: str = ""
+    document_media_type: str = ""
 
 
 @app.get("/health")
@@ -137,4 +149,20 @@ def paper_analysis(request: PaperAnalysisRequest) -> dict:
         generate_audio=request.generate_audio,
         pdf_base64=request.pdf_base64,
         pdf_filename=request.pdf_filename,
+        document_base64=request.document_base64,
+        document_filename=request.document_filename,
+        document_media_type=request.document_media_type,
     )
+
+
+@app.post("/api/paper/jobs", status_code=202)
+def create_paper_analysis_job(request: PaperAnalysisRequest) -> dict:
+    return paper_jobs.create(request.model_dump())
+
+
+@app.get("/api/paper/jobs/{job_id}")
+def get_paper_analysis_job(job_id: str) -> dict:
+    job = paper_jobs.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail="Paper analysis job was not found.")
+    return job

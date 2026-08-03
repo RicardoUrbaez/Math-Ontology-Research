@@ -91,7 +91,16 @@ class AzureTTSBackend:
             synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
             result = synthesizer.speak_ssml_async(ssml).get()
             if result.reason != speechsdk.ResultReason.SynthesizingAudioCompleted:
-                raise RuntimeError(getattr(result, "cancellation_details", result.reason))
+                detail = getattr(result, "cancellation_details", None)
+                if detail is not None:
+                    detail = (
+                        f"reason={getattr(detail, 'reason', '')}; "
+                        f"error_code={getattr(detail, 'error_code', '')}; "
+                        f"error_details={getattr(detail, 'error_details', '')}"
+                    )
+                else:
+                    detail = str(result.reason)
+                raise RuntimeError(detail)
             return {"backend": self.name, "status": "ok", "audio_path": str(path), "detail": "Azure WAV written"}
         except Exception as exc:
             fallback_result = self.fallback.synthesize(text, ssml, Path(output_path).with_suffix(".txt"))
@@ -105,12 +114,29 @@ class AzureTTSBackend:
             return fallback_result
 
 
+class KokoroTTSBackend:
+    name = "kokoro"
+
+    def synthesize(self, text: str, ssml: str, output_path: str | Path) -> dict[str, Any]:
+        from scripts.week4_tts_rendering import KokoroTTSBackend as WorkerBackend
+
+        result = WorkerBackend().synthesize(text, ssml, Path(output_path).with_suffix(".wav"))
+        return {
+            "backend": result.backend,
+            "status": result.status,
+            "audio_path": result.audio_path,
+            "detail": result.detail,
+        }
+
+
 def get_tts_backend(name: str) -> TTSBackend:
     normalized = (name or "mock").lower()
     if normalized == "mock":
         return MockTTSBackend()
     if normalized == "gtts":
         return GTTSBackend()
+    if normalized == "kokoro":
+        return KokoroTTSBackend()
     if normalized == "azure":
         return AzureTTSBackend()
     raise ValueError(f"Unknown TTS backend: {name}")

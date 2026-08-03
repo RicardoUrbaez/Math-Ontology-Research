@@ -235,18 +235,18 @@ If Fuseki is unavailable, the API still serves deterministic concept and gloss r
 
 ## Running the Professor Paper Demo
 
-Start the API:
+Start the complete local stack from the repository root:
 
 ```powershell
-python -m uvicorn api.main:app --reload
+.\Start-MathOntoSpeak.cmd
 ```
 
-In another PowerShell window, start the local frontend:
+This one launcher starts Fuseki, the FastAPI backend, and the Vite frontend in a single terminal, opens the app automatically, and prefixes each service's output. Press `Ctrl+C` once to stop the services started by the launcher.
+
+In VS Code, `Ctrl+Shift+B` runs the same **Start MathOntoSpeak** task. To check service status without starting anything:
 
 ```powershell
-cd demo\frontend
-npm install
-npm run dev
+.\Start-MathOntoSpeak.cmd --check
 ```
 
 Open:
@@ -255,7 +255,17 @@ Open:
 http://127.0.0.1:5173
 ```
 
-The demo lets a reviewer paste paper context or upload a PDF, provide or extract LaTeX equations, choose an audience mode, inspect ontology-backed concepts, and play the semantic MathOntoSpeak reading in the browser. Optional backend audio generation can use mock, gTTS, or Azure Speech; Azure requires `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION`.
+The demo lets a reviewer paste paper context or upload a PDF, provide or extract LaTeX equations, choose an audience mode, inspect ontology-backed concepts, and play the semantic MathOntoSpeak reading in the browser. Optional backend audio generation can use mock, gTTS, local Kokoro-82M, or Azure Speech; Azure requires `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION`.
+
+Install the optional Apache-licensed Kokoro local neural voice in the isolated AI runtime:
+
+```powershell
+& "$HOME\Documents\MathOntoSpeak-External\.venvs\marker\Scripts\python.exe" -m pip install -r requirements-local-tts.txt
+```
+
+Select **Kokoro local neural voice**, enable backend audio generation, and analyze the document. The first synthesis downloads the model weights; later readings use the local cache and CUDA when available.
+
+Normal document reading uses the fast deterministic grounding diagnostic. To run the optional Ragas similarity metric during a research evaluation, set `$env:MATHONTOSPEAK_ENABLE_RAGAS_ANALYSIS = "1"` before starting the stack. This is intentionally off for the interactive demo because Ragas starts an isolated evaluation process for each equation.
 
 ## Running the LaTeX to Audio Pipeline
 

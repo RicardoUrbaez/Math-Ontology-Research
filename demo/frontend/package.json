@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.7",
+    "katex": "^0.18.1",
+    "pdfjs-dist": "^6.2.108",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {}
+    "react-dom": "^19.0.0",
+    "speech-rule-engine": "^5.0.0-rc.4",
+    "vite": "^6.0.7"
+  }
 }

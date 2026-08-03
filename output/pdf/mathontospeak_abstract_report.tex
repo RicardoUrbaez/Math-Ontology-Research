@@ -1,0 +1,43 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{headingblue}{RGB}{31,78,121}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=headingblue,
+  urlcolor=headingblue
+}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{MathOntoSpeak Research Abstract Report}}\\[4pt]
+{\normalsize Ricardo Urbaez}\\[2pt]
+{\normalsize Math Accessibility Knowledge Graph Research}
+\end{center}
+
+\vspace{0.08in}
+
+\section*{Abstract}
+
+MathOntoSpeak is a research prototype designed to make mathematical notation easier to understand through speech. Standard text to speech tools can read symbols aloud, but they often miss the meaning behind those symbols. In mathematics, a single symbol can represent a letter, a variable, an operator, a transformation, or a concept that depends on the surrounding document. This project addresses that problem by connecting mathematical symbols to a knowledge graph that stores their meaning, context, and accessibility focused explanations.
+
+The system is built around a Math Accessibility Knowledge Graph that combines and extends existing mathematical ontology resources. The current graph includes 504 ontology classes, 13 declared properties, 13,986 RDF statements, and 500 provenance tagged classes. Each concept includes labels, definitions, source information, kind and role classification, and glosses written for accessible speech. A key contribution of MathOntoSpeak is that each concept can be rendered in four different forms: concise, pedagogical, expert, and document role. These forms allow the system to adjust how much explanation is given depending on the listener's needs and the context of the equation.
+
+MathOntoSpeak also includes a working LaTeX to speech pipeline, SPARQL query support through Apache Jena Fuseki, a FastAPI backend, and a professor facing paper analysis demo. In the demo, a user can provide paper context and equations. The system then identifies relevant mathematical concepts, generates plain language explanations, creates speech ready scripts, and connects those explanations to text to speech output. This shows that the project is not only an ontology, but an end to end accessibility tool for mathematical reading.
+
+\section*{Evaluation Summary}
+
+The evaluation shows that the system is technically feasible and has promising early results. The knowledge graph was successfully serialized, queried, and checked for reasoning consistency. SPARQL benchmark queries completed with a mean response time of 52.359 ms, showing that the graph can support fast lookup during interaction. Internal gloss review also showed strong agreement, with an overall Cohen's kappa of 0.93.
+
+A rapid within subjects pilot with 10 paired participants compared MathOntoSpeak semantic TTS with notation only TTS. Participants had higher mean comprehension with MathOntoSpeak, 43.3\%, compared with 35.0\% for notation only audio. This result was promising, although it was not statistically significant. Qualitative feedback suggested that semantic explanations helped clarify symbol roles, while notation only audio required more memory and guessing.
+
+\section*{Conclusion}
+
+Overall, MathOntoSpeak shows that accessible mathematical speech should focus not only on pronunciation, but also on meaning. By linking notation to concepts, context, provenance, and multiple explanation styles, this project provides a strong foundation for future work in math accessibility and context aware educational tools.
+
+\end{document}

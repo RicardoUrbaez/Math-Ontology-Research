@@ -1,18 +1,26 @@
 param(
     [string]$FusekiHome = "C:\Users\Ricardo\Downloads\apache-jena-fuseki-6.1.0",
     [string]$Dataset = "mathkg500",
-    [string]$Ontology = "C:\Users\Ricardo\Documents\Math-Ontology-Research\reports\reasoning\math_accessibility_kg_week3_clean.ttl",
+    [string]$Ontology = "C:\Users\Ricardo\Documents\Math-Ontology-Research\ontologies\merged\math_accessibility_kg_week3_grouped_for_protege.owl",
+    [string]$FusekiBase = "",
     [int]$Port = 3030,
-    [switch]$FileMode
+    [switch]$ConfiguredMode
 )
 
 $ErrorActionPreference = "Stop"
+
+if ([string]::IsNullOrWhiteSpace($FusekiBase)) {
+    $localRoot = if ($env:LOCALAPPDATA) { $env:LOCALAPPDATA } else { $env:TEMP }
+    $FusekiBase = Join-Path $localRoot "MathOntoSpeak\fuseki"
+}
+New-Item -ItemType Directory -Path $FusekiBase -Force | Out-Null
+$env:FUSEKI_BASE = $FusekiBase
 
 if (-not (Test-Path -LiteralPath $FusekiHome)) {
     throw "Fuseki folder not found: $FusekiHome"
 }
 
-if ($FileMode -and -not (Test-Path -LiteralPath $Ontology)) {
+if (-not $ConfiguredMode -and -not (Test-Path -LiteralPath $Ontology)) {
     throw "Ontology file not found: $Ontology"
 }
 
@@ -23,9 +31,10 @@ if (-not (Test-Path -LiteralPath $jar)) {
 
 Push-Location $FusekiHome
 try {
-    if ($FileMode) {
+    if (-not $ConfiguredMode) {
         Write-Host "Starting Fuseki on http://localhost:$Port/$Dataset"
         Write-Host "Loading ontology: $Ontology"
+        Write-Host "Fuseki state: $FusekiBase"
         java -jar $jar --port=$Port --file="$Ontology" "/$Dataset"
     }
     else {

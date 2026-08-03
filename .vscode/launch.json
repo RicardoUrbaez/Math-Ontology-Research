@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MathOntoSpeak API (debug)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "api.main:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload",
+        "--log-level",
+        "debug"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "subProcess": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  ]
+}

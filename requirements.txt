@@ -3,6 +3,7 @@ uvicorn
 pydantic
 rdflib
 pylatexenc
+latex2mathml
 gTTS
 python-dotenv
 requests

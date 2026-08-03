@@ -1,0 +1,21 @@
+[
+  {
+    "arxiv_id": "2606.19323v1",
+    "title": "Cohomogeneity one actions on symmetric spaces of mixed type",
+    "latex": "\\mathbb{R}^n \\times M_-",
+    "token_count": 6,
+    "resolved_count": 6,
+    "concepts": [
+      "Real Number",
+      "Exponentiating",
+      "Variable",
+      "Multiplication",
+      "Subtraction"
+    ],
+    "backend": "azure",
+    "audio_path": "reports\\audio\\azure_env_test\\equation_azure\\eq_001_2606_19323v1.wav",
+    "ssml_path": "reports\\audio\\azure_env_test\\equation_ssml\\eq_001_2606_19323v1.ssml",
+    "status": "ok",
+    "detail": "Azure WAV written"
+  }
+]

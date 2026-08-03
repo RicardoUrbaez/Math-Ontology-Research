@@ -13,6 +13,8 @@ import csv
 import json
 import os
 import re
+import subprocess
+import tempfile
 import xml.etree.ElementTree as ET
 from dataclasses import asdict, dataclass, replace
 from pathlib import Path
@@ -128,7 +130,7 @@ SYMBOL_CONCEPT_HINTS = {
     "\\sin": "Sine",
     "\\cos": "Cosine",
     "\\tan": "Tangent",
-    "\\sqrt": "Exponentiating",
+    "\\sqrt": "Taking root",
     "\\in": "Element",
     "\\notin": "Element",
     "\\subset": "Subset",
@@ -609,9 +611,68 @@ class AzureTTSBackend:
         synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
         result = synthesizer.speak_ssml_async(ssml).get()
         if result.reason != speechsdk.ResultReason.SynthesizingAudioCompleted:
-            detail = getattr(result, "cancellation_details", result.reason)
+            detail = getattr(result, "cancellation_details", None)
+            if detail is not None:
+                detail = (
+                    f"reason={getattr(detail, 'reason', '')}; "
+                    f"error_code={getattr(detail, 'error_code', '')}; "
+                    f"error_details={getattr(detail, 'error_details', '')}"
+                )
+            else:
+                detail = str(result.reason)
             raise RuntimeError(f"Azure synthesis failed: {detail}")
         return SynthesisResult(self.name, output_path.stem, str(output_path), "", "ok", "Azure WAV written")
+
+
+class KokoroTTSBackend:
+    name = "kokoro"
+
+    def __init__(self, voice: str | None = None, speed: float | None = None) -> None:
+        self.voice = voice or os.getenv("MATHONTOSPEAK_KOKORO_VOICE", "af_heart")
+        self.speed = speed or float(os.getenv("MATHONTOSPEAK_KOKORO_SPEED", "0.92"))
+
+    def synthesize(self, text: str, ssml: str, output_path: Path) -> SynthesisResult:
+        from api.local_tts import kokoro_python_path, kokoro_runtime_status
+
+        status = kokoro_runtime_status()
+        if not status["available"]:
+            raise RuntimeError(str(status["detail"]))
+        worker_path = ROOT / "scripts" / "kokoro_tts_worker.py"
+        output_path = output_path.with_suffix(".wav")
+        request = {
+            "text": text,
+            "output_path": str(output_path),
+            "voice": self.voice,
+            "speed": self.speed,
+        }
+        with tempfile.TemporaryDirectory(prefix="mathontospeak-kokoro-") as temp_dir:
+            request_path = Path(temp_dir) / "request.json"
+            request_path.write_text(json.dumps(request, ensure_ascii=True), encoding="utf-8")
+            result = subprocess.run(
+                [str(kokoro_python_path()), str(worker_path), str(request_path)],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=600,
+                check=False,
+            )
+        payload = None
+        for line in reversed(result.stdout.splitlines()):
+            if line.startswith("MATHONTOSPEAK_KOKORO="):
+                payload = json.loads(line.split("=", 1)[1])
+                break
+        if result.returncode or not payload or payload.get("status") != "ok":
+            detail = (payload or {}).get("error") or result.stderr or result.stdout or "No Kokoro result was returned."
+            raise RuntimeError(f"Kokoro synthesis failed: {str(detail)[-800:]}")
+        return SynthesisResult(
+            self.name,
+            output_path.stem,
+            str(payload["audio_path"]),
+            "",
+            "ok",
+            f"Kokoro WAV written with {payload.get('voice', self.voice)} on {payload.get('device', 'local runtime')}",
+        )
 
 
 def backend_for(name: str) -> TTSBackend:
@@ -620,6 +681,8 @@ def backend_for(name: str) -> TTSBackend:
         return MockTTSBackend()
     if normalized == "gtts":
         return GTTSBackend()
+    if normalized == "kokoro":
+        return KokoroTTSBackend()
     if normalized == "azure":
         return AzureTTSBackend()
     raise ValueError(f"Unknown backend: {name}")
@@ -637,7 +700,7 @@ def synthesize_bundle(
     audio_dir = output_dir / backend.name
     ssml_paths = write_ssml_bundle(bundle, ssml_dir, profile=profile, voice=voice)
     stem = re.sub(r"[^A-Za-z0-9]+", "_", bundle.canonical_label).strip("_") or "concept"
-    extension = ".mp3" if backend.name == "gtts" else ".wav" if backend.name == "azure" else ".json"
+    extension = ".mp3" if backend.name == "gtts" else ".wav" if backend.name in {"azure", "kokoro"} else ".json"
     results: list[SynthesisResult] = []
     for surface_name in SURFACE_FIELDS:
         text = getattr(bundle, surface_name)
@@ -697,7 +760,7 @@ def synthesize_equation_bundle(
     validate_ssml(bundle.ssml)
     ssml_path.write_text(bundle.ssml, encoding="utf-8")
 
-    extension = ".mp3" if backend.name == "gtts" else ".wav" if backend.name == "azure" else ".json"
+    extension = ".mp3" if backend.name == "gtts" else ".wav" if backend.name in {"azure", "kokoro"} else ".json"
     audio_path = audio_dir / f"{stem}{extension}"
     result = backend.synthesize(bundle.speech_text, bundle.ssml, audio_path)
     labels = _unique_labels(bundle.tokens)
